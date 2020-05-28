@@ -1,8 +1,9 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
-
-public class CategoriaSensori {
+//TODO c'è un attributo descrizione in generalità da rivedere
+public class CategoriaSensori implements Serializable {
     private String nome;
     private ArrayList<Sensore> sensori;
 

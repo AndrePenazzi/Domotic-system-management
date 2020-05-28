@@ -1,13 +1,16 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Artefatto {
+public class Artefatto implements Serializable {
     private String nome;
     private ArrayList<Sensore> sensori;
     private ArrayList<Attuatore> attuatori;
 
     public Artefatto(String nome) {
+        sensori = new ArrayList<>();
+        attuatori = new ArrayList<>();
         this.nome = nome;
     }
 

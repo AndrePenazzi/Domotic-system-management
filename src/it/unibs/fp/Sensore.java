@@ -1,6 +1,8 @@
 package it.unibs.fp;
 
-public class Sensore {
+import java.io.Serializable;
+
+public class Sensore implements Serializable {
     private String nome;
 
     public String getNome() {

@@ -2,40 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Domotic-system-management.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitàImmobiliare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/BelleStringhe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/EstrazioniCasuali.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/MyMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/NumeriCasuali.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/ServizioFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitàImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitàImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cXLD2Gs3tx0dQ8wZp7OeD66yBD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -44,18 +46,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -95,11 +85,12 @@
       <option name="presentableId" value="Default" />
       <updated>1590669868649</updated>
       <workItem from="1590669872931" duration="285000" />
+      <workItem from="1590674675253" duration="3905000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -111,5 +102,86 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1590676960724">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1590676960724" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1590678519527">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
+    <state width="1493" height="613" key="GridCell.Tab.0.bottom" timestamp="1590678588434">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="613" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
+    <state width="1493" height="613" key="GridCell.Tab.0.center" timestamp="1590678588434">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="613" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
+    <state width="1493" height="613" key="GridCell.Tab.0.left" timestamp="1590678588434">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="613" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
+    <state width="1493" height="613" key="GridCell.Tab.0.right" timestamp="1590678588434">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="613" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
+    <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1590674692069">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="584" y="195" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1590674692069" />
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
   </component>
 </project>

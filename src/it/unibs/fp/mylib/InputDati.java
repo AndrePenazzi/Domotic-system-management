@@ -13,7 +13,11 @@ public class InputDati
 	  private final static char RISPOSTA_SI='S';
 	  private final static char RISPOSTA_NO='N';
 
-	  
+	  public static String leggiStringaNonVuotaSenzaSpazi(String messaggio) {
+	  	String lettura = leggiStringaNonVuota(messaggio);
+	  	lettura = lettura.replace(" ", "");
+	  	return lettura;
+	  }
  
 	  private static Scanner creaScanner ()
 	  {

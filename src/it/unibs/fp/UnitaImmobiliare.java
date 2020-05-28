@@ -1,13 +1,14 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class UnitàImmobiliare {
+public class UnitaImmobiliare implements Serializable {
     private String nome;
     private ArrayList<Stanza> stanze;
     private ArrayList<Artefatto> artefatti;
 
-    public UnitàImmobiliare(String nome) {
+    public UnitaImmobiliare(String nome) {
         this.nome = nome;
         this.stanze = new ArrayList<>();
         this.artefatti = new ArrayList<>();
@@ -16,6 +17,7 @@ public class UnitàImmobiliare {
     public int getSizeStanze(){
         return stanze.size();
     }
+
     public int getSizeArtefatti(){
         return stanze.size();
     }
@@ -32,6 +34,14 @@ public class UnitàImmobiliare {
         String s="";
         for(int i=0;i<stanze.size();i++){
             s+=(i+1)+" "+stanze.get(i).toString()+"\n";
+        }
+        return s;
+    }
+
+    public String visualizzaArtefatti(){
+        String s="";
+        for(int i=0;i<artefatti.size();i++){
+            s+=(i+1)+" "+artefatti.get(i).toString()+"\n";
         }
         return s;
     }

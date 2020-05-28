@@ -1,8 +1,9 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ListaCategorie {
+public class ListaCategorie implements Serializable {
     private ArrayList<CategoriaSensori> categorieSensori;
     private ArrayList<CategoriaAttuatori> categorieAttuatori;
 
@@ -19,10 +20,6 @@ public class ListaCategorie {
         return categorieAttuatori;
     }
 
-    public CategoriaSensori getCategoriaSensori(int index){
-        return categorieSensori.get(index);
-    }
-
     public void inserisciESalvaCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori){
         categorieAttuatori.add(categoriaAttuatori);
     }
@@ -35,10 +32,22 @@ public class ListaCategorie {
         return categorieSensori.size();
     }
 
+    public int getSizeCategorieAttuatori(){
+        return categorieAttuatori.size();
+    }
+
     public String visualizzaCategorieSensori(){
         String s="";
         for(int i=0;i<categorieSensori.size();i++){
             s+=(i+1)+" "+categorieSensori.get(i).toString()+"\n";
+        }
+        return s;
+    }
+
+    public String visualizzaCategorieAttuatori(){
+        String s="";
+        for(int i=0;i<categorieAttuatori.size();i++){
+            s+=(i+1)+" "+categorieAttuatori.get(i).toString()+"\n";
         }
         return s;
     }

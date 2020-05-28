@@ -1,6 +1,8 @@
 package it.unibs.fp;
 
-public class Attuatore {
+import java.io.Serializable;
+
+public class Attuatore implements Serializable {
     private String nome;
 
     public String getNome() {

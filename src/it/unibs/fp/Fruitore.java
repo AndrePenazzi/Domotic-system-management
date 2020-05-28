@@ -1,6 +1,8 @@
 package it.unibs.fp;
 
-public class Fruitore {
+import java.io.Serializable;
+
+public class Fruitore implements Serializable {
 
     public Fruitore(){
 
