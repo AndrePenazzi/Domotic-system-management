@@ -14,11 +14,11 @@ public class UnitaImmobiliare implements Serializable {
         this.artefatti = new ArrayList<>();
     }
 
-    public int getSizeStanze(){
+    public int getSizeStanze() {
         return stanze.size();
     }
 
-    public int getSizeArtefatti(){
+    public int getSizeArtefatti() {
         return stanze.size();
     }
 
@@ -30,21 +30,6 @@ public class UnitaImmobiliare implements Serializable {
         this.nome = nome;
     }
 
-    public String visualizzaStanze(){
-        String s="";
-        for(int i=0;i<stanze.size();i++){
-            s+=(i+1)+" "+stanze.get(i).toString()+"\n";
-        }
-        return s;
-    }
-
-    public String visualizzaArtefatti(){
-        String s="";
-        for(int i=0;i<artefatti.size();i++){
-            s+=(i+1)+" "+artefatti.get(i).toString()+"\n";
-        }
-        return s;
-    }
 
     public ArrayList<Stanza> getStanze() {
         return stanze;
@@ -54,44 +39,62 @@ public class UnitaImmobiliare implements Serializable {
         return artefatti;
     }
 
-    public void inserisciStanza(Stanza stanza){
+    public void inserisciStanza(Stanza stanza) {
         stanze.add(stanza);
     }
 
-    public void inserisciArtefatto(Artefatto artefatto){
+    public void inserisciArtefatto(Artefatto artefatto) {
         artefatti.add(artefatto);
     }
 
-    public void associaSensoreAStanze(Sensore sensoreAss,ArrayList<Stanza> stanzeAss){
-        for(Stanza s:stanzeAss){
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss) {
+        for (Stanza s : stanzeAss) {
             s.inserisciSensore(sensoreAss);
         }
     }
 
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss,ArrayList<Stanza> stanzeAss){
-        for(Stanza s:stanzeAss){
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss) {
+        for (Stanza s : stanzeAss) {
             s.inserisciAttuatore(attuatoreAss);
         }
     }
 
-    public void associaSensoreAdArtefatti(Sensore sensoreAss,ArrayList<Artefatto> artefattoAss){
-        for(Artefatto a:artefattoAss){
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss) {
+        for (Artefatto a : artefattoAss) {
             a.inserisciSensore(sensoreAss);
         }
     }
 
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss,ArrayList<Artefatto> artefattoAss){
-        for(Artefatto a:artefattoAss){
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss) {
+        for (Artefatto a : artefattoAss) {
             a.inserisciAttuatore(attuatoreAss);
         }
     }
+    public String visualizzaStanze() {
+        StringBuilder tmp = new StringBuilder("");
+        tmp.append("Le stanze sono:\n");
+        for (Stanza s : stanze) {
+            tmp.append(s.toString()).append("\n");
+        }
+        return tmp.toString();
+    }
+
+    public String visualizzaArtefatti() {
+        StringBuilder tmp = new StringBuilder("");
+        tmp.append("Gli Artefatti sono:\n");
+        for (Artefatto a : artefatti) {
+            tmp.append(a.toString()).append("\n");
+        }
+        return tmp.toString();
+    }
+
 
     @Override
     public String toString() {
-        return "it.unibs.fp.UnitàImmobiliare{" +
-                "nome='" + nome + '\'' +
-                ", stanze=" + stanze +
-                ", artefatti=" + artefatti +
-                '}';
+        StringBuilder tmp = new StringBuilder("");
+        tmp.append("L'unità immobiliare è così composta:\n");
+        tmp.append(visualizzaStanze());
+        tmp.append(visualizzaArtefatti());
+        return tmp.toString();
     }
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class Manutentore implements Serializable {
     private ListaCategorie listaCategorie;
+
     public Manutentore() {
         listaCategorie = new ListaCategorie();
     }
@@ -23,36 +24,30 @@ public class Manutentore implements Serializable {
         }
     }
 
-    public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare){
+    public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliare.inserisciStanza(stanza);
     }
 
-    public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare){
+    public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliare.inserisciArtefatto(artefatto);
     }
 
-    public void inserisciAttuatore(Attuatore attuatore, UnitaImmobiliare unitaImmobiliare){
+    public void inserisciAttuatore(Attuatore attuatore, UnitaImmobiliare unitaImmobiliare) {
 
     }
 
-    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss){
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss) {
 
     }
 
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss,ArrayList<Stanza> stanzeAss){
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss) {
 
     }
 
-    public void associaSensoreAdArtefatti(Sensore sensoreAss,ArrayList<Artefatto> artefattoAss){
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss) {
 
     }
 
-    @Override
-    public String toString() {
-        return "Manutentore{" +
-                "listaCategorie=" + listaCategorie +
-                '}';
-    }
 
     public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss) {
 
@@ -62,19 +57,24 @@ public class Manutentore implements Serializable {
         return listaCategorie;
     }
 
-    public String visualizzaCategorieSensori(){
+    public String visualizzaCategorieSensori() {
         return listaCategorie.visualizzaCategorieSensori();
     }
 
 
-    public String visualizzaDescrizioneCatergorie(){
+    public String visualizzaDescrizioneCatergorie() {
         return null;
     }
 
-    public String visualizzaDescrizioneStanze(){
+    public String visualizzaDescrizioneStanze() {
         return null;
     }
 
-
+    @Override
+    public String toString() {
+        return "Manutentore{" +
+                "listaCategorie=" + listaCategorie +
+                '}';
+    }
 
 }

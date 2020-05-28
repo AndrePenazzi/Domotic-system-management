@@ -5,6 +5,10 @@ import java.io.Serializable;
 public class Attuatore implements Serializable {
     private String nome;
 
+    public Attuatore(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -13,14 +17,8 @@ public class Attuatore implements Serializable {
         this.nome = nome;
     }
 
-    public Attuatore(String nome) {
-        this.nome = nome;
-    }
-
     @Override
     public String toString() {
-        return "it.unibs.fp.Attuatore{" +
-                "nome='" + nome + '\'' +
-                '}';
+        return "Attuatore: nome=" + nome + ".\n";
     }
 }

@@ -2,6 +2,7 @@ package it.unibs.fp;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+
 //TODO c'è un attributo descrizione in generalità da rivedere
 public class CategoriaSensori implements Serializable {
     private String nome;
@@ -10,11 +11,6 @@ public class CategoriaSensori implements Serializable {
     public CategoriaSensori(String nome) {
         this.nome = nome;
         this.sensori = new ArrayList<>();
-    }
-
-    @Override
-    public String toString() {
-        return nome;
     }
 
     public String getNome() {
@@ -31,6 +27,10 @@ public class CategoriaSensori implements Serializable {
 
     public void setSensori(ArrayList<Sensore> sensori) {
         this.sensori = sensori;
+    }
+
+    public String toString() {
+        return "Categoria sensori: nome=" + nome + ".\n";
     }
 
 }

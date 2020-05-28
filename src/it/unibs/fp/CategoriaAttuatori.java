@@ -12,11 +12,6 @@ public class CategoriaAttuatori implements Serializable {
         this.attuatori = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return nome;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -31,5 +26,9 @@ public class CategoriaAttuatori implements Serializable {
 
     public void setAttuatori(ArrayList<Attuatore> attuatori) {
         this.attuatori = attuatori;
+    }
+
+    public String toString() {
+        return "Categoria sensori: nome=" + nome + ".\n";
     }
 }

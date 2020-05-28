@@ -22,16 +22,25 @@ public class Stanza implements Serializable {
         return sensori;
     }
 
-    public void inserisciSensore(Sensore sensore){
+    public void inserisciSensore(Sensore sensore) {
         sensori.add(sensore);
     }
 
-    public void inserisciAttuatore(Attuatore attuatore){
+    public void inserisciAttuatore(Attuatore attuatore) {
         attuatori.add(attuatore);
     }
 
     @Override
     public String toString() {
-        return nome;
+        StringBuilder tmp = new StringBuilder("");
+        tmp.append("Nella stanza").append(nome).append(" ci sono i seguenti componenti.\nI sensori sono:\n");
+        for (Sensore s : sensori) {
+            tmp.append(s.toString()).append("\n");
+        }
+        tmp.append("Gli attuatori sono:\n");
+        for (Attuatore a : attuatori) {
+            tmp.append(a.toString()).append("\n");
+        }
+        return tmp.toString();
     }
 }

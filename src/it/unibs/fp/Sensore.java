@@ -5,6 +5,10 @@ import java.io.Serializable;
 public class Sensore implements Serializable {
     private String nome;
 
+    public Sensore(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -13,17 +17,13 @@ public class Sensore implements Serializable {
         this.nome = nome;
     }
 
-    public Sensore(String nome) {
-        this.nome = nome;
-    }
-
     //TODO PENSACI TU!!! :)
-    public String rilevaVariabileFisica(){ return "";}
+    public String rilevaVariabileFisica() {
+        return "";
+    }
 
     @Override
     public String toString() {
-        return "it.unibs.fp.Sensore{" +
-                "nome='" + nome + '\'' +
-                '}';
+        return "Sensore: nome=" + nome + ".\n";
     }
 }
