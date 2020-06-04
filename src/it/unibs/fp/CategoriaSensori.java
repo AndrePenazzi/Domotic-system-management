@@ -8,27 +8,43 @@ public class CategoriaSensori implements Serializable {
     private String nome;
     private ArrayList<Sensore> sensori;
 
+    /**
+     * Costruttore categoria sensori
+     * @param nome
+     */
     public CategoriaSensori(String nome) {
         this.nome = nome;
         this.sensori = new ArrayList<>();
     }
 
+    /**
+     * Getter
+     * @return nome
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * Setter
+     * @param nome modificato.
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * Getter
+     * @return sensori.
+     */
     public ArrayList<Sensore> getSensori() {
         return sensori;
     }
 
-    public void setSensori(ArrayList<Sensore> sensori) {
-        this.sensori = sensori;
-    }
-
+    /**
+     * toString
+     * @return descrizione categoria attuatori
+     */
     public String toString() {
         return "Categoria sensori: nome=" + nome + ".\n";
     }

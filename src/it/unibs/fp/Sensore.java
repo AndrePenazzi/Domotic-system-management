@@ -7,6 +7,7 @@ public class Sensore implements Serializable {
 
     /**
      * Costruttore del sensore.
+     *
      * @param nome del sensore.
      */
     public Sensore(String nome) {
@@ -21,6 +22,7 @@ public class Sensore implements Serializable {
 
     /**
      * Getter.
+     *
      * @return name.
      */
     public String getNome() {
@@ -29,6 +31,7 @@ public class Sensore implements Serializable {
 
     /**
      * Setter.
+     *
      * @param nome del sensore.
      */
     public void setNome(String nome) {
@@ -37,6 +40,7 @@ public class Sensore implements Serializable {
 
     /**
      * toString.
+     *
      * @return descrizione del sensore.
      */
     @Override
