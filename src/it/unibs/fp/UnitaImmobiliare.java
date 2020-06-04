@@ -70,6 +70,7 @@ public class UnitaImmobiliare implements Serializable {
             a.inserisciAttuatore(attuatoreAss);
         }
     }
+
     public String visualizzaStanze() {
         StringBuilder tmp = new StringBuilder("");
         tmp.append("Le stanze sono:\n");
@@ -91,10 +92,8 @@ public class UnitaImmobiliare implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder tmp = new StringBuilder("");
-        tmp.append("L'unità immobiliare è così composta:\n");
-        tmp.append(visualizzaStanze());
-        tmp.append(visualizzaArtefatti());
-        return tmp.toString();
+        return "L'unità immobiliare è così composta:\n" +
+                visualizzaStanze() +
+                visualizzaArtefatti();
     }
 }

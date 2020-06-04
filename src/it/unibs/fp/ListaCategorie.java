@@ -37,18 +37,18 @@ public class ListaCategorie implements Serializable {
     }
 
     public String visualizzaCategorieSensori(){
-        String s="";
+        StringBuilder s= new StringBuilder();
         for(int i=0;i<categorieSensori.size();i++){
-            s+=(i+1)+" "+categorieSensori.get(i).toString()+"\n";
+            s.append(i + 1).append(" ").append(categorieSensori.get(i).toString()).append("\n");
         }
-        return s;
+        return s.toString();
     }
 
     public String visualizzaCategorieAttuatori(){
-        String s="";
+        StringBuilder s= new StringBuilder();
         for(int i=0;i<categorieAttuatori.size();i++){
-            s+=(i+1)+" "+categorieAttuatori.get(i).toString()+"\n";
+            s.append(i + 1).append(" ").append(categorieAttuatori.get(i).toString()).append("\n");
         }
-        return s;
+        return s.toString();
     }
 }

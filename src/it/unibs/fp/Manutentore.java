@@ -11,17 +11,23 @@ public class Manutentore implements Serializable {
     }
 
     public void inserisciESalvaCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
-        for (int i = 0; i < listaCategorie.getSizeCategorieSensori(); i++) {
-            if (!listaCategorie.getCategorieAttuatori().contains(categoriaAttuatori))
-                listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
+        boolean found = false;
+        for (int i = 0; i < listaCategorie.getSizeCategorieAttuatori(); i++) {
+            if (!listaCategorie.getCategorieAttuatori().get(i).getNome().equals(categoriaAttuatori.getNome()))
+                found = true;
         }
+        if (!found)
+        listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
     }
 
     public void inserisciESalvaCategoriaSensori(CategoriaSensori categoriaSensori) {
+        boolean found = false;
         for (int i = 0; i < listaCategorie.getSizeCategorieSensori(); i++) {
-            if (!listaCategorie.getCategorieSensori().contains(categoriaSensori))
-                listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
+            if (listaCategorie.getCategorieSensori().get(i).getNome().equals(categoriaSensori.getNome()))
+                found = true;
         }
+        if (!found)
+            listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
 
     public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
@@ -32,25 +38,21 @@ public class Manutentore implements Serializable {
         unitaImmobiliare.inserisciArtefatto(artefatto);
     }
 
-    public void inserisciAttuatore(Attuatore attuatore, UnitaImmobiliare unitaImmobiliare) {
-
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaSensoreAStanze(sensoreAss, stanzeAss);
     }
 
-    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss) {
-
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaAttuatoreAStanze(attuatoreAss, stanzeAss);
     }
 
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss) {
-
-    }
-
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss) {
-
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaSensoreAdArtefatti(sensoreAss, artefattoAss);
     }
 
 
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss) {
-
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
     }
 
     public ListaCategorie getListaCategorie() {
@@ -61,13 +63,16 @@ public class Manutentore implements Serializable {
         return listaCategorie.visualizzaCategorieSensori();
     }
 
+    public String visualizzaCategorieAttuatori() {
+        return listaCategorie.visualizzaCategorieAttuatori();
+    }
 
     public String visualizzaDescrizioneCatergorie() {
         return null;
     }
 
-    public String visualizzaDescrizioneStanze() {
-        return null;
+    public String visualizzaDescrizioneStanze(UnitaImmobiliare unitaImmobiliare) {
+        return unitaImmobiliare.visualizzaStanze();
     }
 
     @Override
