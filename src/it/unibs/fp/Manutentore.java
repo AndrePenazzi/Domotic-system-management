@@ -11,8 +11,10 @@ public class Manutentore implements Serializable {
     public void inserisciESalvaCategoriaAttuatori(ListaCategorie listaCategorie, CategoriaAttuatori categoriaAttuatori) {
         boolean found = false;
         for(CategoriaAttuatori c:listaCategorie.getCategorieAttuatori())
-            if(c.equals(categoriaAttuatori.getNome()))
+            if (c.getNome().equals(categoriaAttuatori.getNome())) {
                 found = true;
+                break;
+            }
 
         if (!found)
             listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
@@ -21,8 +23,10 @@ public class Manutentore implements Serializable {
     public void inserisciESalvaCategoriaSensori(ListaCategorie listaCategorie, CategoriaSensori categoriaSensori) {
         boolean found = false;
         for(CategoriaSensori s: listaCategorie.getCategorieSensori())
-            if(s.equals(categoriaSensori.getNome()))
+            if (s.getNome().equals(categoriaSensori.getNome())) {
                 found = true;
+                break;
+            }
         if (!found)
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }

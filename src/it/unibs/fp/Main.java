@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
     private static final String[] s = {"Accedi come manutentore", "Accedi come fruitore"};
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Manutentore manutentore;
         UnitaImmobiliare unitaImmobiliare;
@@ -27,9 +27,7 @@ public class Main {
             unitaImmobiliare = (UnitaImmobiliare) ServizioFile.caricaSingoloOggetto(new File("datiUnitaImmobiliare.txt"));
             fruitore = (Fruitore) ServizioFile.caricaSingoloOggetto(new File("datiFruitore.txt"));
             listaCategorie = (ListaCategorie) ServizioFile.caricaSingoloOggetto(new File("datiListaCategorie.txt"));
-        }
-
-        else {
+        } else {
             manutentore = new Manutentore();
             unitaImmobiliare = new UnitaImmobiliare("Casa di pav");
             fruitore = new Fruitore();
@@ -39,7 +37,6 @@ public class Main {
             ServizioFile.salvaSingoloOggetto(new File("datiFruitore.txt"), fruitore);
             ServizioFile.salvaSingoloOggetto(new File("datiListaCategorie.txt"), listaCategorie);
         }
-
 
 
         System.out.println(BelleStringhe.incornicia("Benvenuto"));
@@ -57,12 +54,12 @@ public class Main {
                 break;
 
                 case 1: {
-                    stampaMenuManutentore(manutentore, unitaImmobiliare,listaCategorie);
+                    stampaMenuManutentore(manutentore, unitaImmobiliare, listaCategorie);
                 }
                 break;
 
-                case 2:{
-                    stampaMenuVisualizzazione(listaCategorie,unitaImmobiliare);
+                case 2: {
+                    stampaMenuVisualizzazione(listaCategorie, unitaImmobiliare);
                 }
                 break;
             }
@@ -133,7 +130,7 @@ public class Main {
                 break;
 
                 case 2: {
-                    stampaMenuVisualizzazione(listaCategorie,unitaImmobiliare);
+                    stampaMenuVisualizzazione(listaCategorie, unitaImmobiliare);
                 }
                 break;
             }
@@ -156,22 +153,70 @@ public class Main {
 
                 case 1: {
                     do {
+                        boolean testoLiberoOK = false;
+                        ArrayList<InformazioneRilevabile> informazioniRilevabili = new ArrayList<>();
                         String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria sensori: ");
-                        manutentore.inserisciESalvaCategoriaSensori(listaCategorie, new CategoriaSensori(nome));
+                        do {
+                            boolean infoRilevabileOK = false;
+                            try {
+                                String testoLibero = InputDati.leggiStringaNonVuota("Inserisci un testo libero di lunghezza massima 50 caratteri: ");
+                                do {
+                                    String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
+                                    do {
+                                        try {
+                                            double min = InputDati.leggiDouble("Inserisci il valore minimo rilevabile");
+                                            double max = InputDati.leggiDouble("Inserisci il valore massimo rilevabile");
+
+                                            informazioniRilevabili.add(new InformazioneRilevabile(nomeInfo, min, max));
+                                            infoRilevabileOK = true;
+                                        } catch (IllegalArgumentException e) {
+                                            System.out.println(e.getMessage());
+                                        }
+                                    } while (!infoRilevabileOK);
+                                } while (InputDati.yesOrNo("Vuoi inserire un'altra informazione rilevabile?"));
+                                manutentore.inserisciESalvaCategoriaSensori(listaCategorie, new CategoriaSensori(nome, testoLibero, informazioniRilevabili));
+                                testoLiberoOK = true;
+                            } catch (IllegalArgumentException e) {
+                                System.out.println(e.getMessage());
+                            }
+                        } while (!testoLiberoOK);
                         ServizioFile.salvaSingoloOggetto(new File("datiListaCategorie.txt"), listaCategorie);
                     } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria sensori?"));
                     listaCategorie = (ListaCategorie) ServizioFile.caricaSingoloOggetto(new File("datiListaCategorie.txt"));
                 }
                 break;
-                //TODO fai nome categoria senza spazi univoco+testo libero con lunghezza predefinita+cosa misura
                 case 2: {
                     do {
+                        boolean testoLiberoOK = false;
+                        ArrayList<ModalitaOperativa> modalitaOperative = new ArrayList<>();
                         String nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome categoria attuatori: ");
-                        manutentore.inserisciESalvaCategoriaAttuatori(listaCategorie, new CategoriaAttuatori(nome));
+                        do {
+                            try {
+                                String testoLibero = InputDati.leggiStringaNonVuota("Inserisci un testo libero di lunghezza massima " + CategoriaAttuatori.getLunghezzaMassima() + " caratteri: ");
+                                do {
+                                    String nomeModalitaOperativa = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome della modalita operativa: ");
+
+                                        if (InputDati.yesOrNo("Vuoi inserire una modalita operativa con valore?")) {
+                                            double valore = InputDati.leggiDouble("Inserisci il valore:");
+                                            modalitaOperative.add(new ModalitaOperativa(nomeModalitaOperativa, valore));
+                                        } else {
+                                            modalitaOperative.add(new ModalitaOperativa(nomeModalitaOperativa));
+                                        }
+                                } while (InputDati.yesOrNo("Vuoi inserire un'altra modalita operativa?"));
+                                manutentore.inserisciESalvaCategoriaAttuatori(listaCategorie, new CategoriaAttuatori(nome, testoLibero, modalitaOperative));
+                                testoLiberoOK = true;
+                            } catch (IllegalArgumentException e) {
+                                System.out.println(e.getMessage());
+                            }
+                        } while (!testoLiberoOK);
                         ServizioFile.salvaSingoloOggetto(new File("datiListaCategorie.txt"), listaCategorie);
+
+
                     } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria attuatori?"));
+                    listaCategorie = (ListaCategorie) ServizioFile.caricaSingoloOggetto(new File("datiListaCategorie.txt"));
                 }
                 break;
+
 
                 case 3: {
                     do {
