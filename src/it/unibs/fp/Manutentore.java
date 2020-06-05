@@ -4,28 +4,25 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Manutentore implements Serializable {
-    private ListaCategorie listaCategorie;
 
     public Manutentore() {
-        listaCategorie = new ListaCategorie();
     }
 
-    public void inserisciESalvaCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
+    public void inserisciESalvaCategoriaAttuatori(ListaCategorie listaCategorie, CategoriaAttuatori categoriaAttuatori) {
         boolean found = false;
-        for (int i = 0; i < listaCategorie.getSizeCategorieAttuatori(); i++) {
-            if (!listaCategorie.getCategorieAttuatori().get(i).getNome().equals(categoriaAttuatori.getNome()))
+        for(CategoriaAttuatori c:listaCategorie.getCategorieAttuatori())
+            if(c.equals(categoriaAttuatori.getNome()))
                 found = true;
-        }
+
         if (!found)
-        listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
+            listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
     }
 
-    public void inserisciESalvaCategoriaSensori(CategoriaSensori categoriaSensori) {
+    public void inserisciESalvaCategoriaSensori(ListaCategorie listaCategorie, CategoriaSensori categoriaSensori) {
         boolean found = false;
-        for (int i = 0; i < listaCategorie.getSizeCategorieSensori(); i++) {
-            if (listaCategorie.getCategorieSensori().get(i).getNome().equals(categoriaSensori.getNome()))
+        for(CategoriaSensori s: listaCategorie.getCategorieSensori())
+            if(s.equals(categoriaSensori.getNome()))
                 found = true;
-        }
         if (!found)
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
@@ -55,31 +52,12 @@ public class Manutentore implements Serializable {
         unitaImmobiliare.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
     }
 
-    public ListaCategorie getListaCategorie() {
-        return listaCategorie;
-    }
-
-    public String visualizzaCategorieSensori() {
-        return listaCategorie.visualizzaCategorieSensori();
-    }
-
-    public String visualizzaCategorieAttuatori() {
-        return listaCategorie.visualizzaCategorieAttuatori();
-    }
-
     public String visualizzaDescrizioneCatergorie() {
         return null;
     }
 
     public String visualizzaDescrizioneStanze(UnitaImmobiliare unitaImmobiliare) {
         return unitaImmobiliare.visualizzaStanze();
-    }
-
-    @Override
-    public String toString() {
-        return "Manutentore{" +
-                "listaCategorie=" + listaCategorie +
-                '}';
     }
 
 }

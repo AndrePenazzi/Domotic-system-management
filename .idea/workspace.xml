@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="Made">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datiManutentore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datiManutentore.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiUImmob.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datiUImmob.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datiUImmob.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,18 +38,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -98,6 +79,7 @@
       <workItem from="1590669872931" duration="285000" />
       <workItem from="1590674675253" duration="3905000" />
       <workItem from="1591276278728" duration="11962000" />
+      <workItem from="1591364184378" duration="712000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -117,20 +99,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -146,22 +127,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="613" key="GridCell.Tab.0.bottom" timestamp="1590678588434">
+    <state width="1493" height="622" key="GridCell.Tab.0.bottom" timestamp="1591295887186">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="613" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
-    <state width="1493" height="613" key="GridCell.Tab.0.center" timestamp="1590678588434">
+    <state width="1493" height="622" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591295887186" />
+    <state width="1493" height="622" key="GridCell.Tab.0.center" timestamp="1591295887186">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="613" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
-    <state width="1493" height="613" key="GridCell.Tab.0.left" timestamp="1590678588434">
+    <state width="1493" height="622" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591295887186" />
+    <state width="1493" height="622" key="GridCell.Tab.0.left" timestamp="1591295887186">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="613" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
-    <state width="1493" height="613" key="GridCell.Tab.0.right" timestamp="1590678588434">
+    <state width="1493" height="622" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591295887186" />
+    <state width="1493" height="622" key="GridCell.Tab.0.right" timestamp="1591295887186">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="613" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1590678588434" />
+    <state width="1493" height="622" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591295887186" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1590674692069">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
