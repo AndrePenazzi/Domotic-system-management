@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/InformazioneRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModalitaOperativa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiManutentore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/datiManutentore.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InformazioneRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InformazioneRilevabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +93,9 @@
       <workItem from="1590674675253" duration="3905000" />
       <workItem from="1591276278728" duration="11962000" />
       <workItem from="1591364184378" duration="712000" />
+      <workItem from="1591431309999" duration="6403000" />
+      <workItem from="1591540931336" duration="1927000" />
+      <workItem from="1591603064800" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -111,11 +111,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591280237523</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile.">
+      <created>1591374536739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591374536740</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -133,7 +140,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
     <MESSAGE value="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi." />
+    <MESSAGE value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1590676960724">

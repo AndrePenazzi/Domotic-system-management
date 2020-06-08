@@ -162,7 +162,7 @@ public class UnitaImmobiliare implements Serializable {
      */
     @Override
     public String toString() {
-        return "L'unita' immobiliare è così composta:\n" +
+        return "L'unita' immobiliare: "+nome+" è così composta:\n" +
                 visualizzaStanze() +
                 visualizzaArtefatti();
     }

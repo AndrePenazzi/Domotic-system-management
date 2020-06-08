@@ -10,19 +10,11 @@ public class InformazioneRilevabile {
         this.nome = nome;
         this.min = min;
         this.max = max;
-        if (min > max) throw new IllegalArgumentException("Il valore minimo deve essere più basso di quello massimo!!!");
+        if (min > max)
+            throw new IllegalArgumentException("Il valore minimo deve essere più basso di quello massimo!!!");
         valore = min;
     }
 
-    @Override
-    public String toString() {
-        return "InformazioneRilevabile{" +
-                "nome='" + nome + '\'' +
-                ", min=" + min +
-                ", max=" + max +
-                ", valore=" + valore +
-                '}';
-    }
 
     public String getNome() {
         return nome;
@@ -38,5 +30,15 @@ public class InformazioneRilevabile {
 
     public double getValore() {
         return valore;
+    }
+
+    @Override
+    public String toString() {
+        return "InformazioneRilevabile:\n" +
+                "nome='" + nome + '\'' +
+                ", min=" + min +
+                ", max=" + max +
+                ", valore=" + valore +
+                '\n';
     }
 }
