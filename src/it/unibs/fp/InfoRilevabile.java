@@ -1,12 +1,14 @@
 package it.unibs.fp;
 
-public class InformazioneRilevabile {
+import java.io.Serializable;
+
+public class InfoRilevabile implements Serializable {
     private String nome;
     private double min;
     private double max;
     private double valore;
 
-    public InformazioneRilevabile(String nome, double min, double max) throws IllegalArgumentException {
+    public InfoRilevabile(String nome, double min, double max) throws IllegalArgumentException {
         this.nome = nome;
         this.min = min;
         this.max = max;

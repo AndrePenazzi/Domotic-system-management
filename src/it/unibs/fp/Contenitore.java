@@ -1,13 +1,18 @@
 package it.unibs.fp;
 
-public class Contenitore {
+import java.io.Serializable;
+
+public class Contenitore implements Serializable {
     private UnitaImmobiliare unitaImmobiliare;
     private Manutentore manutentore;
+    private Fruitore fruitore;
+    private ListaCategorie listaCategorie;
 
-    public Contenitore(UnitaImmobiliare unitaImmobiliare, Manutentore manutentore, Fruitore fruitore) {
+    public Contenitore(UnitaImmobiliare unitaImmobiliare, Manutentore manutentore, Fruitore fruitore, ListaCategorie listaCategorie) {
         this.unitaImmobiliare = unitaImmobiliare;
         this.manutentore = manutentore;
         this.fruitore = fruitore;
+        this.listaCategorie = listaCategorie;
     }
 
     public UnitaImmobiliare getUnitaImmobiliare() {
@@ -34,5 +39,11 @@ public class Contenitore {
         this.fruitore = fruitore;
     }
 
-    private Fruitore fruitore;
+    public ListaCategorie getListaCategorie() {
+        return listaCategorie;
+    }
+
+    public void setListaCategorie(ListaCategorie listaCategorie) {
+        this.listaCategorie = listaCategorie;
+    }
 }

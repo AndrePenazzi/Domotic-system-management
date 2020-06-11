@@ -8,15 +8,15 @@ public class CategoriaAttuatori implements Serializable {
     private String nome;
     private ArrayList<Attuatore> attuatori;
     private String testoLibero;
-    private ArrayList<ModalitaOperativa> modalitaOperative = new ArrayList<>();
+    private ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
 
-    public CategoriaAttuatori(String nome, String testoLibero, ArrayList<ModalitaOperativa> modalitaOperative) throws IllegalArgumentException {
+    public CategoriaAttuatori(String nome, String testoLibero, ArrayList<ModOperativa> modalitaOperative) throws IllegalArgumentException {
         this.nome = nome;
         this.attuatori = new ArrayList<>();
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
         this.testoLibero = testoLibero;
-        this.modalitaOperative.add(new ModalitaOperativa("Idle"));
+        this.modalitaOperative.add(new ModOperativa("Idle"));
         this.modalitaOperative = modalitaOperative;
     }
 
@@ -28,7 +28,7 @@ public class CategoriaAttuatori implements Serializable {
         return testoLibero;
     }
 
-    public ArrayList<ModalitaOperativa> getModalitaOperative() {
+    public ArrayList<ModOperativa> getModalitaOperative() {
         return modalitaOperative;
     }
 

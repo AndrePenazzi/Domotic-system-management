@@ -10,7 +10,8 @@ import java.util.ArrayList;
 public class ClasseDiServizio {
 
 
-    public static void menuPrincipale(Manutentore manutentore, UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    public static void menuPrincipale(Contenitore contenitore) {
+
         boolean finito = false;
         String[] azione = {"Accedi come manutentore", "Accedi come fruitore"};
         MyMenu menu = new MyMenu("Menu principal amigo", azione);
@@ -25,12 +26,12 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    stampaMenuManutentore(manutentore, unitaImmobiliare, listaCategorie);
+                    stampaMenuManutentore(contenitore);
                 }
                 break;
 
                 case 2: {
-                    stampaMenuVisualizzazione(listaCategorie, unitaImmobiliare);
+                    stampaMenuVisualizzazione(contenitore);
                 }
                 break;
             }
@@ -41,7 +42,7 @@ public class ClasseDiServizio {
     Inizio Manutentore-----------------------------------------------------------------------------------------------------
      */
 
-    private static void stampaMenuManutentore(Manutentore manutentore, UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    private static void stampaMenuManutentore(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Inserisci e associa", "Visualizza categorie e valori rilevati"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
@@ -55,12 +56,12 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    stampaMenuManutentoreInserisciEAssocia(manutentore, unitaImmobiliare, listaCategorie);
+                    stampaMenuManutentoreInserisciEAssocia(contenitore);
                 }
                 break;
 
                 case 2: {
-                    stampaMenuVisualizzazione(listaCategorie, unitaImmobiliare);
+                    stampaMenuVisualizzazione(contenitore);
                 }
                 break;
             }
@@ -70,7 +71,7 @@ public class ClasseDiServizio {
     /*
     Visualizzazione
      */
-    private static void stampaMenuVisualizzazione(ListaCategorie listaCategorie, UnitaImmobiliare unitaImmobiliare) {
+    private static void stampaMenuVisualizzazione(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
@@ -86,31 +87,31 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    System.out.println(listaCategorie.visualizzaCategorieSensori());
+                    System.out.println(contenitore.getListaCategorie().visualizzaCategorieSensori());
                 }
                 break;
 
                 case 2: {
-                    System.out.println(listaCategorie.visualizzaCategorieAttuatori());
+                    System.out.println(contenitore.getListaCategorie().visualizzaCategorieAttuatori());
                 }
                 break;
 
                 case 3: {
-                    System.out.println(unitaImmobiliare.visualizzaStanze());
+                    System.out.println(contenitore.getUnitaImmobiliare().visualizzaStanze());
                 }
                 break;
 
                 case 4: {
-                    System.out.println(unitaImmobiliare.visualizzaArtefatti());
+                    System.out.println(contenitore.getUnitaImmobiliare().visualizzaArtefatti());
                 }
                 break;
             }
         } while (!finito);
     }
 
-    private static void stampaMenuManutentoreInserisciEAssocia(Manutentore manutentore, UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    private static void stampaMenuManutentoreInserisciEAssocia(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto"};
+        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore ad artefatto", "Associa attuatore ad artefatto"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -123,42 +124,32 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    listaCategorie = inserisciESalvaCategioriaSensori(manutentore, listaCategorie);
+                    inserisciESalvaCategioriaSensori(contenitore);
                 }
                 break;
                 case 2: {
-                    listaCategorie = inserisciESalvaCategioriaAttuatori(manutentore, listaCategorie);
+                    inserisciESalvaCategioriaAttuatori(contenitore);
                 }
                 break;
 
 
                 case 3: {
-                    inserisciNuovaStanza(manutentore, unitaImmobiliare);
+                    inserisciNuovaStanza(contenitore);
                 }
                 break;
 
                 case 4: {
-                    inserisciNuovoArtefatto(manutentore, unitaImmobiliare);
+                    inserisciNuovoArtefatto(contenitore);
                 }
                 break;
 
                 case 5: {
-                    associaSensoreAStanze(listaCategorie, unitaImmobiliare);
+                    associaSensoreAdArtefatti(contenitore);
                 }
                 break;
 
                 case 6: {
-                    associaAttuatoreAStanze(listaCategorie, unitaImmobiliare);
-                }
-                break;
-
-                case 7: {
-                    associaSensoreAdArtefatti(listaCategorie, unitaImmobiliare);
-                }
-                break;
-
-                case 8: {
-                    associaAttuatoreAdArtefatti(listaCategorie, unitaImmobiliare);
+                    associaAttuatoreAdArtefatti(contenitore);
                 }
                 break;
             }
@@ -167,61 +158,67 @@ public class ClasseDiServizio {
     }
 
 
-    private static void associaSensoreAStanze(ListaCategorie listaCategorie, UnitaImmobiliare unitaImmobiliare) {
-        do {
-            Sensore nuovoSensore = creaSensore(listaCategorie);
-            ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
-            unitaImmobiliare.associaSensoreAStanze(nuovoSensore, stanze);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
-        } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a una stanza?"));
-
-    }
 
 
-    private static void associaAttuatoreAStanze(ListaCategorie listaCategorie, UnitaImmobiliare unitaImmobiliare) {
-        do {
-            Attuatore nuovoAttuatore = creaAttuatore(listaCategorie);
-            ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
-            unitaImmobiliare.associaAttuatoreAStanze(nuovoAttuatore, stanze);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
-        } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a stanze?"));
-
-    }
-
-    private static void associaSensoreAdArtefatti(ListaCategorie listaCategorie, UnitaImmobiliare unitaImmobiliare) {
+    private static void associaSensoreAdArtefatti(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
         do {
             Sensore nuovoSensore = creaSensore(listaCategorie);
             ArrayList<Artefatto> artefatti = scegliArtefatti(unitaImmobiliare);
-            unitaImmobiliare.associaSensoreAdArtefatti(nuovoSensore, artefatti);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+            manutentore.associaSensoreAdArtefatti(nuovoSensore,artefatti,unitaImmobiliare);
+
+            contenitore.setListaCategorie(listaCategorie);
+            contenitore.setUnitaImmobiliare(unitaImmobiliare);
+            contenitore.setManutentore(manutentore);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
         } while (InputDati.yesOrNo("Vuoi associare un'altro sensore ad artefatti?"));
     }
 
-    private static void associaAttuatoreAdArtefatti(ListaCategorie listaCategorie, UnitaImmobiliare unitaImmobiliare) {
+    private static void associaAttuatoreAdArtefatti(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
         do {
             Attuatore nuovoAttuatore = creaAttuatore(listaCategorie);
             ArrayList<Artefatto> artefatti = scegliArtefatti(unitaImmobiliare);
-            unitaImmobiliare.associaAttuatoreAdArtefatti(nuovoAttuatore, artefatti);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+            manutentore.associaAttuatoreAdArtefatti(nuovoAttuatore, artefatti,unitaImmobiliare);
+
+            contenitore.setListaCategorie(listaCategorie);
+            contenitore.setUnitaImmobiliare(unitaImmobiliare);
+            contenitore.setManutentore(manutentore);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
         } while (InputDati.yesOrNo("Vuoi associare un'altro attuatore ad artefatti?"));
     }
 
 
-    private static void inserisciNuovoArtefatto(Manutentore manutentore, UnitaImmobiliare unitaImmobiliare) {
+    private static void inserisciNuovoArtefatto(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        Manutentore manutentore = contenitore.getManutentore();
         do {
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome nuovo artefatto: ");
             manutentore.inserisciArtefatto(new Artefatto(nome), unitaImmobiliare);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+
+            contenitore.setManutentore(manutentore);
+            contenitore.setUnitaImmobiliare(unitaImmobiliare);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
         } while (InputDati.yesOrNo("Vuoi inserire un'altro artefatto?"));
 
     }
 
 
-    private static void inserisciNuovaStanza(Manutentore manutentore, UnitaImmobiliare unitaImmobiliare) {
+    private static void inserisciNuovaStanza(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        Manutentore manutentore = contenitore.getManutentore();
+
         do {
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova stanza: ");
             manutentore.inserisciStanza(new Stanza(nome), unitaImmobiliare);
-            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+
+            contenitore.setManutentore(manutentore);
+            contenitore.setUnitaImmobiliare(unitaImmobiliare);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
         } while (InputDati.yesOrNo("Vuoi inserire un'altra stanza?"));
     }
 
@@ -271,10 +268,12 @@ public class ClasseDiServizio {
         return new Sensore(nome);
     }
 
-    private static ListaCategorie inserisciESalvaCategioriaSensori(Manutentore manutentore, ListaCategorie listaCategorie) {
+    private static void inserisciESalvaCategioriaSensori(Contenitore contenitore) {
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
         do {
             boolean testoLiberoOK = false;
-            ArrayList<InformazioneRilevabile> informazioniRilevabili = new ArrayList<>();
+            ArrayList<InfoRilevabile> informazioniRilevabili = new ArrayList<>();
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria sensori: ");
             do {
                 boolean infoRilevabileOK = false;
@@ -287,7 +286,7 @@ public class ClasseDiServizio {
                                 double min = InputDati.leggiDouble("Inserisci il valore minimo rilevabile");
                                 double max = InputDati.leggiDouble("Inserisci il valore massimo rilevabile");
 
-                                informazioniRilevabili.add(new InformazioneRilevabile(nomeInfo, min, max));
+                                informazioniRilevabili.add(new InfoRilevabile(nomeInfo, min, max));
                                 infoRilevabileOK = true;
                             } catch (IllegalArgumentException e) {
                                 System.out.println(e.getMessage());
@@ -300,16 +299,20 @@ public class ClasseDiServizio {
                     System.out.println(e.getMessage());
                 }
             } while (!testoLiberoOK);
-            ServizioFile.salvaSingoloOggetto(new File("datiListaCategorie.txt"), listaCategorie);
+
+            contenitore.setListaCategorie(listaCategorie);
+            contenitore.setManutentore(manutentore);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
+
         } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria sensori?"));
-        listaCategorie = (ListaCategorie) ServizioFile.caricaSingoloOggetto(new File("datiListaCategorie.txt"));
-        return listaCategorie;
     }
 
-    private static ListaCategorie inserisciESalvaCategioriaAttuatori(Manutentore manutentore, ListaCategorie listaCategorie) {
+    private static ListaCategorie inserisciESalvaCategioriaAttuatori(Contenitore contenitore) {
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
         do {
             boolean testoLiberoOK = false;
-            ArrayList<ModalitaOperativa> modalitaOperative = new ArrayList<>();
+            ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
             String nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome categoria attuatori: ");
             do {
                 try {
@@ -319,9 +322,9 @@ public class ClasseDiServizio {
 
                         if (InputDati.yesOrNo("Vuoi inserire una modalita operativa con valore?")) {
                             double valore = InputDati.leggiDouble("Inserisci il valore:");
-                            modalitaOperative.add(new ModalitaOperativa(nomeModalitaOperativa, valore));
+                            modalitaOperative.add(new ModOperativa(nomeModalitaOperativa, valore));
                         } else {
-                            modalitaOperative.add(new ModalitaOperativa(nomeModalitaOperativa));
+                            modalitaOperative.add(new ModOperativa(nomeModalitaOperativa));
                         }
                     } while (InputDati.yesOrNo("Vuoi inserire un'altra modalita operativa?"));
                     manutentore.inserisciESalvaCategoriaAttuatori(listaCategorie, new CategoriaAttuatori(nome, testoLibero, modalitaOperative));
@@ -330,7 +333,9 @@ public class ClasseDiServizio {
                     System.out.println(e.getMessage());
                 }
             } while (!testoLiberoOK);
-            ServizioFile.salvaSingoloOggetto(new File("datiListaCategorie.txt"), listaCategorie);
+            contenitore.setListaCategorie(listaCategorie);
+            contenitore.setManutentore(manutentore);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
 
 
         } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria attuatori?"));

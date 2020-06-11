@@ -1,16 +1,18 @@
 package it.unibs.fp;
 
-public class ModalitaOperativa {
+import java.io.Serializable;
+
+public class ModOperativa implements Serializable {
     private String nome;
     private double valore;
 
-    public ModalitaOperativa(String nome) {
+    public ModOperativa(String nome) {
         this.nome = nome;
         valore = 0;
 
     }
 
-    public ModalitaOperativa(String nome, double valore) {
+    public ModOperativa(String nome, double valore) {
         this.nome = nome;
         this.valore = valore;
     }

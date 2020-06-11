@@ -2,21 +2,19 @@ package it.unibs.fp;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Objects;
 
-//TODO c'è un attributo descrizione in generalità da rivedere
 public class CategoriaSensori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 25;
     private String nome;
     private ArrayList<Sensore> sensori;
     private String testoLibero;
-    private ArrayList<InformazioneRilevabile> informazioniRilevabili;
+    private ArrayList<InfoRilevabile> informazioniRilevabili;
 
 
     /**
      * Costruttore categoria sensori
      */
-    public CategoriaSensori(String nome, String testoLibero, ArrayList<InformazioneRilevabile> informazioniRilevabili) throws IllegalArgumentException {
+    public CategoriaSensori(String nome, String testoLibero, ArrayList<InfoRilevabile> informazioniRilevabili) throws IllegalArgumentException {
         this.nome = nome;
         this.sensori = new ArrayList<>();
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
@@ -38,11 +36,11 @@ public class CategoriaSensori implements Serializable {
         this.testoLibero = testoLibero;
     }
 
-    public ArrayList<InformazioneRilevabile> getInformazioniRilevabili() {
+    public ArrayList<InfoRilevabile> getInformazioniRilevabili() {
         return informazioniRilevabili;
     }
 
-    public void setInformazioniRilevabili(ArrayList<InformazioneRilevabile> informazioniRilevabili) {
+    public void setInformazioniRilevabili(ArrayList<InfoRilevabile> informazioniRilevabili) {
         this.informazioniRilevabili = informazioniRilevabili;
     }
 
