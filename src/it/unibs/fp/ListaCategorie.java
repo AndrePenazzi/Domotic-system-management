@@ -12,6 +12,7 @@ public class ListaCategorie implements Serializable {
         categorieAttuatori = new ArrayList<>();
     }
 
+
     public ArrayList<CategoriaSensori> getCategorieSensori() {
         return categorieSensori;
     }

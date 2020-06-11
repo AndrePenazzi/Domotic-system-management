@@ -3,6 +3,7 @@ package it.unibs.fp;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//TODO sensori e stanze
 public class Stanza implements Serializable {
     private String nome;
     private ArrayList<Artefatto> artefatti;

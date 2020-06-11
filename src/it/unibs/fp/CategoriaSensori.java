@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class CategoriaSensori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 25;
     private String nome;
-    private ArrayList<Sensore> sensori;
     private String testoLibero;
     private ArrayList<InfoRilevabile> informazioniRilevabili;
 
@@ -16,7 +15,6 @@ public class CategoriaSensori implements Serializable {
      */
     public CategoriaSensori(String nome, String testoLibero, ArrayList<InfoRilevabile> informazioniRilevabili) throws IllegalArgumentException {
         this.nome = nome;
-        this.sensori = new ArrayList<>();
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
         this.testoLibero = testoLibero;
@@ -62,18 +60,6 @@ public class CategoriaSensori implements Serializable {
         this.nome = nome;
     }
 
-    /**
-     * Getter
-     *
-     * @return sensori.
-     */
-    public ArrayList<Sensore> getSensori() {
-        return sensori;
-    }
-
-    public void setSensori(ArrayList<Sensore> sensori) {
-        this.sensori = sensori;
-    }
 
     /**
      * toString

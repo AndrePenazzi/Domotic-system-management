@@ -4,16 +4,20 @@ import java.io.Serializable;
 
 public class Sensore implements Serializable {
     private String nome;
+    private CategoriaSensori categoriaSensori;
 
-    /**
-     * Costruttore del sensore.
-     *
-     * @param nome del sensore.
-     */
-    public Sensore(String nome) {
+    public Sensore(String nome, CategoriaSensori categoriaSensori) {
         this.nome = nome;
+        this.categoriaSensori = categoriaSensori;
     }
 
+    public CategoriaSensori getCategoriaSensori() {
+        return categoriaSensori;
+    }
+
+    public void setCategoriaSensori(CategoriaSensori categoriaSensori) {
+        this.categoriaSensori = categoriaSensori;
+    }
 
     //TODO PENSACI TU!!! :)
     public String rilevaVariabileFisica() {

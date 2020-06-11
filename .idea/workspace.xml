@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/contenitore.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiFruitore.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiListaCategorie.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiManutentore.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datiUnitaImmobiliare.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenitore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contenitore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InformazioneRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModalitaOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591374536740</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Salvataggio in Contenitore e utilizzo metodi di Manutentore">
+      <created>1591867414451</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591867414451</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,33 +156,42 @@
     <MESSAGE value="toString added" />
     <MESSAGE value="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi." />
     <MESSAGE value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
+    <MESSAGE value="Salvataggio in Contenitore e utilizzo metodi di Manutentore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Salvataggio in Contenitore e utilizzo metodi di Manutentore" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1591864827176">
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1591870503508">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591864827176" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591870503508" />
+    <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1591867412865">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="194" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1591867412865" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1590678519527">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="412" key="GridCell.Tab.0.bottom" timestamp="1591866845479">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom" timestamp="1591871741107">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="412" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591866845479" />
-    <state width="1493" height="412" key="GridCell.Tab.0.center" timestamp="1591866845479">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591871741107" />
+    <state width="1493" height="373" key="GridCell.Tab.0.center" timestamp="1591871741107">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="412" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591866845479" />
-    <state width="1493" height="412" key="GridCell.Tab.0.left" timestamp="1591866845478">
+    <state width="1493" height="373" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591871741107" />
+    <state width="1493" height="373" key="GridCell.Tab.0.left" timestamp="1591871741107">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="412" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591866845478" />
-    <state width="1493" height="412" key="GridCell.Tab.0.right" timestamp="1591866845479">
+    <state width="1493" height="373" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591871741107" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right" timestamp="1591871741107">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="412" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591866845479" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591871741107" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1591867419439">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1591867419439" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1590674692069">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

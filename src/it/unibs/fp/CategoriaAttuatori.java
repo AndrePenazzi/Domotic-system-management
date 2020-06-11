@@ -6,13 +6,11 @@ import java.util.ArrayList;
 public class CategoriaAttuatori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 25;
     private String nome;
-    private ArrayList<Attuatore> attuatori;
     private String testoLibero;
     private ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
 
     public CategoriaAttuatori(String nome, String testoLibero, ArrayList<ModOperativa> modalitaOperative) throws IllegalArgumentException {
         this.nome = nome;
-        this.attuatori = new ArrayList<>();
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
         this.testoLibero = testoLibero;
@@ -51,14 +49,6 @@ public class CategoriaAttuatori implements Serializable {
         this.nome = nome;
     }
 
-    /**
-     * Getter
-     *
-     * @return attuatori.
-     */
-    public ArrayList<Attuatore> getAttuatori() {
-        return attuatori;
-    }
 
     /**
      * toString

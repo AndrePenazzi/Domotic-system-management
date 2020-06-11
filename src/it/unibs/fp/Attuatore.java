@@ -4,14 +4,11 @@ import java.io.Serializable;
 
 public class Attuatore implements Serializable {
     private String nome;
+    private CategoriaAttuatori categoriaAttuatori;
 
-    /**
-     * Costruttore dell'attuatore.
-     *
-     * @param nome dell'attuatore.
-     */
-    public Attuatore(String nome) {
+    public Attuatore(String nome, CategoriaAttuatori categoriaAttuatori) {
         this.nome = nome;
+        this.categoriaAttuatori = categoriaAttuatori;
     }
 
     /**

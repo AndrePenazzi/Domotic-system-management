@@ -111,7 +111,7 @@ public class ClasseDiServizio {
 
     private static void stampaMenuManutentoreInserisciEAssocia(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore ad artefatto", "Associa attuatore ad artefatto"};
+        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore ad artefatti", "Associa attuatore ad artefatti"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -167,6 +167,11 @@ public class ClasseDiServizio {
         do {
             Sensore nuovoSensore = creaSensore(listaCategorie);
             ArrayList<Artefatto> artefatti = scegliArtefatti(unitaImmobiliare);
+            for(Artefatto a:artefatti)
+                for(Sensore s:a.getSensori())
+                    if(nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori())
+                        System.out.println("Esite già un sensore con la stessa categoria in uno degli artefatti");
+
             manutentore.associaSensoreAdArtefatti(nuovoSensore,artefatti,unitaImmobiliare);
 
             contenitore.setListaCategorie(listaCategorie);
@@ -255,7 +260,7 @@ public class ClasseDiServizio {
         String nome = InputDati.leggiStringaNonVuota("Inserisci nome attuatori : ");
         nome += "_" + listaCategorie.getCategorieAttuatori().get(categoria);
         System.out.println("Si è creato l'attuatore " + nome);
-        return new Attuatore(nome);
+        return new Attuatore(nome,listaCategorie.getCategorieAttuatori().get(categoria));
     }
 
     private static Sensore creaSensore(ListaCategorie listaCategorie) {
@@ -265,7 +270,7 @@ public class ClasseDiServizio {
         String nome = InputDati.leggiStringaNonVuota("Inserisci nome sensore : ");
         nome += "_" + listaCategorie.getCategorieSensori().get(categoria);
         System.out.println("Si è creato il sensore " + nome);
-        return new Sensore(nome);
+        return new Sensore(nome,listaCategorie.getCategorieSensori().get(categoria));
     }
 
     private static void inserisciESalvaCategioriaSensori(Contenitore contenitore) {
