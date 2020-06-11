@@ -111,7 +111,7 @@ public class ClasseDiServizio {
 
     private static void stampaMenuManutentoreInserisciEAssocia(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore ad artefatti", "Associa attuatore ad artefatti"};
+        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -144,11 +144,21 @@ public class ClasseDiServizio {
                 break;
 
                 case 5: {
-                    associaSensoreAdArtefatti(contenitore);
+                    associaSensoreAStanze(contenitore);
                 }
                 break;
 
                 case 6: {
+                    associaAttuatoreAStanze(contenitore);
+                }
+                break;
+
+                case 7: {
+                    associaSensoreAdArtefatti(contenitore);
+                }
+                break;
+
+                case 8: {
                     associaAttuatoreAdArtefatti(contenitore);
                 }
                 break;
@@ -157,6 +167,32 @@ public class ClasseDiServizio {
 
     }
 
+    private static void associaSensoreAStanze(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
+        do {
+            Sensore nuovoSensore = creaSensore(listaCategorie);
+            ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
+            manutentore.associaSensoreAStanze(nuovoSensore, stanze, unitaImmobiliare);
+            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+        } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a una stanza?"));
+
+    }
+
+
+    private static void associaAttuatoreAStanze(Contenitore contenitore) {
+        UnitaImmobiliare unitaImmobiliare = contenitore.getUnitaImmobiliare();
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        Manutentore manutentore = contenitore.getManutentore();
+        do {
+            Attuatore nuovoAttuatore = creaAttuatore(listaCategorie);
+            ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
+            manutentore.associaAttuatoreAStanze(nuovoAttuatore, stanze, unitaImmobiliare);
+            ServizioFile.salvaSingoloOggetto(new File("datiUnitaImmobiliare.txt"), unitaImmobiliare);
+        } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a stanze?"));
+
+    }
 
 
 

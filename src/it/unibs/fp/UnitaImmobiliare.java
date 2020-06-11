@@ -37,6 +37,23 @@ public class UnitaImmobiliare implements Serializable {
         artefatti.add(artefatto);
     }
 
+    /**
+     * Associa sensore ad una o più stanze
+     */
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss) {
+        for (Stanza s : stanzeAss) {
+            s.inserisciSensore(sensoreAss);
+        }
+    }
+
+    /**
+     * Associa attuatore ad una o più stanze
+     */
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss) {
+        for (Stanza s : stanzeAss) {
+            s.inserisciAttuatore(attuatoreAss);
+        }
+    }
 
     /**
      * Associa sensore ad uno o più artefatti

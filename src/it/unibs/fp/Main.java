@@ -14,7 +14,7 @@ public class Main {
             System.out.println("File caricati correttamente");
             contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(cFile);
         } else {
-            String nomeUnitaImmobiliare=InputDati.leggiStringaNonVuota("Inserisci il nome dell'unita' immobiliare");
+            String nomeUnitaImmobiliare=InputDati.leggiStringaNonVuota("Inserisci il nome dell'unita' immobiliare: ");
             UnitaImmobiliare unitaImmobiliare = new UnitaImmobiliare(nomeUnitaImmobiliare);
             Manutentore manutentore = new Manutentore();
             Fruitore fruitore = new Fruitore();

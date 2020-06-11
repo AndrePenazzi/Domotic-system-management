@@ -39,6 +39,13 @@ public class Manutentore implements Serializable {
         unitaImmobiliare.inserisciArtefatto(artefatto);
     }
 
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaSensoreAStanze(sensoreAss, stanzeAss);
+    }
+
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaAttuatoreAStanze(attuatoreAss, stanzeAss);
+    }
 
     public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliare.associaSensoreAdArtefatti(sensoreAss, artefattoAss);

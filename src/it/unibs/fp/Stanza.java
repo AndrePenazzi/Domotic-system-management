@@ -3,17 +3,20 @@ package it.unibs.fp;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-//TODO sensori e stanze
+
 public class Stanza implements Serializable {
     private String nome;
     private ArrayList<Artefatto> artefatti;
-
+    private ArrayList<Sensore> sensori;
+    private ArrayList<Attuatore> attuatori;
     /**
      * Costruttore della stanza.
      *
      * @param nome della stanza.
      */
     public Stanza(String nome) {
+        sensori = new ArrayList<>();
+        attuatori = new ArrayList<>();
         artefatti = new ArrayList<>();
         this.nome = nome;
     }
@@ -43,6 +46,25 @@ public class Stanza implements Serializable {
         artefatti.add(artefatto);
     }
 
+
+    /**
+     * Inserisci un sensore.
+     *
+     * @param sensore inserito.
+     */
+    public void inserisciSensore(Sensore sensore) {
+        sensori.add(sensore);
+    }
+
+    /**
+     * Inserisci un attuatore.
+     *
+     * @param attuatore inserito.
+     */
+    public void inserisciAttuatore(Attuatore attuatore) {
+        attuatori.add(attuatore);
+    }
+
     /**
      * toString.
      *
@@ -50,7 +72,7 @@ public class Stanza implements Serializable {
      */
     @Override
     public String toString() {
-        StringBuilder tmp = new StringBuilder("");
+        StringBuilder tmp = new StringBuilder();
         tmp.append("Nella stanza").append(nome).append(" ci sono i seguenti artefatti: \n");
         for (Artefatto a:artefatti ) {
             tmp.append(a.toString()).append("\n");
