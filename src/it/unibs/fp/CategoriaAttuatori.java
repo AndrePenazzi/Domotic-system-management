@@ -9,6 +9,14 @@ public class CategoriaAttuatori implements Serializable {
     private String testoLibero;
     private ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
 
+    /**
+     * Costruttore
+     *
+     * @param nome              della categoria attuatori
+     * @param testoLibero       nel quale inserire informazioni varie riguardo la categoria di attuatori
+     * @param modalitaOperative elenco delle modalità operative
+     * @throws IllegalArgumentException il testo libero ha una lunghezza massima
+     */
     public CategoriaAttuatori(String nome, String testoLibero, ArrayList<ModOperativa> modalitaOperative) throws IllegalArgumentException {
         this.nome = nome;
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
@@ -18,18 +26,14 @@ public class CategoriaAttuatori implements Serializable {
         this.modalitaOperative = modalitaOperative;
     }
 
+    /**
+     * Getter
+     *
+     * @return la lunghezza massima
+     */
     public static int getLunghezzaMassima() {
         return LUNGHEZZA_MASSIMA;
     }
-
-    public String getTestoLibero() {
-        return testoLibero;
-    }
-
-    public ArrayList<ModOperativa> getModalitaOperative() {
-        return modalitaOperative;
-    }
-
 
     /**
      * Getter
@@ -49,13 +53,36 @@ public class CategoriaAttuatori implements Serializable {
         this.nome = nome;
     }
 
+    /**
+     * Getter
+     *
+     * @return testo libero
+     */
+    public String getTestoLibero() {
+        return testoLibero;
+    }
+
+    /**
+     * Getter
+     *
+     * @return modalità operativa
+     */
+    public ArrayList<ModOperativa> getModalitaOperative() {
+        return modalitaOperative;
+    }
 
     /**
      * toString
      *
-     * @return descrizione categoria attuatori
+     * @return dati della categoriaAtturatori
      */
+    @Override
     public String toString() {
-        return "Categoria sensori: nome=" + nome + ".\n";
+        return "CategoriaAttuatori:\n" +
+                "nome='" + nome +
+                ", testoLibero='" + testoLibero +
+                ", modalitaOperative=" + modalitaOperative;
     }
+
+
 }

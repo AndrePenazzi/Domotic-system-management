@@ -8,6 +8,14 @@ public class Contenitore implements Serializable {
     private Fruitore fruitore;
     private ListaCategorie listaCategorie;
 
+    /**
+     * Costruttore del contenitore degli oggetti importanti da salvare
+     *
+     * @param unitaImmobiliare da salvare
+     * @param manutentore      da salvare
+     * @param fruitore         da salvare
+     * @param listaCategorie   da salvare
+     */
     public Contenitore(UnitaImmobiliare unitaImmobiliare, Manutentore manutentore, Fruitore fruitore, ListaCategorie listaCategorie) {
         this.unitaImmobiliare = unitaImmobiliare;
         this.manutentore = manutentore;

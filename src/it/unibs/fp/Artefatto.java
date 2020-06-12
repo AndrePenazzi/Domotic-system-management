@@ -11,7 +11,7 @@ public class Artefatto implements Serializable {
     /**
      * Costruttore dell'artefatto.
      *
-     * @param nome dell'artefatto.
+     * @param nome dell'artefatto
      */
     public Artefatto(String nome) {
         sensori = new ArrayList<>();
@@ -71,7 +71,7 @@ public class Artefatto implements Serializable {
      * @return descrizione dell'artefatto.
      */
     public String toString() {
-        StringBuilder tmp = new StringBuilder("");
+        StringBuilder tmp = new StringBuilder();
         tmp.append("Nell'artefatto").append(nome).append(" ci sono i seguenti componenti.\nI sensori sono:\n");
         for (Sensore s : sensori) {
             tmp.append(s.toString()).append("\n");

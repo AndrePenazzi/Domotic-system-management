@@ -26,6 +26,5 @@ public class Main {
         System.out.println(BelleStringhe.incornicia("Benvenuto"));
 
         ClasseDiServizio.menuPrincipale(contenitore);
-
     }
 }

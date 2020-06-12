@@ -9,6 +9,7 @@ public class Stanza implements Serializable {
     private ArrayList<Artefatto> artefatti;
     private ArrayList<Sensore> sensori;
     private ArrayList<Attuatore> attuatori;
+
     /**
      * Costruttore della stanza.
      *
@@ -22,27 +23,11 @@ public class Stanza implements Serializable {
     }
 
     /**
-     * Getter
+     * Inserisci un nuovo artefatto nella stanza
      *
-     * @return nome
+     * @param artefatto nuovo
      */
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public ArrayList<Artefatto> getArtefatti() {
-        return artefatti;
-    }
-
-    public void setArtefatti(ArrayList<Artefatto> artefatti) {
-        this.artefatti = artefatti;
-    }
-
-    public void inserisciArtefatto(Artefatto artefatto){
+    public void inserisciArtefatto(Artefatto artefatto) {
         artefatti.add(artefatto);
     }
 
@@ -65,6 +50,43 @@ public class Stanza implements Serializable {
         attuatori.add(attuatore);
     }
 
+
+    /**
+     * Getter
+     *
+     * @return nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Setter
+     *
+     * @param nome della stanza
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * Getter
+     *
+     * @return artefatti
+     */
+    public ArrayList<Artefatto> getArtefatti() {
+        return artefatti;
+    }
+
+    /**
+     * Setter
+     *
+     * @param artefatti all'interno della stanza
+     */
+    public void setArtefatti(ArrayList<Artefatto> artefatti) {
+        this.artefatti = artefatti;
+    }
+
     /**
      * toString.
      *
@@ -74,7 +96,7 @@ public class Stanza implements Serializable {
     public String toString() {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Nella stanza").append(nome).append(" ci sono i seguenti artefatti: \n");
-        for (Artefatto a:artefatti ) {
+        for (Artefatto a : artefatti) {
             tmp.append(a.toString()).append("\n");
         }
         return tmp.toString();

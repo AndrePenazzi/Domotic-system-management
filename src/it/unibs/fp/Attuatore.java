@@ -6,6 +6,12 @@ public class Attuatore implements Serializable {
     private String nome;
     private CategoriaAttuatori categoriaAttuatori;
 
+    /**
+     * Costruttore attuatore
+     *
+     * @param nome               dell'attuatore
+     * @param categoriaAttuatori tipologia di attuatore
+     */
     public Attuatore(String nome, CategoriaAttuatori categoriaAttuatori) {
         this.nome = nome;
         this.categoriaAttuatori = categoriaAttuatori;
@@ -19,6 +25,7 @@ public class Attuatore implements Serializable {
     public String getNome() {
         return nome;
     }
+
     /**
      * Setter.
      *
@@ -35,6 +42,9 @@ public class Attuatore implements Serializable {
      */
     @Override
     public String toString() {
-        return "Attuatore: nome=" + nome + ".\n";
+        return "Attuatore:\n" +
+                "nome='" + nome +
+                ", categoriaAttuatori=" + categoriaAttuatori;
     }
+
 }
