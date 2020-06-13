@@ -22,14 +22,6 @@ public class Stanza implements Serializable {
         this.nome = nome;
     }
 
-    public ArrayList<Sensore> getSensori() {
-        return sensori;
-    }
-
-    public ArrayList<Attuatore> getAttuatori() {
-        return attuatori;
-    }
-
     /**
      * Inserisci un nuovo artefatto nella stanza
      *
@@ -58,6 +50,23 @@ public class Stanza implements Serializable {
         attuatori.add(attuatore);
     }
 
+    /**
+     * Getter
+     *
+     * @return sensori
+     */
+    public ArrayList<Sensore> getSensori() {
+        return sensori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return attutatori
+     */
+    public ArrayList<Attuatore> getAttuatori() {
+        return attuatori;
+    }
 
     /**
      * Getter

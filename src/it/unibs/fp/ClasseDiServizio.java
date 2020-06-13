@@ -1,12 +1,10 @@
 package it.unibs.fp;
 
-import it.unibs.fp.mylib.BelleStringhe;
 import it.unibs.fp.mylib.InputDati;
 import it.unibs.fp.mylib.MyMenu;
 import it.unibs.fp.mylib.ServizioFile;
 
 import java.io.File;
-import java.lang.management.MemoryNotificationInfo;
 import java.util.ArrayList;
 
 public class ClasseDiServizio {
@@ -75,6 +73,11 @@ public class ClasseDiServizio {
         } while (!finito);
     }
 
+    /**
+     * Menu di visualizzazione delle descrizioni da parte del manutentore
+     *
+     * @param contenitore per ottenere gli oggetti necessari
+     */
     private static void stampaMenuVisualizzazioneManutentore(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
@@ -250,6 +253,7 @@ public class ClasseDiServizio {
             do {
                 Artefatto artefatto = scegliArtefatto(unitaImmobiliare);
                 ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
+                manutentore.associaArtefattoAStanze(artefatto, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setUnitaImmobiliare(unitaImmobiliare);
                 contenitore.setManutentore(manutentore);
@@ -274,6 +278,7 @@ public class ClasseDiServizio {
             do {
                 Sensore nuovoSensore = creaSensore(listaCategorie);
                 ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
+                manutentore.associaSensoreAStanze(nuovoSensore, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setUnitaImmobiliare(unitaImmobiliare);
                 contenitore.setManutentore(manutentore);
@@ -564,8 +569,6 @@ public class ClasseDiServizio {
         System.out.println("Si è creato il sensore " + nome);
         return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
     }
-
-
 
 
 }

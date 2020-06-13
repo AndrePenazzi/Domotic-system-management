@@ -22,10 +22,11 @@ public class Sensore implements Serializable {
 
     /**
      * Genera un numero casuale tra il minimo e il massimo della categoriaSensori
+     *
      * @return misura
      */
     public String rilevaVariabileFisica() {
-        return String.valueOf(NumeriCasuali.estraiDouble(categoriaSensori.getInformazioniRilevabili().get(0).getMin(),categoriaSensori.getInformazioniRilevabili().get(0).getMax()));
+        return String.valueOf(NumeriCasuali.estraiDouble(categoriaSensori.getInformazioniRilevabili().get(0).getMin(), categoriaSensori.getInformazioniRilevabili().get(0).getMax()));
     }
 
     /**
