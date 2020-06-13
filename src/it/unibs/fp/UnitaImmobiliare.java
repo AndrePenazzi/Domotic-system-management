@@ -74,6 +74,15 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
+     * Associa artefatto ad uno o più stanze
+     */
+    public void associaArtefattoAStanze(Artefatto artefattoAss, ArrayList<Stanza> stanzeAss) {
+        for (Stanza s : stanzeAss) {
+            s.inserisciArtefatto(artefattoAss);
+        }
+    }
+
+    /**
      * Getter.
      *
      * @return le stanze.

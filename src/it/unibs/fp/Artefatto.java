@@ -72,7 +72,7 @@ public class Artefatto implements Serializable {
      */
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("Nell'artefatto").append(nome).append(" ci sono i seguenti componenti.\nI sensori sono:\n");
+        tmp.append("Artefatto-").append(nome).append(" ha i seguenti componenti.\nI sensori sono:\n");
         for (Sensore s : sensori) {
             tmp.append(s.toString()).append("\n");
         }

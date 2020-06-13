@@ -1,5 +1,7 @@
 package it.unibs.fp;
 
+import it.unibs.fp.mylib.NumeriCasuali;
+
 import java.io.Serializable;
 
 public class Sensore implements Serializable {
@@ -18,9 +20,12 @@ public class Sensore implements Serializable {
     }
 
 
-    //TODO PENSACI TU!!! :)
+    /**
+     * Genera un numero casuale tra il minimo e il massimo della categoriaSensori
+     * @return misura
+     */
     public String rilevaVariabileFisica() {
-        return "";
+        return String.valueOf(NumeriCasuali.estraiDouble(categoriaSensori.getInformazioniRilevabili().get(0).getMin(),categoriaSensori.getInformazioniRilevabili().get(0).getMax()));
     }
 
     /**

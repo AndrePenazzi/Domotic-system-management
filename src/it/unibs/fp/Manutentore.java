@@ -63,11 +63,6 @@ public class Manutentore implements Serializable {
         unitaImmobiliare.inserisciArtefatto(artefatto);
     }
 
-    //TODO da aggiungere nell'UML e da finire
-    public void inserisciArtefattoInStanza() {
-
-    }
-
     /**
      * Associa un sensore ad una certa quantità di stanze
      *
@@ -113,43 +108,29 @@ public class Manutentore implements Serializable {
     }
 
     /**
-     * Visualizza la descrizione delle categorie
+     * Associa artefatto a stanze
      *
-     * @param listaCategorie scelta
-     * @return la descrizione da visualizzare
+     * @param artefatto       da associare alle stanze
+     * @param stanzeAss     stanze scelte
+     * @param unitaImmobiliare che contiene gli artefatti
      */
-    public String visualizzaDescrizioneCatergorie(ListaCategorie listaCategorie) {
-        return listaCategorie.toString();
+    public void associaArtefattoAStanze(Artefatto artefatto, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        unitaImmobiliare.associaArtefattoAStanze(artefatto, stanzeAss);
     }
 
-    /**
-     * Visualizza la descrizione delle stanze dell'unità immobiliare richiesta
-     *
-     * @param unitaImmobiliare da visualizzare
-     * @return la descrizione delle stanze
-     */
-    public String visualizzaDescrizioneStanze(UnitaImmobiliare unitaImmobiliare) {
-        return unitaImmobiliare.visualizzaStanze();
+    public String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie){
+        return (listaCategorie.visualizzaCategorieSensori());
+    }
+    public String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie){
+        return (listaCategorie.visualizzaCategorieAttuatori());
     }
 
-    /**
-     * Visualizza la descrizione delgli artefatti dell'unità immobiliare richiesta
-     *
-     * @param unitaImmobiliare da visualizzare
-     * @return la descrizione degli artefatti
-     */
-    public String visualizzaDescrizioneArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        return unitaImmobiliare.visualizzaArtefatti();
+    public String visualizzaStanze(UnitaImmobiliare unitaImmobiliare){
+        return (unitaImmobiliare.visualizzaStanze());
     }
 
-    /**
-     * Visualizza la descrizione dell'unità immobiliare richiesta
-     *
-     * @param unitaImmobiliare da visualizzare
-     * @return la descrizione dell'unitaImmobiliare
-     */
-    public String visualizzaDescrizioneUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        return unitaImmobiliare.toString();
+    public String visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare){
+        return (unitaImmobiliare.visualizzaArtefatti());
     }
 
 }

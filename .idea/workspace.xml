@@ -22,20 +22,14 @@
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,18 +61,6 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -172,13 +154,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -189,10 +170,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Sensore e Attuatore hanno ora le relative categorie" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1591870503508">
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592037234091">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1591870503508" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592037234091" />
     <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1591871792408">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -201,22 +182,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="373" key="GridCell.Tab.0.bottom" timestamp="1591894121577">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom" timestamp="1592038261899">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1591894121577" />
-    <state width="1493" height="373" key="GridCell.Tab.0.center" timestamp="1591894121576">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
+    <state width="1493" height="373" key="GridCell.Tab.0.center" timestamp="1592038261899">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1591894121576" />
-    <state width="1493" height="373" key="GridCell.Tab.0.left" timestamp="1591894121576">
+    <state width="1493" height="373" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
+    <state width="1493" height="373" key="GridCell.Tab.0.left" timestamp="1592038261899">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1591894121576" />
-    <state width="1493" height="373" key="GridCell.Tab.0.right" timestamp="1591894121577">
+    <state width="1493" height="373" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right" timestamp="1592038261899">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1591894121577" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1591871817836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

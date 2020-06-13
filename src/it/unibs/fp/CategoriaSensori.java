@@ -31,6 +31,15 @@ public class CategoriaSensori implements Serializable {
     /**
      * Getter
      *
+     * @return la lunghezza massima
+     */
+    public static int getLunghezzaMassima() {
+        return LUNGHEZZA_MASSIMA;
+    }
+
+    /**
+     * Getter
+     *
      * @return testo libero
      */
     public String getTestoLibero() {
