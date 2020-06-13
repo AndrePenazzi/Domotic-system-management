@@ -39,6 +39,9 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Associa sensore ad una o più stanze
+     *
+     * @param sensoreAss sensore da associare alle stanze
+     * @param stanzeAss  stanze scelte
      */
     public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
@@ -48,6 +51,9 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Associa attuatore ad una o più stanze
+     *
+     * @param attuatoreAss attuatore da associare
+     * @param stanzeAss    stanze scelte
      */
     public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
@@ -57,6 +63,9 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Associa sensore ad uno o più artefatti
+     *
+     * @param sensoreAss   sensore da associare
+     * @param artefattoAss artefatto scelto
      */
     public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss) {
         for (Artefatto a : artefattoAss) {
@@ -66,6 +75,9 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Associa attuatore ad uno o più artefatti
+     *
+     * @param attuatoreAss attuatore da associare
+     * @param artefattoAss artefatti scelti
      */
     public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss) {
         for (Artefatto a : artefattoAss) {
@@ -75,6 +87,9 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Associa artefatto ad uno o più stanze
+     *
+     * @param artefattoAss artefatto da associare
+     * @param stanzeAss    stanze scelte
      */
     public void associaArtefattoAStanze(Artefatto artefattoAss, ArrayList<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
@@ -171,7 +186,7 @@ public class UnitaImmobiliare implements Serializable {
      */
     @Override
     public String toString() {
-        return "L'unita' immobiliare: "+nome+" è così composta:\n" +
+        return "L'unita' immobiliare: " + nome + " è così composta:\n" +
                 visualizzaStanze() +
                 visualizzaArtefatti();
     }
