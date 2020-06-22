@@ -1,7 +1,5 @@
 package it.unibs.fp;
 
-import it.unibs.fp.mylib.NumeriCasuali;
-
 import java.io.Serializable;
 
 public class Sensore implements Serializable {
@@ -11,7 +9,7 @@ public class Sensore implements Serializable {
     /**
      * Costruttore sensore
      *
-     * @param nome             del sensore
+     * @param nome del sensore
      * @param categoriaSensori tipologia di sensore
      */
     public Sensore(String nome, CategoriaSensori categoriaSensori) {
@@ -25,8 +23,14 @@ public class Sensore implements Serializable {
      *
      * @return misura
      */
+//TODO CAMBIATO
     public String rilevaVariabileFisica() {
-        return String.valueOf(NumeriCasuali.estraiDouble(categoriaSensori.getInformazioniRilevabili().get(0).getMin(), categoriaSensori.getInformazioniRilevabili().get(0).getMax()));
+        InfoRilevabile infoRilevabile = categoriaSensori.getInformazioniRilevabili().get(0);
+        if(categoriaSensori.getInformazioniRilevabili().get(0).getType()==0)
+            return String.valueOf(((InfoRilevabileNumerica)infoRilevabile).rilevaVariabile());
+        if(categoriaSensori.getInformazioniRilevabili().get(0).getType()==1)
+            return String.valueOf(((InfoRilevabileNonNumerica)infoRilevabile).rilevaVariabile());
+        return "C'è stato qualche errore";
     }
 
     /**

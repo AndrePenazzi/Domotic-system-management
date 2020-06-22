@@ -4,9 +4,115 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Manutentore implements Serializable {
+    Fruitore fruitore;
 
-    public Manutentore() {
+    public Manutentore(Fruitore fruitore) {
+        this.fruitore = fruitore;
     }
+
+    public Fruitore getFruitore() {
+        return fruitore;
+    }
+
+    public void setFruitore(Fruitore fruitore) {
+        this.fruitore = fruitore;
+    }
+
+    public int getSizeUnitaImmobiliari() {
+        return fruitore.getUnitaImmobiliari().size();
+    }
+
+    public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
+        fruitore.aggiungiUnitaImmobiliare(unitaImmobiliare);
+    }
+
+    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
+        return fruitore.getUnitaImmobiliari();
+    }
+
+    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
+        fruitore.setUnitaImmobiliari(unitaImmobiliari);
+    }
+
+    public String visualizzaUnitaImmobiliari() {
+        return fruitore.visualizzaUnitaImmobiliari();
+    }
+
+    /**
+     * Inserisci una nuova stanza nell'unità immobiliare
+     *
+     * @param stanza           nuova da aggiungere
+     * @param unitaImmobiliare esistente
+     */
+    public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.inserisciStanza(stanza, unitaImmobiliare);
+    }
+
+    /**
+     * Inserisci un nuova artefatto nell'unità immobiliare
+     *
+     * @param artefatto        nuovo da aggiungere
+     * @param unitaImmobiliare esistente
+     */
+    public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.inserisciArtefatto(artefatto, unitaImmobiliare);
+    }
+
+    /**
+     * Associa un sensore ad una certa quantità di stanze
+     *
+     * @param sensoreAss       da associare alle stanze
+     * @param stanzeAss        stanze scelte
+     * @param unitaImmobiliare che contiene le stanze
+     */
+    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.associaSensoreAStanze(sensoreAss, stanzeAss, unitaImmobiliare);
+    }
+
+    /**
+     * Associa un attuatore ad una certa quantità di stanze
+     *
+     * @param attuatoreAss     da associare alle stanze
+     * @param stanzeAss        stanze scelte
+     * @param unitaImmobiliare che contiene le stanze
+     */
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.associaAttuatoreAStanze(attuatoreAss, stanzeAss, unitaImmobiliare);
+    }
+
+    /**
+     * Associa un sensore ad una certa quantità di artefatti
+     *
+     * @param sensoreAss       da associare agli artefatti
+     * @param artefattoAss     artefatti scelti
+     * @param unitaImmobiliare che contiene gli artefatti
+     */
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.associaSensoreAdArtefatti(sensoreAss, artefattoAss, unitaImmobiliare);
+    }
+
+    /**
+     * Associa un attuatore ad una certa quantità di artefatti
+     *
+     * @param attuatoreAss     da associare agli artefatti
+     * @param artefattoAss     artefatti scelti
+     * @param unitaImmobiliare che contiene gli artefatti
+     */
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss, unitaImmobiliare);
+    }
+
+    /**
+     * Associa artefatto a stanze
+     *
+     * @param artefatto        da associare alle stanze
+     * @param stanzeAss        stanze scelte
+     * @param unitaImmobiliare che contiene gli artefatti
+     */
+    public void associaArtefattoAStanze(Artefatto artefatto, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+        fruitore.associaArtefattoAStanze(artefatto, stanzeAss, unitaImmobiliare);
+    }
+
 
     /**
      * Inseriscce e salva una categoria di attuatori se non esiste già
@@ -41,81 +147,6 @@ public class Manutentore implements Serializable {
             }
         if (!found)
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
-    }
-
-    /**
-     * Inserisci una nuova stanza nell'unità immobiliare
-     *
-     * @param stanza           nuova da aggiungere
-     * @param unitaImmobiliare esistente
-     */
-    public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.inserisciStanza(stanza);
-    }
-
-    /**
-     * Inserisci un nuova artefatto nell'unità immobiliare
-     *
-     * @param artefatto        nuovo da aggiungere
-     * @param unitaImmobiliare esistente
-     */
-    public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.inserisciArtefatto(artefatto);
-    }
-
-    /**
-     * Associa un sensore ad una certa quantità di stanze
-     *
-     * @param sensoreAss       da associare alle stanze
-     * @param stanzeAss        stanze scelte
-     * @param unitaImmobiliare che contiene le stanze
-     */
-    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.associaSensoreAStanze(sensoreAss, stanzeAss);
-    }
-
-    /**
-     * Associa un attuatore ad una certa quantità di stanze
-     *
-     * @param attuatoreAss     da associare alle stanze
-     * @param stanzeAss        stanze scelte
-     * @param unitaImmobiliare che contiene le stanze
-     */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.associaAttuatoreAStanze(attuatoreAss, stanzeAss);
-    }
-
-    /**
-     * Associa un sensore ad una certa quantità di artefatti
-     *
-     * @param sensoreAss       da associare agli artefatti
-     * @param artefattoAss     artefatti scelti
-     * @param unitaImmobiliare che contiene gli artefatti
-     */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.associaSensoreAdArtefatti(sensoreAss, artefattoAss);
-    }
-
-    /**
-     * Associa un attuatore ad una certa quantità di artefatti
-     *
-     * @param attuatoreAss     da associare agli artefatti
-     * @param artefattoAss     artefatti scelti
-     * @param unitaImmobiliare che contiene gli artefatti
-     */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
-    }
-
-    /**
-     * Associa artefatto a stanze
-     *
-     * @param artefatto        da associare alle stanze
-     * @param stanzeAss        stanze scelte
-     * @param unitaImmobiliare che contiene gli artefatti
-     */
-    public void associaArtefattoAStanze(Artefatto artefatto, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliare.associaArtefattoAStanze(artefatto, stanzeAss);
     }
 
 
@@ -156,7 +187,7 @@ public class Manutentore implements Serializable {
      * @return la descrizione degli artefatti
      */
     public String visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        return (unitaImmobiliare.visualizzaArtefatti());
+        return (fruitore.visualizzaArtefatti(unitaImmobiliare));
     }
 
 }

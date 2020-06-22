@@ -15,11 +15,10 @@ public class Main {
             contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(cFile);
         } else {
             String nomeUnitaImmobiliare=InputDati.leggiStringaNonVuota("Inserisci il nome dell'unita' immobiliare: ");
-            UnitaImmobiliare unitaImmobiliare = new UnitaImmobiliare(nomeUnitaImmobiliare);
-            Manutentore manutentore = new Manutentore();
             Fruitore fruitore = new Fruitore();
+            Manutentore manutentore = new Manutentore(fruitore);
             ListaCategorie listaCategorie = new ListaCategorie();
-            contenitore = new Contenitore(unitaImmobiliare,manutentore,fruitore,listaCategorie);
+            contenitore = new Contenitore(manutentore,fruitore,listaCategorie);
             ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
         }
 
