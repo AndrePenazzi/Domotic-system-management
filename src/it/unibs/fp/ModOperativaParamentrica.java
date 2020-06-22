@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class ModOperativaParamentrica extends ModOperativa implements Serializable {
     private ArrayList<String> paramentri;
-    private String paremetroAttuale;
+    private String parametroAttuale;
 
 
 
@@ -27,12 +27,12 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
         this.paramentri = paramentri;
     }
 
-    public String getParemetroAttuale() {
-        return paremetroAttuale;
+    public String getParametroAttuale() {
+        return parametroAttuale;
     }
 
-    public void setParemetroAttuale(String paremetroAttuale) {
-        this.paremetroAttuale = paremetroAttuale;
+    public void setParametroAttuale(String parametroAttuale) {
+        this.parametroAttuale = parametroAttuale;
     }
 
     /**
@@ -48,6 +48,6 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
         }
         return "ModalitaOperativa:\n" +
                 "nome='" + super.getNome() +
-                ", valore=" + val;
+                ", valore=" + val +'\n'+"Modalità attuale: "+parametroAttuale;
     }
 }

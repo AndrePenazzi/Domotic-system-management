@@ -130,7 +130,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return il numero degli artefatti.
      */
     public int getSizeArtefatti() {
-        return stanze.size();
+        return artefatti.size();
     }
 
     /**

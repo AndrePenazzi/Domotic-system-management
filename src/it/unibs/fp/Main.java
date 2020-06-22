@@ -3,6 +3,7 @@ package it.unibs.fp;
 import it.unibs.fp.mylib.*;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +15,6 @@ public class Main {
             System.out.println("File caricati correttamente");
             contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(cFile);
         } else {
-            String nomeUnitaImmobiliare=InputDati.leggiStringaNonVuota("Inserisci il nome dell'unita' immobiliare: ");
             Fruitore fruitore = new Fruitore();
             Manutentore manutentore = new Manutentore(fruitore);
             ListaCategorie listaCategorie = new ListaCategorie();

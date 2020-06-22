@@ -50,7 +50,7 @@ public class ClasseDiServizio {
      */
     private static void stampaMenuManutentore(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci e associa", "Visualizza categorie e valori rilevati"};
+        String[] azione = {"Inserisci unità immobiliare","Inserisci e associa", "Visualizza categorie e valori rilevati", "Elimina salvataggi"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -62,12 +62,27 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    stampaMenuManutentoreInserisciEAssocia(contenitore);
+                    Manutentore manutentore = contenitore.getManutentore();
+                    String nomeUnitaImmobiliare = InputDati.leggiStringaNonVuota("Inserisci nome della unità immobiliare da inserire :");
+                    UnitaImmobiliare unitaImmobiliare = new UnitaImmobiliare(nomeUnitaImmobiliare);
+                    manutentore.aggiungiUnitaImmobiliare(unitaImmobiliare);
+                    contenitore.setManutentore(manutentore);
+                    ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
                 }
                 break;
 
                 case 2: {
+                    stampaMenuManutentoreInserisciEAssocia(contenitore);
+                }
+                break;
+
+                case 3: {
                     stampaMenuVisualizzazioneManutentore(contenitore);
+                }
+                break;
+                //TODO SE RIESCI FALLO SE NO BUTTA VIA
+                case 4: {
+                    System.out.println("Eliminazione");
                 }
                 break;
             }
@@ -173,8 +188,8 @@ public class ClasseDiServizio {
 
                 case 6: {
                     System.out.println(fruitore.visualizzaUnitaImmobiliari());
-                    int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni", 0, fruitore.getUnitaImmobiliari().size());
-                    stampaMenuOperazioniFruitore(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm));
+                    int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni", 1, fruitore.getUnitaImmobiliari().size());
+                    stampaMenuOperazioniFruitore(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm));
                 }
                 break;
             }
@@ -225,7 +240,7 @@ public class ClasseDiServizio {
                                 ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) modOperativa;
                                 System.out.println(modOperativaParamentrica.toString());
                                 int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 0, modOperativaParamentrica.getParamentri().size());
-                                ((ModOperativaParamentrica) unitaImmobiliare.getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParemetroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
+                                ((ModOperativaParamentrica) unitaImmobiliare.getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
                             }
 
                         } else {
@@ -243,7 +258,7 @@ public class ClasseDiServizio {
                                 ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) modOperativa;
                                 System.out.println(modOperativaParamentrica.toString());
                                 int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 0, modOperativaParamentrica.getParamentri().size());
-                                ((ModOperativaParamentrica) unitaImmobiliare.getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParemetroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
+                                ((ModOperativaParamentrica) unitaImmobiliare.getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
                             }
                         }
                     } else {
@@ -267,7 +282,7 @@ public class ClasseDiServizio {
                             ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) modOperativa;
                             System.out.println(modOperativaParamentrica.toString());
                             int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 0, modOperativaParamentrica.getParamentri().size());
-                            ((ModOperativaParamentrica) unitaImmobiliare.getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParemetroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
+                            ((ModOperativaParamentrica) unitaImmobiliare.getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
                         }
                     }
                 }
@@ -588,13 +603,13 @@ public class ClasseDiServizio {
 
 
         } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria attuatori?"));
-        ServizioFile.caricaSingoloOggetto(new File("datiListaCategorie.txt"));
+        ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
     }
 
     //TODO CREATO
     public static ModOperativa inserisciModalitaOperativa() {
         ModOperativa modOperative = null;
-        int scelta = InputDati.leggiIntero("Premere 1 per inserire modalità operative non parametriche e 2 per modalità operative parametriche", 1, 2);
+        int scelta = InputDati.leggiIntero("Premere 1 per inserire modalità operative non parametriche e 2 per modalità operative parametriche: ", 1, 2);
         if (scelta == 1)
             modOperative = inserisciModalitaOperativaNonParametrica();
         else
@@ -675,7 +690,7 @@ public class ClasseDiServizio {
         ArrayList<Artefatto> artefatti = new ArrayList<>();
         do {
             System.out.println(unitaImmobiliare.visualizzaArtefatti());
-            int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeStanze());
+            int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeArtefatti());
             artefatti.add(unitaImmobiliare.getArtefatti().get(--artefattoIndex));
         } while (InputDati.yesOrNo("Vuoi scegliere un'altro artefatto?"));
         return artefatti;
@@ -691,7 +706,7 @@ public class ClasseDiServizio {
         System.out.println("Si scelga ora l'artefatto");
         Artefatto artefatto;
         System.out.println(unitaImmobiliare.visualizzaArtefatti());
-        int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeStanze());
+        int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeArtefatti());
         artefatto = unitaImmobiliare.getArtefatti().get(--artefattoIndex);
         return artefatto;
     }
@@ -752,8 +767,8 @@ public class ClasseDiServizio {
         System.out.println("Si scelga ora l' unita immobiliare");
         ArrayList<UnitaImmobiliare> unitaImmobiliari = manutentore.getUnitaImmobiliari();
         System.out.println(manutentore.visualizzaListaUnitaImmobiliari());
-        int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, manutentore.getSizeUnitaImmobiliari());
-        return unitaImmobiliari.get(--artefattoIndex);
+        int unitaImmobiliareScelta = InputDati.leggiIntero("Scegli UnitaImmobiliare : ", 1, manutentore.getSizeUnitaImmobiliari());
+        return unitaImmobiliari.get(--unitaImmobiliareScelta);
 
     }
 
