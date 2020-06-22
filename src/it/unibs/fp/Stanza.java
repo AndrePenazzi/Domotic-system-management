@@ -107,6 +107,20 @@ public class Stanza implements Serializable {
     /**
      * toString.
      *
+     * @return descrizione degli artefatti nell'unità immobiliare.
+     */
+    public String visualizzaArtefatti() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("Gli Artefatti sono:\n");
+        for (Artefatto a : artefatti) {
+            tmp.append(a.toString()).append("\n");
+        }
+        return tmp.toString();
+    }
+
+    /**
+     * toString.
+     *
      * @return descrizione della stanza.
      */
     @Override

@@ -22,7 +22,7 @@ public class CategoriaAttuatori implements Serializable {
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
         this.testoLibero = testoLibero;
-        this.modalitaOperative.add(new ModOperativa("Idle"));
+        this.modalitaOperative.add(new ModOperativaNonParamentrica("Idle"));
         this.modalitaOperative = modalitaOperative;
     }
 
@@ -78,6 +78,14 @@ public class CategoriaAttuatori implements Serializable {
      */
     @Override
     public String toString() {
+        String val = "";
+        int scelta = 1;
+        for(ModOperativa modOperativa: modalitaOperative)
+            if(modOperativa.getType()==1)
+                val+=scelta+" "+((ModOperativaNonParamentrica)modOperativa).toString();
+            else
+                val+=scelta+" "+((ModOperativaParamentrica)modOperativa).toString();
+
         return "CategoriaAttuatori:\n" +
                 "nome='" + nome +
                 ", testoLibero='" + testoLibero +

@@ -9,25 +9,25 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
     private ArrayList<String> valori;
     private String valoreAttuale;
 
-    public InfoRilevabileNonNumerica(String nome, ArrayList<String> valori) {
-        super(nome, 2);
+    public InfoRilevabileNonNumerica(String nome,ArrayList<String> valori){
+        super(nome,2);
         this.valori = valori;
         valoreAttuale = "default";
     }
 
-    public void inserisciValore(String valore) {
+    public void inserisciValore(String valore){
         valori.add(valore);
     }
 
-    public String rilevaVariabile() {
-        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0, valori.size()));
+    public String rilevaVariabile(){
+        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0,valori.size()));
     }
 
     @Override
     public String toString() {
         String val = "";
-        for (String s : valori) {
-            val += s + '\n';
+        for(String s: valori){
+            val+=s+'\n';
         }
         return "InformazioneRilevabile:\n" +
                 "nome='" + super.getNome() +

@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Attuatore implements Serializable {
     private String nome;
     private CategoriaAttuatori categoriaAttuatori;
-
+    private ModOperativa modOperativa;
     /**
      * Costruttore attuatore
      *
@@ -15,6 +15,23 @@ public class Attuatore implements Serializable {
     public Attuatore(String nome, CategoriaAttuatori categoriaAttuatori) {
         this.nome = nome;
         this.categoriaAttuatori = categoriaAttuatori;
+        this.modOperativa = new ModOperativa("Idle");
+    }
+
+    public CategoriaAttuatori getCategoriaAttuatori() {
+        return categoriaAttuatori;
+    }
+
+    public void setCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
+        this.categoriaAttuatori = categoriaAttuatori;
+    }
+
+    public ModOperativa getModOperativa() {
+        return modOperativa;
+    }
+
+    public void setModOperativa(ModOperativa modOperativa) {
+        this.modOperativa = modOperativa;
     }
 
     /**

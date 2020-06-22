@@ -5,14 +5,34 @@ import java.util.ArrayList;
 
 public class ModOperativaParamentrica extends ModOperativa implements Serializable {
     private ArrayList<String> paramentri;
+    private String paremetroAttuale;
+
+
+
     /**
      * Costruttore
      *
      * @param nome della modalità operativa
      */
     public ModOperativaParamentrica(String nome, ArrayList<String> paramentri) {
-        super(nome);
+        super(nome,2);
         this.paramentri = paramentri;
+    }
+
+    public ArrayList<String> getParamentri() {
+        return paramentri;
+    }
+
+    public void setParamentri(ArrayList<String> paramentri) {
+        this.paramentri = paramentri;
+    }
+
+    public String getParemetroAttuale() {
+        return paremetroAttuale;
+    }
+
+    public void setParemetroAttuale(String paremetroAttuale) {
+        this.paremetroAttuale = paremetroAttuale;
     }
 
     /**

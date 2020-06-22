@@ -65,6 +65,16 @@ public class Artefatto implements Serializable {
         return nome;
     }
 
+    //TODO CREATO
+    public String visualizzaAttuatori(){
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("Gli attuatori sono:\n");
+        for (Attuatore a : attuatori) {
+            tmp.append(a.toString()).append("\n");
+        }
+        return tmp.toString();
+    }
+
     /**
      * toString.
      *

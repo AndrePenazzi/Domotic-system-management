@@ -19,11 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="Ant Version completata">
-      <change afterPath="$PROJECT_DIR$/documentazione.rar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaNonParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaNonParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,18 +64,12 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.unibs.fp" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -114,6 +116,8 @@
       <workItem from="1591540931336" duration="1927000" />
       <workItem from="1591603064800" duration="629000" />
       <workItem from="1591948106804" duration="3158000" />
+      <workItem from="1592062624529" duration="701000" />
+      <workItem from="1592832525044" duration="15046000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -161,20 +165,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -187,10 +190,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Ant Version completata" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592037234091">
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592846589997">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592037234091" />
+    <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592846589997" />
     <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1591871792408">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -199,22 +202,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="373" key="GridCell.Tab.0.bottom" timestamp="1592038261899">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom" timestamp="1592847441778">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
-    <state width="1493" height="373" key="GridCell.Tab.0.center" timestamp="1592038261899">
+    <state width="1493" height="373" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592847441778" />
+    <state width="1493" height="373" key="GridCell.Tab.0.center" timestamp="1592847441777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
-    <state width="1493" height="373" key="GridCell.Tab.0.left" timestamp="1592038261899">
+    <state width="1493" height="373" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592847441777" />
+    <state width="1493" height="373" key="GridCell.Tab.0.left" timestamp="1592847441777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
-    <state width="1493" height="373" key="GridCell.Tab.0.right" timestamp="1592038261899">
+    <state width="1493" height="373" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592847441777" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right" timestamp="1592847441778">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="373" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592038261899" />
+    <state width="1493" height="373" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592847441778" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1592839536292">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1592839536292" />
+    <state x="277" y="62" key="SettingsEditor" timestamp="1592833315406">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1592833315406" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1591871817836">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -223,6 +234,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="584" y="195" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1590674692069" />
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592839500461">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1592839500461" />
+    <state x="541" y="291" width="619" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592833311208">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="541" y="291" width="619" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834" timestamp="1592833311208" />
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

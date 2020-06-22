@@ -34,7 +34,7 @@ public class Manutentore implements Serializable {
         fruitore.setUnitaImmobiliari(unitaImmobiliari);
     }
 
-    public String visualizzaUnitaImmobiliari() {
+    public String visualizzaListaUnitaImmobiliari() {
         return fruitore.visualizzaUnitaImmobiliari();
     }
 

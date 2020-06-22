@@ -1,10 +1,11 @@
 package it.unibs.fp;
 
+import it.unibs.fp.mylib.InputDati;
 import it.unibs.fp.mylib.NumeriCasuali;
 
 import java.io.Serializable;
 
-public class InfoRilevabileNumerica extends InfoRilevabile implements Serializable {
+public class InfoRilevabileNumerica extends  InfoRilevabile implements Serializable {
     private double min;
     private double max;
     private double valore;
@@ -13,8 +14,8 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
      * Costruttore
      *
      * @param nome dell'informazione
-     * @param min valore minimo del dominio
-     * @param max valore massimo del dominio
+     * @param min  valore minimo del dominio
+     * @param max  valore massimo del dominio
      * @throws IllegalArgumentException il valore minimo deve essere minore del valore massimo
      */
     public InfoRilevabileNumerica(String nome, double min, double max) throws IllegalArgumentException {

@@ -11,7 +11,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      * @param nome della modalità operativa
      */
     public ModOperativaNonParamentrica(String nome) {
-        super(nome);
+        super(nome,1);
         valore = 0;
 
     }
@@ -23,7 +23,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      * @param valore richiesto
      */
     public ModOperativaNonParamentrica(String nome, double valore) {
-        super(nome);
+        super(nome,1);
         this.valore = valore;
     }
 
