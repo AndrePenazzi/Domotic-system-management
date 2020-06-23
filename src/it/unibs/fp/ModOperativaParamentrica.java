@@ -7,12 +7,10 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
     private ArrayList<String> paramentri;
     private String parametroAttuale;
 
-
-
     /**
      * Costruttore
-     *
      * @param nome della modalità operativa
+     * @param paramentri scelti
      */
     public ModOperativaParamentrica(String nome, ArrayList<String> paramentri) {
         super(nome,2);
@@ -31,7 +29,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
     /**
      * Setter
      *
-     * @param paramentri
+     * @param paramentri da modificare
      */
     public void setParamentri(ArrayList<String> paramentri) {
         this.paramentri = paramentri;
@@ -48,7 +46,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
 
     /**
      * Setter
-     * @param parametroAttuale
+     * @param parametroAttuale da modificare
      */
     public void setParametroAttuale(String parametroAttuale) {
         this.parametroAttuale = parametroAttuale;
@@ -66,12 +64,12 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
             int i = 1;
             tmp.append("\nParametri:\n");
             for (String s : paramentri) {
-                tmp.append(i+" "+s).append("\n");
+                tmp.append(i).append(" ").append(s).append("\n");
                 i++;
             }
         } else
             tmp.append("\nNon ci sono ancora parametri associati");
-        tmp.append("\nParametro attuale: "+parametroAttuale);
+        tmp.append("\nParametro attuale: ").append(parametroAttuale);
         return tmp.toString();
     }
 }

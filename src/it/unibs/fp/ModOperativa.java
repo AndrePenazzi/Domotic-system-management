@@ -50,7 +50,7 @@ public class ModOperativa implements Serializable {
 
     /**
      * Setter del nome
-     * @param nome
+     * @param nome da modificare
      */
     public void setNome(String nome) {
         this.nome = nome;

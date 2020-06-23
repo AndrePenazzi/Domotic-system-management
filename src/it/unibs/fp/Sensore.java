@@ -23,7 +23,6 @@ public class Sensore implements Serializable {
      *
      * @return misura
      */
-//TODO CAMBIATO
     public String rilevaVariabileFisica() {
         for(InfoRilevabile infoRilevabile : categoriaSensori.getInformazioniRilevabili()) {
             System.err.println("hey man");
@@ -81,7 +80,8 @@ public class Sensore implements Serializable {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");
         tmp.append(nome);
-        tmp.append("\n"+categoriaSensori);
+        tmp.append("\n");
+        tmp.append(categoriaSensori);
         return tmp.toString();
     }
 

@@ -16,7 +16,7 @@ public class Manutentore implements Serializable {
 
     /**
      * Getter
-     * @return
+     * @return fruitore
      */
     public Fruitore getFruitore() {
         return fruitore;
@@ -24,7 +24,7 @@ public class Manutentore implements Serializable {
 
     /**
      * Setter
-     * @param fruitore
+     * @param fruitore scelto
      */
     public void setFruitore(Fruitore fruitore) {
         this.fruitore = fruitore;
@@ -32,7 +32,7 @@ public class Manutentore implements Serializable {
 
     /**
      * Getter
-     * @return
+     * @return SizeUnitaImmobiliare
      */
     public int getSizeUnitaImmobiliari() {
         return fruitore.getUnitaImmobiliari().size();
@@ -48,23 +48,23 @@ public class Manutentore implements Serializable {
 
     /**
      * Getter
-     * @return
+     * @return unitaImmobiliare
      */
     public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
         return fruitore.getUnitaImmobiliari();
     }
 
     /**
-     * Getter
-     * @return
+     * Setter
+     * @param unitaImmobiliari da modificare
      */
     public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
         fruitore.setUnitaImmobiliari(unitaImmobiliari);
     }
 
     /**
-     * Getter
-     * @return
+     * visualizza la lista dei nomi delle unità immobiliari
+     * @return la lista dei nomi delle unità immobiliari
      */
     public String visualizzaListaUnitaImmobiliari() {
         return fruitore.visualizzaListaUnitaImmobiliari();

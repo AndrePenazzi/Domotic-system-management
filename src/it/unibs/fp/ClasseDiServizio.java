@@ -17,7 +17,7 @@ public class ClasseDiServizio {
 
         boolean finito = false;
         String[] azione = {"Accedi come manutentore", "Accedi come fruitore"};
-        MyMenu menu = new MyMenu("Menu principal amigo", azione);
+        MyMenu menu = new MyMenu("Menu principale", azione);
         do {
             int scelta = menu.scegli();
             switch (scelta) {
@@ -708,7 +708,7 @@ public class ClasseDiServizio {
      * @return la modalità operativa
      */
     public static ModOperativa inserisciModalitaOperativaNonParametrica() {
-        ModOperativa modOperative = null;
+        ModOperativa modOperative;
         String nomeModalitaOperativa = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome della modalita operativa: ");
         if (InputDati.yesOrNo("Vuoi inserire una modalita operativa con valore?")) {
             double valore = InputDati.leggiDouble("Inserisci il valore: ");
