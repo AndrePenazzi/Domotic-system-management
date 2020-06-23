@@ -1,19 +1,19 @@
 package it.unibs.fp;
 
-public enum OperazioniRelazionale {
+public enum OperatoriRelazionali {
     MAGGIORE(">"),
     MINORE("<"),
     MAGGIORE_UGUALE("≥"),
     MINORE_UGUALE("≤"),
     UGUALE("=");
+
     private String value;
-    private OperazioniRelazionale(String value)
-    {
+
+    private OperatoriRelazionali(String value) {
         this.value = value;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return this.value;
     }
 

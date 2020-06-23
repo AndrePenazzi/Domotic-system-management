@@ -1,5 +1,7 @@
 package it.unibs.fp;
 
+import it.unibs.fp.mylib.OperatoriBooleani;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -7,6 +9,7 @@ public class UnitaImmobiliare implements Serializable {
     private String nome;
     private ArrayList<Stanza> stanze;
     private ArrayList<Artefatto> artefatti;
+    private ArrayList<Regola> regole;
 
     /**
      * Costruttore unita' immobiliare
@@ -17,6 +20,82 @@ public class UnitaImmobiliare implements Serializable {
         this.nome = nome;
         this.stanze = new ArrayList<>();
         this.artefatti = new ArrayList<>();
+        this.regole = new ArrayList<>();
+    }
+
+    /**
+     * Inserisci la regola per la prima volta
+     *
+     * @param attuatore    per settare la sua modalità operativa
+     * @param modOperativa scelta
+     */
+    public void inserisciRegola(Attuatore attuatore, ModOperativa modOperativa) {
+        regole.add(new Regola());
+        int i = regole.size();
+        regole.get(i - 1).inserisciCostituenteLogico();
+        regole.get(i - 1).inserisciAzione(attuatore, modOperativa);
+    }
+
+    /**
+     * Inserisci la regola per la prima volta
+     *
+     * @param regola       scelta
+     * @param attuatore    per settare la sua modalità operativa
+     * @param modOperativa scelta
+     */
+    public void aggiungiAzione(Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciAzione(attuatore, modOperativa);
+        }
+    }
+
+    /**
+     * Inserisci il primo costituente logico
+     *
+     * @param regola          scelta
+     * @param primoOpLogico   primo operatore da confrontare
+     * @param secondoOpLogico secondo operatore da confrontare
+     * @param opRelazionale   operatore relazionale per il confronto
+     */
+    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
+        }
+    }
+
+    /**
+     * Inserisci l'ennesimo costituente logico
+     *
+     * @param regola          scelta
+     * @param primoOpLogico   primo operatore da confrontare
+     * @param secondoOpLogico secondo operatore da confrontare
+     * @param opRelazionale   operatore relazionale per il confronto
+     * @param opBooleano      per confrontare i costituenti logici
+     */
+    public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+        }
+    }
+
+    /**
+     * Trova la regola se esistente restituisce -1 altrimenti
+     *
+     * @param regola da trovare
+     * @return indice della regola
+     */
+    public int trovaRegola(Regola regola) {
+        for (int i = 0; i < regole.size(); i++) {
+            if (regole.get(i).equals(regola))
+                return i;
+        }
+        return -1;
     }
 
     /**
@@ -162,7 +241,10 @@ public class UnitaImmobiliare implements Serializable {
             int i = 1;
             tmp.append("\nStanze:\n");
             for (Stanza s : stanze) {
-                tmp.append(i+" "+s.toString()).append("\n");
+                tmp.append(i);
+                tmp.append(" ");
+                tmp.append(s.toString());
+                tmp.append("\n");
                 i++;
             }
         } else
@@ -181,7 +263,10 @@ public class UnitaImmobiliare implements Serializable {
             int i = 1;
             tmp.append("\nArtefatti:\n");
             for (Artefatto s : artefatti) {
-                tmp.append(i+" "+s.toString()).append("\n");
+                tmp.append(i);
+                tmp.append(" ");
+                tmp.append(s.toString());
+                tmp.append("\n");
                 i++;
             }
         } else
@@ -197,9 +282,42 @@ public class UnitaImmobiliare implements Serializable {
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n"+nome);
+        tmp.append("\n");
+        tmp.append(nome);
         tmp.append(visualizzaArtefatti());
         tmp.append(visualizzaStanze());
         return tmp.toString();
+    }
+
+    /**
+     * Getter
+     *
+     * @return il numero delle stanze.
+     */
+    public int getSizeRegole() {
+        return regole.size();
+    }
+
+    /**
+     * Getter
+     *
+     * @return regole
+     */
+    public ArrayList<Regola> getRegole() {
+        return regole;
+    }
+
+    /**
+     * Setter
+     *
+     * @param regole scelte
+     */
+    public void setRegole(ArrayList<Regola> regole) {
+        this.regole = regole;
+    }
+
+    //TODO DA CAMBIARE E SISTEMARE
+    public String visualizzaRegole() {
+        return regole.toString();
     }
 }

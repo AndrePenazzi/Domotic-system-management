@@ -74,6 +74,14 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
     }
 
     /**
+     * Setter
+     * @param valore da cambiare
+     */
+    public void setValore(double valore) {
+        this.valore = valore;
+    }
+
+    /**
      * toString
      *
      * @return i dati dell'informazione

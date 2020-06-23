@@ -1,9 +1,9 @@
 package it.unibs.fp;
 
 public class CostituenteLogico {
-    InfoRilevabile primoOperatoreLogico;
-    InfoRilevabile secondoOperatoreLogico;
-    OperazioniRelazionale operatoreRelazionale;
+    private InfoRilevabile primoOperatoreLogico;
+    private InfoRilevabile secondoOperatoreLogico;
+    private OperatoriRelazionali operatoreRelazionale;
 
     /**
      * Costruttore con valori
@@ -11,7 +11,7 @@ public class CostituenteLogico {
      * @param secondoOperatoreLogico Informazione rilevabile 2
      * @param operatoreRelazionale >,<,=,<=,>=
      */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperazioniRelazionale operatoreRelazionale) {
+    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         this.primoOperatoreLogico = primoOperatoreLogico;
         this.secondoOperatoreLogico = secondoOperatoreLogico;
         this.operatoreRelazionale = operatoreRelazionale;
@@ -36,7 +36,7 @@ public class CostituenteLogico {
 
     /**
      * Setter
-     * @param primoOperatoreLogico
+     * @param primoOperatoreLogico scelto
      */
     public void setPrimoOperatoreLogico(InfoRilevabile primoOperatoreLogico) {
         this.primoOperatoreLogico = primoOperatoreLogico;
@@ -52,7 +52,7 @@ public class CostituenteLogico {
 
     /**
      * Setter
-     * @param secondoOperatoreLogico
+     * @param secondoOperatoreLogico scelto
      */
     public void setSecondoOperatoreLogico(InfoRilevabile secondoOperatoreLogico) {
         this.secondoOperatoreLogico = secondoOperatoreLogico;
@@ -62,15 +62,15 @@ public class CostituenteLogico {
      * Getter
      * @return operatoreRelazionale
      */
-    public OperazioniRelazionale getOperatoreRelazionale() {
+    public OperatoriRelazionali getOperatoreRelazionale() {
         return operatoreRelazionale;
     }
 
     /**
      * Setter
-     * @param operatoreRelazionale
+     * @param operatoreRelazionale scelto
      */
-    public void setOperatoreRelazionale(OperazioniRelazionale operatoreRelazionale) {
+    public void setOperatoreRelazionale(OperatoriRelazionali operatoreRelazionale) {
         this.operatoreRelazionale = operatoreRelazionale;
     }
 
@@ -80,30 +80,23 @@ public class CostituenteLogico {
      */
     public boolean calcolaValoreBooleano() {
         if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
-            if (operatoreRelazionale == OperazioniRelazionale.UGUALE) {
+            if (operatoreRelazionale == OperatoriRelazionali.UGUALE) {
                 if (primoOperatoreLogico.getType() == 1) {
-                    if (((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile())
-                        return true;
+                    return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
                 } else {
-                    if (((InfoRilevabileNonNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNonNumerica) secondoOperatoreLogico).rilevaVariabile())
-                        return true;
+                    return ((InfoRilevabileNonNumerica) primoOperatoreLogico).rilevaVariabile().equals(((InfoRilevabileNonNumerica) secondoOperatoreLogico).rilevaVariabile());
                 }
-            } else if (operatoreRelazionale == OperazioniRelazionale.MAGGIORE) {
-                if (((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() > ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile())
-                    return true;
-            } else if (operatoreRelazionale == OperazioniRelazionale.MINORE) {
-                if (((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() < ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile())
-                    return true;
-            } else if (operatoreRelazionale == OperazioniRelazionale.MAGGIORE_UGUALE) {
-                if (((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() >= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile())
-                    return true;
-            } else if (operatoreRelazionale == OperazioniRelazionale.MINORE_UGUALE) {
-                if (((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() <= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile())
-                    return true;
+            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() > ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() < ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE_UGUALE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() >= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE_UGUALE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() <= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
             }
         }
         else return  true;
-
         return false;
     }
 

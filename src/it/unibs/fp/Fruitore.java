@@ -1,15 +1,65 @@
 package it.unibs.fp;
 
+import it.unibs.fp.mylib.OperatoriBooleani;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
-//TODO MODIFICARE I TOSTRING E SIMILI
+
 public class Fruitore implements Serializable {
     private ArrayList<UnitaImmobiliare> unitaImmobiliari;
 
     public Fruitore() {
         unitaImmobiliari = new ArrayList<>();
     }
+
+    /**
+     * Inserisci la regola per la prima volta
+     *
+     * @param attuatore    per settare la sua modalità operativa
+     * @param modOperativa scelta
+     */
+    public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
+        unitaImmobiliare.inserisciRegola(attuatore, modOperativa);
+    }
+
+    /**
+     * Inserisci la regola per la prima volta
+     *
+     * @param regola       scelta
+     * @param attuatore    per settare la sua modalità operativa
+     * @param modOperativa scelta
+     */
+    public void aggiungiAzione(UnitaImmobiliare unitaImmobiliare,Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
+        unitaImmobiliare.aggiungiAzione(regola,attuatore, modOperativa);
+    }
+
+
+    /**
+     * Inserisci il primo costituente logico
+     *
+     * @param regola          scelta
+     * @param primoOpLogico   primo operatore da confrontare
+     * @param secondoOpLogico secondo operatore da confrontare
+     * @param opRelazionale   operatore relazionale per il confronto
+     */
+    public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
+    }
+
+    /**
+     * Inserisci l'ennesimo costituente logico
+     *
+     * @param regola          scelta
+     * @param primoOpLogico   primo operatore da confrontare
+     * @param secondoOpLogico secondo operatore da confrontare
+     * @param opRelazionale   operatore relazionale per il confronto
+     * @param opBooleano      per confrontare i costituenti logici
+     */
+    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+    }
+
 
     /**
      * Lista delle unità immobilari e loro caratteristiche
@@ -58,7 +108,12 @@ public class Fruitore implements Serializable {
         unitaImmobiliari.add(unitaImmobiliare);
     }
 
-    //TODO SE ESCE -1 ERROREEEEE
+    /**
+     * Trova l'indice dell'unità immobiliare cercata
+     *
+     * @param unitaImmobiliare scelta
+     * @return indice unità immobiliare
+     */
     public int trovaIndiceUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         for (int i = 0; i < unitaImmobiliari.size(); i++) {
             if (unitaImmobiliari.get(i).equals(unitaImmobiliare))
@@ -236,17 +291,17 @@ public class Fruitore implements Serializable {
                 if (!stanza.getSensori().isEmpty())
                     for (Sensore sensore :
                             stanza.getSensori()) {
-                        tmp.append("\n"+sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
+                        tmp.append("\n" + sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
                     }
                 else tmp.append("\nNon ci sono sensori nella stanza");
                 if (!stanza.getArtefatti().isEmpty())
                     for (Artefatto artefatto :
                             stanza.getArtefatti()) {
-                        tmp.append("\n"+artefatto.getNome());
+                        tmp.append("\n" + artefatto.getNome());
                         if (!artefatto.getSensori().isEmpty())
                             for (Sensore sensore :
                                     artefatto.getSensori()) {
-                                tmp.append("\n"+sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
+                                tmp.append("\n" + sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
                             }
                         else tmp.append("\nNon ci sono sensori nell'artefatto");
                     }
