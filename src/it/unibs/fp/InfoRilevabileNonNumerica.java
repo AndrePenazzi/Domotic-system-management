@@ -43,7 +43,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append(getNome());
+        tmp.append("\n"+getNome());
 
         if (!valori.isEmpty()) {
             int i = 1;

@@ -104,7 +104,7 @@ public class CategoriaSensori implements Serializable {
 
         if (!informazioniRilevabili.isEmpty()) {
             int i = 1;
-            tmp.append("\nModalità operative:\n");
+            tmp.append("\nInformazioni rilevabili:\n");
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
                 if(infoRilevabile.getType()==1)
                     tmp.append(i+" "+((InfoRilevabileNumerica)infoRilevabile).toString());

@@ -391,19 +391,24 @@ public class ClasseDiServizio {
     private static void associaSensoreAStanze(Contenitore contenitore) {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);
 
-        if (!listaCategorie.getCategorieSensori().isEmpty())
+        if (!listaCategorie.getCategorieSensori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Sensore nuovoSensore = creaSensore(listaCategorie);
                 ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
                 manutentore.associaSensoreAStanze(nuovoSensore, stanze, unitaImmobiliare);
+
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setManutentore(manutentore);
                 ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
             } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a una stanza?"));
-        else
-            System.out.println("Bisogna prima creare una categoria sensori");
+        } else {
+            if (listaCategorie.getCategorieSensori().isEmpty())
+                System.out.println("Bisogna prima creare una categoria sensori");
+            if (unitaImmobiliare.getStanze().isEmpty())
+                System.out.println("Bisogna prima avere una stanza nell'unità immobiliare");
+        }
     }
 
     /**
@@ -415,7 +420,8 @@ public class ClasseDiServizio {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
-        if (!listaCategorie.getCategorieAttuatori().isEmpty())
+
+        if (!listaCategorie.getCategorieAttuatori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = creaAttuatore(listaCategorie);
                 ArrayList<Stanza> stanze = scegliStanze(unitaImmobiliare);
@@ -424,8 +430,12 @@ public class ClasseDiServizio {
                 contenitore.setManutentore(manutentore);
                 ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
             } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a stanze?"));
-        else
-            System.out.println("Bisogna prima creare una categoria attuatori");
+        } else {
+            if (listaCategorie.getCategorieAttuatori().isEmpty())
+                System.out.println("Bisogna prima creare una categoria attuatori");
+            if (unitaImmobiliare.getStanze().isEmpty())
+                System.out.println("Bisogna prima avere una stanza nell'unità immobiliare");
+        }
     }
 
     /**
@@ -436,9 +446,8 @@ public class ClasseDiServizio {
     private static void associaSensoreAdArtefatti(Contenitore contenitore) {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
-
-        if (!listaCategorie.getCategorieAttuatori().isEmpty())
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);
+        if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieSensori().isEmpty()) {
             do {
                 Sensore nuovoSensore = creaSensore(listaCategorie);
                 ArrayList<Artefatto> artefatti = scegliArtefatti(unitaImmobiliare);
@@ -453,8 +462,12 @@ public class ClasseDiServizio {
                 contenitore.setManutentore(manutentore);
                 ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
             } while (InputDati.yesOrNo("Vuoi associare un'altro sensore ad artefatti?"));
-        else
-            System.out.println("Bisogna prima creare una categoria sensori");
+        } else {
+            if (listaCategorie.getCategorieSensori().isEmpty())
+                System.out.println("Bisogna prima creare una categoria sensori");
+            if (unitaImmobiliare.getArtefatti().isEmpty())
+                System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
+        }
     }
 
     /**
@@ -466,7 +479,7 @@ public class ClasseDiServizio {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
-        if (!listaCategorie.getCategorieAttuatori().isEmpty())
+        if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieAttuatori().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = creaAttuatore(listaCategorie);
                 ArrayList<Artefatto> artefatti = scegliArtefatti(unitaImmobiliare);
@@ -476,8 +489,12 @@ public class ClasseDiServizio {
                 contenitore.setManutentore(manutentore);
                 ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
             } while (InputDati.yesOrNo("Vuoi associare un'altro attuatore ad artefatti?"));
-        else
-            System.out.println("Bisogna prima creare una categoria attuatori");
+        } else {
+            if (listaCategorie.getCategorieAttuatori().isEmpty())
+                System.out.println("Bisogna prima creare una categoria attuatori");
+            if (unitaImmobiliare.getArtefatti().isEmpty())
+                System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
+        }
     }
     //-----------------------------FINE ASSOCIA-----------------------------------------------------
 
@@ -569,7 +586,7 @@ public class ClasseDiServizio {
      */
     private static void inserisciNuovoArtefatto(Contenitore contenitore) {
         Manutentore manutentore = contenitore.getManutentore();
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);
         do {
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome nuovo artefatto: ");
             manutentore.inserisciArtefatto(new Artefatto(nome), unitaImmobiliare);
@@ -587,7 +604,7 @@ public class ClasseDiServizio {
      */
     private static void inserisciNuovaStanza(Contenitore contenitore) {
         Manutentore manutentore = contenitore.getManutentore();
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(manutentore);
         do {
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova stanza: ");
             manutentore.inserisciStanza(new Stanza(nome), unitaImmobiliare);
@@ -625,8 +642,8 @@ public class ClasseDiServizio {
         String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
         do {
             try {
-                double min = InputDati.leggiDouble("Inserisci il valore minimo rilevabile");
-                double max = InputDati.leggiDouble("Inserisci il valore massimo rilevabile");
+                double min = InputDati.leggiDouble("Inserisci il valore minimo rilevabile: ");
+                double max = InputDati.leggiDouble("Inserisci il valore massimo rilevabile: ");
 
                 informazioneRilevabile = new InfoRilevabileNumerica(nomeInfo, min, max);
                 infoRilevabileOK = true;
@@ -653,7 +670,7 @@ public class ClasseDiServizio {
             try {
                 ArrayList<String> valoriNonNumerici = new ArrayList<>();
                 do {
-                    valoriNonNumerici.add(InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci un valore rilevabile non numerico :"));
+                    valoriNonNumerici.add(InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci un valore rilevabile non numerico:"));
 
                 } while (InputDati.yesOrNo("Vuoi inserire un'altro valore non numerico ?"));
 
@@ -694,7 +711,7 @@ public class ClasseDiServizio {
         ModOperativa modOperative = null;
         String nomeModalitaOperativa = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome della modalita operativa: ");
         if (InputDati.yesOrNo("Vuoi inserire una modalita operativa con valore?")) {
-            double valore = InputDati.leggiDouble("Inserisci il valore:");
+            double valore = InputDati.leggiDouble("Inserisci il valore: ");
             modOperative = new ModOperativaNonParamentrica(nomeModalitaOperativa, valore);
         } else {
             modOperative = new ModOperativaNonParamentrica(nomeModalitaOperativa);
@@ -713,7 +730,7 @@ public class ClasseDiServizio {
         ArrayList<String> parametri = new ArrayList<>();
         String nomeModalitaOperativa = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome della modalita operativa: ");
         do {
-            parametri.add(InputDati.leggiStringaNonVuota("Inserisci parametro :"));
+            parametri.add(InputDati.leggiStringaNonVuota("Inserisci parametro: "));
         } while (InputDati.yesOrNo("Vuoi inserire un'altro parametro nella modalità operativa?"));
         modOperative = new ModOperativaParamentrica(nomeModalitaOperativa, parametri);
         return modOperative;

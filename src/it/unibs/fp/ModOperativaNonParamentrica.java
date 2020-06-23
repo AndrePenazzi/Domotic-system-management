@@ -1,8 +1,10 @@
 package it.unibs.fp;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 
 public class ModOperativaNonParamentrica extends ModOperativa implements Serializable {
+    private static DecimalFormat df2 = new DecimalFormat("#.##");
     private double valore;
 
     /**
@@ -19,7 +21,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
     /**
      * Costruttore
      *
-     * @param nome   della modalità operativa
+     * @param nome della modalità operativa
      * @param valore richiesto
      */
     public ModOperativaNonParamentrica(String nome, double valore) {
@@ -56,7 +58,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");
         tmp.append(getNome()+"\n");
-        tmp.append("Valore: "+valore);
+        tmp.append("Valore: "+df2.format(valore));
         return tmp.toString();
     }
 }
