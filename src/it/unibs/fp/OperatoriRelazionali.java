@@ -23,7 +23,6 @@ public enum OperatoriRelazionali {
         boolean finito = false;
         String[] azione = {">","<","≥","≤","="};
         MyMenu menu = new MyMenu("Menu scelta operatore relazionale", azione);
-        do {
             int scelta = menu.scegli();
             switch (scelta) {
 
@@ -47,7 +46,6 @@ public enum OperatoriRelazionali {
                     return UGUALE;
                 }
             }
-        } while (!finito);
         return null;
     }
 

@@ -10,7 +10,6 @@ public enum OperatoriBooleani {
         boolean finito = false;
         String[] azione = {"and","or"};
         MyMenu menu = new MyMenu("Menu scelta operatore booleano", azione);
-        do {
             int scelta = menu.scegli();
             switch (scelta) {
 
@@ -22,7 +21,6 @@ public enum OperatoriBooleani {
                     return OR;
                 }
             }
-        } while (!finito);
         return null;
     }
 

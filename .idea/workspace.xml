@@ -25,19 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Domotic_system_management_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Conseguente.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriBooleani.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +118,7 @@
       <workItem from="1592062624529" duration="701000" />
       <workItem from="1592832525044" duration="24543000" />
       <workItem from="1592901432112" duration="13986000" />
-      <workItem from="1592927185025" duration="7224000" />
+      <workItem from="1592927185025" duration="11545000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -205,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592919991886</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Aggiunte nuove funzionalità per aggiungere una Regola">
+      <created>1592944718889</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1592944718889</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +235,8 @@
     <MESSAGE value="Testing ulteriori" />
     <MESSAGE value="Push finale bee version" />
     <MESSAGE value="Creato CostituenteLogico" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creato CostituenteLogico" />
+    <MESSAGE value="Aggiunte nuove funzionalità per aggiungere una Regola" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte nuove funzionalità per aggiungere una Regola" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592943129008">
@@ -247,10 +247,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="527" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1592920677680" />
-    <state x="386" y="0" key="CommitChangelistDialog2" timestamp="1592919988358">
+    <state x="386" y="0" key="CommitChangelistDialog2" timestamp="1592947685924">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="386" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592919988358" />
+    <state x="386" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592947685924" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1590678519527">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -291,14 +291,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1592932585995" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1592920799470">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1592944809699">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1592920799470" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1592919993104">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1592944809699" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1592944725305">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1592919993104" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1592944725305" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1590674692069">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

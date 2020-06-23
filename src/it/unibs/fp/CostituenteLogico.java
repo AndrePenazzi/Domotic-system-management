@@ -1,16 +1,18 @@
 package it.unibs.fp;
 
 public class CostituenteLogico {
-    private InfoRilevabile primoOperatoreLogico;
-    private InfoRilevabile secondoOperatoreLogico;
-    private OperatoriRelazionali operatoreRelazionale;
-    private double secondoOperatoreCostante;
-    private String secondoOperatoreScalare;
+    private InfoRilevabile primoOperatoreLogico = null;
+    private InfoRilevabile secondoOperatoreLogico = null;
+    private OperatoriRelazionali operatoreRelazionale = null;
+    private double secondoOperatoreCostante = Double.parseDouble(null);
+    private String secondoOperatoreScalare = null;
+
     /**
      * Costruttore con valori
-     * @param primoOperatoreLogico Informazione rilevabile 1
+     *
+     * @param primoOperatoreLogico   Informazione rilevabile 1
      * @param secondoOperatoreLogico Informazione rilevabile 2
-     * @param operatoreRelazionale >,<,=,<=,>=
+     * @param operatoreRelazionale   >,<,=,<=,>=
      */
     public CostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         this.primoOperatoreLogico = primoOperatoreLogico;
@@ -20,6 +22,7 @@ public class CostituenteLogico {
 
     /**
      * Costruttore con costante
+     *
      * @param primoOperatoreLogico
      * @param secondoOperatoreCostante
      * @param operatoreRelazionale
@@ -32,15 +35,15 @@ public class CostituenteLogico {
     }
 
     /**
-     * Costruttore con scalare
+     *
      * @param primoOperatoreLogico
-     * @param secondoOperatoreCostante
+     * @param secondoOperatoreScalare
      * @param operatoreRelazionale
      */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreCostante, OperatoriRelazionali operatoreRelazionale) {
+    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreScalare, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreLogico = null;
         this.primoOperatoreLogico = primoOperatoreLogico;
-        this.secondoOperatoreScalare = secondoOperatoreCostante;
+        this.secondoOperatoreScalare = secondoOperatoreScalare;
         this.operatoreRelazionale = operatoreRelazionale;
     }
 
@@ -55,6 +58,7 @@ public class CostituenteLogico {
 
     /**
      * Getter
+     *
      * @return primoOperatoreLogico
      */
     public InfoRilevabile getPrimoOperatoreLogico() {
@@ -63,6 +67,7 @@ public class CostituenteLogico {
 
     /**
      * Setter
+     *
      * @param primoOperatoreLogico scelto
      */
     public void setPrimoOperatoreLogico(InfoRilevabile primoOperatoreLogico) {
@@ -71,6 +76,7 @@ public class CostituenteLogico {
 
     /**
      * Getter
+     *
      * @return secondoOperatoreLogico
      */
     public InfoRilevabile getSecondoOperatoreLogico() {
@@ -79,6 +85,7 @@ public class CostituenteLogico {
 
     /**
      * Setter
+     *
      * @param secondoOperatoreLogico scelto
      */
     public void setSecondoOperatoreLogico(InfoRilevabile secondoOperatoreLogico) {
@@ -87,6 +94,7 @@ public class CostituenteLogico {
 
     /**
      * Getter
+     *
      * @return operatoreRelazionale
      */
     public OperatoriRelazionali getOperatoreRelazionale() {
@@ -95,6 +103,7 @@ public class CostituenteLogico {
 
     /**
      * Setter
+     *
      * @param operatoreRelazionale scelto
      */
     public void setOperatoreRelazionale(OperatoriRelazionali operatoreRelazionale) {
@@ -103,6 +112,7 @@ public class CostituenteLogico {
 
     /**
      * Calcolo del valore booleano attuale del costituente logico
+     *
      * @return valore calcolato
      */
     public boolean calcolaValoreBooleano() {
@@ -122,20 +132,25 @@ public class CostituenteLogico {
             } else if (operatoreRelazionale == OperatoriRelazionali.MINORE_UGUALE) {
                 return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() <= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
             }
-        }
-        else return  true;
+        } else return true;
         return false;
     }
 
     /**
      * toString
+     *
      * @return nomi e opeartore relazionale
      */
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null)
-            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString()).append(" ").append(secondoOperatoreLogico.getNome());
+        if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
+            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+            if (secondoOperatoreLogico != null)
+                tmp.append(" "+secondoOperatoreLogico);
+            else tmp.append(" "+secondoOperatoreCostante);
+
+        }
         return tmp.toString();
     }
 }

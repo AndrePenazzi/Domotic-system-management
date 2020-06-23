@@ -146,6 +146,20 @@ public class Regola {
      */
     @Override//TODO I FOR PER ANTECEDENTE E CONSEGUENTE
     public String toString() {
+        StringBuilder anteced = new StringBuilder();
+        for(int i=0; i<antecedente.size();i++) {
+            anteced.append(" "+antecedente.get(i).toString());
+            if (i % 2 == 0 && opBooleani.get(0) != null)
+                anteced.append(opBooleani.get(i));
+        }
+
+        for(int i=0; i<conseguente.size();i++) {
+            anteced.append(" "+conseguente.get(i).toString());
+            if(i<conseguente.size()-1)
+                anteced.append(",");
+        }
+
+
         return "Regola:" +
                 "if " + antecedente + " else " + conseguente;
     }

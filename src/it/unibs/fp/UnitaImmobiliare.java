@@ -354,8 +354,10 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = regole;
     }
 
-    //TODO DA CAMBIARE E SISTEMARE
     public String visualizzaRegole() {
-        return regole.toString();
+        StringBuilder str = new StringBuilder();
+        for(Regola r: regole)
+            str.append("\n"+regole.toString());
+        return str.toString();
     }
 }
