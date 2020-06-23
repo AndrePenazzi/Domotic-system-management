@@ -1,7 +1,5 @@
 package it.unibs.fp;
 
-import it.unibs.fp.mylib.OperatoriBooleani;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -68,6 +66,30 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
+     *
+     * @param regola
+     * @param primoOpLogico
+     * @param secondoOpCostante
+     * @param opRelazionale
+     */
+    //TODO FAI COMMENTO
+    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, Double secondoOpCostante, OperatoriRelazionali opRelazionale) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
+        }
+    }
+
+    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
+        }
+    }
+
+    /**
      * Inserisci l'ennesimo costituente logico
      *
      * @param regola          scelta
@@ -81,6 +103,22 @@ public class UnitaImmobiliare implements Serializable {
         if (regole.contains(regola)) {
             i = trovaRegola(regola);
             regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+        }
+    }
+
+    public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale, opBooleano);
+        }
+    }
+
+    public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale, opBooleano);
         }
     }
 

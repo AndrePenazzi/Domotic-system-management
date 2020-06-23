@@ -2,14 +2,12 @@ package it.unibs.fp;
 
 import it.unibs.fp.mylib.InputDati;
 import it.unibs.fp.mylib.MyMenu;
-import it.unibs.fp.mylib.OperatoriBooleani;
 import it.unibs.fp.mylib.ServizioFile;
 
 import java.io.File;
 import java.util.ArrayList;
 
 public class ClasseDiServizio {
-File("contenitore.txt"),contenitore
 
     /**
      * Menu di scelta utente (manutentore o fruitore)
@@ -188,11 +186,8 @@ File("contenitore.txt"),contenitore
         }
         while (!finito);
     }
-        while(!finito);
-        contenitore.setFruitore(fruitore);
-        ServizioFile.salvaSingoloOggetto(new
 
-        /**
+    /**
      * Stampa il menu con le operazioni del fruitore
      *
      * @param contenitore per ottenere gli oggetti necessari
@@ -292,10 +287,11 @@ File("contenitore.txt"),contenitore
                 case 3: {
                     boolean flag;
                     do {
-                        if (InputDati.yesOrNo("Si vuole scgliere un attuatore di una stanza ?")) {
+                        if (InputDati.yesOrNo("Si vuole scegliere un attuatore di una stanza ?")) {
                             System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaStanze());
                             int stanzaScelta = InputDati.leggiIntero("Scegliere stanza :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeStanze());
                             Stanza stanza = fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(--stanzaScelta);
+
                             if (InputDati.yesOrNo("Si vuole scegliere l'attautore di un artefatto ?")) {
                                 System.out.println(stanza.visualizzaArtefatti());
                                 int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
@@ -308,6 +304,7 @@ File("contenitore.txt"),contenitore
 
                                 int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
                                 ModOperativa mTMP = attuatore.getCategoriaAttuatori().getModalitaOperative().get(--modalitaOperativaScelta);
+
                                 if (mTMP.getType() == 1) {
                                     double valore = InputDati.leggiDouble("Inserisci valore : ");
                                     ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
@@ -318,6 +315,100 @@ File("contenitore.txt"),contenitore
                                     ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--paremetroScelto));
                                 }
                                 inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
+                            } else {
+                                int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, stanza.getAttuatori().size());
+                                Attuatore attuatore = stanza.getAttuatori().get(--attuatoreScelto);
+                                System.out.println(attuatore.getCategoriaAttuatori().toString());
+
+                                int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
+                                ModOperativa mTMP = attuatore.getCategoriaAttuatori().getModalitaOperative().get(--modalitaOperativaScelta);
+
+                                if (mTMP.getType() == 1) {
+                                    double valore = InputDati.leggiDouble("Inserisci valore : ");
+                                    ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
+                                } else {
+                                    ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) mTMP;
+                                    System.out.println(modOperativaParamentrica.toString());
+                                    int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
+                                    ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--paremetroScelto));
+                                }
+                                inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
+                            }
+                        } else if (InputDati.yesOrNo("Si vuole scegliere un attuatore di un artefatto ?")) {
+                            System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaArtefatti());
+                            int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
+                            Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
+                            System.out.println(artefatto.visualizzaAttuatori());
+
+                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
+                            Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);
+                            System.out.println(attuatore.getCategoriaAttuatori().toString());
+
+                            int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
+                            ModOperativa mTMP = attuatore.getCategoriaAttuatori().getModalitaOperative().get(--modalitaOperativaScelta);
+
+                            if (mTMP.getType() == 1) {
+                                double valore = InputDati.leggiDouble("Inserisci valore : ");
+                                ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
+                            } else {
+                                ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) mTMP;
+                                System.out.println(modOperativaParamentrica.toString());
+                                int parametroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
+                                ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--parametroScelto));
+                            }
+                            inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
+                        }
+                        flag = InputDati.yesOrNo("Vuoi continuare a creare conseguenze?");
+                    } while (!flag);
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+                    flag = false;
+                    do {
+                        if (InputDati.yesOrNo("Si vuole scegliere un sensore di una stanza?")) {
+                            System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaStanze());
+                            int stanzaScelta = InputDati.leggiIntero("Scegliere stanza :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeStanze());
+                            Stanza stanza = fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(--stanzaScelta);
+                            if (InputDati.yesOrNo("Si vuole scegliere l'attautore di un artefatto ?")) {
+                                System.out.println(stanza.visualizzaArtefatti());
+                                int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(--stanzaScelta).getArtefatti().size());
+                                Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
+                                System.out.println(artefatto.visualizzaSensori());
+
+                                int sensoreScelto = InputDati.leggiIntero("Scegliere sensore :", 1, artefatto.getSensori().size());
+                                Sensore sensore = artefatto.getSensori().get(--sensoreScelto);
+                                System.out.println(sensore.getCategoriaSensori().toString());
+
+                                int infoRilevabileScelta = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore.getCategoriaSensori().getInformazioniRilevabili().size());
+                                InfoRilevabile iTMP = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta);
+                                //numerico
+                                if (iTMP.getType() == 1) {
+                                    if (InputDati.yesOrNo("Vuoi confrontare con una costante?")) {
+                                        InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
+                                        OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
+                                        double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
+                                        aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                                    } else {
+                                        InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
+                                        OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
+
+                                        int sensoreScelto2 = InputDati.leggiIntero("Scegliere sensore :", 1, artefatto.getSensori().size());
+                                        Sensore sensore2 = artefatto.getSensori().get(--sensoreScelto);
+                                        System.out.println(sensore.getCategoriaSensori().toString());
+                                        int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore.getCategoriaSensori().getInformazioniRilevabili().size());
+                                        InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta);
+                                        InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
+                                        aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                                    }
+
+                                }
+                                //parametrico
+                                else {
+                                    InfoRilevabileNonNumerica iNNTMP = (InfoRilevabileNonNumerica) iTMP;
+                                    System.out.println("L'operatore logico predefinito è =");
+                                    String parametro = scegliParametroConCuiConfrontare(iNNTMP);
+                                    OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
+                                    aggiungiCostituenteLogicoAregola(contenitore,fruitore.getUnitaImmobiliari().get(--unitaImm),iNNTMP,parametro,operatoreRelazionale);
+                                }
                             } else {
                                 int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, stanza.getAttuatori().size());
                                 Attuatore attuatore = stanza.getAttuatori().get(--attuatoreScelto);
@@ -365,86 +456,10 @@ File("contenitore.txt"),contenitore
                     } while (!flag);
                 }
 
-                boolean flag;
-                do {
-                    if (InputDati.yesOrNo("Si vuole scgliere un sensore di una stanza ?")) {
-                        System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaStanze());
-                        int stanzaScelta = InputDati.leggiIntero("Scegliere stanza :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeStanze());
-                        Stanza stanza = fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(--stanzaScelta);
-                        if (InputDati.yesOrNo("Si vuole scegliere l'attautore di un artefatto ?")) {
-                            System.out.println(stanza.visualizzaArtefatti());
-                            int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
-                            Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
-                            System.out.println(artefatto.visualizzaSensori());
-
-                            int sensoreScelto = InputDati.leggiIntero("Scegliere sensore :", 1, artefatto.getSensori().size());
-                            Sensore sensore = artefatto.getSensori().get(--sensoreScelto);
-                            System.out.println(sensore.getCategoriaSensori().toString());
-
-                            int infoRilevabileScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, sensore.getCategoriaSensori().getInformazioniRilevabili().size());
-                            InfoRilevabile mTMP = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta);
-                            if (mTMP.getType() == 1) {
-                                double valore = InputDati.leggiDouble("Inserisci valore : ");
-                                ((InfoRilevabileNumerica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getSensori().get(sensoreScelto).getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta)).setValore(valore);
-                            } else {
-                                InfoRilevabileNonNumerica infoRilevabileNonNumerica = (InfoRilevabileNonNumerica) mTMP;
-                                System.out.println(infoRilevabileNonNumerica.toString());
-                                int tipoScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, infoRilevabileNonNumerica.getType());
-                                (fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getSensori().get(sensoreScelto).getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta)).setType(tipoScelto);
-                            }
-                            aggiungiPrimoCosituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), mTMP, mTMP);
-                        } else {
-                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, stanza.getAttuatori().size());
-                            Attuatore attuatore = stanza.getAttuatori().get(--attuatoreScelto);
-                            System.out.println(attuatore.getCategoriaAttuatori().toString());
-
-                            int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
-                            ModOperativa mTMP = attuatore.getCategoriaAttuatori().getModalitaOperative().get(--modalitaOperativaScelta);
-
-                            if (mTMP.getType() == 1) {
-                                double valore = InputDati.leggiDouble("Inserisci valore : ");
-                                ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
-                            } else {
-                                ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) mTMP;
-                                System.out.println(modOperativaParamentrica.toString());
-                                int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
-                                ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--paremetroScelto));
-                            }
-                            inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
-                        }
-                    } else if (InputDati.yesOrNo("Si vuole cambiare modalità operativa di un attautore in un artefatto ?")) {
-                        System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaArtefatti());
-                        int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
-                        Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
-                        System.out.println(artefatto.visualizzaAttuatori());
-
-                        int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
-                        Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);
-                        System.out.println(attuatore.getCategoriaAttuatori().toString());
-
-                        int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
-                        ModOperativa mTMP = attuatore.getCategoriaAttuatori().getModalitaOperative().get(--modalitaOperativaScelta);
-
-                        if (mTMP.getType() == 1) {
-                            double valore = InputDati.leggiDouble("Inserisci valore : ");
-                            ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
-                        } else {
-                            ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) mTMP;
-                            System.out.println(modOperativaParamentrica.toString());
-                            int parametroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
-                            ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--parametroScelto));
-                        }
-                        inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
-                    }
-                    flag = InputDati.yesOrNo("Vuoi continuare a creare nuove regole?");
-                } while (!flag);
+                break;
             }
-
-
-            break;
-        }
-    });
-}
+        }while (!finito);
+    }
 
     /**
      * Menu del manutentore per inserire ed assciare
@@ -513,7 +528,6 @@ File("contenitore.txt"),contenitore
         } while (!finito);
 
     }
-    //----------------------------------ASSOCIA-----------------------------------------------------
 
     /**
      * Associa un artefatto ad una o più stanze
@@ -537,6 +551,7 @@ File("contenitore.txt"),contenitore
             System.out.println("Bisogna prima creare un artefatto");
 
     }
+    //----------------------------------ASSOCIA-----------------------------------------------------
 
     /**
      * Associa un sensore ad una o più stanze
@@ -651,9 +666,6 @@ File("contenitore.txt"),contenitore
                 System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
         }
     }
-    //-----------------------------FINE ASSOCIA-----------------------------------------------------
-
-    //-----------------------------INSERISCI-----------------------------------------------------
 
     /**
      * Inserisci una nuova unitàImmobiliare
@@ -668,6 +680,9 @@ File("contenitore.txt"),contenitore
         contenitore.setManutentore(manutentore);
         ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
     }
+    //-----------------------------FINE ASSOCIA-----------------------------------------------------
+
+    //-----------------------------INSERISCI-----------------------------------------------------
 
     /**
      * Inseriesci e salva una o piu categoria di attuatori
@@ -856,7 +871,6 @@ File("contenitore.txt"),contenitore
         return modOperative;
     }
 
-
     /**
      * Inserisci una modalità operativa non parametrica
      *
@@ -873,7 +887,6 @@ File("contenitore.txt"),contenitore
         }
         return modOperative;
     }
-
 
     /**
      * Inserisci una modalità operativa parametrica
@@ -905,7 +918,54 @@ File("contenitore.txt"),contenitore
         return fruitore;
     }
 
+    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore = contenitore.getFruitore();
+        if (unitaImmobiliare.getRegole().isEmpty())
+            fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
+        else {
+            OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
+            fruitore = aggiungiEnnesimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale, operatoreBooleano);
+        }
+        return fruitore;
+    }
+
+    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, Double secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore = contenitore.getFruitore();
+        if (unitaImmobiliare.getRegole().isEmpty())
+            fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
+        else {
+            OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
+            fruitore = aggiungiEnnesimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale, operatoreBooleano);
+        }
+        return fruitore;
+    }
+
+    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore = contenitore.getFruitore();
+        if (unitaImmobiliare.getRegole().isEmpty())
+            fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
+        else {
+            OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
+            fruitore = aggiungiEnnesimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale, operatoreBooleano);
+        }
+        return fruitore;
+    }
+
     public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore = contenitore.getFruitore();
+        int i = scegliRegola(unitaImmobiliare);
+        fruitore.aggiungiPrimoCosituenteLogicoARegola(unitaImmobiliare, unitaImmobiliare.getRegole().get(i), primoOpLogico, secondoOpLogico, opRelazionale);
+        return fruitore;
+    }
+
+    public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore = contenitore.getFruitore();
+        int i = scegliRegola(unitaImmobiliare);
+        fruitore.aggiungiPrimoCosituenteLogicoARegola(unitaImmobiliare, unitaImmobiliare.getRegole().get(i), primoOpLogico, secondoOpLogico, opRelazionale);
+        return fruitore;
+    }
+
+    public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
         fruitore.aggiungiPrimoCosituenteLogicoARegola(unitaImmobiliare, unitaImmobiliare.getRegole().get(i), primoOpLogico, secondoOpLogico, opRelazionale);
@@ -919,14 +979,24 @@ File("contenitore.txt"),contenitore
         return fruitore;
     }
 
+    public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        Fruitore fruitore = contenitore.getFruitore();
+        int i = scegliRegola(unitaImmobiliare);
+        fruitore.aggiungiEnnesimoCosituenteLogicoARegola(unitaImmobiliare, unitaImmobiliare.getRegole().get(i), primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+        return fruitore;
+    }
+
+    public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        Fruitore fruitore = contenitore.getFruitore();
+        int i = scegliRegola(unitaImmobiliare);
+        fruitore.aggiungiEnnesimoCosituenteLogicoARegola(unitaImmobiliare, unitaImmobiliare.getRegole().get(i), primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+        return fruitore;
+    }
 
     public static int scegliRegola(UnitaImmobiliare unitaImmobiliare) {
         System.out.println(unitaImmobiliare.visualizzaRegole());
         return InputDati.leggiIntero("Scegli la regola:", 1, unitaImmobiliare.getRegole().size()) - 1;
     }
-    //-----------------------------FINE INSERISCI-----------------------------------------------
-
-    //-----------------------------SCEGLI-------------------------------------------------------
 
     /**
      * Scegli un unità immobiliare
@@ -940,6 +1010,9 @@ File("contenitore.txt"),contenitore
         int unitaImmobiliareScelta = InputDati.leggiIntero("Scegli UnitaImmobiliare : ", 1, manutentore.getSizeUnitaImmobiliari());
         return unitaImmobiliari.get(--unitaImmobiliareScelta);
     }
+    //-----------------------------FINE INSERISCI-----------------------------------------------
+
+    //-----------------------------SCEGLI-------------------------------------------------------
 
     /**
      * Scegli uno o più nuovi artefatti
@@ -989,9 +1062,6 @@ File("contenitore.txt"),contenitore
         } while (InputDati.yesOrNo("Vuoi scegliere un'altra stanza?"));
         return stanze;
     }
-    //-----------------------------FINE SCEGLI-----------------------------------------------------
-
-    //-----------------------------CREA------------------------------------------------------------
 
     /**
      * Crea un nuovo attuatore
@@ -1008,6 +1078,9 @@ File("contenitore.txt"),contenitore
         System.out.println("Si è creato l'attuatore " + nome);
         return new Attuatore(nome, listaCategorie.getCategorieAttuatori().get(categoria));
     }
+    //-----------------------------FINE SCEGLI-----------------------------------------------------
+
+    //-----------------------------CREA------------------------------------------------------------
 
     /**
      * Crea un nuovo sensore
@@ -1023,6 +1096,15 @@ File("contenitore.txt"),contenitore
         nome += "_" + listaCategorie.getCategorieSensori().get(categoria).getNome();
         System.out.println("Si è creato il sensore " + nome);
         return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
+    }
+
+    private static String scegliParametroConCuiConfrontare(InfoRilevabileNonNumerica infoRilevabileNonNumerica) {
+        int i = 1;
+        for(String valore: infoRilevabileNonNumerica.getValori()){
+            System.out.println(i+" "+valore);
+        }
+        int scelta = InputDati.leggiIntero("Scegliere parametro con cui confrontare");
+        return infoRilevabileNonNumerica.getValori().get(scelta);
     }
     //-----------------------------FINE CREA-----------------------------------------------------
 }

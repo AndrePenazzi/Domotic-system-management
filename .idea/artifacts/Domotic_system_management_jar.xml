@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Domotic-system-management:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Domotic_system_management_jar</output-path>
+    <root id="archive" name="Domotic-system-management.jar">
+      <element id="module-output" name="Domotic-system-management" />
+    </root>
+  </artifact>
+</component>

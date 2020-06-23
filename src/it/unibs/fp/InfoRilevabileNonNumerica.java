@@ -56,4 +56,20 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
             tmp.append("\nNon ci sono ancora valori associati");
         return tmp.toString();
     }
+
+    public void setValori(ArrayList<String> valori) {
+        this.valori = valori;
+    }
+
+    public ArrayList<String> getValori() {
+        return valori;
+    }
+
+    public String getValoreAttuale() {
+        return valoreAttuale;
+    }
+
+    public void setValoreAttuale(String valoreAttuale) {
+        this.valoreAttuale = valoreAttuale;
+    }
 }

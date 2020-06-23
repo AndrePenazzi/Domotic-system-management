@@ -1,7 +1,5 @@
 package it.unibs.fp;
 
-import it.unibs.fp.mylib.OperatoriBooleani;
-
 import java.util.ArrayList;
 
 public class Regola {
@@ -33,6 +31,26 @@ public class Regola {
 
     }
 
+    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        opBooleani.add(opBooleano);
+        CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
+        antecedente.add(costituenteLogico);
+
+    }
+//TODO FAI COMMENTO
+    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+        opBooleani.add(opBooleano);
+        CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
+        antecedente.add(costituenteLogico);
+
+    }
+
+    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale) {
+        CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
+        antecedente.add(costituenteLogico);
+
+    }
+
     /**
      * Inserisci costituente logico
      *
@@ -42,6 +60,10 @@ public class Regola {
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale));
+    }
+
+    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, Double secondoOpCostante, OperatoriRelazionali opRelazionale) {
+        antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale));
     }
 
     /**
