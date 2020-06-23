@@ -7,6 +7,9 @@ import java.util.ArrayList;
 public class Fruitore implements Serializable {
     private ArrayList<UnitaImmobiliare> unitaImmobiliari;
 
+    /**
+     * Costruttore fruitore
+     */
     public Fruitore() {
         unitaImmobiliari = new ArrayList<>();
     }
@@ -14,6 +17,7 @@ public class Fruitore implements Serializable {
     /**
      * Inserisci la regola per la prima volta
      *
+     * @param unitaImmobiliare scelta
      * @param attuatore    per settare la sua modalità operativa
      * @param modOperativa scelta
      */
@@ -24,31 +28,51 @@ public class Fruitore implements Serializable {
     /**
      * Inserisci la regola per la prima volta
      *
+     * @param unitaImmobiliare scelta
      * @param regola       scelta
      * @param attuatore    per settare la sua modalità operativa
      * @param modOperativa scelta
      */
-    public void aggiungiAzione(UnitaImmobiliare unitaImmobiliare,Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
-        unitaImmobiliare.aggiungiAzione(regola,attuatore, modOperativa);
+    public void aggiungiAzione(UnitaImmobiliare unitaImmobiliare, Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
+        unitaImmobiliare.aggiungiAzione(regola, attuatore, modOperativa);
     }
 
 
     /**
      * Inserisci il primo costituente logico
      *
+     * @param unitaImmobiliare scelta
      * @param regola          scelta
      * @param primoOpLogico   primo operatore da confrontare
-     * @param secondoOpLogico secondo operatore da confrontare
+     * @param secondoOpLogico info rilevabile
      * @param opRelazionale   operatore relazionale per il confronto
      */
     public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
+    /**
+     * Aggiungi primo costituente logico a regola
+     *
+     * @param unitaImmobiliare scelta
+     * @param regola           scelta
+     * @param primoOpLogico    scelto
+     * @param secondoOpLogico  double
+     * @param opRelazionale    per il confronto
+     */
     public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale) {
         unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
+    /**
+     * Aggiungi primo costituente logico a regola
+     *
+     * @param unitaImmobiliare scelta
+     * @param regola           scelta
+     * @param primoOpLogico    scelto
+     * @param secondoOpLogico  String
+     * @param opRelazionale    per il confronto
+     */
     public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
         unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
     }
@@ -56,20 +80,41 @@ public class Fruitore implements Serializable {
     /**
      * Inserisci l'ennesimo costituente logico
      *
+     * @param unitaImmobiliare scelta
      * @param regola          scelta
      * @param primoOpLogico   primo operatore da confrontare
-     * @param secondoOpLogico secondo operatore da confrontare
-     * @param opRelazionale   operatore relazionale per il confronto
+     * @param secondoOpLogico info rilevabile
+     * @param opRelazionale   per il confronto
      * @param opBooleano      per confrontare i costituenti logici
      */
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }
 
+    /**
+     * Aggiungi ennesimo costituente logico a regola
+     *
+     * @param unitaImmobiliare scelta
+     * @param regola           scelta
+     * @param primoOpLogico    scelto
+     * @param secondoOpLogico  double
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per il confronto tra costituenti
+     */
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }
 
+    /**
+     * Aggiungi ennesimo costituente logico a regola
+     *
+     * @param unitaImmobiliare scelta
+     * @param regola           scelta
+     * @param primoOpLogico    scelto
+     * @param secondoOpLogico  String
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per il confronto tra costituenti
+     */
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }

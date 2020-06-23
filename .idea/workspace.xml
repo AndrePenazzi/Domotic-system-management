@@ -24,10 +24,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
+    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="Cricket Version with javaDoc">
+      <change afterPath="$PROJECT_DIR$/contenitore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
@@ -69,6 +72,18 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.unibs.fp" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -215,12 +230,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -236,7 +252,8 @@
     <MESSAGE value="Push finale bee version" />
     <MESSAGE value="Creato CostituenteLogico" />
     <MESSAGE value="Aggiunte nuove funzionalità per aggiungere una Regola" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aggiunte nuove funzionalità per aggiungere una Regola" />
+    <MESSAGE value="Cricket Version with javaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cricket Version with javaDoc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592943129008">

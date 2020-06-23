@@ -66,14 +66,14 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
+     * Inserisci il primo costituente logico
      *
-     * @param regola
-     * @param primoOpLogico
-     * @param secondoOpCostante
-     * @param opRelazionale
+     * @param regola            scelta
+     * @param primoOpLogico     primo operatore da confrontare
+     * @param secondoOpCostante double
+     * @param opRelazionale     per il confronto
      */
-    //TODO FAI COMMENTO
-    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, Double secondoOpCostante, OperatoriRelazionali opRelazionale) {
+    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale) {
         int i;
         if (regole.contains(regola)) {
             i = trovaRegola(regola);
@@ -81,6 +81,14 @@ public class UnitaImmobiliare implements Serializable {
         }
     }
 
+    /**
+     * Inserisci il primo costituente logico
+     *
+     * @param regola            scelta
+     * @param primoOpLogico     primo operatore da confrontare
+     * @param secondoOpCostante String
+     * @param opRelazionale     per il confronto
+     */
     public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale) {
         int i;
         if (regole.contains(regola)) {
@@ -94,8 +102,8 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param regola          scelta
      * @param primoOpLogico   primo operatore da confrontare
-     * @param secondoOpLogico secondo operatore da confrontare
-     * @param opRelazionale   operatore relazionale per il confronto
+     * @param secondoOpLogico info rilevabile
+     * @param opRelazionale   per il confronto
      * @param opBooleano      per confrontare i costituenti logici
      */
     public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
@@ -106,6 +114,15 @@ public class UnitaImmobiliare implements Serializable {
         }
     }
 
+    /**
+     * Aggiungi ennesimo costituente logico a regola
+     *
+     * @param regola            scelta
+     * @param primoOpLogico     scelto
+     * @param secondoOpCostante double
+     * @param opRelazionale     per il confronto
+     * @param opBooleano        per il confronto tra costituenti
+     */
     public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         int i;
         if (regole.contains(regola)) {
@@ -114,6 +131,15 @@ public class UnitaImmobiliare implements Serializable {
         }
     }
 
+    /**
+     * Aggiungi ennesimo costituente logico a regola
+     *
+     * @param regola            scelta
+     * @param primoOpLogico     scelto
+     * @param secondoOpCostante String
+     * @param opRelazionale     per il confronto
+     * @param opBooleano        per il confronto tra costituenti
+     */
     public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         int i;
         if (regole.contains(regola)) {
@@ -354,10 +380,15 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = regole;
     }
 
+    /**
+     * Visualliza le regole
+     *
+     * @return la visualizzazione delle regole
+     */
     public String visualizzaRegole() {
         StringBuilder str = new StringBuilder();
-        for(Regola r: regole)
-            str.append("\n"+regole.toString());
+        for (Regola r : regole)
+            str.append("\n" + regole.toString());
         return str.toString();
     }
 }

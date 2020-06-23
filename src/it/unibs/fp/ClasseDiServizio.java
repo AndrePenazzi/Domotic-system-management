@@ -49,7 +49,7 @@ public class ClasseDiServizio {
      */
     private static void stampaMenuManutentore(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci unità immobiliare", "Inserisci e associa", "Visualizza categorie e valori rilevati", "Elimina salvataggi"};
+        String[] azione = {"Inserisci unità immobiliare", "Inserisci e associa", "Visualizza categorie e valori rilevati"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -72,11 +72,6 @@ public class ClasseDiServizio {
 
                 case 3: {
                     stampaMenuVisualizzazioneManutentore(contenitore);
-                }
-                break;
-                //TODO SE RIESCI FALLO SE NO BUTTA VIA
-                case 4: {
-                    System.out.println("Eliminazione");
                 }
                 break;
             }
@@ -327,7 +322,7 @@ public class ClasseDiServizio {
                             InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                             OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                             double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
                         }
                         //con un'altro sensore
                         else {
@@ -340,7 +335,7 @@ public class ClasseDiServizio {
                             int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size());
                             InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta2);
                             InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                         }
 
                     }
@@ -350,7 +345,7 @@ public class ClasseDiServizio {
                         System.out.println("L'operatore logico predefinito è =");
                         String parametro = scegliParametroConCuiConfrontare(iNNTMP);
                         OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
-                        aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
+                        aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
                     }
                 }
                 //in sensore di stanza
@@ -368,7 +363,7 @@ public class ClasseDiServizio {
                             InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                             OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                             double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
                         }
                         //con un'altro sensore
                         else {
@@ -381,7 +376,7 @@ public class ClasseDiServizio {
                             int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size());
                             InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta2);
                             InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                         }
 
                     }
@@ -391,7 +386,7 @@ public class ClasseDiServizio {
                         System.out.println("L'operatore logico predefinito è =");
                         String parametro = scegliParametroConCuiConfrontare(iNNTMP);
                         OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
-                        aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
+                        aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
                     }
 
                 }
@@ -416,7 +411,7 @@ public class ClasseDiServizio {
                             InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                             OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                             double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
                         }
                         //con un'altro sensore
                         else {
@@ -429,7 +424,7 @@ public class ClasseDiServizio {
                             int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size());
                             InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(--infoRilevabileScelta2);
                             InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                            aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                            aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                         }
 
                     }
@@ -439,13 +434,20 @@ public class ClasseDiServizio {
                         System.out.println("L'operatore logico predefinito è =");
                         String parametro = scegliParametroConCuiConfrontare(iNNTMP);
                         OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
-                        aggiungiCostituenteLogicoAregola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
+                        aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNNTMP, parametro, operatoreRelazionale);
                     }
                 }
             }
         } while (InputDati.yesOrNo("Vuoi continuare a creare nuove regole?"));
     }
 
+    /**
+     * Crea le conseguenze delle regole
+     *
+     * @param contenitore dal quale prendere gli oggetti necessari
+     * @param unitaImm    scelta
+     * @param fruitore    scelto
+     */
     private static void creaConseguenze(Contenitore contenitore, int unitaImm, Fruitore fruitore) {
         do {
             //in stanza
@@ -970,13 +972,30 @@ public class ClasseDiServizio {
         return modOperative;
     }
 
-    //TODO
+    /**
+     * Inserisci una nuova regola
+     *
+     * @param contenitore      dal quale prendere gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param attuatore        scelto
+     * @param modOperativa     da impostare
+     * @return il fruitore
+     */
     public static Fruitore inserisciNuovaRegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
         Fruitore fruitore = contenitore.getFruitore();
         fruitore.inserisciRegola(unitaImmobiliare, attuatore, modOperativa);
         return fruitore;
     }
 
+    /**
+     * Aggiungi un'azione alla conseguenza
+     *
+     * @param contenitore      per gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param attuatore        scelto
+     * @param modOperativa     da impostare
+     * @return il fruitore
+     */
     public static Fruitore aggiungiAzione(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -984,8 +1003,18 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
-    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        Fruitore fruitore = contenitore.getFruitore();
+    /**
+     * Aggiungi un costituente logico alla regola
+     *
+     * @param contenitore      per gli ogetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  info rilevabile
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
+    public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore;
         if (unitaImmobiliare.getRegole().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
@@ -995,8 +1024,18 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
-    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, Double secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        Fruitore fruitore = contenitore.getFruitore();
+    /**
+     * Aggiungi un costituente logico alla regola
+     *
+     * @param contenitore      per gli ogetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  costante
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
+    public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, Double secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore;
         if (unitaImmobiliare.getRegole().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
@@ -1006,8 +1045,18 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
-    public static Fruitore aggiungiCostituenteLogicoAregola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        Fruitore fruitore = contenitore.getFruitore();
+    /**
+     * Aggiungi un costituente logico alla regola
+     *
+     * @param contenitore      per gli ogetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  String
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
+    public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
+        Fruitore fruitore;
         if (unitaImmobiliare.getRegole().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
@@ -1017,6 +1066,16 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi il primo costituente logico alla regola
+     *
+     * @param contenitore      per gli ogetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  infoRilevabile
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
     public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1024,6 +1083,16 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi il primo costituente logico alla regola
+     *
+     * @param contenitore      per gli ogetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  double
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
     public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1031,6 +1100,16 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi il primo costituente logico alla regola
+     *
+     * @param contenitore      per gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  String
+     * @param opRelazionale    per il confronto
+     * @return il fruitore
+     */
     public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1038,6 +1117,17 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi l'ennesimo costituente logico a regola
+     *
+     * @param contenitore      per gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  info rilevabile
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per confronto tra costituenti logici
+     * @return il fruitore
+     */
     public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1045,6 +1135,17 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi l'ennesimo costituente logico a regola
+     *
+     * @param contenitore      per gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  double
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per confronto tra costituenti logici
+     * @return il fruitore
+     */
     public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1052,6 +1153,17 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Aggiungi l'ennesimo costituente logico a regola
+     *
+     * @param contenitore      per gli oggetti necessari
+     * @param unitaImmobiliare scelta
+     * @param primoOpLogico    da confrontare
+     * @param secondoOpLogico  String
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per confronto tra costituenti logici
+     * @return il fruitore
+     */
     public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         Fruitore fruitore = contenitore.getFruitore();
         int i = scegliRegola(unitaImmobiliare);
@@ -1059,6 +1171,12 @@ public class ClasseDiServizio {
         return fruitore;
     }
 
+    /**
+     * Scegli la regola
+     *
+     * @param unitaImmobiliare scelta
+     * @return indice della regola
+     */
     public static int scegliRegola(UnitaImmobiliare unitaImmobiliare) {
         System.out.println(unitaImmobiliare.visualizzaRegole());
         return InputDati.leggiIntero("Scegli la regola:", 1, unitaImmobiliare.getRegole().size()) - 1;
@@ -1164,6 +1282,11 @@ public class ClasseDiServizio {
         return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
     }
 
+    /**
+     * Scegli un parametro con cui confrontare
+     * @param infoRilevabileNonNumerica informazione rilevabile non numerica
+     * @return una stringa confrontata
+     */
     private static String scegliParametroConCuiConfrontare(InfoRilevabileNonNumerica infoRilevabileNonNumerica) {
         int i = 1;
         for (String valore : infoRilevabileNonNumerica.getValori()) {

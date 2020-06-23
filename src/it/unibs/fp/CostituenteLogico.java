@@ -12,7 +12,7 @@ public class CostituenteLogico {
      *
      * @param primoOperatoreLogico   Informazione rilevabile 1
      * @param secondoOperatoreLogico Informazione rilevabile 2
-     * @param operatoreRelazionale   >,<,=,<=,>=
+     * @param operatoreRelazionale   per il confronto
      */
     public CostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         this.primoOperatoreLogico = primoOperatoreLogico;
@@ -23,11 +23,11 @@ public class CostituenteLogico {
     /**
      * Costruttore con costante
      *
-     * @param primoOperatoreLogico
-     * @param secondoOperatoreCostante
-     * @param operatoreRelazionale
+     * @param primoOperatoreLogico da confrontare
+     * @param secondoOperatoreCostante double
+     * @param operatoreRelazionale per il confronto
      */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, Double secondoOperatoreCostante, OperatoriRelazionali operatoreRelazionale) {
+    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, double secondoOperatoreCostante, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreLogico = null;
         this.primoOperatoreLogico = primoOperatoreLogico;
         this.secondoOperatoreCostante = secondoOperatoreCostante;
@@ -35,10 +35,10 @@ public class CostituenteLogico {
     }
 
     /**
-     *
-     * @param primoOperatoreLogico
-     * @param secondoOperatoreScalare
-     * @param operatoreRelazionale
+     *Costruttore costituente logico
+     * @param primoOperatoreLogico da confrontare
+     * @param secondoOperatoreScalare String
+     * @param operatoreRelazionale per il confronto
      */
     public CostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreScalare, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreLogico = null;

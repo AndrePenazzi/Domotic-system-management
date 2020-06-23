@@ -28,7 +28,6 @@ public class Regola {
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
         antecedente.add(costituenteLogico);
-
     }
 
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
