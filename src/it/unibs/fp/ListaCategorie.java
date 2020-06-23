@@ -75,11 +75,18 @@ public class ListaCategorie implements Serializable {
      * @return i dati delle categorieSensori
      */
     public String visualizzaCategorieSensori() {
-        StringBuilder s = new StringBuilder("Le categorie sensori sono:\n");
-        for (int i = 0; i < categorieSensori.size(); i++) {
-            s.append(i + 1).append(" ").append(categorieSensori.get(i).toString()).append("\n");
-        }
-        return s.toString();
+        StringBuilder tmp = new StringBuilder();
+        if (!categorieSensori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nCategorie sensori:\n");
+            for (CategoriaSensori categoriaSensori : categorieSensori) {
+                tmp.append(i+" "+categoriaSensori.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora categorie sensori");
+
+        return tmp.toString();
     }
 
     /**
@@ -88,11 +95,19 @@ public class ListaCategorie implements Serializable {
      * @return i dati delle categorieAttuatori
      */
     public String visualizzaCategorieAttuatori() {
-        StringBuilder s = new StringBuilder("Le categorie attuatori sono:\n");
-        for (int i = 0; i < categorieAttuatori.size(); i++) {
-            s.append(i + 1).append(" ").append(categorieAttuatori.get(i).toString()).append("\n");
-        }
-        return s.toString();
+        StringBuilder tmp = new StringBuilder();
+
+        if (!categorieAttuatori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nCategorie attuatori:\n");
+            for (CategoriaAttuatori categorieAttuatori : categorieAttuatori) {
+                tmp.append(i+" "+categorieAttuatori.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora categorie attuatori");
+
+        return tmp.toString();
     }
 
     /**

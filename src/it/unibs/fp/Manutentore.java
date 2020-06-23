@@ -6,36 +6,68 @@ import java.util.ArrayList;
 public class Manutentore implements Serializable {
     Fruitore fruitore;
 
+    /**
+     * Costruttore
+     * @param fruitore l'unico fruitore associato
+     */
     public Manutentore(Fruitore fruitore) {
         this.fruitore = fruitore;
     }
 
+    /**
+     * Getter
+     * @return
+     */
     public Fruitore getFruitore() {
         return fruitore;
     }
 
+    /**
+     * Setter
+     * @param fruitore
+     */
     public void setFruitore(Fruitore fruitore) {
         this.fruitore = fruitore;
     }
 
+    /**
+     * Getter
+     * @return
+     */
     public int getSizeUnitaImmobiliari() {
         return fruitore.getUnitaImmobiliari().size();
     }
 
+    /**
+     * Aggiunta di un unità immobiliare
+     * @param unitaImmobiliare da inserire nella lista
+     */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         fruitore.aggiungiUnitaImmobiliare(unitaImmobiliare);
     }
 
+    /**
+     * Getter
+     * @return
+     */
     public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
         return fruitore.getUnitaImmobiliari();
     }
 
+    /**
+     * Getter
+     * @return
+     */
     public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
         fruitore.setUnitaImmobiliari(unitaImmobiliari);
     }
 
+    /**
+     * Getter
+     * @return
+     */
     public String visualizzaListaUnitaImmobiliari() {
-        return fruitore.visualizzaUnitaImmobiliari();
+        return fruitore.visualizzaListaUnitaImmobiliari();
     }
 
     /**

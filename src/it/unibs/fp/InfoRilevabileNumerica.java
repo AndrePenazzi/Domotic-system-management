@@ -63,6 +63,10 @@ public class InfoRilevabileNumerica extends  InfoRilevabile implements Serializa
         return valore;
     }
 
+    /**
+     * Rilevamento della variabile casualmente
+     * @return un valore estratto casualmente tra quelli disponibili
+     */
     public double rilevaVariabile(){
         return valore = NumeriCasuali.estraiDouble(min,max);
     }
@@ -74,9 +78,10 @@ public class InfoRilevabileNumerica extends  InfoRilevabile implements Serializa
      */
     @Override
     public String toString() {
-        return "InformazioneRilevabile:\n" +
-                "nome='" + super.getNome() +
-                ", valore=" + valore +
-                '\n';
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(getNome()+"\n");
+        tmp.append("Valore: "+valore);
+        return tmp.toString();
     }
 }

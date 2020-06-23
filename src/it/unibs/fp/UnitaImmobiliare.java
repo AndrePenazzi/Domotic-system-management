@@ -158,10 +158,15 @@ public class UnitaImmobiliare implements Serializable {
      */
     public String visualizzaStanze() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("Le stanze sono:\n");
-        for (Stanza s : stanze) {
-            tmp.append(s.toString()).append("\n");
-        }
+        if (!stanze.isEmpty()) {
+            int i = 1;
+            tmp.append("\nStanze:\n");
+            for (Stanza s : stanze) {
+                tmp.append(i+" "+s.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora stanze nella unità immobiliare");
         return tmp.toString();
     }
 
@@ -172,10 +177,15 @@ public class UnitaImmobiliare implements Serializable {
      */
     public String visualizzaArtefatti() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("Gli Artefatti sono:\n");
-        for (Artefatto a : artefatti) {
-            tmp.append(a.toString()).append("\n");
-        }
+        if (!artefatti.isEmpty()) {
+            int i = 1;
+            tmp.append("\nArtefatti:\n");
+            for (Artefatto s : artefatti) {
+                tmp.append(i+" "+s.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora artefatti nella unità immobiliare");
         return tmp.toString();
     }
 
@@ -186,8 +196,10 @@ public class UnitaImmobiliare implements Serializable {
      */
     @Override
     public String toString() {
-        return "L'unita' immobiliare: " + nome + " è così composta:\n" +
-                visualizzaStanze() +
-                visualizzaArtefatti();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n"+nome);
+        tmp.append(visualizzaArtefatti());
+        tmp.append(visualizzaStanze());
+        return tmp.toString();
     }
 }

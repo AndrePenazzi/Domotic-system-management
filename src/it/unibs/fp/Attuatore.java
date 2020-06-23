@@ -6,6 +6,7 @@ public class Attuatore implements Serializable {
     private String nome;
     private CategoriaAttuatori categoriaAttuatori;
     private ModOperativa modOperativa;
+
     /**
      * Costruttore attuatore
      *
@@ -18,18 +19,38 @@ public class Attuatore implements Serializable {
         this.modOperativa = new ModOperativa("Idle");
     }
 
+    /**
+     * Ritorna le categoria a cui l'attuatore appartiene
+     *
+     * @return categoria dell'attuatore
+     */
     public CategoriaAttuatori getCategoriaAttuatori() {
         return categoriaAttuatori;
     }
 
+    /**
+     * Setter della categoria a cui l'attuatore appartiene
+     *
+     * @param categoriaAttuatori tipologia di attuatore
+     */
     public void setCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
         this.categoriaAttuatori = categoriaAttuatori;
     }
 
+    /**
+     * Getter modalità operativa attuale dell'attuatore
+     *
+     * @return modalità operativa
+     */
     public ModOperativa getModOperativa() {
         return modOperativa;
     }
 
+    /**
+     * Setter modalità operativa scelta
+     *
+     * @param modOperativa tipo di funzionamento
+     */
     public void setModOperativa(ModOperativa modOperativa) {
         this.modOperativa = modOperativa;
     }
@@ -59,9 +80,11 @@ public class Attuatore implements Serializable {
      */
     @Override
     public String toString() {
-        return "Attuatore:\n" +
-                "nome='" + nome +
-                ", categoriaAttuatori=" + categoriaAttuatori;
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n"+nome);
+        tmp.append("\n"+categoriaAttuatori);
+        tmp.append("\n"+modOperativa);
+        return tmp.toString();
     }
 
 }

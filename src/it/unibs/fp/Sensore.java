@@ -25,11 +25,13 @@ public class Sensore implements Serializable {
      */
 //TODO CAMBIATO
     public String rilevaVariabileFisica() {
-        InfoRilevabile infoRilevabile = categoriaSensori.getInformazioniRilevabili().get(0);
-        if(categoriaSensori.getInformazioniRilevabili().get(0).getType()==0)
-            return String.valueOf(((InfoRilevabileNumerica)infoRilevabile).rilevaVariabile());
-        if(categoriaSensori.getInformazioniRilevabili().get(0).getType()==1)
-            return String.valueOf(((InfoRilevabileNonNumerica)infoRilevabile).rilevaVariabile());
+        for(InfoRilevabile infoRilevabile : categoriaSensori.getInformazioniRilevabili()) {
+            System.err.println("hey man");
+            if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 1)
+                return String.valueOf(((InfoRilevabileNumerica) infoRilevabile).rilevaVariabile());
+            if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 2)
+                return String.valueOf(((InfoRilevabileNonNumerica) infoRilevabile).rilevaVariabile());
+        }
         return "C'è stato qualche errore";
     }
 
@@ -76,9 +78,11 @@ public class Sensore implements Serializable {
      */
     @Override
     public String toString() {
-        return "Sensore:\n" +
-                "nome='" + nome +
-                ", categoriaSensori=" + categoriaSensori;
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(nome);
+        tmp.append("\n"+categoriaSensori);
+        return tmp.toString();
     }
 
 }

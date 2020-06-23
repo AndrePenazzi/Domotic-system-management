@@ -53,8 +53,10 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      */
     @Override
     public String toString() {
-        return "ModalitaOperativa:\n" +
-                "nome='" + super.getNome()+
-                ", valore=" + valore;
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(getNome()+"\n");
+        tmp.append("Valore: "+valore);
+        return tmp.toString();
     }
 }

@@ -11,14 +11,48 @@ public class Fruitore implements Serializable {
         unitaImmobiliari = new ArrayList<>();
     }
 
-
+    /**
+     * Lista delle unità immobilari e loro caratteristiche
+     *
+     * @return lista unità immobilari
+     */
     public String visualizzaUnitaImmobiliari() {
         StringBuilder tmp = new StringBuilder();
-        for (int i = 0; i < unitaImmobiliari.size(); i++)
-            tmp.append(i + 1).append(" ").append(unitaImmobiliari.get(i).toString()).append("\n");
+        if (!unitaImmobiliari.isEmpty()) {
+            int i = 1;
+            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
+                tmp.append(i + " " + unitaImmobiliare.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
         return tmp.toString();
     }
 
+    /**
+     * Lista delle unità immobilari con solo i nomi
+     *
+     * @return lista unità immobilari
+     */
+    public String visualizzaListaUnitaImmobiliari() {
+        StringBuilder tmp = new StringBuilder();
+        if (!unitaImmobiliari.isEmpty()) {
+            int i = 1;
+            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
+                tmp.append(i + " " + unitaImmobiliare.getNome()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
+        return tmp.toString();
+    }
+
+
+    /**
+     * Aggiungere un unità immobiliare per il fruitore
+     *
+     * @param unitaImmobiliare scelta per essere inserita
+     */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliari.add(unitaImmobiliare);
     }
@@ -121,28 +155,12 @@ public class Fruitore implements Serializable {
         }
     }
 
-/*
-    **
-     * Visualizza la descrizione delle stanze dell'unità immobiliare
-     *
-     * @param unitaImmobiliari scelta
-     * @return la descrizione delle stanze
-     *
-    public String visualizzaStanze(UnitaImmobiliare unitaImmobiliari) {
-            return (unitaImmobiliari.visualizzaStanze());
-    }
 
-    **
-     * Visualizza la descrizione degli artefatti dell'unità immobiliare
+    /**
+     * Getter delle unità immobiliari del fruitore
      *
-     * @param unitaImmobiliare scelta
-     * @return la descrizione degli artefatti
-     *
-    public String visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        return (unitaImmobiliare.visualizzaArtefatti());
-    }
-    */
-
+     * @return le varie unità immobiliari
+     */
     public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
         return unitaImmobiliari;
     }
@@ -151,8 +169,6 @@ public class Fruitore implements Serializable {
         this.unitaImmobiliari = unitaImmobiliari;
     }
 
-
-    //TODO CAMBIATO TUTTO QUELLO SOPRA!!!!
 
     /**
      * Visualizza la descrizione delle categorie sensori
@@ -209,24 +225,33 @@ public class Fruitore implements Serializable {
      * @return i valori rilevati
      */
     public String valoriRilevati(UnitaImmobiliare unitaImmobiliare) {
-        StringBuilder s = new StringBuilder();
-        for (Stanza stanza :
-                unitaImmobiliare.getStanze()) {
-            s.append(stanza.getNome());
-            for (Sensore sensore :
-                    stanza.getSensori()) {
-                s.append(sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        if (!unitaImmobiliare.getStanze().isEmpty())
+            for (Stanza stanza :
+                    unitaImmobiliare.getStanze()) {
+                tmp.append("\n");
+                tmp.append(stanza.getNome());
+                if (!stanza.getSensori().isEmpty())
+                    for (Sensore sensore :
+                            stanza.getSensori()) {
+                        tmp.append("\n"+sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
+                    }
+                else tmp.append("\nNon ci sono sensori nella stanza");
+                if (!stanza.getArtefatti().isEmpty())
+                    for (Artefatto artefatto :
+                            stanza.getArtefatti()) {
+                        tmp.append("\n"+artefatto.getNome());
+                        if (!artefatto.getSensori().isEmpty())
+                            for (Sensore sensore :
+                                    artefatto.getSensori()) {
+                                tmp.append("\n"+sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
+                            }
+                        else tmp.append("\nNon ci sono sensori nell'artefatto");
+                    }
+                else tmp.append("\nNon ci sono artefatti nella stanza");
             }
-            for (Artefatto artefatto :
-                    stanza.getArtefatti()) {
-                s.append(artefatto.getNome());
-                for (Sensore sensore :
-                        artefatto.getSensori()) {
-                    s.append(sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
-                }
-            }
-        }
-        s.append("---------------------------------------------");
-        return s.toString();
+        else tmp.append("\nNon ci sono stanze nella unità immobiliare");
+        return tmp.toString();
     }
 }

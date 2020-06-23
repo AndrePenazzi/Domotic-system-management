@@ -126,10 +126,37 @@ public class Stanza implements Serializable {
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("Nella stanza").append(nome).append(" ci sono i seguenti artefatti: \n");
-        for (Artefatto a : artefatti) {
-            tmp.append(a.toString()).append("\n");
-        }
+        tmp.append(nome);
+        if (!artefatti.isEmpty()) {
+            int i = 1;
+            tmp.append("\nArtefatti:\n");
+            for (Artefatto a : artefatti) {
+                tmp.append(i+" "+a.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora artefatti nella stanza");
+
+        if (!sensori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nSensori:\n");
+            for (Sensore s : sensori) {
+                tmp.append(i+" "+s.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori nella stanza");
+
+        if (!artefatti.isEmpty()) {
+            int i = 1;
+            tmp.append("\nArtefatti:\n");
+            for (Artefatto a : artefatti) {
+                tmp.append(i+" "+a.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora artefatti nella stanza");
+
         return tmp.toString();
     }
 }

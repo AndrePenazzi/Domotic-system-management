@@ -78,18 +78,23 @@ public class CategoriaAttuatori implements Serializable {
      */
     @Override
     public String toString() {
-        String val = "";
-        int scelta = 1;
-        for(ModOperativa modOperativa: modalitaOperative)
-            if(modOperativa.getType()==1)
-                val+=scelta+" "+((ModOperativaNonParamentrica)modOperativa).toString();
-            else
-                val+=scelta+" "+((ModOperativaParamentrica)modOperativa).toString();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n"+nome);
+        tmp.append("\n"+testoLibero);
 
-        return "CategoriaAttuatori:\n" +
-                "nome='" + nome +
-                ", testoLibero='" + testoLibero +
-                ", modalitaOperative=" + modalitaOperative;
+        if (!modalitaOperative.isEmpty()) {
+            int i = 1;
+            tmp.append("\nModalità operative:\n");
+            for (ModOperativa modOperativa : modalitaOperative) {
+                if(modOperativa.getType()==1)
+                    tmp.append(i+" "+((ModOperativaNonParamentrica)modOperativa).toString());
+                else
+                    tmp.append(i+" "+((ModOperativaNonParamentrica)modOperativa).toString());
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora modalità operative associate");
+        return tmp.toString();
     }
 
 

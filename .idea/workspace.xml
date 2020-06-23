@@ -21,9 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Attuatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CategoriaSensori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNonNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaNonParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaNonParamentrica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ModOperativaParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Sensore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +123,8 @@
       <workItem from="1591603064800" duration="629000" />
       <workItem from="1591948106804" duration="3158000" />
       <workItem from="1592062624529" duration="701000" />
-      <workItem from="1592832525044" duration="18775000" />
+      <workItem from="1592832525044" duration="24543000" />
+      <workItem from="1592901432112" duration="3871000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -161,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592847868742</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Inserita funzionalità di scelta modalità operativa per il fruitore testata lievemente">
+      <created>1592855706808</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1592855706808</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,65 +209,66 @@
     <MESSAGE value="fix e javadoc" />
     <MESSAGE value="Ant Version completata" />
     <MESSAGE value="Inserita funzionalità di scelta modalità operativa per il fruitore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserita funzionalità di scelta modalità operativa per il fruitore" />
+    <MESSAGE value="Inserita funzionalità di scelta modalità operativa per il fruitore testata lievemente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inserita funzionalità di scelta modalità operativa per il fruitore testata lievemente" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592846589997">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592846589997" />
-    <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1592847858174">
+    <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1592855700300">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="194" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592847858174" />
+    <state x="194" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1592855700300" />
     <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1590678519527">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1592855409509">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1592905285486">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
-    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1592855409509">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592905285486" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1592905285484">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
-    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1592855409508">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592905285484" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1592905285484">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592855409508" />
-    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1592855409509">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592905285484" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1592905285485">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1592855409510">
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592905285485" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592855409510" />
-    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1592855409509">
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592861637905" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
-    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1592855409509">
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1592861637905" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
-    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1592855409509">
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1592861637905" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1592855409509" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1592861637905" />
     <state x="147" y="65" key="MergeDialog" timestamp="1592839536292">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1592839536292" />
-    <state x="277" y="62" key="SettingsEditor" timestamp="1592833315406">
+    <state x="277" y="62" key="SettingsEditor" timestamp="1592904259457">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1592833315406" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1592847869254">
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1592904259457" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1592855709704">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1592847869254" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1592855709704" />
     <state x="584" y="195" key="chooseDestDirectoryDialog" timestamp="1590674692069">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

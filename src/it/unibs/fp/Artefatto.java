@@ -3,6 +3,7 @@ package it.unibs.fp;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+
 public class Artefatto implements Serializable {
     private String nome;
     private ArrayList<Sensore> sensori;
@@ -66,7 +67,7 @@ public class Artefatto implements Serializable {
     }
 
     //TODO CREATO
-    public String visualizzaAttuatori(){
+    public String visualizzaAttuatori() {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Gli attuatori sono:\n");
         for (Attuatore a : attuatori) {
@@ -82,14 +83,27 @@ public class Artefatto implements Serializable {
      */
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("Artefatto-").append(nome).append(" ha i seguenti componenti.\nI sensori sono:\n");
-        for (Sensore s : sensori) {
-            tmp.append(s.toString()).append("\n");
-        }
-        tmp.append("Gli attuatori sono:\n");
-        for (Attuatore a : attuatori) {
-            tmp.append(a.toString()).append("\n");
-        }
+        tmp.append("\n"+nome);
+
+        if (!sensori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nSensori:\n");
+            for (Sensore s : sensori) {
+                tmp.append(i+" "+s.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori associati");
+
+        if (!attuatori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nAttuatori:\n");
+            for (Attuatore a : attuatori) {
+                tmp.append(i+" "+a.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora attuatori associati");
         return tmp.toString();
     }
 }
