@@ -38,6 +38,32 @@ public class CategoriaSensori implements Serializable {
     }
 
     /**
+     * toString
+     *
+     * @return dati della categoriaSensori
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(nome + "\n");
+        tmp.append(testoLibero);
+
+        if (!informazioniRilevabili.isEmpty()) {
+            int i = 1;
+            tmp.append("\nInformazioni rilevabili:\n");
+            for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
+                if (infoRilevabile.getType() == 1)
+                    tmp.append(i + " " + ((InfoRilevabileNumerica) infoRilevabile).toString());
+                else
+                    tmp.append(i + " " + ((InfoRilevabileNonNumerica) infoRilevabile).toString());
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
+        return tmp.toString();
+    }
+
+    /**
      * Getter
      *
      * @return testo libero
@@ -91,29 +117,4 @@ public class CategoriaSensori implements Serializable {
         this.nome = nome;
     }
 
-    /**
-     * toString
-     *
-     * @return dati della categoriaSensori
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(nome+"\n");
-        tmp.append(testoLibero);
-
-        if (!informazioniRilevabili.isEmpty()) {
-            int i = 1;
-            tmp.append("\nInformazioni rilevabili:\n");
-            for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                if(infoRilevabile.getType()==1)
-                    tmp.append(i+" "+((InfoRilevabileNumerica)infoRilevabile).toString());
-                else
-                    tmp.append(i+" "+((InfoRilevabileNonNumerica)infoRilevabile).toString());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
-        return tmp.toString();
-    }
 }

@@ -24,6 +24,7 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Cambia lo stato delle regole da attiva a disattiva o viceversa in automatico
+     *
      * @param regola scelta
      */
     public void cambiaRegolaAttivaDisattiva(Regola regola) {
@@ -33,6 +34,7 @@ public class UnitaImmobiliare implements Serializable {
 
     /**
      * Visualizza le regole con il loro stato
+     *
      * @return lo stato delle regole
      */
     public String visualizzaStatoRegole() {
@@ -137,7 +139,7 @@ public class UnitaImmobiliare implements Serializable {
      * Inserisci il primo costituente logico
      *
      * @param regola        scelta
-     * @param orologio primo operatore da confrontare
+     * @param orologio      primo operatore da confrontare
      * @param opRelazionale per il confronto
      */
     public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, Orologio orologio, OperatoriRelazionali opRelazionale) {
@@ -308,60 +310,6 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
-     * Getter.
-     *
-     * @return le stanze.
-     */
-    public ArrayList<Stanza> getStanze() {
-        return stanze;
-    }
-
-    /**
-     * Getter
-     *
-     * @return degli artefatti.
-     */
-    public ArrayList<Artefatto> getArtefatti() {
-        return artefatti;
-    }
-
-    /**
-     * Getter
-     *
-     * @return il numero delle stanze.
-     */
-    public int getSizeStanze() {
-        return stanze.size();
-    }
-
-    /**
-     * Getter
-     *
-     * @return il numero degli artefatti.
-     */
-    public int getSizeArtefatti() {
-        return artefatti.size();
-    }
-
-    /**
-     * Getter
-     *
-     * @return nome dell'unita' immobiliare.
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * Setter.
-     *
-     * @param nome modificato.
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
      * toString.
      *
      * @return descrizione delle stanze nell'unità immobiliare.
@@ -419,6 +367,61 @@ public class UnitaImmobiliare implements Serializable {
         tmp.append(visualizzaStanze());
         return tmp.toString();
     }
+
+    /**
+     * Getter.
+     *
+     * @return le stanze.
+     */
+    public ArrayList<Stanza> getStanze() {
+        return stanze;
+    }
+
+    /**
+     * Getter
+     *
+     * @return degli artefatti.
+     */
+    public ArrayList<Artefatto> getArtefatti() {
+        return artefatti;
+    }
+
+    /**
+     * Getter
+     *
+     * @return il numero delle stanze.
+     */
+    public int getSizeStanze() {
+        return stanze.size();
+    }
+
+    /**
+     * Getter
+     *
+     * @return il numero degli artefatti.
+     */
+    public int getSizeArtefatti() {
+        return artefatti.size();
+    }
+
+    /**
+     * Getter
+     *
+     * @return nome dell'unita' immobiliare.
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Setter.
+     *
+     * @param nome modificato.
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
 
     /**
      * Getter

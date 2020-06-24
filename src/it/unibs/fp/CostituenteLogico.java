@@ -27,9 +27,9 @@ public class CostituenteLogico implements Serializable {
     /**
      * Costruttore con costante
      *
-     * @param primoOperatoreLogico da confrontare
+     * @param primoOperatoreLogico     da confrontare
      * @param secondoOperatoreCostante double
-     * @param operatoreRelazionale per il confronto
+     * @param operatoreRelazionale     per il confronto
      */
     public CostituenteLogico(InfoRilevabile primoOperatoreLogico, double secondoOperatoreCostante, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreLogico = null;
@@ -39,10 +39,11 @@ public class CostituenteLogico implements Serializable {
     }
 
     /**
-     *Costruttore costituente logico
-     * @param primoOperatoreLogico da confrontare
+     * Costruttore costituente logico
+     *
+     * @param primoOperatoreLogico    da confrontare
      * @param secondoOperatoreScalare String
-     * @param operatoreRelazionale per il confronto
+     * @param operatoreRelazionale    per il confronto
      */
     public CostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreScalare, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreLogico = null;
@@ -53,8 +54,9 @@ public class CostituenteLogico implements Serializable {
 
     /**
      * Costruttore con orologio
+     *
      * @param secondoOperatoreLogico orologio
-     * @param operatoreRelazionale per il confronto
+     * @param operatoreRelazionale   per il confronto
      */
     public CostituenteLogico(Orologio secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         this.secondoOperatoreOrologio = secondoOperatoreLogico;
@@ -68,6 +70,56 @@ public class CostituenteLogico implements Serializable {
         this.primoOperatoreLogico = null;
         this.secondoOperatoreLogico = null;
         this.operatoreRelazionale = null;
+    }
+
+
+    /**
+     * Calcolo del valore booleano attuale del costituente logico
+     *
+     * @return valore calcolato
+     */
+    public boolean calcolaValoreBooleano() {
+        if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
+            if (operatoreRelazionale == OperatoriRelazionali.UGUALE) {
+                if (primoOperatoreLogico.getType() == 1) {
+                    return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+                } else {
+                    return ((InfoRilevabileNonNumerica) primoOperatoreLogico).rilevaVariabile().equals(((InfoRilevabileNonNumerica) secondoOperatoreLogico).rilevaVariabile());
+                }
+            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() > ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() < ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE_UGUALE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() >= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE_UGUALE) {
+                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() <= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
+            }
+        } else return true;
+        return false;
+    }
+
+    /**
+     * toString
+     *
+     * @return nomi e opeartore relazionale
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
+            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+
+            if (secondoOperatoreLogico != null)
+                tmp.append(" " + secondoOperatoreLogico);
+            if (secondoOperatoreCostante != null)
+                tmp.append(" " + secondoOperatoreCostante);
+            if (secondoOperatoreScalare != null)
+                tmp.append(" " + secondoOperatoreScalare);
+        } else {
+            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
+        }
+        return tmp.toString();
     }
 
     /**
@@ -122,55 +174,5 @@ public class CostituenteLogico implements Serializable {
      */
     public void setOperatoreRelazionale(OperatoriRelazionali operatoreRelazionale) {
         this.operatoreRelazionale = operatoreRelazionale;
-    }
-
-    /**
-     * Calcolo del valore booleano attuale del costituente logico
-     *
-     * @return valore calcolato
-     */
-    public boolean calcolaValoreBooleano() {
-        if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
-            if (operatoreRelazionale == OperatoriRelazionali.UGUALE) {
-                if (primoOperatoreLogico.getType() == 1) {
-                    return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
-                } else {
-                    return ((InfoRilevabileNonNumerica) primoOperatoreLogico).rilevaVariabile().equals(((InfoRilevabileNonNumerica) secondoOperatoreLogico).rilevaVariabile());
-                }
-            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE) {
-                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() > ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
-            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE) {
-                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() < ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
-            } else if (operatoreRelazionale == OperatoriRelazionali.MAGGIORE_UGUALE) {
-                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() >= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
-            } else if (operatoreRelazionale == OperatoriRelazionali.MINORE_UGUALE) {
-                return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() <= ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
-            }
-        } else return true;
-        return false;
-    }
-
-    /**
-     * toString
-     *
-     * @return nomi e opeartore relazionale
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
-            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
-
-            if (secondoOperatoreLogico != null)
-                tmp.append(" "+secondoOperatoreLogico);
-            if (secondoOperatoreCostante != null)
-                tmp.append(" "+secondoOperatoreCostante);
-            if (secondoOperatoreScalare != null)
-                tmp.append(" "+secondoOperatoreScalare);
-        }
-        else{
-            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
-        }
-        return tmp.toString();
     }
 }

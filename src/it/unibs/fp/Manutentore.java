@@ -4,10 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Manutentore implements Serializable {
-    Fruitore fruitore;
+    private Fruitore fruitore;
 
     /**
      * Costruttore
+     *
      * @param fruitore l'unico fruitore associato
      */
     public Manutentore(Fruitore fruitore) {
@@ -15,31 +16,8 @@ public class Manutentore implements Serializable {
     }
 
     /**
-     * Getter
-     * @return fruitore
-     */
-    public Fruitore getFruitore() {
-        return fruitore;
-    }
-
-    /**
-     * Setter
-     * @param fruitore scelto
-     */
-    public void setFruitore(Fruitore fruitore) {
-        this.fruitore = fruitore;
-    }
-
-    /**
-     * Getter
-     * @return SizeUnitaImmobiliare
-     */
-    public int getSizeUnitaImmobiliari() {
-        return fruitore.getUnitaImmobiliari().size();
-    }
-
-    /**
      * Aggiunta di un unità immobiliare
+     *
      * @param unitaImmobiliare da inserire nella lista
      */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
@@ -47,23 +25,8 @@ public class Manutentore implements Serializable {
     }
 
     /**
-     * Getter
-     * @return unitaImmobiliare
-     */
-    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
-        return fruitore.getUnitaImmobiliari();
-    }
-
-    /**
-     * Setter
-     * @param unitaImmobiliari da modificare
-     */
-    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
-        fruitore.setUnitaImmobiliari(unitaImmobiliari);
-    }
-
-    /**
      * visualizza la lista dei nomi delle unità immobiliari
+     *
      * @return la lista dei nomi delle unità immobiliari
      */
     public String visualizzaListaUnitaImmobiliari() {
@@ -181,7 +144,6 @@ public class Manutentore implements Serializable {
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
 
-
     /**
      * Visualizza la descrizione dei sensori delle categorie sensori
      *
@@ -222,4 +184,48 @@ public class Manutentore implements Serializable {
         return (fruitore.visualizzaArtefatti(unitaImmobiliare));
     }
 
+    /**
+     * Getter
+     *
+     * @return fruitore
+     */
+    public Fruitore getFruitore() {
+        return fruitore;
+    }
+
+    /**
+     * Setter
+     *
+     * @param fruitore scelto
+     */
+    public void setFruitore(Fruitore fruitore) {
+        this.fruitore = fruitore;
+    }
+
+    /**
+     * Getter
+     *
+     * @return SizeUnitaImmobiliare
+     */
+    public int getSizeUnitaImmobiliari() {
+        return fruitore.getUnitaImmobiliari().size();
+    }
+
+    /**
+     * Getter
+     *
+     * @return unitaImmobiliare
+     */
+    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
+        return fruitore.getUnitaImmobiliari();
+    }
+
+    /**
+     * Setter
+     *
+     * @param unitaImmobiliari da modificare
+     */
+    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
+        fruitore.setUnitaImmobiliari(unitaImmobiliari);
+    }
 }

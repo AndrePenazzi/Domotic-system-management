@@ -36,6 +36,32 @@ public class CategoriaAttuatori implements Serializable {
     }
 
     /**
+     * toString
+     *
+     * @return dati della categoriaAtturatori
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n" + nome);
+        tmp.append("\n" + testoLibero);
+
+        if (!modalitaOperative.isEmpty()) {
+            int i = 1;
+            tmp.append("\nModalità operative:\n");
+            for (ModOperativa modOperativa : modalitaOperative) {
+                if (modOperativa.getType() == 1)
+                    tmp.append(i + " " + ((ModOperativaNonParamentrica) modOperativa).toString());
+                else
+                    tmp.append(i + " " + ((ModOperativaNonParamentrica) modOperativa).toString());
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora modalità operative associate");
+        return tmp.toString();
+    }
+
+    /**
      * Getter
      *
      * @return nome
@@ -70,32 +96,4 @@ public class CategoriaAttuatori implements Serializable {
     public ArrayList<ModOperativa> getModalitaOperative() {
         return modalitaOperative;
     }
-
-    /**
-     * toString
-     *
-     * @return dati della categoriaAtturatori
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n"+nome);
-        tmp.append("\n"+testoLibero);
-
-        if (!modalitaOperative.isEmpty()) {
-            int i = 1;
-            tmp.append("\nModalità operative:\n");
-            for (ModOperativa modOperativa : modalitaOperative) {
-                if(modOperativa.getType()==1)
-                    tmp.append(i+" "+((ModOperativaNonParamentrica)modOperativa).toString());
-                else
-                    tmp.append(i+" "+((ModOperativaNonParamentrica)modOperativa).toString());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora modalità operative associate");
-        return tmp.toString();
-    }
-
-
 }

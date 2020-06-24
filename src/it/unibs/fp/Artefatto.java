@@ -38,34 +38,6 @@ public class Artefatto implements Serializable {
         attuatori.add(attuatore);
     }
 
-
-    /**
-     * Getter
-     *
-     * @return arrayList di sensori.
-     */
-    public ArrayList<Sensore> getSensori() {
-        return sensori;
-    }
-
-    /**
-     * Getter
-     *
-     * @return arrayList di attuatori.
-     */
-    public ArrayList<Attuatore> getAttuatori() {
-        return attuatori;
-    }
-
-    /**
-     * Getter
-     *
-     * @return nome
-     */
-    public String getNome() {
-        return nome;
-    }
-
     /**
      * Visualizza i attuatori
      *
@@ -124,4 +96,32 @@ public class Artefatto implements Serializable {
             tmp.append("\nNon ci sono ancora attuatori associati");
         return tmp.toString();
     }
+
+    /**
+     * Getter
+     *
+     * @return arrayList di sensori.
+     */
+    public ArrayList<Sensore> getSensori() {
+        return sensori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return arrayList di attuatori.
+     */
+    public ArrayList<Attuatore> getAttuatori() {
+        return attuatori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
 }

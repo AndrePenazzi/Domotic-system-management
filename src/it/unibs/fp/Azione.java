@@ -6,6 +6,7 @@ public class Azione implements Serializable {
     private Attuatore attuatore;
     private ModOperativa modOperativa;
     private Orologio start;
+
     /**
      * Costruttore
      *
@@ -20,14 +21,36 @@ public class Azione implements Serializable {
 
     /**
      * Costruttore con staart
-     * @param attuatore da modificare
+     *
+     * @param attuatore    da modificare
      * @param modOperativa da assegnare
-     * @param start tempo di assegnamento
+     * @param start        tempo di assegnamento
      */
     public Azione(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         this.attuatore = attuatore;
         this.modOperativa = modOperativa;
         this.start = start;
+    }
+
+    /**
+     * Esegue l'azione e modifica la modalità operativa
+     */
+    public void eseguiAzione() {
+        attuatore.setModOperativa(modOperativa);
+    }
+
+    /**
+     * ToString
+     *
+     * @return Nome dell'attuatore e della modalità da assegnare
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(attuatore.getNome()).append(":=").append(modOperativa.getNome());
+        if (start != null)
+            tmp.append("," + "start := " + start);
+        return tmp.toString();
     }
 
     /**
@@ -66,23 +89,4 @@ public class Azione implements Serializable {
         this.modOperativa = modOperativa;
     }
 
-    /**
-     * Esegue l'azione e modifica la modalità operativa
-     */
-    public void eseguiAzione() {
-        attuatore.setModOperativa(modOperativa);
-    }
-
-    /**
-     * ToString
-     * @return Nome dell'attuatore e della modalità da assegnare
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(attuatore.getNome()).append(":=").append(modOperativa.getNome());
-        if(start!=null)
-            tmp.append(","+"start := "+start);
-        return tmp.toString();
-    }
 }

@@ -15,7 +15,6 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
     public ModOperativaNonParamentrica(String nome) {
         super(nome,1);
         valore = 0;
-
     }
 
     /**
@@ -28,7 +27,6 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
         super(nome,1);
         this.valore = valore;
     }
-
 
     /**
      * Getter

@@ -15,27 +15,6 @@ public class Fruitore implements Serializable {
     }
 
     /**
-     * Cambia stato di una regola
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     */
-    public void cambiaRegolaAttivaDisattiva(UnitaImmobiliare unitaImmobiliare, Regola regola) {
-        unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
-    }
-
-    /**
-     * Visualizza le regole con il loro stato
-     *
-     * @param unitaImmobiliare scelta
-     * @return le regole con il loro stato
-     */
-    public String visualizzaStatoRegole(UnitaImmobiliare unitaImmobiliare) {
-        return unitaImmobiliare.visualizzaStatoRegole();
-
-    }
-
-    /**
      * Inserisci la regola per la prima volta
      *
      * @param unitaImmobiliare scelta
@@ -177,45 +156,6 @@ public class Fruitore implements Serializable {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }
 
-
-    /**
-     * Lista delle unità immobilari e loro caratteristiche
-     *
-     * @return lista unità immobilari
-     */
-    public String visualizzaUnitaImmobiliari() {
-        StringBuilder tmp = new StringBuilder();
-        if (!unitaImmobiliari.isEmpty()) {
-            int i = 1;
-            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
-                tmp.append(i + " " + unitaImmobiliare.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
-        return tmp.toString();
-    }
-
-    /**
-     * Lista delle unità immobilari con solo i nomi
-     *
-     * @return lista unità immobilari
-     */
-    public String visualizzaListaUnitaImmobiliari() {
-        StringBuilder tmp = new StringBuilder();
-        if (!unitaImmobiliari.isEmpty()) {
-            int i = 1;
-            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
-                tmp.append("\n");
-                tmp.append(i + " " + unitaImmobiliare.getNome());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
-        return tmp.toString();
-    }
-
-
     /**
      * Aggiungere un unità immobiliare per il fruitore
      *
@@ -328,25 +268,42 @@ public class Fruitore implements Serializable {
         }
     }
 
-
     /**
-     * Getter delle unità immobiliari del fruitore
+     * Lista delle unità immobilari e loro caratteristiche
      *
-     * @return le varie unità immobiliari
+     * @return lista unità immobilari
      */
-    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
-        return unitaImmobiliari;
+    public String visualizzaUnitaImmobiliari() {
+        StringBuilder tmp = new StringBuilder();
+        if (!unitaImmobiliari.isEmpty()) {
+            int i = 1;
+            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
+                tmp.append(i + " " + unitaImmobiliare.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
+        return tmp.toString();
     }
 
     /**
-     * Setter
+     * Lista delle unità immobilari con solo i nomi
      *
-     * @param unitaImmobiliari da modificare
+     * @return lista unità immobilari
      */
-    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
-        this.unitaImmobiliari = unitaImmobiliari;
+    public String visualizzaListaUnitaImmobiliari() {
+        StringBuilder tmp = new StringBuilder();
+        if (!unitaImmobiliari.isEmpty()) {
+            int i = 1;
+            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
+                tmp.append("\n");
+                tmp.append(i + " " + unitaImmobiliare.getNome());
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
+        return tmp.toString();
     }
-
 
     /**
      * Visualizza la descrizione delle categorie sensori
@@ -432,4 +389,23 @@ public class Fruitore implements Serializable {
         else tmp.append("\nNon ci sono stanze nella unità immobiliare");
         return tmp.toString();
     }
+
+    /**
+     * Getter delle unità immobiliari del fruitore
+     *
+     * @return le varie unità immobiliari
+     */
+    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
+        return unitaImmobiliari;
+    }
+
+    /**
+     * Setter
+     *
+     * @param unitaImmobiliari da modificare
+     */
+    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
+        this.unitaImmobiliari = unitaImmobiliari;
+    }
+
 }

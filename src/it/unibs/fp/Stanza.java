@@ -50,6 +50,63 @@ public class Stanza implements Serializable {
         attuatori.add(attuatore);
     }
 
+
+    /**
+     * toString.
+     *
+     * @return descrizione degli artefatti nell'unità immobiliare.
+     */
+    public String visualizzaArtefatti() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("Gli Artefatti sono:\n");
+        for (Artefatto a : artefatti) {
+            tmp.append(a.toString()).append("\n");
+        }
+        return tmp.toString();
+    }
+
+    /**
+     * toString.
+     *
+     * @return descrizione della stanza.
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(nome);
+        if (!artefatti.isEmpty()) {
+            int i = 1;
+            tmp.append("\nArtefatti:\n");
+            for (Artefatto a : artefatti) {
+                tmp.append(i + " " + a.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora artefatti nella stanza");
+
+        if (!sensori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nSensori:\n");
+            for (Sensore s : sensori) {
+                tmp.append(i + " " + s.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori nella stanza");
+
+        if (!artefatti.isEmpty()) {
+            int i = 1;
+            tmp.append("\nArtefatti:\n");
+            for (Artefatto a : artefatti) {
+                tmp.append(i + " " + a.toString()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora artefatti nella stanza");
+
+        return tmp.toString();
+    }
+
     /**
      * Getter
      *
@@ -104,59 +161,4 @@ public class Stanza implements Serializable {
         this.artefatti = artefatti;
     }
 
-    /**
-     * toString.
-     *
-     * @return descrizione degli artefatti nell'unità immobiliare.
-     */
-    public String visualizzaArtefatti() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("Gli Artefatti sono:\n");
-        for (Artefatto a : artefatti) {
-            tmp.append(a.toString()).append("\n");
-        }
-        return tmp.toString();
-    }
-
-    /**
-     * toString.
-     *
-     * @return descrizione della stanza.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(nome);
-        if (!artefatti.isEmpty()) {
-            int i = 1;
-            tmp.append("\nArtefatti:\n");
-            for (Artefatto a : artefatti) {
-                tmp.append(i+" "+a.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora artefatti nella stanza");
-
-        if (!sensori.isEmpty()) {
-            int i = 1;
-            tmp.append("\nSensori:\n");
-            for (Sensore s : sensori) {
-                tmp.append(i+" "+s.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora sensori nella stanza");
-
-        if (!artefatti.isEmpty()) {
-            int i = 1;
-            tmp.append("\nArtefatti:\n");
-            for (Artefatto a : artefatti) {
-                tmp.append(i+" "+a.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora artefatti nella stanza");
-
-        return tmp.toString();
-    }
 }

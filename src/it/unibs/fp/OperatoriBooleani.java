@@ -8,21 +8,21 @@ public enum OperatoriBooleani implements Serializable {
     AND,
     OR;
 
-    public static OperatoriBooleani sceltaOperatoreBooleano(){
+    public static OperatoriBooleani sceltaOperatoreBooleano() {
         boolean finito = false;
-        String[] azione = {"and","or"};
+        String[] azione = {"and", "or"};
         MyMenu menu = new MyMenu("Menu scelta operatore booleano", azione);
-            int scelta = menu.scegli();
-            switch (scelta) {
+        int scelta = menu.scegli();
+        switch (scelta) {
 
-                case 1: {
-                    return AND;
-                }
-
-                case 2: {
-                    return OR;
-                }
+            case 1: {
+                return AND;
             }
+
+            case 2: {
+                return OR;
+            }
+        }
         return null;
     }
 

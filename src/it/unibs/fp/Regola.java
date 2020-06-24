@@ -34,6 +34,14 @@ public class Regola implements Serializable {
         antecedente.add(costituenteLogico);
     }
 
+    /**
+     * Inserisci il costituente logico
+     *
+     * @param primoOpLogico   da confrontare
+     * @param secondoOpLogico String
+     * @param opRelazionale   per il confronto
+     * @param opBooleano      per confrontare i costituenti logici
+     */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
@@ -41,6 +49,13 @@ public class Regola implements Serializable {
 
     }
 
+    /**
+     * Inserisci il costituente logico
+     *
+     * @param opRelazionale da confrontare
+     * @param opBooleano    per il confronto
+     * @param orologio      da confrontare
+     */
     public void inserisciCostituenteLogico(OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(orologio, opRelazionale);
@@ -49,11 +64,12 @@ public class Regola implements Serializable {
     }
 
     /**
+     * Inserisci il costituente logico
      *
-     * @param primoOpLogico
-     * @param secondoOpCostante
-     * @param opRelazionale
-     * @param opBooleano
+     * @param primoOpLogico     da confrontare
+     * @param secondoOpCostante costante
+     * @param opRelazionale     per il confronto
+     * @param opBooleano        per confrontare i costituenti logici
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         opBooleani.add(opBooleano);
@@ -64,9 +80,10 @@ public class Regola implements Serializable {
 
     /**
      * Inserisci constituente logico
-     * @param primoOpLogico scelto
+     *
+     * @param primoOpLogico     scelto
      * @param secondoOpCostante String
-     * @param opRelazionale per il confronto
+     * @param opRelazionale     per il confronto
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale) {
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
@@ -87,9 +104,10 @@ public class Regola implements Serializable {
 
     /**
      * Inserisci il costituente logico
-     * @param primoOpLogico da confrontare
+     *
+     * @param primoOpLogico     da confrontare
      * @param secondoOpCostante costante
-     * @param opRelazionale per il confronto
+     * @param opRelazionale     per il confronto
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale) {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale));
@@ -135,6 +153,57 @@ public class Regola implements Serializable {
     public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         Azione azione = new Azione(attuatore, modOperativa, start);
         conseguente.add(azione);
+    }
+
+    /**
+     * Visualizza la regola con il suo stato
+     *
+     * @return la regola ed il suo stato
+     */
+    public String visualizzaStatoRegola() {
+        StringBuilder regola = new StringBuilder();
+        for (int i = 0; i < antecedente.size(); i++) {
+            regola.append(" " + antecedente.get(i).toString());
+            if (i % 2 == 0 && opBooleani.get(0) != null)
+                regola.append(opBooleani.get(i));
+        }
+
+        for (int i = 0; i < conseguente.size(); i++) {
+            regola.append(" " + conseguente.get(i).toString());
+            if (i < conseguente.size() - 1)
+                regola.append(",");
+        }
+
+        regola.append("La regola:" +
+                "if " + antecedente + " then " + conseguente + " è ");
+        if (attiva) {
+            return regola.append("attiva\n").toString();
+        } else return regola.append("disattiva\n").toString();
+    }
+
+    /**
+     * To String
+     *
+     * @return descrizione
+     */
+    @Override
+    public String toString() {
+        StringBuilder regola = new StringBuilder();
+        for (int i = 0; i < antecedente.size(); i++) {
+            regola.append(" " + antecedente.get(i).toString());
+            if (i % 2 == 0 && opBooleani.get(0) != null)
+                regola.append(opBooleani.get(i));
+        }
+
+        for (int i = 0; i < conseguente.size(); i++) {
+            regola.append(" " + conseguente.get(i).toString());
+            if (i < conseguente.size() - 1)
+                regola.append(",");
+        }
+
+
+        return "Regola:" +
+                "if " + antecedente + " then " + conseguente + "\n";
     }
 
 
@@ -208,56 +277,5 @@ public class Regola implements Serializable {
      */
     public void setAttiva(boolean attiva) {
         this.attiva = attiva;
-    }
-
-    /**
-     * Visualizza la regola con il suo stato
-     *
-     * @return la regola ed il suo stato
-     */
-    public String visualizzaStatoRegola() {
-        StringBuilder regola = new StringBuilder();
-        for (int i = 0; i < antecedente.size(); i++) {
-            regola.append(" " + antecedente.get(i).toString());
-            if (i % 2 == 0 && opBooleani.get(0) != null)
-                regola.append(opBooleani.get(i));
-        }
-
-        for (int i = 0; i < conseguente.size(); i++) {
-            regola.append(" " + conseguente.get(i).toString());
-            if (i < conseguente.size() - 1)
-                regola.append(",");
-        }
-
-        regola.append("La regola:" +
-                "if " + antecedente + " then " + conseguente + " è ");
-        if (attiva) {
-            return regola.append("attiva\n").toString();
-        } else return regola.append("disattiva\n").toString();
-    }
-
-    /**
-     * To String
-     *
-     * @return descrizione
-     */
-    @Override
-    public String toString() {
-        StringBuilder regola = new StringBuilder();
-        for (int i = 0; i < antecedente.size(); i++) {
-            regola.append(" " + antecedente.get(i).toString());
-            if (i % 2 == 0 && opBooleani.get(0) != null)
-                regola.append(opBooleani.get(i));
-        }
-
-        for (int i = 0; i < conseguente.size(); i++) {
-            regola.append(" " + conseguente.get(i).toString());
-            if (i < conseguente.size() - 1)
-                regola.append(",");
-        }
-
-
-        return "Regola:" +
-                "if " + antecedente + " then " + conseguente + "\n";
     }
 }

@@ -17,38 +17,38 @@ public enum OperatoriRelazionali implements Serializable {
         this.value = value;
     }
 
-    public String toString() {
-        return this.value;
+    public static OperatoriRelazionali sceltaOperatoreRelazionale() {
+        boolean finito = false;
+        String[] azione = {">", "<", "≥", "≤", "="};
+        MyMenu menu = new MyMenu("Menu scelta operatore relazionale", azione);
+        int scelta = menu.scegli();
+        switch (scelta) {
+
+            case 1: {
+                return MAGGIORE;
+            }
+
+            case 2: {
+                return MINORE;
+            }
+
+            case 3: {
+                return MAGGIORE_UGUALE;
+            }
+
+            case 4: {
+                return MINORE_UGUALE;
+            }
+
+            case 5: {
+                return UGUALE;
+            }
+        }
+        return null;
     }
 
-    public static OperatoriRelazionali sceltaOperatoreRelazionale(){
-        boolean finito = false;
-        String[] azione = {">","<","≥","≤","="};
-        MyMenu menu = new MyMenu("Menu scelta operatore relazionale", azione);
-            int scelta = menu.scegli();
-            switch (scelta) {
-
-                case 1: {
-                    return MAGGIORE;
-                }
-
-                case 2: {
-                    return MINORE;
-                }
-
-                case 3: {
-                    return MAGGIORE_UGUALE;
-                }
-
-                case 4: {
-                    return MINORE_UGUALE;
-                }
-
-                case 5: {
-                    return UGUALE;
-                }
-            }
-        return null;
+    public String toString() {
+        return this.value;
     }
 
 }

@@ -29,6 +29,30 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
     }
 
     /**
+     * Rilevamento della variabile casualmente
+     *
+     * @return un valore estratto casualmente tra quelli disponibili
+     */
+    public double rilevaVariabile() {
+        return valore = Double.parseDouble(df2.format(NumeriCasuali.estraiDouble(min, max)));
+    }
+
+    /**
+     * toString
+     *
+     * @return i dati dell'informazione
+     */
+    @Override
+    public String toString() {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(getNome());
+        tmp.append("\nMin: " + min);
+        tmp.append("\nMax: " + max);
+        return tmp.toString();
+    }
+
+    /**
      * Getter
      *
      * @return nome
@@ -65,34 +89,11 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
     }
 
     /**
-     * Rilevamento della variabile casualmente
-     *
-     * @return un valore estratto casualmente tra quelli disponibili
-     */
-    public double rilevaVariabile() {
-        return valore = Double.parseDouble(df2.format(NumeriCasuali.estraiDouble(min, max)));
-    }
-
-    /**
      * Setter
+     *
      * @param valore da cambiare
      */
     public void setValore(double valore) {
         this.valore = valore;
-    }
-
-    /**
-     * toString
-     *
-     * @return i dati dell'informazione
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        tmp.append(getNome());
-        tmp.append("\nMin: "+min);
-        tmp.append("\nMax: "+max);
-        return tmp.toString();
     }
 }

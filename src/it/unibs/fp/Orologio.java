@@ -8,13 +8,12 @@ public class Orologio implements Serializable {
     private int ora;
     private int minuti;
 
-
-    public Orologio(int ora, int minuti){
+    public Orologio(int ora, int minuti) {
         this.ora = ora;
         this.minuti = minuti;
     }
 
-    public Orologio(){
+    public Orologio() {
         Calendar calendar = GregorianCalendar.getInstance();
         ora = calendar.get(Calendar.HOUR_OF_DAY);
         minuti = calendar.get(Calendar.MINUTE);
@@ -22,6 +21,6 @@ public class Orologio implements Serializable {
 
     @Override
     public String toString() {
-        return ora+":"+minuti;
+        return ora + ":" + minuti;
     }
 }
