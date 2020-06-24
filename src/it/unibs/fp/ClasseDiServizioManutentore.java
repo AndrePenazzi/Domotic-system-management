@@ -298,20 +298,25 @@ public class ClasseDiServizioManutentore {
                 break;
 
                 case 2: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di attuatori da salvare: ");
-                    File categorieSensoriFile = new File(nomeLibreria + ".dat");
+                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di attuatori da importare: ");
+                    File categorieAttuatoriFile = new File(nomeLibreria + ".dat");
 
-                    ArrayList<CategoriaSensori> categorieSensori = (ArrayList<CategoriaSensori>) ServizioFile.caricaSingoloOggetto(categorieSensoriFile);
-                    if (categorieSensori != null) {
-                        for (CategoriaSensori c : categorieSensori)
-                            contenitore.getListaCategorie().inserisciESalvaCategoriaSensori(c);
+                    ArrayList<CategoriaAttuatori> categorieAttuatori = (ArrayList<CategoriaAttuatori>) ServizioFile.caricaSingoloOggetto(categorieAttuatoriFile);
+                    if (categorieAttuatori != null) {
+                        for (CategoriaAttuatori c : categorieAttuatori)
+                            contenitore.getListaCategorie().inserisciESalvaCategoriaAttuatori(c);
                         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"),contenitore);
                     }}
                 break;
 
                 case 3: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria della unità immobiliare da salvare: ");
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), contenitore.getListaCategorie().getCategorieSensori());
+                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di unità immobiliari da importare: ");
+                    File unitaImmobiliareFile = new File(nomeLibreria + ".dat");
+
+                    UnitaImmobiliare unitaImmobiliare = (UnitaImmobiliare) ServizioFile.caricaSingoloOggetto(unitaImmobiliareFile);
+                    if (unitaImmobiliare != null) {
+                        ArrayList<CategoriaSensori> categorieSensoriCompatibilita =
+                    }
                 }
                 break;
 
