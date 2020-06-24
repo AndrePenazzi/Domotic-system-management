@@ -3,7 +3,7 @@ package it.unibs.fp;
 public class Azione {
     private Attuatore attuatore;
     private ModOperativa modOperativa;
-
+    private Orologio start;
     /**
      * Costruttore
      *
@@ -13,6 +13,19 @@ public class Azione {
     public Azione(Attuatore attuatore, ModOperativa modOperativa) {
         this.attuatore = attuatore;
         this.modOperativa = modOperativa;
+        start = null;
+    }
+
+    /**
+     * Costruttore con staart
+     * @param attuatore da modificare
+     * @param modOperativa da assegnare
+     * @param start tempo di assegnamento
+     */
+    public Azione(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
+        this.attuatore = attuatore;
+        this.modOperativa = modOperativa;
+        this.start = start;
     }
 
     /**
@@ -66,6 +79,8 @@ public class Azione {
     public String toString() {
         StringBuilder tmp = new StringBuilder();
         tmp.append(attuatore.getNome()).append(":=").append(modOperativa.getNome());
+        if(start!=null)
+            tmp.append(","+"start := "+start);
         return tmp.toString();
     }
 }

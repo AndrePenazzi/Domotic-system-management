@@ -4,8 +4,10 @@ public class CostituenteLogico {
     private InfoRilevabile primoOperatoreLogico = null;
     private InfoRilevabile secondoOperatoreLogico = null;
     private OperatoriRelazionali operatoreRelazionale = null;
-    private double secondoOperatoreCostante = Double.parseDouble(null);
+    private Double secondoOperatoreCostante = null;
     private String secondoOperatoreScalare = null;
+    private Orologio time = null;
+    private Orologio secondoOperatoreOrologio = null;
 
     /**
      * Costruttore con valori
@@ -44,6 +46,16 @@ public class CostituenteLogico {
         this.secondoOperatoreLogico = null;
         this.primoOperatoreLogico = primoOperatoreLogico;
         this.secondoOperatoreScalare = secondoOperatoreScalare;
+        this.operatoreRelazionale = operatoreRelazionale;
+    }
+
+    /**
+     * Costruttore con orologio
+     * @param secondoOperatoreLogico orologio
+     * @param operatoreRelazionale per il confronto
+     */
+    public CostituenteLogico(Orologio secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
+        this.secondoOperatoreOrologio = secondoOperatoreLogico;
         this.operatoreRelazionale = operatoreRelazionale;
     }
 
@@ -144,12 +156,18 @@ public class CostituenteLogico {
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
+        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
             tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+
             if (secondoOperatoreLogico != null)
                 tmp.append(" "+secondoOperatoreLogico);
-            else tmp.append(" "+secondoOperatoreCostante);
-
+            if (secondoOperatoreCostante != null)
+                tmp.append(" "+secondoOperatoreCostante);
+            if (secondoOperatoreScalare != null)
+                tmp.append(" "+secondoOperatoreScalare);
+        }
+        else{
+            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
         }
         return tmp.toString();
     }

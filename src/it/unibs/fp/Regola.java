@@ -36,6 +36,13 @@ public class Regola {
         antecedente.add(costituenteLogico);
 
     }
+
+    public void inserisciCostituenteLogico(OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
+        opBooleani.add(opBooleano);
+        CostituenteLogico costituenteLogico = new CostituenteLogico(orologio,opRelazionale);
+        antecedente.add(costituenteLogico);
+
+    }
 //TODO FAI COMMENTO
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         opBooleani.add(opBooleano);
@@ -65,6 +72,13 @@ public class Regola {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale));
     }
 
+    public void inserisciCostituenteLogico( Orologio orologio, OperatoriRelazionali opRelazionale) {
+        antecedente.set(0, new CostituenteLogico( orologio, opRelazionale));
+    }
+
+
+
+
     /**
      * Inserisci costituente logico
      */
@@ -83,6 +97,20 @@ public class Regola {
         Azione azione = new Azione(attuatore, modOperativa);
         conseguente.add(azione);
     }
+
+    /**
+     * Inserisci una nuova azione con start
+     *
+     * @param attuatore    nel quale inserire un'azione
+     * @param modOperativa scelta
+     * @param start con ora di assegnamento
+     */
+    public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa ,Orologio start) {
+        Azione azione = new Azione(attuatore, modOperativa, start);
+        conseguente.add(azione);
+    }
+
+
 
     /**
      * Getter

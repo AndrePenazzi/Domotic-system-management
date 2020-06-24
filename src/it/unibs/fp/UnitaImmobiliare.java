@@ -35,6 +35,20 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
+     * Inserisci la regola per la prima volta con start
+     *
+     * @param attuatore    per settare la sua modalità operativa
+     * @param modOperativa scelta
+     * @param start ora di assegnamento
+     */
+    public void inserisciRegola(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
+        regole.add(new Regola());
+        int i = regole.size();
+        regole.get(i - 1).inserisciCostituenteLogico();
+        regole.get(i - 1).inserisciAzione(attuatore, modOperativa, start);
+    }
+
+    /**
      * Inserisci la regola per la prima volta
      *
      * @param regola       scelta
@@ -98,6 +112,22 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     /**
+     * Inserisci il primo costituente logico
+     *
+     * @param regola            scelta
+     * @param primoOpLogico     primo operatore da confrontare
+     * @param opRelazionale     per il confronto
+     * @param orologio da confrontare
+     */
+    public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, Orologio orologio, OperatoriRelazionali opRelazionale) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico(orologio, opRelazionale);
+        }
+    }
+
+    /**
      * Inserisci l'ennesimo costituente logico
      *
      * @param regola          scelta
@@ -145,6 +175,22 @@ public class UnitaImmobiliare implements Serializable {
         if (regole.contains(regola)) {
             i = trovaRegola(regola);
             regole.get(i).inserisciCostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale, opBooleano);
+        }
+    }
+
+    /**
+     * Aggiungi ennesimo costituente logico a regola con orologio
+     *
+     * @param regola            scelta
+     * @param opRelazionale     per il confronto
+     * @param opBooleano        per il confronto tra costituenti
+     * @param orologio da confrontare
+     */
+    public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
+        int i;
+        if (regole.contains(regola)) {
+            i = trovaRegola(regola);
+            regole.get(i).inserisciCostituenteLogico( opRelazionale, opBooleano,orologio);
         }
     }
 
