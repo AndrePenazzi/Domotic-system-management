@@ -292,7 +292,7 @@ public class ClasseDiServizioManutentore {
                     if (categorieSensori != null) {
                         for (CategoriaSensori c : categorieSensori)
                             contenitore.getListaCategorie().inserisciESalvaCategoriaSensori(c);
-                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"),contenitore);
+                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                     }
                 }
                 break;
@@ -305,18 +305,76 @@ public class ClasseDiServizioManutentore {
                     if (categorieAttuatori != null) {
                         for (CategoriaAttuatori c : categorieAttuatori)
                             contenitore.getListaCategorie().inserisciESalvaCategoriaAttuatori(c);
-                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"),contenitore);
-                    }}
+                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
+                    }
+                }
                 break;
 
                 case 3: {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di unità immobiliari da importare: ");
                     File unitaImmobiliareFile = new File(nomeLibreria + ".dat");
+                    ArrayList<CategoriaSensori> categorieSensoriCompatibilita = new ArrayList<>();
+                    ArrayList<CategoriaAttuatori> categorieAttuatoriCompatibilita = new ArrayList<>();
 
                     UnitaImmobiliare unitaImmobiliare = (UnitaImmobiliare) ServizioFile.caricaSingoloOggetto(unitaImmobiliareFile);
+
+
                     if (unitaImmobiliare != null) {
-                        ArrayList<CategoriaSensori> categorieSensoriCompatibilita =
+                        //Categorie sensori in stanze
+                        for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getSensori().size(); j++) {
+                                categorieSensoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getSensori().get(j).getCategoriaSensori());
+                            }
+                        }
+                        //Categorie sensori in artefatti nelle stanze
+                        for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getArtefatti().size(); j++) {
+                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().size(); l++) {
+                                    categorieSensoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().get(l).getCategoriaSensori());
+                                }
+                            }
+                        }
+                        //Categorie sensori in artefatti
+                        for (int i = 0; i < unitaImmobiliare.getSizeArtefatti(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensori().size(); j++) {
+                                categorieSensoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getSensori().get(j).getCategoriaSensori());
+                            }
+                        }
+                        //Categorie attuatori in stanze
+                        for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getSensori().size(); j++) {
+                                categorieAttuatoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getAttuatori().get(j).getCategoriaAttuatori());
+                            }
+                        }
+                        //Categorie attuatori in artefatti nelle stanze
+                        for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getArtefatti().size(); j++) {
+                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().size(); l++) {
+                                    categorieAttuatoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getAttuatori().get(l).getCategoriaAttuatori());
+                                }
+                            }
+                        }
+                        //Categorie attuatori in artefatti
+                        for (int i = 0; i < unitaImmobiliare.getSizeArtefatti(); i++) {
+                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensori().size(); j++) {
+                                categorieAttuatoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getAttuatori().get(j).getCategoriaAttuatori());
+                            }
+                        }
                     }
+                    for (int i = 0; i < contenitore.getListaCategorie().getCategorieSensori().size(); i++) {
+                        if (!contenitore.getListaCategorie().getCategorieSensori().contains(categorieSensoriCompatibilita.get(i))) {
+                            System.out.println("C'è un errore di compatibilità con la categoria sensori");
+                            break;
+                        }
+                    }
+                    for (int i = 0; i < contenitore.getListaCategorie().getCategorieAttuatori().size(); i++) {
+                        if (!contenitore.getListaCategorie().getCategorieAttuatori().contains(categorieAttuatoriCompatibilita.get(i))) {
+                            System.out.println("C'è un errore di compatibilità con la categoria attuatori");
+                            break;
+                        }
+                    }
+                    contenitore.getManutentore().getFruitore().aggiungiUnitaImmobiliare(unitaImmobiliare);
+                    ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                 }
                 break;
 
