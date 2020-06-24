@@ -1,6 +1,8 @@
 package it.unibs.fp;
 
-public class CostituenteLogico {
+import java.io.Serializable;
+
+public class CostituenteLogico implements Serializable {
     private InfoRilevabile primoOperatoreLogico = null;
     private InfoRilevabile secondoOperatoreLogico = null;
     private OperatoriRelazionali operatoreRelazionale = null;

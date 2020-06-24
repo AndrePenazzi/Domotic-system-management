@@ -24,16 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="Cricket Version with javaDoc">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" afterDir="false" />
+    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documentazione.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Azione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriBooleani.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +72,18 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.unibs.fp" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -208,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592944718889</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Aggiunta funzionalità del cambio stato delle regole">
+      <created>1592991359880</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1592991359880</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,12 +237,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -241,7 +260,8 @@
     <MESSAGE value="Creato CostituenteLogico" />
     <MESSAGE value="Aggiunte nuove funzionalità per aggiungere una Regola" />
     <MESSAGE value="Cricket Version with javaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cricket Version with javaDoc" />
+    <MESSAGE value="Aggiunta funzionalità del cambio stato delle regole" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aggiunta funzionalità del cambio stato delle regole" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser" timestamp="1592943129008">

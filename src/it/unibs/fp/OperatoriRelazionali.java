@@ -2,7 +2,9 @@ package it.unibs.fp;
 
 import it.unibs.fp.mylib.MyMenu;
 
-public enum OperatoriRelazionali {
+import java.io.Serializable;
+
+public enum OperatoriRelazionali implements Serializable {
     MAGGIORE(">"),
     MINORE("<"),
     MAGGIORE_UGUALE("≥"),

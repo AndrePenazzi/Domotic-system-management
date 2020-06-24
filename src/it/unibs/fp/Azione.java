@@ -1,6 +1,8 @@
 package it.unibs.fp;
 
-public class Azione {
+import java.io.Serializable;
+
+public class Azione implements Serializable {
     private Attuatore attuatore;
     private ModOperativa modOperativa;
     private Orologio start;

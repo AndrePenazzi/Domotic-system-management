@@ -2,7 +2,9 @@ package it.unibs.fp;
 
 import it.unibs.fp.mylib.MyMenu;
 
-public enum OperatoriBooleani {
+import java.io.Serializable;
+
+public enum OperatoriBooleani implements Serializable {
     AND,
     OR;
 

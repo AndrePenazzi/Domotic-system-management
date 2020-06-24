@@ -1,11 +1,12 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class Orologio{
-    int ora;
-    int minuti;
+public class Orologio implements Serializable {
+    private int ora;
+    private int minuti;
 
 
     public Orologio(int ora, int minuti){

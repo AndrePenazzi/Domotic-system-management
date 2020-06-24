@@ -1,8 +1,9 @@
 package it.unibs.fp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Regola {
+public class Regola implements Serializable {
     private ArrayList<CostituenteLogico> antecedente;
     private ArrayList<Azione> conseguente;
     private ArrayList<OperatoriBooleani> opBooleani;
@@ -47,7 +48,13 @@ public class Regola {
 
     }
 
-    //TODO FAI COMMENTO
+    /**
+     *
+     * @param primoOpLogico
+     * @param secondoOpCostante
+     * @param opRelazionale
+     * @param opBooleano
+     */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
@@ -55,6 +62,12 @@ public class Regola {
 
     }
 
+    /**
+     * Inserisci constituente logico
+     * @param primoOpLogico scelto
+     * @param secondoOpCostante String
+     * @param opRelazionale per il confronto
+     */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, String secondoOpCostante, OperatoriRelazionali opRelazionale) {
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
         antecedente.add(costituenteLogico);
@@ -66,7 +79,7 @@ public class Regola {
      *
      * @param primoOpLogico   primo operatore logico scelto
      * @param secondoOpLogico secondo operatore logico scelto
-     * @param opRelazionale   scelto
+     * @param opRelazionale   per il confronto
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale));
