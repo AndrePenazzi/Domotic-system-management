@@ -7,7 +7,7 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
 
-        File cFile = new File("contenitore.txt");
+        File cFile = new File("contenitore.dat");
         Contenitore contenitore;
 
         if (cFile.exists()) {
@@ -17,8 +17,8 @@ public class Main {
             Fruitore fruitore = new Fruitore();
             Manutentore manutentore = new Manutentore(fruitore);
             ListaCategorie listaCategorie = new ListaCategorie();
-            contenitore = new Contenitore(manutentore,fruitore,listaCategorie);
-            ServizioFile.salvaSingoloOggetto(new File("contenitore.txt"), contenitore);
+            contenitore = new Contenitore(manutentore,listaCategorie);
+            ServizioFile.salvaSingoloOggetto(new File("contenitore"), contenitore);
         }
 
         System.out.println(BelleStringhe.incornicia("Benvenuto"));

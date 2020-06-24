@@ -45,7 +45,6 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
     @Override
     public String toString() {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
         tmp.append(getNome());
         tmp.append("\nMin: " + min);
         tmp.append("\nMax: " + max);

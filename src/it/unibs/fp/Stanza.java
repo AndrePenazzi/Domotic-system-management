@@ -60,7 +60,7 @@ public class Stanza implements Serializable {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Gli Artefatti sono:\n");
         for (Artefatto a : artefatti) {
-            tmp.append(a.toString()).append("\n");
+            tmp.append(a.getNome()).append("\n");
         }
         return tmp.toString();
     }

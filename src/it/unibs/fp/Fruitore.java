@@ -278,7 +278,7 @@ public class Fruitore implements Serializable {
         if (!unitaImmobiliari.isEmpty()) {
             int i = 1;
             for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
-                tmp.append(i + " " + unitaImmobiliare.toString()).append("\n");
+                tmp.append(i + " " + unitaImmobiliare.getNome()).append("\n");
                 i++;
             }
         } else

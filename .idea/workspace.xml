@@ -25,14 +25,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioAssociazioni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioFruitore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioInserimenti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioManutentore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentazione.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Azione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/CostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriBooleani.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/OperatoriRelazionali.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Regola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenitore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Contenitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Fruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/InfoRilevabileNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/UnitaImmobiliare.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,18 +78,6 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.unibs.fp" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -237,13 +231,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
@@ -280,22 +273,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1590678519527" />
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1592984589178">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1593003056854">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1592984589178" />
-    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1592984589178">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1593003056854" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1593003056854">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1592984589178" />
-    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1592984589177">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1593003056854" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1593003056853">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1592984589177" />
-    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1592984589178">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1593003056853" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1593003056854">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1592984589178" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1593003056854" />
     <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -312,10 +305,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1592861637905" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1592932585995">
+    <state x="147" y="65" key="MergeDialog" timestamp="1593000317568">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1592932585995" />
+    <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1593000317568" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1592944809699">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -328,10 +321,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="584" y="195" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1590674692069" />
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592983056927">
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593000282270">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1592983056927" />
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1593000282270" />
     <state x="541" y="291" width="619" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592833311208">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

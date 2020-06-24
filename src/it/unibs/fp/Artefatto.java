@@ -47,7 +47,7 @@ public class Artefatto implements Serializable {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Gli attuatori sono:\n");
         for (Attuatore a : attuatori) {
-            tmp.append(a.toString()).append("\n");
+            tmp.append(a.getNome()).append("\n");
         }
         return tmp.toString();
     }

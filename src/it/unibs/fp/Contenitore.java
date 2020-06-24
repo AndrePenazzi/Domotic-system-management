@@ -4,19 +4,16 @@ import java.io.Serializable;
 
 public class Contenitore implements Serializable {
     private Manutentore manutentore;
-    private Fruitore fruitore;
     private ListaCategorie listaCategorie;
 
     /**
      * Costruttore del contenitore degli oggetti importanti da salvare
      *
      * @param manutentore      da salvare
-     * @param fruitore         da salvare
      * @param listaCategorie   da salvare
      */
-    public Contenitore(Manutentore manutentore, Fruitore fruitore, ListaCategorie listaCategorie) {
+    public Contenitore(Manutentore manutentore, ListaCategorie listaCategorie) {
         this.manutentore = manutentore;
-        this.fruitore = fruitore;
         this.listaCategorie = listaCategorie;
     }
 
@@ -36,24 +33,6 @@ public class Contenitore implements Serializable {
      */
     public void setManutentore(Manutentore manutentore) {
         this.manutentore = manutentore;
-    }
-
-    /**
-     * Getter
-     *
-     * @return fruitore
-     */
-    public Fruitore getFruitore() {
-        return fruitore;
-    }
-
-    /**
-     * Setter
-     *
-     * @param fruitore da modificare
-     */
-    public void setFruitore(Fruitore fruitore) {
-        this.fruitore = fruitore;
     }
 
     /**

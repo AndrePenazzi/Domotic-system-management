@@ -322,7 +322,7 @@ public class UnitaImmobiliare implements Serializable {
             for (Stanza s : stanze) {
                 tmp.append(i);
                 tmp.append(" ");
-                tmp.append(s.toString());
+                tmp.append(s.getNome());
                 tmp.append("\n");
                 i++;
             }
@@ -457,8 +457,11 @@ public class UnitaImmobiliare implements Serializable {
      */
     public String visualizzaRegole() {
         StringBuilder str = new StringBuilder();
-        for (Regola r : regole)
-            str.append("\n" + regole.toString());
+        if (!regole.isEmpty())
+            for (Regola r : regole)
+                str.append("\n" + r.toString());
+        else
+            str.append("Non ci sono ancora regole in questa unità immobiliare");
         return str.toString();
     }
 }
