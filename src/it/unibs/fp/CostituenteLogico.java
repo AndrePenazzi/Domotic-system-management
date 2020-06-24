@@ -116,7 +116,7 @@ public class CostituenteLogico implements Serializable {
                 tmp.append(" " + secondoOperatoreCostante);
             if (secondoOperatoreScalare != null)
                 tmp.append(" " + secondoOperatoreScalare);
-        } else {
+        } else if(time!=null){
             tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
         }
         return tmp.toString();

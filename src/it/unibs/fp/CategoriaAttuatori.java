@@ -53,7 +53,7 @@ public class CategoriaAttuatori implements Serializable {
                 if (modOperativa.getType() == 1)
                     tmp.append(i + " " + ((ModOperativaNonParamentrica) modOperativa).toString());
                 else
-                    tmp.append(i + " " + ((ModOperativaNonParamentrica) modOperativa).toString());
+                    tmp.append(i + " " + ((ModOperativaParamentrica) modOperativa).toString());
                 i++;
             }
         } else

@@ -17,7 +17,7 @@ public class ClasseDiServizioManutentore {
      */
     static void stampaMenuManutentore(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori", "Operazioni di import"};
+        String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori", "Operazioni di import", "Operazioni di salvataggio"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -46,7 +46,7 @@ public class ClasseDiServizioManutentore {
                 case 4: {
                     stampaMenuVisualizzazioneCategorie(contenitore);
                 }
-
+                break;
                 case 5: {
                     stampaMenuSalvataggiLibrerie(contenitore);
                 }
@@ -54,6 +54,7 @@ public class ClasseDiServizioManutentore {
                 case 6: {
                     stampaMenuImportLibrerie(contenitore);
                 }
+                break;
             }
         } while (!finito);
     }
@@ -66,7 +67,7 @@ public class ClasseDiServizioManutentore {
      */
     private static void stampaMenuManutentoreOperazioniSuUnitaImmobiliare(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori", "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
+        String[] azione = { "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -79,42 +80,42 @@ public class ClasseDiServizioManutentore {
                 break;
 
 
-                case 3: {
+                case 1: {
                     ClasseDiServizioInserimenti.inserisciNuovaStanza(contenitore);
                 }
                 break;
 
-                case 4: {
+                case 2: {
                     ClasseDiServizioInserimenti.inserisciNuovoArtefatto(contenitore);
                 }
                 break;
 
-                case 5: {
+                case 3: {
                     ClasseDiServizioAssociazioni.associaSensoreAStanze(contenitore);
                 }
                 break;
 
-                case 6: {
+                case 4: {
                     ClasseDiServizioAssociazioni.associaAttuatoreAStanze(contenitore);
                 }
                 break;
 
-                case 7: {
+                case 5: {
                     ClasseDiServizioAssociazioni.associaSensoreAdArtefatti(contenitore);
                 }
                 break;
 
-                case 8: {
+                case 6: {
                     ClasseDiServizioAssociazioni.associaAttuatoreAdArtefatti(contenitore);
                 }
                 break;
 
-                case 9: {
+                case 7: {
                     ClasseDiServizioAssociazioni.associaArtefattoAStanze(contenitore);
                 }
                 break;
 
-                case 10: {
+                case 8: {
                     stampaMenuVisualizzazioneCaratteristicheUnitaImmobiliare(contenitore);
                 }
             }

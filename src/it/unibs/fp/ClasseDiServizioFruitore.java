@@ -164,6 +164,7 @@ public class ClasseDiServizioFruitore {
 
                 case 3: {
                     ClasseDiServizioInserimenti.creaConseguenze(contenitore, unitaImm, fruitore);
+
                     ClasseDiServizioInserimenti.creaAntecedente(contenitore, unitaImm, fruitore);
                 }
                 break;

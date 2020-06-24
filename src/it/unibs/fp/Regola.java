@@ -191,7 +191,7 @@ public class Regola implements Serializable {
         StringBuilder regola = new StringBuilder();
         for (int i = 0; i < antecedente.size(); i++) {
             regola.append(" " + antecedente.get(i).toString());
-            if (i % 2 == 0 && opBooleani.get(0) != null)
+            if (i % 2 == 0 && opBooleani != null && i<antecedente.size()-1)
                 regola.append(opBooleani.get(i));
         }
 

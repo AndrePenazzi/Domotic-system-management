@@ -17,12 +17,11 @@ public class Fruitore implements Serializable {
     /**
      * Inserisci la regola per la prima volta
      *
-     * @param unitaImmobiliare scelta
      * @param attuatore        per settare la sua modalità operativa
      * @param modOperativa     scelta
      */
-    public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
-        unitaImmobiliare.inserisciRegola(attuatore, modOperativa);
+    public void inserisciRegola(int unitaImmobiliareIndex, Attuatore attuatore, ModOperativa modOperativa) {
+        unitaImmobiliari.get(unitaImmobiliareIndex).inserisciRegola(attuatore, modOperativa);
     }
 
     /**

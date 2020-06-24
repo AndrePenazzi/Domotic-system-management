@@ -232,14 +232,13 @@ public class ClasseDiServizioInserimenti {
      * Inserisci una nuova regola
      *
      * @param contenitore      dal quale prendere gli oggetti necessari
-     * @param unitaImmobiliare scelta
      * @param attuatore        scelto
      * @param modOperativa     da impostare
      * @return il fruitore
      */
-    public static Fruitore inserisciNuovaRegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
+    public static Fruitore inserisciNuovaRegola(Contenitore contenitore, int unitaImmobiliareIndex, Attuatore attuatore, ModOperativa modOperativa) {
         Fruitore fruitore = contenitore.getManutentore().getFruitore();
-        fruitore.inserisciRegola(unitaImmobiliare, attuatore, modOperativa);
+        fruitore.inserisciRegola(unitaImmobiliareIndex, attuatore, modOperativa);
         return fruitore;
     }
 
@@ -287,7 +286,9 @@ public class ClasseDiServizioInserimenti {
      */
     public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore;
-        if (unitaImmobiliare.getRegole().isEmpty())
+        int size = unitaImmobiliare.getRegole().size();
+        System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -308,7 +309,9 @@ public class ClasseDiServizioInserimenti {
      */
     public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, Double secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore;
-        if (unitaImmobiliare.getRegole().isEmpty())
+        int size = unitaImmobiliare.getRegole().size();
+        System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -329,7 +332,9 @@ public class ClasseDiServizioInserimenti {
      */
     public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore;
-        if (unitaImmobiliare.getRegole().isEmpty())
+        int size = unitaImmobiliare.getRegole().size();
+        System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -349,7 +354,9 @@ public class ClasseDiServizioInserimenti {
      */
     public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, OperatoriRelazionali opRelazionale, Orologio orologio) {
         Fruitore fruitore;
-        if (unitaImmobiliare.getRegole().isEmpty())
+        int size = unitaImmobiliare.getRegole().size();
+        System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, opRelazionale, orologio);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -655,7 +662,8 @@ public class ClasseDiServizioInserimenti {
                         System.out.println("Si farà quindi un confronto con l'orario");
                         OperatoriRelazionali operatoriRelazionali = OperatoriRelazionali.sceltaOperatoreRelazionale();
                         Orologio orologio = inserisciOrologio();
-                        ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), operatoriRelazionali, orologio);
+                        unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                        ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), operatoriRelazionali, orologio);
                     } else {
                         int infoRilevabileScelta = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore.getCategoriaSensori().getInformazioniRilevabili().size()) - 1;
                         InfoRilevabile iTMP = sensore.getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta);
@@ -666,7 +674,8 @@ public class ClasseDiServizioInserimenti {
                                 InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                                 OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                                 double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
+                                unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
                             }
                             //con un'altro sensore
                             else {
@@ -679,7 +688,8 @@ public class ClasseDiServizioInserimenti {
                                 int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size()) - 1;
                                 InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta2);
                                 InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                                unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                             }
 
                         }
@@ -689,7 +699,8 @@ public class ClasseDiServizioInserimenti {
                             System.out.println("L'operatore logico predefinito è =");
                             String parametro = ClasseDiServizioInserimenti.scegliParametroConCuiConfrontare(iNNTMP);
                             OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
-                            ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNNTMP, parametro, operatoreRelazionale);
+                            unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                            ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore,  contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNNTMP, parametro, operatoreRelazionale);
                         }
                     }
                 }
@@ -716,7 +727,8 @@ public class ClasseDiServizioInserimenti {
                                 InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                                 OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                                 double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                                unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
                             }
                             //con un'altro sensore
                             else {
@@ -729,7 +741,8 @@ public class ClasseDiServizioInserimenti {
                                 int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size()) - 1;
                                 InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta2);
                                 InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                                unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                             }
                         }
                         //parametrico
@@ -738,15 +751,16 @@ public class ClasseDiServizioInserimenti {
                             System.out.println("L'operatore logico predefinito è =");
                             String parametro = ClasseDiServizioInserimenti.scegliParametroConCuiConfrontare(iNNTMP);
                             OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
-                            ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNNTMP, parametro, operatoreRelazionale);
+                            unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size()-1;
+                            ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm), iNNTMP, parametro, operatoreRelazionale);
                         }
                     }
 
                 }
                 //in unità immobilare in un artefatto
                 else if (InputDati.yesOrNo("Si vuole scegliere un sensore in un artefatto della unità immobiliare?")) {
-                    System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaArtefatti());
-                    int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().size()) - 1;
+                    System.out.println(fruitore.getUnitaImmobiliari().get(unitaImm).visualizzaArtefatti());
+                    int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().size()) - 1;
                     Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
                     System.out.println(artefatto.visualizzaSensori());
 
@@ -771,7 +785,7 @@ public class ClasseDiServizioInserimenti {
                                 InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                                 OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                                 double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, costante, operatoreRelazionale);
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
                             }
                             //con un'altro sensore
                             else {
@@ -784,7 +798,7 @@ public class ClasseDiServizioInserimenti {
                                 int infoRilevabileScelta2 = InputDati.leggiIntero("Scegliere informazione rilevabile :", 1, sensore2.getCategoriaSensori().getInformazioniRilevabili().size()) - 1;
                                 InfoRilevabile iTMP2 = sensore.getCategoriaSensori().getInformazioniRilevabili().get(infoRilevabileScelta2);
                                 InfoRilevabileNumerica iNTMP2 = (InfoRilevabileNumerica) iTMP2;
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
+                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, iNTMP2, operatoreRelazionale);
                             }
 
                         }
@@ -799,7 +813,7 @@ public class ClasseDiServizioInserimenti {
                     }
                 }
             }
-        } while (InputDati.yesOrNo("Vuoi continuare a creare nuove regole?"));
+        } while (InputDati.yesOrNo("Vuoi continuare a inserire antecedenti?"));
     }
 
     /**
@@ -819,7 +833,7 @@ public class ClasseDiServizioInserimenti {
                 Stanza stanza = fruitore.getUnitaImmobiliari().get(unitaImm).getStanze().get(stanzaScelta);
 
                 //in artefatto della stanza
-                if (InputDati.yesOrNo("Si vuole scegliere l'attautore di un artefatto ?")) {
+                if (InputDati.yesOrNo("Si vuole scegliere l'attuatore di un artefatto ?")) {
                     //SCELTA ARTEFATTO
                     System.out.println(stanza.visualizzaArtefatti());
                     int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getSizeArtefatti()) - 1;
@@ -846,13 +860,13 @@ public class ClasseDiServizioInserimenti {
 
                     if (InputDati.yesOrNo("Si vuole creare una conseguenza con orario ?")) {
                         Orologio start = inserisciOrologio();
-                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP, start);
+                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), attuatore, mTMP, start);
                         Manutentore manutentore = contenitore.getManutentore();
                         manutentore.setFruitore(fruitore);
                         contenitore.setManutentore(manutentore);
                         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                     } else {
-                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(--unitaImm), attuatore, mTMP);
+                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, unitaImm, attuatore, mTMP);
                         Manutentore manutentore = contenitore.getManutentore();
                         manutentore.setFruitore(fruitore);
                         contenitore.setManutentore(manutentore);
@@ -885,7 +899,7 @@ public class ClasseDiServizioInserimenti {
                         contenitore.setManutentore(manutentore);
                         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                     } else {
-                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), attuatore, mTMP);
+                        fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, unitaImm, attuatore, mTMP);
                         Manutentore manutentore = contenitore.getManutentore();
                         manutentore.setFruitore(fruitore);
                         contenitore.setManutentore(manutentore);
@@ -895,9 +909,9 @@ public class ClasseDiServizioInserimenti {
             }
             //attuatore di artefatto in unità immobiliari
             else if (InputDati.yesOrNo("Si vuole scegliere un attuatore di un artefatto ?")) {
-                System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaArtefatti());
+                System.out.println(fruitore.getUnitaImmobiliari().get(unitaImm).visualizzaArtefatti());
                 int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getSizeArtefatti()) - 1;
-                Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto);
+                Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
                 System.out.println(artefatto.visualizzaAttuatori());
 
                 int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size()) - 1;
@@ -924,7 +938,7 @@ public class ClasseDiServizioInserimenti {
                     contenitore.setManutentore(manutentore);
                     ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                 } else {
-                    fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), attuatore, mTMP);
+                    fruitore = ClasseDiServizioInserimenti.inserisciNuovaRegola(contenitore, unitaImm, attuatore, mTMP);
                     Manutentore manutentore = contenitore.getManutentore();
                     manutentore.setFruitore(fruitore);
                     contenitore.setManutentore(manutentore);
@@ -953,7 +967,7 @@ public class ClasseDiServizioInserimenti {
      * @return il fruitore
      */
     static Fruitore cambiaStatoRegola(int unitaImm, Fruitore fruitore) {
-        UnitaImmobiliare unitaImmobiliare = fruitore.getUnitaImmobiliari().get(--unitaImm);
+        UnitaImmobiliare unitaImmobiliare = fruitore.getUnitaImmobiliari().get(unitaImm);
         do {
             System.out.println(unitaImmobiliare.visualizzaStatoRegole());
             int indexRegola = InputDati.leggiIntero("Scegli la regola a cui vuoi cambiare stato: ", 1, unitaImmobiliare.getRegole().size());

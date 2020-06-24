@@ -148,21 +148,7 @@ public class InputDati {
         return valoreLetto;
     }
 
-    public static double leggiDouble(String messaggio, double minimo, double massimo) {
-        boolean finito = false;
-        double valoreLetto = 0;
-        do {
-            valoreLetto = lettore.nextDouble();
-            if (valoreLetto >= minimo && valoreLetto <= massimo)
-                finito = true;
-            else if (valoreLetto < minimo)
-                System.out.println(ERRORE_MINIMO + minimo);
-            else
-                System.out.println(ERRORE_MASSIMO + massimo);
-        } while (!finito);
 
-        return valoreLetto;
-    }
 
 
     public static double leggiDouble(String messaggio) {
@@ -190,6 +176,22 @@ public class InputDati {
                 finito = true;
             else
                 System.out.println(ERRORE_MINIMO + minimo);
+        } while (!finito);
+
+        return valoreLetto;
+    }
+
+    public static double leggiDouble(String messaggio, double minimo, double massimo) {
+        boolean finito = false;
+        double valoreLetto = 0;
+        do {
+            valoreLetto = leggiDouble(messaggio);
+            if (valoreLetto >= minimo && valoreLetto <= massimo)
+                finito = true;
+            else if (valoreLetto < minimo)
+                System.out.println(ERRORE_MINIMO + minimo);
+            else
+                System.out.println(ERRORE_MASSIMO + massimo);
         } while (!finito);
 
         return valoreLetto;
