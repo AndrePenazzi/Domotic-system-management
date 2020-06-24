@@ -6,6 +6,8 @@ public class Regola {
     private ArrayList<CostituenteLogico> antecedente;
     private ArrayList<Azione> conseguente;
     private ArrayList<OperatoriBooleani> opBooleani;
+    private boolean attiva;
+
 
     /**
      * Costruttore regola
@@ -14,6 +16,7 @@ public class Regola {
         this.antecedente = new ArrayList<>();
         this.conseguente = new ArrayList<>();
         this.opBooleani = new ArrayList<>();
+        attiva = true;
     }
 
     /**
@@ -39,11 +42,12 @@ public class Regola {
 
     public void inserisciCostituenteLogico(OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
         opBooleani.add(opBooleano);
-        CostituenteLogico costituenteLogico = new CostituenteLogico(orologio,opRelazionale);
+        CostituenteLogico costituenteLogico = new CostituenteLogico(orologio, opRelazionale);
         antecedente.add(costituenteLogico);
 
     }
-//TODO FAI COMMENTO
+
+    //TODO FAI COMMENTO
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
@@ -68,15 +72,25 @@ public class Regola {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale));
     }
 
-    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, Double secondoOpCostante, OperatoriRelazionali opRelazionale) {
+    /**
+     * Inserisci il costituente logico
+     * @param primoOpLogico da confrontare
+     * @param secondoOpCostante costante
+     * @param opRelazionale per il confronto
+     */
+    public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale) {
         antecedente.set(0, new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale));
     }
 
-    public void inserisciCostituenteLogico( Orologio orologio, OperatoriRelazionali opRelazionale) {
-        antecedente.set(0, new CostituenteLogico( orologio, opRelazionale));
+    /**
+     * Inserisci il costituente logico
+     *
+     * @param orologio      da confrontare con l'orario attuale
+     * @param opRelazionale per il confronto
+     */
+    public void inserisciCostituenteLogico(Orologio orologio, OperatoriRelazionali opRelazionale) {
+        antecedente.set(0, new CostituenteLogico(orologio, opRelazionale));
     }
-
-
 
 
     /**
@@ -103,13 +117,12 @@ public class Regola {
      *
      * @param attuatore    nel quale inserire un'azione
      * @param modOperativa scelta
-     * @param start con ora di assegnamento
+     * @param start        con ora di assegnamento
      */
-    public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa ,Orologio start) {
+    public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         Azione azione = new Azione(attuatore, modOperativa, start);
         conseguente.add(azione);
     }
-
 
 
     /**
@@ -167,27 +180,71 @@ public class Regola {
     }
 
     /**
+     * Getter
+     *
+     * @return lo stato della regola
+     */
+    public boolean isAttiva() {
+        return attiva;
+    }
+
+    /**
+     * Setter
+     *
+     * @param attiva da modificare
+     */
+    public void setAttiva(boolean attiva) {
+        this.attiva = attiva;
+    }
+
+    /**
+     * Visualizza la regola con il suo stato
+     *
+     * @return la regola ed il suo stato
+     */
+    public String visualizzaStatoRegola() {
+        StringBuilder regola = new StringBuilder();
+        for (int i = 0; i < antecedente.size(); i++) {
+            regola.append(" " + antecedente.get(i).toString());
+            if (i % 2 == 0 && opBooleani.get(0) != null)
+                regola.append(opBooleani.get(i));
+        }
+
+        for (int i = 0; i < conseguente.size(); i++) {
+            regola.append(" " + conseguente.get(i).toString());
+            if (i < conseguente.size() - 1)
+                regola.append(",");
+        }
+
+        regola.append("La regola:" +
+                "if " + antecedente + " then " + conseguente + " è ");
+        if (attiva) {
+            return regola.append("attiva\n").toString();
+        } else return regola.append("disattiva\n").toString();
+    }
+
+    /**
      * To String
      *
      * @return descrizione
      */
-    @Override//TODO I FOR PER ANTECEDENTE E CONSEGUENTE
+    @Override
     public String toString() {
-        StringBuilder anteced = new StringBuilder();
-        for(int i=0; i<antecedente.size();i++) {
-            anteced.append(" "+antecedente.get(i).toString());
+        StringBuilder regola = new StringBuilder();
+        for (int i = 0; i < antecedente.size(); i++) {
+            regola.append(" " + antecedente.get(i).toString());
             if (i % 2 == 0 && opBooleani.get(0) != null)
-                anteced.append(opBooleani.get(i));
+                regola.append(opBooleani.get(i));
         }
 
-        for(int i=0; i<conseguente.size();i++) {
-            anteced.append(" "+conseguente.get(i).toString());
-            if(i<conseguente.size()-1)
-                anteced.append(",");
+        for (int i = 0; i < conseguente.size(); i++) {
+            regola.append(" " + conseguente.get(i).toString());
+            if (i < conseguente.size() - 1)
+                regola.append(",");
         }
 
 
         return "Regola:" +
-                "if " + antecedente + " else " + conseguente;
+                "if " + antecedente + " then " + conseguente + "\n";
     }
 }

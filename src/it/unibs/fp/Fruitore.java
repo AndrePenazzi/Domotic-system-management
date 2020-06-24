@@ -15,11 +15,32 @@ public class Fruitore implements Serializable {
     }
 
     /**
+     * Cambia stato di una regola
+     *
+     * @param unitaImmobiliare scelta
+     * @param regola           scelta
+     */
+    public void cambiaRegolaAttivaDisattiva(UnitaImmobiliare unitaImmobiliare, Regola regola) {
+        unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
+    }
+
+    /**
+     * Visualizza le regole con il loro stato
+     *
+     * @param unitaImmobiliare scelta
+     * @return le regole con il loro stato
+     */
+    public String visualizzaStatoRegole(UnitaImmobiliare unitaImmobiliare) {
+        return unitaImmobiliare.visualizzaStatoRegole();
+
+    }
+
+    /**
      * Inserisci la regola per la prima volta
      *
      * @param unitaImmobiliare scelta
-     * @param attuatore    per settare la sua modalità operativa
-     * @param modOperativa scelta
+     * @param attuatore        per settare la sua modalità operativa
+     * @param modOperativa     scelta
      */
     public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa) {
         unitaImmobiliare.inserisciRegola(attuatore, modOperativa);
@@ -27,10 +48,11 @@ public class Fruitore implements Serializable {
 
     /**
      * Inserisci la regola per la prima volta con strat
+     *
      * @param unitaImmobiliare scelta
-     * @param attuatore per settare la sua modalità operativa
-     * @param modOperativa scelta
-     * @param start ora di assegnameto
+     * @param attuatore        per settare la sua modalità operativa
+     * @param modOperativa     scelta
+     * @param start            ora di assegnameto
      */
     public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         unitaImmobiliare.inserisciRegola(attuatore, modOperativa, start);
@@ -40,9 +62,9 @@ public class Fruitore implements Serializable {
      * Inserisci la regola per la prima volta
      *
      * @param unitaImmobiliare scelta
-     * @param regola       scelta
-     * @param attuatore    per settare la sua modalità operativa
-     * @param modOperativa scelta
+     * @param regola           scelta
+     * @param attuatore        per settare la sua modalità operativa
+     * @param modOperativa     scelta
      */
     public void aggiungiAzione(UnitaImmobiliare unitaImmobiliare, Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
         unitaImmobiliare.aggiungiAzione(regola, attuatore, modOperativa);
@@ -53,10 +75,10 @@ public class Fruitore implements Serializable {
      * Inserisci il primo costituente logico
      *
      * @param unitaImmobiliare scelta
-     * @param regola          scelta
-     * @param primoOpLogico   primo operatore da confrontare
-     * @param secondoOpLogico info rilevabile
-     * @param opRelazionale   operatore relazionale per il confronto
+     * @param regola           scelta
+     * @param primoOpLogico    primo operatore da confrontare
+     * @param secondoOpLogico  info rilevabile
+     * @param opRelazionale    operatore relazionale per il confronto
      */
     public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
@@ -94,21 +116,21 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare scelta
      * @param regola           scelta
      * @param opRelazionale    per il confronto
-     * @param orologio  da confrontare
+     * @param orologio         da confrontare
      */
     public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, OperatoriRelazionali opRelazionale, Orologio orologio) {
-        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, orologio,opRelazionale);
+        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, orologio, opRelazionale);
     }
 
     /**
      * Inserisci l'ennesimo costituente logico
      *
      * @param unitaImmobiliare scelta
-     * @param regola          scelta
-     * @param primoOpLogico   primo operatore da confrontare
-     * @param secondoOpLogico info rilevabile
-     * @param opRelazionale   per il confronto
-     * @param opBooleano      per confrontare i costituenti logici
+     * @param regola           scelta
+     * @param primoOpLogico    primo operatore da confrontare
+     * @param secondoOpLogico  info rilevabile
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per confrontare i costituenti logici
      */
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
@@ -118,10 +140,10 @@ public class Fruitore implements Serializable {
      * Inserisci l'ennesimo costituente logico con orologio
      *
      * @param unitaImmobiliare scelta
-     * @param regola          scelta
-     * @param opRelazionale   per il confronto
-     * @param opBooleano      per confrontare i costituenti logici
-     * @param orologio da confrontare
+     * @param regola           scelta
+     * @param opRelazionale    per il confronto
+     * @param opBooleano       per confrontare i costituenti logici
+     * @param orologio         da confrontare
      */
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, opRelazionale, opBooleano, orologio);
@@ -154,7 +176,6 @@ public class Fruitore implements Serializable {
     public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }
-
 
 
     /**
@@ -317,6 +338,11 @@ public class Fruitore implements Serializable {
         return unitaImmobiliari;
     }
 
+    /**
+     * Setter
+     *
+     * @param unitaImmobiliari da modificare
+     */
     public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
         this.unitaImmobiliari = unitaImmobiliari;
     }
@@ -406,6 +432,4 @@ public class Fruitore implements Serializable {
         else tmp.append("\nNon ci sono stanze nella unità immobiliare");
         return tmp.toString();
     }
-
-
 }

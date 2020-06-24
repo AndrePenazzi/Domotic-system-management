@@ -9,6 +9,7 @@ public class UnitaImmobiliare implements Serializable {
     private ArrayList<Artefatto> artefatti;
     private ArrayList<Regola> regole;
 
+
     /**
      * Costruttore unita' immobiliare
      *
@@ -19,6 +20,27 @@ public class UnitaImmobiliare implements Serializable {
         this.stanze = new ArrayList<>();
         this.artefatti = new ArrayList<>();
         this.regole = new ArrayList<>();
+    }
+
+    /**
+     * Cambia lo stato delle regole da attiva a disattiva o viceversa in automatico
+     * @param regola scelta
+     */
+    public void cambiaRegolaAttivaDisattiva(Regola regola) {
+        int i = trovaRegola(regola);
+        regole.get(i).setAttiva(!regole.get(i).isAttiva());
+    }
+
+    /**
+     * Visualizza le regole con il loro stato
+     * @return lo stato delle regole
+     */
+    public String visualizzaStatoRegole() {
+        StringBuilder statoRegole = new StringBuilder();
+        for (int i = 0; i < regole.size(); i++) {
+            statoRegole.append(regole.get(i).visualizzaStatoRegola());
+        }
+        return statoRegole.toString();
     }
 
     /**
@@ -39,7 +61,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param attuatore    per settare la sua modalità operativa
      * @param modOperativa scelta
-     * @param start ora di assegnamento
+     * @param start        ora di assegnamento
      */
     public void inserisciRegola(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         regole.add(new Regola());
@@ -114,10 +136,9 @@ public class UnitaImmobiliare implements Serializable {
     /**
      * Inserisci il primo costituente logico
      *
-     * @param regola            scelta
-     * @param primoOpLogico     primo operatore da confrontare
-     * @param opRelazionale     per il confronto
-     * @param orologio da confrontare
+     * @param regola        scelta
+     * @param orologio primo operatore da confrontare
+     * @param opRelazionale per il confronto
      */
     public void aggiungiPrimoCosituenteLogicoARegola(Regola regola, Orologio orologio, OperatoriRelazionali opRelazionale) {
         int i;
@@ -181,16 +202,16 @@ public class UnitaImmobiliare implements Serializable {
     /**
      * Aggiungi ennesimo costituente logico a regola con orologio
      *
-     * @param regola            scelta
-     * @param opRelazionale     per il confronto
-     * @param opBooleano        per il confronto tra costituenti
-     * @param orologio da confrontare
+     * @param regola        scelta
+     * @param opRelazionale per il confronto
+     * @param opBooleano    per il confronto tra costituenti
+     * @param orologio      da confrontare
      */
     public void aggiungiEnnesimoCosituenteLogicoARegola(Regola regola, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
         int i;
         if (regole.contains(regola)) {
             i = trovaRegola(regola);
-            regole.get(i).inserisciCostituenteLogico( opRelazionale, opBooleano,orologio);
+            regole.get(i).inserisciCostituenteLogico(opRelazionale, opBooleano, orologio);
         }
     }
 

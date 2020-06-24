@@ -192,7 +192,7 @@ public class ClasseDiServizio {
         System.out.println(fruitore.visualizzaUnitaImmobiliari());
         int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni", 1, fruitore.getUnitaImmobiliari().size());
         boolean finito = false;
-        String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole"};
+        String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole", "Modifica stato regola"};
         MyMenu menu = new MyMenu("Menu fruitore operazioni su " + fruitore.getUnitaImmobiliari().get(--unitaImm), azione);
         do {
             int scelta = menu.scegli();
@@ -290,10 +290,21 @@ public class ClasseDiServizio {
                     System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaRegole());
                 }
                 break;
+                case 5: {
+                    cambiaStatoRegola(unitaImm, fruitore);
+                }
+                break;
             }
         } while (!finito);
     }
 
+    /**
+     * Crea l'antecedente di una regola
+     *
+     * @param contenitore per gli oggetti e salvataggio
+     * @param unitaImm    scelta
+     * @param fruitore    scelto
+     */
     private static void creaAntecedente(Contenitore contenitore, int unitaImm, Fruitore fruitore) {
         do {
             //in stanza
@@ -639,6 +650,8 @@ public class ClasseDiServizio {
 
     }
 
+    //----------------------------------ASSOCIA-----------------------------------------------------
+
     /**
      * Associa un artefatto ad una o più stanze
      *
@@ -661,7 +674,6 @@ public class ClasseDiServizio {
             System.out.println("Bisogna prima creare un artefatto");
 
     }
-    //----------------------------------ASSOCIA-----------------------------------------------------
 
     /**
      * Associa un sensore ad una o più stanze
@@ -1407,4 +1419,21 @@ public class ClasseDiServizio {
         return infoRilevabileNonNumerica.getValori().get(scelta);
     }
     //-----------------------------FINE CREA-----------------------------------------------------
+
+    /**
+     * Cambia lo stato di una regola scelta dall'utente
+     *
+     * @param unitaImm scelta
+     * @param fruitore per il salvataggio
+     * @return il fruitore
+     */
+    private static Fruitore cambiaStatoRegola(int unitaImm, Fruitore fruitore) {
+        UnitaImmobiliare unitaImmobiliare = fruitore.getUnitaImmobiliari().get(--unitaImm);
+        do {
+            unitaImmobiliare.visualizzaStatoRegole();
+            int indexRegola = InputDati.leggiIntero("Scegli la regola a cui vuoi cambiare stato: ", 1, unitaImmobiliare.getRegole().size());
+            unitaImmobiliare.cambiaRegolaAttivaDisattiva(unitaImmobiliare.getRegole().get(--indexRegola));
+        } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
+        return fruitore;
+    }
 }
