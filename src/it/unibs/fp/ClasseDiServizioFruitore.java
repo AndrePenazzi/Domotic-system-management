@@ -12,7 +12,7 @@ public class ClasseDiServizioFruitore {
      */
     static void stampaMenuFruitore(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore", "Operazioni su un'unità immobiliare"};
+        String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
         Manutentore manutentore = contenitore.getManutentore();
         Fruitore fruitore = manutentore.getFruitore();
@@ -26,6 +26,46 @@ public class ClasseDiServizioFruitore {
                 case 0: {
                     finito = true;
                     System.out.println("Uscita verso menu principale");
+                }
+                break;
+
+                case 1: {
+                    stampaMenuFruitoreVisualizzazione(contenitore);
+                }
+                break;
+
+
+                case 2: {
+                    ClasseDiServizioFruitore.stampaMenuOperazioniFruitore(contenitore, fruitore, unitaImm);
+                }
+                break;
+            }
+        }
+        while (!finito);
+    }
+
+
+    /**
+     * Menu di visualizzazione delle descrizioni da parte del fruitore
+     *
+     * @param contenitore per ottenere gli oggetti necessari
+     */
+    static void stampaMenuFruitoreVisualizzazione(Contenitore contenitore) {
+        boolean finito = false;
+        String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
+        MyMenu menu = new MyMenu("Menu fruitore", azione);
+        Manutentore manutentore = contenitore.getManutentore();
+        Fruitore fruitore = manutentore.getFruitore();
+        ListaCategorie listaCategorie = contenitore.getListaCategorie();
+        System.out.println(fruitore.visualizzaUnitaImmobiliari());
+        int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni: ", 1, fruitore.getUnitaImmobiliari().size()) - 1;
+        do {
+            int scelta = menu.scegli();
+            switch (scelta) {
+
+                case 0: {
+                    finito = true;
+                    System.out.println("Uscita verso menu fruitore");
                 }
                 break;
 
@@ -54,15 +94,10 @@ public class ClasseDiServizioFruitore {
                 }
                 break;
 
-                case 6: {
-                    ClasseDiServizioFruitore.stampaMenuOperazioniFruitore(contenitore, fruitore, unitaImm);
-                }
-                break;
             }
         }
         while (!finito);
     }
-
 
     /**
      * Stampa il menu con le operazioni del fruitore
