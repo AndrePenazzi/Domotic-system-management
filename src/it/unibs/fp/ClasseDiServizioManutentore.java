@@ -380,11 +380,73 @@ public class ClasseDiServizioManutentore {
 
                 case 4: {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di regole da salvare: ");
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), contenitore.getListaCategorie().getCategorieSensori());
+
+                    ArrayList<CategoriaSensori> categoriaSensori = contenitore.getListaCategorie().getCategorieSensori();
+                    ArrayList<CategoriaAttuatori> categoriaAttuatori = contenitore.getListaCategorie().getCategorieAttuatori();
+
+
+                    File regoleFile = new File(nomeLibreria + ".dat");
+
+                    ArrayList<Regola> regole = (ArrayList<Regola>) ServizioFile.caricaSingoloOggetto(regoleFile);
+
+
+                    ArrayList<InfoRilevabile> categorieAntecedentiCompatibilita = new ArrayList<>();
+
+                    ArrayList<ModOperativa> categorieConseguentiCompatibilita = new ArrayList<>();
+
+
+                    if (!regole.isEmpty()) {
+                        //InfoRilvabili in antecedenti
+                        for (int i = 0; i < regole.size(); i++) {
+                            for (int j = 0; j < regole.get(i).getAntecedente().size(); j++) {
+                                categorieAntecedentiCompatibilita.add(regole.get(i).getAntecedente().get(j).getPrimoOperatoreLogico());
+                                if (regole.get(i).getAntecedente().get(j).getSecondoOperatoreLogico() != null) {
+                                    categorieAntecedentiCompatibilita.add(regole.get(i).getAntecedente().get(j).getSecondoOperatoreLogico());
+                                }
+                            }
+                        }
+
+
+                        //ModOperativa in conseguenti
+                        for (int i = 0; i < regole.size(); i++) {
+                            for (int j = 0; j < regole.get(i).getConseguente().size(); j++) {
+                                categorieConseguentiCompatibilita.add(regole.get(i).getConseguente().get(j).getModOperativa());
+                                if (regole.get(i).getConseguente().get(j).getModOperativa() != null) {
+                                    categorieConseguentiCompatibilita.add(regole.get(i).getConseguente().get(j).getModOperativa());
+                                }
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < categoriaSensori.size(); i++) {
+                        boolean flag = false;
+                        for (int j = 0; j < categorieAntecedentiCompatibilita.size(); j++) {
+                            if (!categoriaSensori.get(i).getInformazioniRilevabili().contains(categorieAntecedentiCompatibilita.get(j))) {
+                                flag = true;
+                            }
+                            if (!flag) {
+                                System.out.println("C'è un errore di compatibilità con la categoria sensori");
+                                break;
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < categoriaAttuatori.size(); i++) {
+                        boolean flag = false;
+                        for (int j = 0; j < categorieConseguentiCompatibilita.size(); j++) {
+                            if (!categoriaAttuatori.get(i).getModalitaOperative().contains(categorieConseguentiCompatibilita.get(j))) {
+                                flag = true;
+                            }
+                            if (!flag) {
+                                System.out.println("C'è un errore di compatibilità con la categoria attuatori");
+                                break;
+                            }
+                        }
+                    }
                 }
                 break;
             }
-        } while (!finito);
+        }
+        while (!finito);
     }
-
 }
