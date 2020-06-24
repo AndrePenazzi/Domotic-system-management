@@ -287,8 +287,7 @@ public class ClasseDiServizioInserimenti {
     public static Fruitore aggiungiCostituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
         Fruitore fruitore;
         int size = unitaImmobiliare.getRegole().size();
-        System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
-        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().get(0).isTrue())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -311,7 +310,7 @@ public class ClasseDiServizioInserimenti {
         Fruitore fruitore;
         int size = unitaImmobiliare.getRegole().size();
         System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
-        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().get(0).isTrue())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -334,7 +333,7 @@ public class ClasseDiServizioInserimenti {
         Fruitore fruitore;
         int size = unitaImmobiliare.getRegole().size();
         System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
-        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().get(0).isTrue())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, primoOpLogico, secondoOpLogico, opRelazionale);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -356,7 +355,7 @@ public class ClasseDiServizioInserimenti {
         Fruitore fruitore;
         int size = unitaImmobiliare.getRegole().size();
         System.err.println(unitaImmobiliare.getRegole().get(size-1).getAntecedente().size());
-        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().isEmpty())
+        if (unitaImmobiliare.getRegole().get(size-1).getAntecedente().get(0).isTrue())
             fruitore = aggiungiPrimoCosituenteLogicoARegola(contenitore, unitaImmobiliare, opRelazionale, orologio);
         else {
             OperatoriBooleani operatoreBooleano = OperatoriBooleani.sceltaOperatoreBooleano();
@@ -785,7 +784,7 @@ public class ClasseDiServizioInserimenti {
                                 InfoRilevabileNumerica iNTMP = (InfoRilevabileNumerica) iTMP;
                                 OperatoriRelazionali operatoreRelazionale = OperatoriRelazionali.sceltaOperatoreRelazionale();
                                 double costante = InputDati.leggiDouble("Inserire la costante con cui confrontare: ", iNTMP.getMin(), iNTMP.getMax());
-                                ClasseDiServizioInserimenti.aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
+                                aggiungiCostituenteLogicoARegola(contenitore, fruitore.getUnitaImmobiliari().get(unitaImm), iNTMP, costante, operatoreRelazionale);
                             }
                             //con un'altro sensore
                             else {

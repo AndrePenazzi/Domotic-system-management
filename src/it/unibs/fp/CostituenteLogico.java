@@ -24,6 +24,7 @@ public class CostituenteLogico implements Serializable {
         this.operatoreRelazionale = operatoreRelazionale;
     }
 
+
     /**
      * Costruttore con costante
      *
@@ -70,6 +71,14 @@ public class CostituenteLogico implements Serializable {
         this.primoOperatoreLogico = null;
         this.secondoOperatoreLogico = null;
         this.operatoreRelazionale = null;
+        this.secondoOperatoreCostante = null;
+        this.time = null;
+    }
+
+    public boolean isTrue(){
+        if(primoOperatoreLogico == null && time == null)
+            return false;
+        return  true;
     }
 
 
