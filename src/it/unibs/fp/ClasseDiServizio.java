@@ -1,11 +1,6 @@
 package it.unibs.fp;
 
-import it.unibs.fp.mylib.InputDati;
 import it.unibs.fp.mylib.MyMenu;
-import it.unibs.fp.mylib.ServizioFile;
-
-import java.io.File;
-import java.util.ArrayList;
 
 public class ClasseDiServizio {
 

@@ -64,12 +64,12 @@ public class ClasseDiServizioFruitore {
     }
 
 
-
     /**
      * Stampa il menu con le operazioni del fruitore
      *
      * @param contenitore per ottenere gli oggetti necessari
      * @param fruitore    scelto
+     * @param unitaImm    scelta
      */
     public static void stampaMenuOperazioniFruitore(Contenitore contenitore, Fruitore fruitore, int unitaImm) {
 

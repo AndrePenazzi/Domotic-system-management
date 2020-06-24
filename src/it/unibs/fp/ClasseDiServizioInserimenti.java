@@ -251,7 +251,7 @@ public class ClasseDiServizioInserimenti {
      * @param attuatore        scelto
      * @param modOperativa     da impostare
      * @param start            tempo di assegnamento
-     * @return
+     * @return il fruitore
      */
     public static Fruitore inserisciNuovaRegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
         Fruitore fruitore = contenitore.getManutentore().getFruitore();
@@ -382,7 +382,7 @@ public class ClasseDiServizioInserimenti {
      * @param unitaImmobiliare scelta
      * @param opRelazionale    per il confronto
      * @param orologio         da confrontare
-     * @return
+     * @return il fruitore
      */
     public static Fruitore aggiungiPrimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, OperatoriRelazionali opRelazionale, Orologio orologio) {
         Fruitore fruitore = contenitore.getManutentore().getFruitore();
@@ -486,6 +486,7 @@ public class ClasseDiServizioInserimenti {
      * @param unitaImmobiliare scelta
      * @param opRelazionale    per il confronto
      * @param opBooleano       per confronto tra costituenti logici
+     * @param orologio         scelto
      * @return il fruitore
      */
     public static Fruitore aggiungiEnnesimoCosituenteLogicoARegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
@@ -941,14 +942,7 @@ public class ClasseDiServizioInserimenti {
     }
 
 
-
-
-
-
-
-
     //-----------------------------FINE SCEGLI-----------------------------------------------------
-
 
 
     /**
@@ -973,7 +967,7 @@ public class ClasseDiServizioInserimenti {
      *
      * @param contenitore per ottenere gli oggetti necessari
      */
-    public static void inserisciUnitaImmobiliare (Contenitore contenitore){
+    public static void inserisciUnitaImmobiliare(Contenitore contenitore) {
         Manutentore manutentore = contenitore.getManutentore();
         String nomeUnitaImmobiliare = InputDati.leggiStringaNonVuota("Inserisci nome della unità immobiliare da inserire :");
         UnitaImmobiliare unitaImmobiliare = new UnitaImmobiliare(nomeUnitaImmobiliare);

@@ -24,7 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="" />
+    <list default="true" id="4c65f890-b1dd-4095-bb01-30a6174deb98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contenitore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioFruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioInserimenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/ClasseDiServizioInserimenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Orologio.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +71,18 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.unibs.fp" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -113,6 +133,7 @@
       <workItem from="1592832525044" duration="24543000" />
       <workItem from="1592901432112" duration="13986000" />
       <workItem from="1592927185025" duration="11545000" />
+      <workItem from="1593003694083" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -216,19 +237,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="toString added" />
