@@ -155,19 +155,6 @@ public class Fruitore implements Serializable {
         unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
     }
 
-    /**
-     * Aggiungi ennesimo costituente logico a regola con orologio
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    scelto
-     * @param opRelazionale    per il confronto
-     * @param opBooleano       per il confronto tra costituenti
-     * @param orologio  da confrontare
-     */
-    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
-        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, opRelazionale, opBooleano, orologio);
-    }
 
 
     /**
