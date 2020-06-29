@@ -75,10 +75,13 @@ public class CostituenteLogico implements Serializable {
         this.time = null;
     }
 
-    public boolean isTrue(){
-        if(primoOperatoreLogico == null && time == null)
-            return false;
-        return  true;
+    /**
+     * Controlla se esiste il primo operatore logico
+     *
+     * @return true se esiste falso altrimenti
+     */
+    public boolean isTrue() {
+        return primoOperatoreLogico != null || time != null;
     }
 
 
@@ -125,7 +128,7 @@ public class CostituenteLogico implements Serializable {
                 tmp.append(" " + secondoOperatoreCostante);
             if (secondoOperatoreScalare != null)
                 tmp.append(" " + secondoOperatoreScalare);
-        } else if(time!=null){
+        } else if (time != null) {
             tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
         }
         return tmp.toString();

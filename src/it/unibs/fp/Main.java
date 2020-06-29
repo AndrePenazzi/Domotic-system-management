@@ -6,9 +6,6 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-
-
-
         File cFile = new File("contenitore.dat");
         Contenitore contenitore;
 
@@ -19,7 +16,7 @@ public class Main {
             Fruitore fruitore = new Fruitore();
             Manutentore manutentore = new Manutentore(fruitore);
             ListaCategorie listaCategorie = new ListaCategorie();
-            contenitore = new Contenitore(manutentore,listaCategorie);
+            contenitore = new Contenitore(manutentore, listaCategorie);
             ServizioFile.salvaSingoloOggetto(new File("contenitore"), contenitore);
         }
 

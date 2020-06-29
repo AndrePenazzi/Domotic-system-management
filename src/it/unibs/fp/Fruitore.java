@@ -17,6 +17,7 @@ public class Fruitore implements Serializable {
     /**
      * Inserisci la regola per la prima volta
      *
+     * @param unitaImmobiliareIndex indice dell'unità immobiliare scelta
      * @param attuatore        per settare la sua modalità operativa
      * @param modOperativa     scelta
      */

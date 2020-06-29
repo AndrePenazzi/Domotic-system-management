@@ -5,7 +5,6 @@ import it.unibs.fp.mylib.MyMenu;
 import it.unibs.fp.mylib.ServizioFile;
 
 import java.io.File;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 public class ClasseDiServizioManutentore {
@@ -67,7 +66,7 @@ public class ClasseDiServizioManutentore {
      */
     private static void stampaMenuManutentoreOperazioniSuUnitaImmobiliare(Contenitore contenitore) {
         boolean finito = false;
-        String[] azione = { "Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
+        String[] azione = {"Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -160,7 +159,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-
+    /**
+     * Menu inserisci categorie
+     *
+     * @param contenitore per gli oggetti necessari
+     */
     private static void stampaMenuInserisciCategorie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori"};
@@ -223,6 +226,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
+    /**
+     * Menu salvataggi librerie
+     *
+     * @param contenitore per gli oggetti necessari
+     */
     private static void stampaMenuSalvataggiLibrerie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Salva categorie sensori", "Salva categorie attuatori", "Salva unità immobiliare", "Salva regole"};
@@ -259,7 +267,6 @@ public class ClasseDiServizioManutentore {
                 }
                 break;
 
-                //TODO Ancora da costruire
                 case 4: {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di regole da salvare: ");
 
@@ -270,6 +277,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
+    /**
+     * Menu importa librerie
+     *
+     * @param contenitore per gli oggetti necessari
+     */
     private static void stampaMenuImportLibrerie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Importa categorie di sensori", "Importa categorie di attuatori", "Importa unità immobiliare", "Importa set di regole"};
