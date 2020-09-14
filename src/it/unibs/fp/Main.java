@@ -1,6 +1,11 @@
 package it.unibs.fp;
 
+import it.unibs.fp.categoria.ListaCategorie;
+import it.unibs.fp.classiDiServizio.ClasseDiServizio;
+import it.unibs.fp.classiDiServizio.Contenitore;
 import it.unibs.fp.mylib.*;
+import it.unibs.fp.utenti.Fruitore;
+import it.unibs.fp.utenti.Manutentore;
 
 import java.io.File;
 
