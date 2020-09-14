@@ -36,15 +36,4 @@ public class ClasseDiServizio {
             }
         } while (!finito);
     }
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -13,12 +13,21 @@ public enum OperatoriRelazionali implements Serializable {
 
     private String value;
 
-    private OperatoriRelazionali(String value) {
+    /**
+     * Costruttore operatori relazionali
+     *
+     * @param value dell'operatore relazionale
+     */
+    OperatoriRelazionali(String value) {
         this.value = value;
     }
 
+    /**
+     * scelta dell'operatore relazionale
+     *
+     * @return l'operatore relazionale scelto
+     */
     public static OperatoriRelazionali sceltaOperatoreRelazionale() {
-        boolean finito = false;
         String[] azione = {">", "<", "≥", "≤", "="};
         MyMenu menu = new MyMenu("Menu scelta operatore relazionale", azione);
         int scelta = menu.scegli();
@@ -47,6 +56,11 @@ public enum OperatoriRelazionali implements Serializable {
         return null;
     }
 
+    /**
+     * toString
+     *
+     * @return il valore
+     */
     public String toString() {
         return this.value;
     }

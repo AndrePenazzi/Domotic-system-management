@@ -8,6 +8,11 @@ public enum OperatoriBooleani implements Serializable {
     AND,
     OR;
 
+    /**
+     * Scelta dell'operatore booleano
+     *
+     * @return AND o OR
+     */
     public static OperatoriBooleani sceltaOperatoreBooleano() {
         boolean finito = false;
         String[] azione = {"and", "or"};
