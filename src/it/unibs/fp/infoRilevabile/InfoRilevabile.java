@@ -17,6 +17,9 @@ public class InfoRilevabile implements Serializable {
         this.type = type;
     }
 
+    public InfoRilevabile() {
+    }
+
     /**
      * Getter del nome dell'info rilevabile
      *

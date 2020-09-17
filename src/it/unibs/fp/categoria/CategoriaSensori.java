@@ -32,6 +32,12 @@ public class CategoriaSensori implements Serializable {
             throw new IllegalArgumentException("Deve esserci almeno un'informazione rilevabile.");
     }
 
+    public CategoriaSensori() {
+        this.nome="";
+        this.testoLibero="";
+        this.informazioniRilevabili = new ArrayList<>();
+    }
+
     /**
      * Getter
      *
