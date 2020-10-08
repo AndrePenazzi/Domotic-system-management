@@ -23,6 +23,12 @@ public class Artefatto implements Serializable {
         this.nome = nome;
     }
 
+    public Artefatto() {
+        this.nome="";
+        sensori = new ArrayList<>();
+        attuatori = new ArrayList<>();
+    }
+
     /**
      * Inserisci un sensore.
      *

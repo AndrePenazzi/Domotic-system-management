@@ -1,8 +1,5 @@
 package it.unibs.fp.categoria;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.categoria.CategoriaSensori;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 

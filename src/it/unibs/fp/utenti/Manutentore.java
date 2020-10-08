@@ -23,6 +23,9 @@ public class Manutentore implements Serializable {
     public Manutentore(Fruitore fruitore) {
         this.fruitore = fruitore;
     }
+    public Manutentore() {
+        this.fruitore = new Fruitore();
+    }
 
     /**
      * Aggiunta di un unità immobiliare

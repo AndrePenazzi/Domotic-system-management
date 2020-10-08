@@ -31,6 +31,13 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = new ArrayList<>();
     }
 
+    public UnitaImmobiliare() {
+        this.nome = "";
+        this.stanze = new ArrayList<>();
+        this.artefatti = new ArrayList<>();
+        this.regole = new ArrayList<>();
+    }
+
     /**
      * Cambia lo stato delle regole da attiva a disattiva o viceversa in automatico
      *

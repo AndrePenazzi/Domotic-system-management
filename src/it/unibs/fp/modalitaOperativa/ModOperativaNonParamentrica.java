@@ -28,6 +28,11 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
         this.valore = valore;
     }
 
+    public ModOperativaNonParamentrica() {
+        super("",1);
+        this.valore=0;
+    }
+
     /**
      * Getter
      *

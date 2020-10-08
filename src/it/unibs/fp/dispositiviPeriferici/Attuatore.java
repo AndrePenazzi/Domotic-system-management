@@ -4,6 +4,7 @@ import it.unibs.fp.categoria.CategoriaAttuatori;
 import it.unibs.fp.modalitaOperativa.ModOperativa;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Attuatore implements Serializable {
     private String nome;
@@ -19,6 +20,12 @@ public class Attuatore implements Serializable {
     public Attuatore(String nome, CategoriaAttuatori categoriaAttuatori) {
         this.nome = nome;
         this.categoriaAttuatori = categoriaAttuatori;
+        this.modOperativa = new ModOperativa("Idle");
+    }
+
+    public Attuatore() {
+        this.nome="";
+        this.categoriaAttuatori=null;
         this.modOperativa = new ModOperativa("Idle");
     }
 

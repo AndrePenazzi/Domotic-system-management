@@ -17,6 +17,11 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
         this.paramentri = paramentri;
     }
 
+    public ModOperativaParamentrica() {
+        super("",2);
+        this.paramentri = new ArrayList<>();
+    }
+
     /**
      * Getter
      *

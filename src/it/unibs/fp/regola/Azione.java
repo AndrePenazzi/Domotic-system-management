@@ -21,6 +21,11 @@ public class Azione implements Serializable {
         this.modOperativa = modOperativa;
         start = null;
     }
+    public Azione() {
+        this.attuatore = null;
+        this.modOperativa = null;
+        start = null;
+    }
 
     /**
      * Costruttore con staart
