@@ -30,7 +30,6 @@ public class Sensore implements Serializable {
      */
     public String rilevaVariabileFisica() {
         for(InfoRilevabile infoRilevabile : categoriaSensori.getInformazioniRilevabili()) {
-            System.err.println("hey man");
             if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 1)
                 return String.valueOf(((InfoRilevabileNumerica) infoRilevabile).rilevaVariabile());
             if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 2)
