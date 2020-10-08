@@ -24,6 +24,13 @@ public class Stanza implements Serializable {
         artefatti = new ArrayList<>();
         this.nome = nome;
     }
+    public Stanza(){
+        sensori = new ArrayList<>();
+        attuatori = new ArrayList<>();
+        artefatti = new ArrayList<>();
+        this.nome = "";
+
+    }
 
     /**
      * Inserisci un nuovo artefatto nella stanza

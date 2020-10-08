@@ -3,7 +3,7 @@ package it.unibs.fp.operatori;
 import it.unibs.fp.mylib.MyMenu;
 
 import java.io.Serializable;
-
+//TODO non si possono fare test perchè è un menu, quindi che faccio?? I dunno
 public enum OperatoriBooleani implements Serializable {
     AND,
     OR;

@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class CategoriaAttuatori implements Serializable {
-    private static final int LUNGHEZZA_MASSIMA = 25;
+    private static final int LUNGHEZZA_MASSIMA = 30;
     private String nome;
     private String testoLibero;
     private ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
@@ -28,6 +28,12 @@ public class CategoriaAttuatori implements Serializable {
         this.testoLibero = testoLibero;
         this.modalitaOperative.add(new ModOperativaNonParamentrica("Idle"));
         this.modalitaOperative = modalitaOperative;
+    }
+
+    public CategoriaAttuatori() {
+        this.nome="";
+        this.testoLibero="";
+        this.modalitaOperative = new ArrayList<>();
     }
 
     /**

@@ -25,25 +25,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CatergoriaSensoreTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/AttuatoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaAttuatoriTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ListaCategorieTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaNonParametrica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaParametricaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Domotic-system-management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Domotic-system-management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contenitore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contenitore.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Attuatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Sensore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaNonParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaNonParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/operatori/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/operatori/OperatoriBooleani.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Azione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CatergoriaSensoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CatergoriaSensoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Manutentore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -65,6 +87,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -73,24 +99,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="it.unibs.fp.test" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="it.unibs.fp" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.InfoRilevabileTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
-      <module name="Domotic-system-management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.unibs.fp.categoria.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.it.unibs.fp.test in Domotic-system-management">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
       <module name="Domotic-system-management" />
@@ -109,7 +128,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CatergoriaSensoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManutentoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Domotic-system-management" />
       <extension name="coverage">
         <pattern>
@@ -118,13 +137,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.CatergoriaSensoreTest" />
+      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.ManutentoreTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CatergoriaSensoreTest.testInizializzazione" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManutentoreTest.assegnazioneTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Domotic-system-management" />
       <extension name="coverage">
         <pattern>
@@ -133,14 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.CatergoriaSensoreTest" />
-      <option name="METHOD_NAME" value="testInizializzazione" />
+      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.ManutentoreTest" />
+      <option name="METHOD_NAME" value="assegnazioneTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InfoRilevabileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ManutentoreTest.inserisciESalvaCategoriaSensori" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Domotic-system-management" />
       <extension name="coverage">
         <pattern>
@@ -149,18 +168,49 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.InfoRilevabileTest" />
+      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.ManutentoreTest" />
+      <option name="METHOD_NAME" value="inserisciESalvaCategoriaSensori" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitaImmobiliareTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Domotic-system-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unibs.fp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
+      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.UnitaImmobiliareTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="it.unibs.fp.test in Domotic-system-management" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Domotic-system-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unibs.fp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InfoRilevabileTest" />
-        <item itemvalue="JUnit.CatergoriaSensoreTest" />
-        <item itemvalue="JUnit.CatergoriaSensoreTest.testInizializzazione" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.it.unibs.fp.test in Domotic-system-management" />
+        <item itemvalue="JUnit.ManutentoreTest" />
+        <item itemvalue="JUnit.ManutentoreTest.inserisciESalvaCategoriaSensori" />
+        <item itemvalue="JUnit.UnitaImmobiliareTest" />
+        <item itemvalue="JUnit.ManutentoreTest.assegnazioneTest" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +243,20 @@
       <workItem from="1600071595147" duration="2031000" />
       <workItem from="1600242137580" duration="1278000" />
       <workItem from="1600330015228" duration="3572000" />
+      <workItem from="1600383090755" duration="331000" />
+      <workItem from="1600415759202" duration="12444000" />
+      <workItem from="1600758906952" duration="8336000" />
+      <workItem from="1600768478579" duration="10000" />
+      <workItem from="1600769674450" duration="825000" />
+      <workItem from="1600846647309" duration="51000" />
+      <workItem from="1600846821134" duration="4778000" />
+      <workItem from="1600934396759" duration="3330000" />
+      <workItem from="1601023700767" duration="1813000" />
+      <workItem from="1601105506420" duration="6797000" />
+      <workItem from="1601278525170" duration="7514000" />
+      <workItem from="1601366522755" duration="5842000" />
+      <workItem from="1601455658024" duration="2621000" />
+      <workItem from="1601577267226" duration="403000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -367,6 +431,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="101" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1592943129008" />
+    <state x="690" y="296" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1601110453439">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="296" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601110453439" />
     <state x="527" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592920677680">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -383,22 +451,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600331996845" />
-    <state width="1493" height="69" key="GridCell.Tab.0.bottom" timestamp="1600333254276">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="69" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
-    <state width="1493" height="69" key="GridCell.Tab.0.center" timestamp="1600333254276">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="69" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
-    <state width="1493" height="69" key="GridCell.Tab.0.left" timestamp="1600333254276">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="69" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
-    <state width="1493" height="69" key="GridCell.Tab.0.right" timestamp="1600333254276">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="69" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
     <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1592861637905">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -439,10 +511,22 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1600072715557" />
+    <state x="937" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1601110458083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="937" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601110458083" />
     <state x="541" y="291" width="619" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1592833311208">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="541" y="291" width="619" height="283" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.834@0.0.1536.834" timestamp="1592833311208" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Domotic_system_management$it_unibs_fp_test_in_Domotic_system_management.ic" NAME="it.unibs.fp.test in Domotic-system-management Coverage Results" MODIFIED="1601107590651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unibs.fp.test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Domotic_system_management$CategoriaAttuatoriTest.ic" NAME="CategoriaAttuatoriTest Coverage Results" MODIFIED="1601107537335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.unibs.fp.test.*</FILTER>
+    </SUITE>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

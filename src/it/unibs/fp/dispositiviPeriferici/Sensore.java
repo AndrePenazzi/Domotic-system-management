@@ -22,6 +22,11 @@ public class Sensore implements Serializable {
         this.categoriaSensori = categoriaSensori;
     }
 
+    public Sensore() {
+        this.nome="";
+        this.categoriaSensori = new CategoriaSensori();
+    }
+
 
     /**
      * Genera un numero casuale tra il minimo e il massimo della categoriaSensori

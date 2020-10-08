@@ -26,6 +26,10 @@ public class ModOperativa implements Serializable {
         this.type = type;
     }
 
+    public ModOperativa() {
+        this.nome="";
+    }
+
     /**
      * Getter del tipo di modalitò operativa
      *
