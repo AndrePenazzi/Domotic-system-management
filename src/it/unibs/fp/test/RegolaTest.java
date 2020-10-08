@@ -1,6 +1,6 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
+    import it.unibs.fp.categoria.CategoriaAttuatori;
 import it.unibs.fp.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;

@@ -25,20 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaSensoriTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CostituenteLogicoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/FruitoreTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNonNumericaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNumericaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/OperatoriRelazionaliTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/SensoreTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Sensore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CatergoriaSensoreTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +83,21 @@
       <recent name="it.unibs.fp" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoriaSensoriTest">
+  <component name="RunManager" selected="JUnit.it.unibs.fp.test in Domotic-system-management">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
       <module name="Domotic-system-management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,21 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SensoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Domotic-system-management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.unibs.fp.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.SensoreTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StanzaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Domotic-system-management" />
       <extension name="coverage">
@@ -182,13 +166,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="it.unibs.fp.test in Domotic-system-management" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Domotic-system-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unibs.fp.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.it.unibs.fp.test in Domotic-system-management" />
         <item itemvalue="JUnit.CategoriaSensoriTest" />
         <item itemvalue="JUnit.CatergoriaSensoreTest and 9 more" />
         <item itemvalue="JUnit.StanzaTest" />
         <item itemvalue="JUnit.InfoRilevabileNumericaTest" />
-        <item itemvalue="JUnit.SensoreTest" />
       </list>
     </recent_temporary>
   </component>
@@ -231,6 +229,7 @@
       <workItem from="1601886688137" duration="2841000" />
       <workItem from="1601891264182" duration="3148000" />
       <workItem from="1602161066070" duration="92000" />
+      <workItem from="1602183069150" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -358,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600333910447</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Inseriti i test">
+      <created>1602183121810</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602183121810</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +408,8 @@
     <MESSAGE value="Inserite funzionalità di import e salvataggio e fixati alcuni bug" />
     <MESSAGE value="Inserite funzionalità di import e salvataggio e fixati alcuni bug ulteriori" />
     <MESSAGE value="Inseriti primi test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inseriti primi test" />
+    <MESSAGE value="Inseriti i test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inseriti i test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -417,10 +424,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="527" y="207" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.834@0.0.1536.834" timestamp="1600347324791" />
-    <state x="273" y="0" key="CommitChangelistDialog2" timestamp="1600333908927">
+    <state x="178" y="0" key="CommitChangelistDialog2" timestamp="1602183119730">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="273" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1600333908927" />
+    <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602183119730" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183682510" />
     <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1600331996845">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -441,10 +452,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1601894468532" />
-    <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1600074182268">
+    <state x="247" y="65" key="MergeDialog" timestamp="1602183663056">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="407" y="178" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1600074182268" />
+    <state x="247" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183663056" />
+    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog" timestamp="1602183664930">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183664930" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1600071631217">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -457,10 +472,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1600331595904" />
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600072715557">
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602183474580">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1600072715557" />
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1602183474580" />
     <state x="975" y="181" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600769813819">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
