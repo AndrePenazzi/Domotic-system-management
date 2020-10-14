@@ -5,13 +5,14 @@ import it.unibs.fp.dispositiviPeriferici.Sensore;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Stanza implements Serializable {
     private String nome;
-    private ArrayList<Artefatto> artefatti;
-    private ArrayList<Sensore> sensori;
-    private ArrayList<Attuatore> attuatori;
+    private List<Artefatto> artefatti;
+    private List<Sensore> sensori;
+    private List<Attuatore> attuatori;
 
     /**
      * Costruttore della stanza.
@@ -122,7 +123,7 @@ public class Stanza implements Serializable {
      *
      * @return sensori
      */
-    public ArrayList<Sensore> getSensori() {
+    public List<Sensore> getSensori() {
         return sensori;
     }
 
@@ -131,7 +132,7 @@ public class Stanza implements Serializable {
      *
      * @return attutatori
      */
-    public ArrayList<Attuatore> getAttuatori() {
+    public List<Attuatore> getAttuatori() {
         return attuatori;
     }
 
@@ -158,7 +159,7 @@ public class Stanza implements Serializable {
      *
      * @return artefatti
      */
-    public ArrayList<Artefatto> getArtefatti() {
+    public List<Artefatto> getArtefatti() {
         return artefatti;
     }
 

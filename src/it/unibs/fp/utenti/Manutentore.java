@@ -11,6 +11,7 @@ import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Manutentore implements Serializable {
     private Fruitore fruitore;
@@ -228,7 +229,7 @@ public class Manutentore implements Serializable {
      *
      * @return unitaImmobiliare
      */
-    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
+    public List<UnitaImmobiliare> getUnitaImmobiliari() {
         return fruitore.getUnitaImmobiliari();
     }
 

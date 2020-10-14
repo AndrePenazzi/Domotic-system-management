@@ -4,9 +4,10 @@ import it.unibs.fp.mylib.NumeriCasuali;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class InfoRilevabileNonNumerica extends InfoRilevabile implements Serializable {
-    private ArrayList<String> valori;
+    private List<String> valori;
     private String valoreAttuale;
 
     /**
@@ -15,7 +16,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      * @param nome   dell'informazione
      * @param valori sottoforma di stringa
      */
-    public InfoRilevabileNonNumerica(String nome, ArrayList<String> valori) {
+    public InfoRilevabileNonNumerica(String nome, List<String> valori) {
         super(nome, 2);
         this.valori = valori;
         valoreAttuale = "default";
@@ -66,7 +67,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      *
      * @return valori
      */
-    public ArrayList<String> getValori() {
+    public List<String> getValori() {
         return valori;
     }
 

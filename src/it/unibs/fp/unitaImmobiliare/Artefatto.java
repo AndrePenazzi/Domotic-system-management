@@ -5,12 +5,13 @@ import it.unibs.fp.dispositiviPeriferici.Sensore;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Artefatto implements Serializable {
     private String nome;
-    private ArrayList<Sensore> sensori;
-    private ArrayList<Attuatore> attuatori;
+    private List<Sensore> sensori;
+    private List<Attuatore> attuatori;
 
     /**
      * Costruttore dell'artefatto.
@@ -111,7 +112,7 @@ public class Artefatto implements Serializable {
      *
      * @return arrayList di sensori.
      */
-    public ArrayList<Sensore> getSensori() {
+    public List<Sensore> getSensori() {
         return sensori;
     }
 
@@ -120,7 +121,7 @@ public class Artefatto implements Serializable {
      *
      * @return arrayList di attuatori.
      */
-    public ArrayList<Attuatore> getAttuatori() {
+    public List<Attuatore> getAttuatori() {
         return attuatori;
     }
 

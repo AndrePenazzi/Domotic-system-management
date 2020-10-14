@@ -2,10 +2,11 @@ package it.unibs.fp.categoria;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListaCategorie implements Serializable {
-    private ArrayList<CategoriaSensori> categorieSensori;
-    private ArrayList<CategoriaAttuatori> categorieAttuatori;
+    private List<CategoriaSensori> categorieSensori;
+    private List<CategoriaAttuatori> categorieAttuatori;
 
     /**
      * Costruttore lista categorie
@@ -110,7 +111,7 @@ public class ListaCategorie implements Serializable {
      *
      * @return categorieSensori
      */
-    public ArrayList<CategoriaSensori> getCategorieSensori() {
+    public List<CategoriaSensori> getCategorieSensori() {
         return categorieSensori;
     }
 
@@ -119,7 +120,7 @@ public class ListaCategorie implements Serializable {
      *
      * @return categorieAttuatori
      */
-    public ArrayList<CategoriaAttuatori> getCategorieAttuatori() {
+    public List<CategoriaAttuatori> getCategorieAttuatori() {
         return categorieAttuatori;
     }
 

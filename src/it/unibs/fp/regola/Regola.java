@@ -8,11 +8,12 @@ import it.unibs.fp.modalitaOperativa.ModOperativa;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Regola implements Serializable {
-    private ArrayList<CostituenteLogico> antecedente;
-    private ArrayList<Azione> conseguente;
-    private ArrayList<OperatoriBooleani> opBooleani;
+    private List<CostituenteLogico> antecedente;
+    private List<Azione> conseguente;
+    private List<OperatoriBooleani> opBooleani;
     private boolean attiva;
 
 
@@ -78,6 +79,7 @@ public class Regola implements Serializable {
      * @param opBooleano        per confrontare i costituenti logici
      */
     public void inserisciCostituenteLogico(InfoRilevabile primoOpLogico, double secondoOpCostante, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
+
         opBooleani.add(opBooleano);
         CostituenteLogico costituenteLogico = new CostituenteLogico(primoOpLogico, secondoOpCostante, opRelazionale);
         antecedente.add(costituenteLogico);
@@ -218,7 +220,7 @@ public class Regola implements Serializable {
      *
      * @return antecedente
      */
-    public ArrayList<CostituenteLogico> getAntecedente() {
+    public List<CostituenteLogico> getAntecedente() {
         return antecedente;
     }
 
@@ -236,7 +238,7 @@ public class Regola implements Serializable {
      *
      * @return conseguente
      */
-    public ArrayList<Azione> getConseguente() {
+    public List<Azione> getConseguente() {
         return conseguente;
     }
 
@@ -254,7 +256,7 @@ public class Regola implements Serializable {
      *
      * @return operatoriBooleani
      */
-    public ArrayList<OperatoriBooleani> getOpBooleani() {
+    public List<OperatoriBooleani> getOpBooleani() {
         return opBooleani;
     }
 

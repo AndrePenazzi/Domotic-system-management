@@ -11,12 +11,13 @@ import it.unibs.fp.regola.Regola;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class UnitaImmobiliare implements Serializable {
     private String nome;
-    private ArrayList<Stanza> stanze;
-    private ArrayList<Artefatto> artefatti;
-    private ArrayList<Regola> regole;
+    private List<Stanza> stanze;
+    private List<Artefatto> artefatti;
+    private List<Regola> regole;
 
 
     /**
@@ -389,7 +390,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return le stanze.
      */
-    public ArrayList<Stanza> getStanze() {
+    public List<Stanza> getStanze() {
         return stanze;
     }
 
@@ -398,7 +399,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return degli artefatti.
      */
-    public ArrayList<Artefatto> getArtefatti() {
+    public List<Artefatto> getArtefatti() {
         return artefatti;
     }
 
@@ -453,7 +454,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return regole
      */
-    public ArrayList<Regola> getRegole() {
+    public List<Regola> getRegole() {
         return regole;
     }
 
@@ -462,7 +463,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param regole scelte
      */
-    public void setRegole(ArrayList<Regola> regole) {
+    public void setRegole(List<Regola> regole) {
         this.regole = regole;
     }
 

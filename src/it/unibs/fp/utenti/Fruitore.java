@@ -15,10 +15,11 @@ import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Fruitore implements Serializable {
-    private ArrayList<UnitaImmobiliare> unitaImmobiliari;
+    private List<UnitaImmobiliare> unitaImmobiliari;
 
     /**
      * Costruttore fruitore
@@ -408,7 +409,7 @@ public class Fruitore implements Serializable {
      *
      * @return le varie unità immobiliari
      */
-    public ArrayList<UnitaImmobiliare> getUnitaImmobiliari() {
+    public List<UnitaImmobiliare> getUnitaImmobiliari() {
         return unitaImmobiliari;
     }
 
