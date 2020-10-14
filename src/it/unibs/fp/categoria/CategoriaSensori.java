@@ -6,12 +6,13 @@ import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CategoriaSensori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 25;
     private String nome;
     private String testoLibero;
-    private ArrayList<InfoRilevabile> informazioniRilevabili;
+    private List<InfoRilevabile> informazioniRilevabili;
 
     /**
      * Costruttore categoria sensori
@@ -21,7 +22,7 @@ public class CategoriaSensori implements Serializable {
      * @param informazioniRilevabili elenco delle informazioni rilevabili
      * @throws IllegalArgumentException il testo libero ha una lunghezza massima
      */
-    public CategoriaSensori(String nome, String testoLibero, ArrayList<InfoRilevabile> informazioniRilevabili) throws IllegalArgumentException {
+    public CategoriaSensori(String nome, String testoLibero, List<InfoRilevabile> informazioniRilevabili) throws IllegalArgumentException {
         this.nome = nome;
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
@@ -96,7 +97,7 @@ public class CategoriaSensori implements Serializable {
      *
      * @return informazioni rilevabili
      */
-    public ArrayList<InfoRilevabile> getInformazioniRilevabili() {
+    public List<InfoRilevabile> getInformazioniRilevabili() {
         return informazioniRilevabili;
     }
 

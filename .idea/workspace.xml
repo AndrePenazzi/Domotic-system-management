@@ -230,6 +230,22 @@
       <workItem from="1601891264182" duration="3148000" />
       <workItem from="1602161066070" duration="92000" />
       <workItem from="1602183069150" duration="605000" />
+      <workItem from="1600330015228" duration="3572000" />
+      <workItem from="1600383090755" duration="331000" />
+      <workItem from="1600415759202" duration="12444000" />
+      <workItem from="1600758906952" duration="8336000" />
+      <workItem from="1600768478579" duration="10000" />
+      <workItem from="1600769674450" duration="825000" />
+      <workItem from="1600846647309" duration="51000" />
+      <workItem from="1600846821134" duration="4778000" />
+      <workItem from="1600934396759" duration="3330000" />
+      <workItem from="1601023700767" duration="1813000" />
+      <workItem from="1601105506420" duration="6797000" />
+      <workItem from="1601278525170" duration="7514000" />
+      <workItem from="1601366522755" duration="5842000" />
+      <workItem from="1601455658024" duration="2621000" />
+      <workItem from="1601577267226" duration="403000" />
+      <workItem from="1602183087238" duration="897000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -365,6 +381,14 @@
       <updated>1602183121810</updated>
     </task>
     <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00018" summary="Adding tests">
+      <created>1602183190620</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602183190620</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,6 +434,8 @@
     <MESSAGE value="Inseriti primi test" />
     <MESSAGE value="Inseriti i test" />
     <option name="LAST_COMMIT_MESSAGE" value="Inseriti i test" />
+    <MESSAGE value="Adding tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -430,8 +456,15 @@
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602183119730" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
+    <state x="690" y="296" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1601110453439">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="296" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601110453439" />
+    <state x="471" y="88" key="CommitChangelistDialog2" timestamp="1602183189242">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183682510" />
+    <state x="471" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602183189242" />
     <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1600331996845">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -457,6 +490,27 @@
     </state>
     <state x="247" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183663056" />
     <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog" timestamp="1602183664930">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="69" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="69" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="69" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1601464065191">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="69" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1600333254276" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601464065191" />
+    <state x="407" y="178" key="MultipleFileMergeDialog" timestamp="1600074182268">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183664930" />
@@ -466,8 +520,12 @@
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
     <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1600333913897">
       <screen x="0" y="0" width="1536" height="834" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1602183201238">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1600333913897" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1600074201058" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602183201238" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -484,6 +542,7 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="601" y="174" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1600346061671" />
+    <state x="937" y="261" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601110458083" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Domotic_system_management$InfoRilevabileTest.ic" NAME="InfoRilevabileTest Coverage Results" MODIFIED="1600334991828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

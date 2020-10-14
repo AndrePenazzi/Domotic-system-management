@@ -6,12 +6,13 @@ import it.unibs.fp.modalitaOperativa.ModOperativaParamentrica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CategoriaAttuatori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 30;
     private String nome;
     private String testoLibero;
-    private ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
+    private List<ModOperativa> modalitaOperative = new ArrayList<>();
 
     /**
      * Costruttore
@@ -21,7 +22,7 @@ public class CategoriaAttuatori implements Serializable {
      * @param modalitaOperative elenco delle modalità operative
      * @throws IllegalArgumentException il testo libero ha una lunghezza massima
      */
-    public CategoriaAttuatori(String nome, String testoLibero, ArrayList<ModOperativa> modalitaOperative) throws IllegalArgumentException {
+    public CategoriaAttuatori(String nome, String testoLibero, List<ModOperativa> modalitaOperative) throws IllegalArgumentException {
         this.nome = nome;
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
@@ -103,7 +104,7 @@ public class CategoriaAttuatori implements Serializable {
      *
      * @return modalità operativa
      */
-    public ArrayList<ModOperativa> getModalitaOperative() {
+    public List<ModOperativa> getModalitaOperative() {
         return modalitaOperative;
     }
 }

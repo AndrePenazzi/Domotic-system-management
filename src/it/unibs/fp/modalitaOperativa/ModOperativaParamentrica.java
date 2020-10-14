@@ -2,9 +2,11 @@ package it.unibs.fp.modalitaOperativa;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class ModOperativaParamentrica extends ModOperativa implements Serializable {
-    private ArrayList<String> paramentri;
+    private List<String> paramentri;
     private String parametroAttuale;
 
     /**
@@ -12,7 +14,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      * @param nome della modalità operativa
      * @param paramentri scelti
      */
-    public ModOperativaParamentrica(String nome, ArrayList<String> paramentri) {
+    public ModOperativaParamentrica(String nome, List<String> paramentri) {
         super(nome,2);
         this.paramentri = paramentri;
     }
@@ -27,7 +29,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      *
      * @return parametri
      */
-    public ArrayList<String> getParamentri() {
+    public List<String> getParamentri() {
         return paramentri;
     }
 
