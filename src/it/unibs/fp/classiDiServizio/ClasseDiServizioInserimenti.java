@@ -24,6 +24,8 @@ import it.unibs.fp.utenti.Manutentore;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class ClasseDiServizioInserimenti {
     //-----------------------------INSERISCI-----------------------------------------------------
@@ -38,7 +40,7 @@ public class ClasseDiServizioInserimenti {
         Manutentore manutentore = contenitore.getManutentore();
         do {
             boolean testoLiberoOK = false;
-            ArrayList<ModOperativa> modalitaOperative = new ArrayList<>();
+            List<ModOperativa> modalitaOperative = new ArrayList<>();
             String nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome categoria attuatori: ");
             do {
                 try {
@@ -71,7 +73,7 @@ public class ClasseDiServizioInserimenti {
         Manutentore manutentore = contenitore.getManutentore();
         do {
             boolean testoLiberoOK = false;
-            ArrayList<InfoRilevabile> informazioniRilevabili = new ArrayList<>();
+            List<InfoRilevabile> informazioniRilevabili = new ArrayList<>();
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria sensori: ");
             do {
                 try {
@@ -181,7 +183,7 @@ public class ClasseDiServizioInserimenti {
         String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
         do {
             try {
-                ArrayList<String> valoriNonNumerici = new ArrayList<>();
+                List<String> valoriNonNumerici = new ArrayList<>();
                 do {
                     valoriNonNumerici.add(InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci un valore rilevabile non numerico:"));
 
@@ -238,7 +240,7 @@ public class ClasseDiServizioInserimenti {
      */
     public static ModOperativa inserisciModalitaOperativaParametrica() {
         ModOperativa modOperative;
-        ArrayList<String> parametri = new ArrayList<>();
+        List<String> parametri = new ArrayList<>();
         String nomeModalitaOperativa = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome della modalita operativa: ");
         do {
             parametri.add(InputDati.leggiStringaNonVuota("Inserisci parametro: "));
@@ -540,7 +542,7 @@ public class ClasseDiServizioInserimenti {
      * @return unitaImmobiliare scelta
      */
     static UnitaImmobiliare scegliUnitaImmobiliare(Manutentore manutentore) {
-        ArrayList<UnitaImmobiliare> unitaImmobiliari = manutentore.getUnitaImmobiliari();
+        List<UnitaImmobiliare> unitaImmobiliari = manutentore.getUnitaImmobiliari();
         System.out.println(manutentore.visualizzaListaUnitaImmobiliari());
         int unitaImmobiliareScelta = InputDati.leggiIntero("Scegli UnitaImmobiliare : ", 1, manutentore.getSizeUnitaImmobiliari());
         return unitaImmobiliari.get(--unitaImmobiliareScelta);
@@ -556,9 +558,9 @@ public class ClasseDiServizioInserimenti {
      * @param unitaImmobiliare dal quale prendere gli artefatti
      * @return artefatti scelti
      */
-    static ArrayList<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
+    static List<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
         System.out.println("Si scelgano ora gli artefatti");
-        ArrayList<Artefatto> artefatti = new ArrayList<>();
+        List<Artefatto> artefatti = new ArrayList<>();
         do {
             System.out.println(unitaImmobiliare.visualizzaArtefatti());
             int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeArtefatti());
@@ -588,9 +590,9 @@ public class ClasseDiServizioInserimenti {
      * @param unitaImmobiliare dal quale prendere le stanze
      * @return stanze scelte
      */
-    static ArrayList<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
+    static List<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
         System.out.println("Si scelga ora le stanze");
-        ArrayList<Stanza> stanze = new ArrayList<>();
+        List<Stanza> stanze = new ArrayList<>();
         do {
             System.out.println(unitaImmobiliare.visualizzaStanze());
             int stanzaIndex = InputDati.leggiIntero("Scegli stanza : ", 1, unitaImmobiliare.getSizeStanze());

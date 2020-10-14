@@ -73,7 +73,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaSensoreAStanze(Sensore sensoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAStanze(Sensore sensoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaSensoreAStanze(sensoreAss, stanzeAss, unitaImmobiliare);
     }
 
@@ -84,7 +84,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaAttuatoreAStanze(attuatoreAss, stanzeAss, unitaImmobiliare);
     }
 
@@ -95,7 +95,7 @@ public class Manutentore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaSensoreAdArtefatti(sensoreAss, artefattoAss, unitaImmobiliare);
     }
 
@@ -106,7 +106,7 @@ public class Manutentore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, ArrayList<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss, unitaImmobiliare);
     }
 
@@ -117,7 +117,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaArtefattoAStanze(Artefatto artefatto, ArrayList<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaArtefattoAStanze(Artefatto artefatto, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaArtefattoAStanze(artefatto, stanzeAss, unitaImmobiliare);
     }
 

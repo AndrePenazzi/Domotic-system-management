@@ -14,6 +14,7 @@ import it.unibs.fp.utenti.Manutentore;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClasseDiServizioManutentore {
 
@@ -309,7 +310,7 @@ public class ClasseDiServizioManutentore {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di sensori da importare: ");
                     File categorieSensoriFile = new File(nomeLibreria + ".dat");
 
-                    ArrayList<CategoriaSensori> categorieSensori = (ArrayList<CategoriaSensori>) ServizioFile.caricaSingoloOggetto(categorieSensoriFile);
+                    List<CategoriaSensori> categorieSensori = (ArrayList<CategoriaSensori>) ServizioFile.caricaSingoloOggetto(categorieSensoriFile);
                     if (categorieSensori != null) {
                         for (CategoriaSensori c : categorieSensori)
                             contenitore.getListaCategorie().inserisciESalvaCategoriaSensori(c);
@@ -322,7 +323,7 @@ public class ClasseDiServizioManutentore {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di attuatori da importare: ");
                     File categorieAttuatoriFile = new File(nomeLibreria + ".dat");
 
-                    ArrayList<CategoriaAttuatori> categorieAttuatori = (ArrayList<CategoriaAttuatori>) ServizioFile.caricaSingoloOggetto(categorieAttuatoriFile);
+                    List<CategoriaAttuatori> categorieAttuatori = (ArrayList<CategoriaAttuatori>) ServizioFile.caricaSingoloOggetto(categorieAttuatoriFile);
                     if (categorieAttuatori != null) {
                         for (CategoriaAttuatori c : categorieAttuatori)
                             contenitore.getListaCategorie().inserisciESalvaCategoriaAttuatori(c);
@@ -334,8 +335,8 @@ public class ClasseDiServizioManutentore {
                 case 3: {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di unità immobiliari da importare: ");
                     File unitaImmobiliareFile = new File(nomeLibreria + ".dat");
-                    ArrayList<CategoriaSensori> categorieSensoriCompatibilita = new ArrayList<>();
-                    ArrayList<CategoriaAttuatori> categorieAttuatoriCompatibilita = new ArrayList<>();
+                    List<CategoriaSensori> categorieSensoriCompatibilita = new ArrayList<>();
+                    List<CategoriaAttuatori> categorieAttuatoriCompatibilita = new ArrayList<>();
 
                     UnitaImmobiliare unitaImmobiliare = (UnitaImmobiliare) ServizioFile.caricaSingoloOggetto(unitaImmobiliareFile);
 
@@ -402,18 +403,18 @@ public class ClasseDiServizioManutentore {
                 case 4: {
                     String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di regole da salvare: ");
 
-                    ArrayList<CategoriaSensori> categoriaSensori = contenitore.getListaCategorie().getCategorieSensori();
-                    ArrayList<CategoriaAttuatori> categoriaAttuatori = contenitore.getListaCategorie().getCategorieAttuatori();
+                    List<CategoriaSensori> categoriaSensori = contenitore.getListaCategorie().getCategorieSensori();
+                    List<CategoriaAttuatori> categoriaAttuatori = contenitore.getListaCategorie().getCategorieAttuatori();
 
 
                     File regoleFile = new File(nomeLibreria + ".dat");
 
-                    ArrayList<Regola> regole = (ArrayList<Regola>) ServizioFile.caricaSingoloOggetto(regoleFile);
+                    List<Regola> regole = (ArrayList<Regola>) ServizioFile.caricaSingoloOggetto(regoleFile);
 
 
-                    ArrayList<InfoRilevabile> categorieAntecedentiCompatibilita = new ArrayList<>();
+                    List<InfoRilevabile> categorieAntecedentiCompatibilita = new ArrayList<>();
 
-                    ArrayList<ModOperativa> categorieConseguentiCompatibilita = new ArrayList<>();
+                    List<ModOperativa> categorieConseguentiCompatibilita = new ArrayList<>();
 
 
                     if (!regole.isEmpty()) {

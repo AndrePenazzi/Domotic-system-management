@@ -12,6 +12,7 @@ import it.unibs.fp.utenti.Manutentore;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClasseDiServizioAssociazioni {
 
@@ -29,7 +30,7 @@ public class ClasseDiServizioAssociazioni {
         if (!unitaImmobiliare.getArtefatti().isEmpty())
             do {
                 Artefatto artefatto = ClasseDiServizioInserimenti.scegliArtefatto(unitaImmobiliare);
-                ArrayList<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
+                List<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
                 manutentore.associaArtefattoAStanze(artefatto, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setManutentore(manutentore);
@@ -53,7 +54,7 @@ public class ClasseDiServizioAssociazioni {
         if (!listaCategorie.getCategorieSensori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioInserimenti.creaSensore(listaCategorie);
-                ArrayList<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
+                List<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
                 manutentore.associaSensoreAStanze(nuovoSensore, stanze, unitaImmobiliare);
 
                 contenitore.setListaCategorie(listaCategorie);
@@ -81,7 +82,7 @@ public class ClasseDiServizioAssociazioni {
         if (!listaCategorie.getCategorieAttuatori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioInserimenti.creaAttuatore(listaCategorie);
-                ArrayList<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
+                List<Stanza> stanze = ClasseDiServizioInserimenti.scegliStanze(unitaImmobiliare);
                 manutentore.associaAttuatoreAStanze(nuovoAttuatore, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setManutentore(manutentore);
@@ -107,7 +108,7 @@ public class ClasseDiServizioAssociazioni {
         if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieSensori().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioInserimenti.creaSensore(listaCategorie);
-                ArrayList<Artefatto> artefatti = ClasseDiServizioInserimenti.scegliArtefatti(unitaImmobiliare);
+                List<Artefatto> artefatti = ClasseDiServizioInserimenti.scegliArtefatti(unitaImmobiliare);
                 for (Artefatto a : artefatti)
                     for (Sensore s : a.getSensori())
                         if (nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori())
@@ -139,7 +140,7 @@ public class ClasseDiServizioAssociazioni {
         if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieAttuatori().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioInserimenti.creaAttuatore(listaCategorie);
-                ArrayList<Artefatto> artefatti = ClasseDiServizioInserimenti.scegliArtefatti(unitaImmobiliare);
+                List<Artefatto> artefatti = ClasseDiServizioInserimenti.scegliArtefatti(unitaImmobiliare);
                 manutentore.associaAttuatoreAdArtefatti(nuovoAttuatore, artefatti, unitaImmobiliare);
 
                 contenitore.setListaCategorie(listaCategorie);
