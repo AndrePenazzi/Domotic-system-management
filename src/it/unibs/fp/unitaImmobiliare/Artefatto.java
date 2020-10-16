@@ -110,7 +110,7 @@ public class Artefatto implements Serializable {
     /**
      * Getter
      *
-     * @return arrayList di sensori.
+     * @return List di sensori.
      */
     public List<Sensore> getSensori() {
         return sensori;
@@ -119,7 +119,7 @@ public class Artefatto implements Serializable {
     /**
      * Getter
      *
-     * @return arrayList di attuatori.
+     * @return List di attuatori.
      */
     public List<Attuatore> getAttuatori() {
         return attuatori;

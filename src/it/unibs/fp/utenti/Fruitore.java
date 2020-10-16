@@ -418,7 +418,7 @@ public class Fruitore implements Serializable {
      *
      * @param unitaImmobiliari da modificare
      */
-    public void setUnitaImmobiliari(ArrayList<UnitaImmobiliare> unitaImmobiliari) {
+    public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
         this.unitaImmobiliari = unitaImmobiliari;
     }
 

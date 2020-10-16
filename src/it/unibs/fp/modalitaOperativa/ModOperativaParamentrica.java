@@ -37,7 +37,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      *
      * @param paramentri da modificare
      */
-    public void setParamentri(ArrayList<String> paramentri) {
+    public void setParamentri(List<String> paramentri) {
         this.paramentri = paramentri;
     }
 

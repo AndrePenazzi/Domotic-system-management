@@ -3,7 +3,6 @@ package it.unibs.fp.test;
 import it.unibs.fp.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.dispositiviPeriferici.Sensore;
 import it.unibs.fp.modalitaOperativa.ModOperativa;
-import it.unibs.fp.regola.Regola;
 import it.unibs.fp.unitaImmobiliare.Artefatto;
 import it.unibs.fp.unitaImmobiliare.Stanza;
 import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
@@ -116,7 +115,7 @@ class UnitaImmobiliareTest {
         unitaImmobiliareNuova.inserisciRegola(attuatoreNuovo, modOperativaNuova);
         unitaImmobiliareNuova.inserisciRegola(attuatoreNuovo, new ModOperativa("Attivo"));
         unitaImmobiliareNuova.inserisciRegola(attuatoreNuovo, modOperativaNuova);
-        assertEquals("Attivo",unitaImmobiliareNuova.getRegole().get(1).getConseguente().get(0).getModOperativa().getNome());
+        assertEquals("Attivo",unitaImmobiliareNuova.getRegole().get(1).getConseguenti().get(0).getModOperativa().getNome());
         assert unitaImmobiliareNuova.getSizeStanze() == 0;
         assert unitaImmobiliareNuova.getSizeArtefatti() == 0;
         assert unitaImmobiliareNuova.getSizeRegole() == 3;

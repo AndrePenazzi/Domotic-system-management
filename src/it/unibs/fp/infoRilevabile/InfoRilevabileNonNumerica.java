@@ -76,7 +76,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      *
      * @param valori da modificare
      */
-    public void setValori(ArrayList<String> valori) {
+    public void setValori(List<String> valori) {
         this.valori = valori;
     }
 

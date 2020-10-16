@@ -107,7 +107,7 @@ public class CategoriaSensori implements Serializable {
      *
      * @param informazioniRilevabili dalla categoria di sensori
      */
-    public void setInformazioniRilevabili(ArrayList<InfoRilevabile> informazioniRilevabili) {
+    public void setInformazioniRilevabili(List<InfoRilevabile> informazioniRilevabili) {
         this.informazioniRilevabili = informazioniRilevabili;
     }
 

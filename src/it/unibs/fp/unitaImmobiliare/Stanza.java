@@ -168,7 +168,7 @@ public class Stanza implements Serializable {
      *
      * @param artefatti all'interno della stanza
      */
-    public void setArtefatti(ArrayList<Artefatto> artefatti) {
+    public void setArtefatti(List<Artefatto> artefatti) {
         this.artefatti = artefatti;
     }
 }

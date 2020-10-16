@@ -7,7 +7,7 @@ import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
 
 import java.io.Serializable;
 
-public class CostituenteLogico implements Serializable {
+public abstract class CostituenteLogico implements Serializable {
     private InfoRilevabile primoOperatoreLogico = null;
     private InfoRilevabile secondoOperatoreLogico = null;
     private OperatoriRelazionali operatoreRelazionale = null;

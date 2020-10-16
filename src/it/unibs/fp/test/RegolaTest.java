@@ -11,9 +11,7 @@ import it.unibs.fp.regola.Orologio;
 import it.unibs.fp.regola.Regola;
 import org.junit.jupiter.api.Test;
 
-import javax.naming.directory.Attributes;
-
-import static org.junit.jupiter.api.Assertions.*;
+    import static org.junit.jupiter.api.Assertions.*;
 
 class RegolaTest {
 
@@ -109,7 +107,7 @@ class RegolaTest {
         Attuatore attuatore = new Attuatore("AttuatoreTest",categoriaAttuatori);
         ModOperativa modOperativa = new ModOperativa("ModOperativa");
         regola.inserisciAzione(attuatore,modOperativa);
-        assertEquals(1,regola.getConseguente().size());
+        assertEquals(1,regola.getConseguenti().size());
     }
 
     @Test
@@ -120,7 +118,7 @@ class RegolaTest {
         ModOperativa modOperativa = new ModOperativa("ModOperativa");
         Orologio orologio = new Orologio();
         regola.inserisciAzione(attuatore, modOperativa, orologio);
-        assertEquals(1,regola.getConseguente().size());
+        assertEquals(1,regola.getConseguenti().size());
     }
 
     @Test

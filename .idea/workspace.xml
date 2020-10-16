@@ -21,17 +21,36 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteSingolo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoOrologio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoParametrico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoValoreNumerico.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/EnnesimoAntecedente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_2020_21_07_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_2020_21_07__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioManutentore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Regola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
@@ -47,8 +66,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,10 +112,36 @@
       <recent name="it.unibs.fp.infoRilevabile.InfoRilevabile" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.it.unibs.fp.test in Domotic-system-management">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
+      <module name="Domotic-system-management" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.unibs.fp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
       <module name="Domotic-system-management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,21 +180,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InfoRilevabileNumericaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Domotic-system-management" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.unibs.fp.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="it.unibs.fp.test" />
-      <option name="MAIN_CLASS_NAME" value="it.unibs.fp.test.InfoRilevabileNumericaTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StanzaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Domotic-system-management" />
       <extension name="coverage">
@@ -181,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.it.unibs.fp.test in Domotic-system-management" />
         <item itemvalue="JUnit.CategoriaSensoriTest" />
         <item itemvalue="JUnit.CatergoriaSensoreTest and 9 more" />
         <item itemvalue="JUnit.StanzaTest" />
-        <item itemvalue="JUnit.InfoRilevabileNumericaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +261,8 @@
       <workItem from="1602183069150" duration="1199000" />
       <workItem from="1602185040427" duration="1871000" />
       <workItem from="1602616970689" duration="708000" />
-      <workItem from="1602704160773" duration="4011000" />
+      <workItem from="1602704160773" duration="4997000" />
+      <workItem from="1602832922613" duration="7515000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -373,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602183857511</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactoring of lists for ISP &#10;&#10;-Modify ArrayLists to List">
+      <created>1602708364253</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1602708364253</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +427,19 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -419,17 +469,18 @@
     <MESSAGE value="Inseriti primi test" />
     <MESSAGE value="Inseriti i test" />
     <MESSAGE value="Inseriti i test completi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inseriti i test completi" />
+    <MESSAGE value="Refactoring of lists for ISP &#10;&#10;-Modify ArrayLists to List" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring of lists for ISP &#10;&#10;-Modify ArrayLists to List" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1600074156868" />
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1602707601167">
+    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1602840139199">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602707601167" />
+    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602840139199" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600350511340">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -442,50 +493,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="551" y="311" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1602183790741" />
-    <state x="178" y="0" key="CommitChangelistDialog2" timestamp="1602183854571">
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602836824091">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602183854571" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
+    <state x="178" y="0" key="CommitChangelistDialog2" timestamp="1602708360688">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183682510" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1600331996845">
+    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1602836217721">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1600331996845" />
-    <state width="1493" height="508" key="GridCell.Tab.0.bottom" timestamp="1602184284991">
+    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1602836217721" />
+    <state width="1493" height="508" key="GridCell.Tab.0.bottom" timestamp="1602709223540">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="508" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602184284991" />
-    <state width="1493" height="508" key="GridCell.Tab.0.center" timestamp="1602184284991">
+    <state width="1493" height="508" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
+    <state width="1493" height="508" key="GridCell.Tab.0.center" timestamp="1602709223540">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="508" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1602184284991" />
-    <state width="1493" height="508" key="GridCell.Tab.0.left" timestamp="1602184284991">
+    <state width="1493" height="508" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
+    <state width="1493" height="508" key="GridCell.Tab.0.left" timestamp="1602709223540">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="508" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1602184284991" />
-    <state width="1493" height="508" key="GridCell.Tab.0.right" timestamp="1602184284991">
+    <state width="1493" height="508" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
+    <state width="1493" height="508" key="GridCell.Tab.0.right" timestamp="1602709223540">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="508" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1602184284991" />
+    <state width="1493" height="508" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
     <state x="247" y="65" key="MergeDialog" timestamp="1602183663056">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="247" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183663056" />
-    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog" timestamp="1602183664930">
+    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog" timestamp="1602708437058">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183664930" />
+    <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1602708437058" />
     <state x="277" y="0" key="SettingsEditor" timestamp="1600071631217">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602183866591">
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602708515178">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602183866591" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

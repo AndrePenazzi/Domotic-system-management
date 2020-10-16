@@ -272,7 +272,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param sensoreAss sensore da associare alle stanze
      * @param stanzeAss  stanze scelte
      */
-    public void associaSensoreAStanze(Sensore sensoreAss, List<Stanza> stanzeAss) {
+    public void associaSensoreAStanze(Sensore sensoreAss, Iterable<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
             s.inserisciSensore(sensoreAss);
         }
@@ -284,7 +284,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param attuatoreAss attuatore da associare
      * @param stanzeAss    stanze scelte
      */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, List<Stanza> stanzeAss) {
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, Iterable<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
             s.inserisciAttuatore(attuatoreAss);
         }
@@ -296,7 +296,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param sensoreAss   sensore da associare
      * @param artefattoAss artefatto scelto
      */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, List<Artefatto> artefattoAss) {
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, Iterable<Artefatto> artefattoAss) {
         for (Artefatto a : artefattoAss) {
             a.inserisciSensore(sensoreAss);
         }
@@ -308,7 +308,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param attuatoreAss attuatore da associare
      * @param artefattoAss artefatti scelti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, List<Artefatto> artefattoAss) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, Iterable<Artefatto> artefattoAss) {
         for (Artefatto a : artefattoAss) {
             a.inserisciAttuatore(attuatoreAss);
         }
@@ -320,7 +320,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param artefattoAss artefatto da associare
      * @param stanzeAss    stanze scelte
      */
-    public void associaArtefattoAStanze(Artefatto artefattoAss, List<Stanza> stanzeAss) {
+    public void associaArtefattoAStanze(Artefatto artefattoAss, Iterable<Stanza> stanzeAss) {
         for (Stanza s : stanzeAss) {
             s.inserisciArtefatto(artefattoAss);
         }

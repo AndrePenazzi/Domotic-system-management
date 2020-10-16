@@ -431,10 +431,10 @@ public class ClasseDiServizioManutentore {
 
                         //ModOperativa in conseguenti
                         for (int i = 0; i < regole.size(); i++) {
-                            for (int j = 0; j < regole.get(i).getConseguente().size(); j++) {
-                                categorieConseguentiCompatibilita.add(regole.get(i).getConseguente().get(j).getModOperativa());
-                                if (regole.get(i).getConseguente().get(j).getModOperativa() != null) {
-                                    categorieConseguentiCompatibilita.add(regole.get(i).getConseguente().get(j).getModOperativa());
+                            for (int j = 0; j < regole.get(i).getConseguenti().size(); j++) {
+                                categorieConseguentiCompatibilita.add(regole.get(i).getConseguenti().get(j).getModOperativa());
+                                if (regole.get(i).getConseguenti().get(j).getModOperativa() != null) {
+                                    categorieConseguentiCompatibilita.add(regole.get(i).getConseguenti().get(j).getModOperativa());
                                 }
                             }
                         }
