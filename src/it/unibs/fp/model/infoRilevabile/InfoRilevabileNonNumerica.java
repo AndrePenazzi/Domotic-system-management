@@ -16,7 +16,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      * @param valori sottoforma di stringa
      */
     public InfoRilevabileNonNumerica(String nome, List<String> valori) {
-        super(nome, 2);
+        super(nome);
         this.valori = valori;
         valoreAttuale = "default";
     }
@@ -95,5 +95,8 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      */
     public void setValoreAttuale(String valoreAttuale) {
         this.valoreAttuale = valoreAttuale;
+    }
+    public int getType(){
+        return 2;
     }
 }

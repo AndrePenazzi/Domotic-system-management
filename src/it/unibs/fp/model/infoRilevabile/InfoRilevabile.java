@@ -2,19 +2,16 @@ package it.unibs.fp.model.infoRilevabile;
 
 import java.io.Serializable;
 
-public class InfoRilevabile implements Serializable {
+public abstract class InfoRilevabile implements Serializable {
     private String nome;
-    private int type;
 
     /**
      * Costruttore con il tipo
      *
      * @param nome dell'info rilevabile
-     * @param type sottoforma di intero
      */
-    public InfoRilevabile(String nome, int type) {
+    public InfoRilevabile(String nome) {
         this.nome = nome;
-        this.type = type;
     }
 
     public InfoRilevabile() {
@@ -44,16 +41,5 @@ public class InfoRilevabile implements Serializable {
      *
      * @return il tipo sottoforma di intero
      */
-    public int getType() {
-        return type;
-    }
-
-    /**
-     * Setter del tipo di informazione rilevabile
-     *
-     * @param type tipo sottoforma di intero
-     */
-    public void setType(int type) {
-        this.type = type;
-    }
+    public abstract int getType();
 }

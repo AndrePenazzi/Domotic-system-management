@@ -34,8 +34,8 @@ public class CategoriaSensori implements Serializable {
     }
 
     public CategoriaSensori() {
-        this.nome="";
-        this.testoLibero="";
+        this.nome = "";
+        this.testoLibero = "";
         this.informazioniRilevabili = new ArrayList<>();
     }
 
@@ -63,10 +63,7 @@ public class CategoriaSensori implements Serializable {
             int i = 1;
             tmp.append("\nInformazioni rilevabili:\n");
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                if (infoRilevabile.getType() == 1)
-                    tmp.append(i + " " + ((InfoRilevabileNumerica) infoRilevabile).toString());
-                else
-                    tmp.append(i + " " + ((InfoRilevabileNonNumerica) infoRilevabile).toString());
+                tmp.append(i + " " + infoRilevabile.toString());
                 i++;
             }
         } else

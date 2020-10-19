@@ -20,7 +20,7 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
      * @throws IllegalArgumentException il valore minimo deve essere minore del valore massimo
      */
     public InfoRilevabileNumerica(String nome, double min, double max) throws IllegalArgumentException {
-        super(nome, 1);
+        super(nome);
         this.min = min;
         this.max = max;
         if (min > max)
@@ -94,5 +94,8 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
      */
     public void setValore(double valore) {
         this.valore = valore;
+    }
+    public int getType(){
+        return 1;
     }
 }
