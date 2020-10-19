@@ -1,8 +1,8 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.categoria.CategoriaSensori;
-import it.unibs.fp.categoria.ListaCategorie;
+import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.categoria.CategoriaSensori;
+import it.unibs.fp.model.categoria.ListaCategorie;
 import org.junit.jupiter.api.Test;
 
 

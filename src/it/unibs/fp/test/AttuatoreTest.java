@@ -1,8 +1,8 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.modalitaOperativa.ModOperativa;
+import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

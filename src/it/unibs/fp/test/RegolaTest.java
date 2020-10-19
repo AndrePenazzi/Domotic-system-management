@@ -1,17 +1,15 @@
 package it.unibs.fp.test;
 
-    import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
-import it.unibs.fp.modalitaOperativa.ModOperativa;
-import it.unibs.fp.operatori.OperatoriBooleani;
-import it.unibs.fp.operatori.OperatoriRelazionali;
-import it.unibs.fp.regola.Orologio;
-import it.unibs.fp.regola.Regola;
+    import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.modalitaOperativa.ModOperativa;
+import it.unibs.fp.model.operatori.OperatoriBooleani;
+import it.unibs.fp.model.operatori.OperatoriRelazionali;
+import it.unibs.fp.model.regola.Orologio;
+import it.unibs.fp.model.regola.Regola;
 import org.junit.jupiter.api.Test;
-
-    import static org.junit.jupiter.api.Assertions.*;
 
 class RegolaTest {
 

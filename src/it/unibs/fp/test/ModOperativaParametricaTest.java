@@ -1,6 +1,6 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.modalitaOperativa.ModOperativaParamentrica;
+import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

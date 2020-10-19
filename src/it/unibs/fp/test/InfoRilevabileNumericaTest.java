@@ -1,7 +1,7 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

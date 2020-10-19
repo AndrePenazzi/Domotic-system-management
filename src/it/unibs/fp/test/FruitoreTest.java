@@ -1,24 +1,21 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.categoria.CategoriaSensori;
-import it.unibs.fp.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.dispositiviPeriferici.Sensore;
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
-import it.unibs.fp.operatori.OperatoriBooleani;
-import it.unibs.fp.operatori.OperatoriRelazionali;
-import it.unibs.fp.regola.CostituenteLogico;
-import it.unibs.fp.regola.Orologio;
-import it.unibs.fp.regola.Regola;
-import it.unibs.fp.unitaImmobiliare.Artefatto;
-import it.unibs.fp.unitaImmobiliare.Stanza;
-import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
-import it.unibs.fp.utenti.Fruitore;
+import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.categoria.CategoriaSensori;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.operatori.OperatoriBooleani;
+import it.unibs.fp.model.operatori.OperatoriRelazionali;
+import it.unibs.fp.model.regola.Orologio;
+import it.unibs.fp.model.regola.Regola;
+import it.unibs.fp.model.unitaImmobiliare.Artefatto;
+import it.unibs.fp.model.unitaImmobiliare.Stanza;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.model.utenti.Fruitore;
 import org.junit.jupiter.api.Test;
 
-import javax.naming.directory.Attributes;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,7 +1,7 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.modalitaOperativa.ModOperativa;
+import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

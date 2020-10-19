@@ -1,7 +1,7 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNonNumerica;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

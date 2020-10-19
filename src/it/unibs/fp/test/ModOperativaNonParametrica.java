@@ -1,6 +1,6 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.modalitaOperativa.ModOperativaNonParamentrica;
+import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

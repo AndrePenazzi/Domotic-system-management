@@ -1,10 +1,8 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
-import it.unibs.fp.operatori.OperatoriRelazionali;
-import it.unibs.fp.regola.CostituenteLogico;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.operatori.OperatoriRelazionali;
+import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

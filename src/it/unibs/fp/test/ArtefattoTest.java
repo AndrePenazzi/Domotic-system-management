@@ -1,8 +1,8 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.dispositiviPeriferici.Sensore;
-import it.unibs.fp.unitaImmobiliare.Artefatto;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

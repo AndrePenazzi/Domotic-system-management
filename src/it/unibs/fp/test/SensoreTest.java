@@ -1,9 +1,9 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaSensori;
-import it.unibs.fp.dispositiviPeriferici.Sensore;
-import it.unibs.fp.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.categoria.CategoriaSensori;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

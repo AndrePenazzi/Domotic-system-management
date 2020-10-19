@@ -1,16 +1,14 @@
 package it.unibs.fp.test;
 
-import it.unibs.fp.categoria.CategoriaAttuatori;
-import it.unibs.fp.categoria.CategoriaSensori;
-import it.unibs.fp.categoria.ListaCategorie;
-import it.unibs.fp.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.dispositiviPeriferici.Sensore;
-import it.unibs.fp.modalitaOperativa.ModOperativa;
-import it.unibs.fp.unitaImmobiliare.Artefatto;
-import it.unibs.fp.unitaImmobiliare.Stanza;
-import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
-import it.unibs.fp.utenti.Fruitore;
-import it.unibs.fp.utenti.Manutentore;
+import it.unibs.fp.model.categoria.CategoriaAttuatori;
+import it.unibs.fp.model.categoria.CategoriaSensori;
+import it.unibs.fp.model.categoria.ListaCategorie;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.unitaImmobiliare.Artefatto;
+import it.unibs.fp.model.unitaImmobiliare.Stanza;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.model.utenti.Manutentore;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
