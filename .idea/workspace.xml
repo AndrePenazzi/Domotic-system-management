@@ -32,75 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/AntecedenteFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/EnnesimoAntecedente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioRegola.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/ClasseDiServizioAntecedente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioAssociazioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioAssociazioni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioFruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioInserimenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioManutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/Contenitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Sensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaNonParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaNonParamentrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaParamentrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/BelleStringhe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/BelleStringhe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/EstrazioniCasuali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/EstrazioniCasuali.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/InputDati.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/InputDati.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/MyMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/MyMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/NumeriCasuali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/NumeriCasuali.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/mylib/ServizioFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/ServizioFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/operatori/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriBooleani.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/operatori/OperatoriRelazionali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriRelazionali.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/Antecedente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteSingolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/AntecedenteSingolo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/Antecedenti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Azione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogicoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogicoInfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoOrologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogicoOrologio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoParametrico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogicoParametrico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoValoreNumerico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogicoValoreNumerico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/EnnesimoAntecedente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Orologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Orologio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Regola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/AttuatoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/AttuatoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaAttuatoriTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaAttuatoriTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaSensoriTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaSensoriTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CostituenteLogicoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/CostituenteLogicoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/FruitoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/FruitoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNonNumericaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNonNumericaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNumericaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNumericaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ListaCategorieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ListaCategorieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaNonParametrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaNonParametrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaParametricaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaParametricaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/SensoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/SensoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +243,7 @@
       <workItem from="1602616970689" duration="708000" />
       <workItem from="1602704160773" duration="4997000" />
       <workItem from="1602832922613" duration="7515000" />
-      <workItem from="1603092293050" duration="6885000" />
+      <workItem from="1603092293050" duration="7662000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -467,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603096388144</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactoring MV&#10;&#10;-Modify package structure&#10;-Add new packages for model and view">
+      <created>1603099258225</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1603099258225</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +466,8 @@
     <MESSAGE value="Inseriti i test completi" />
     <MESSAGE value="Refactoring of lists for ISP &#10;&#10;-Modify ArrayLists to List" />
     <MESSAGE value="Refactoring for parallel list of CostituenteLogico and OpBooleani&#10;&#10;-Add a new class Antecedenti with a smart list of Antecedente&#10;-Modify CostituenteLogicoFactory&#10;-Modify AntecedenteFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring for parallel list of CostituenteLogico and OpBooleani&#10;&#10;-Add a new class Antecedenti with a smart list of Antecedente&#10;-Modify CostituenteLogicoFactory&#10;-Modify AntecedenteFactory" />
+    <MESSAGE value="Refactoring MV&#10;&#10;-Modify package structure&#10;-Add new packages for model and view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring MV&#10;&#10;-Modify package structure&#10;-Add new packages for model and view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -555,11 +495,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
-    <state x="223" y="0" key="CommitChangelistDialog2" timestamp="1603096387157">
+    <state x="223" y="0" key="CommitChangelistDialog2" timestamp="1603099257225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="223" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603096387157" />
+    <state x="223" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603099257225" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
