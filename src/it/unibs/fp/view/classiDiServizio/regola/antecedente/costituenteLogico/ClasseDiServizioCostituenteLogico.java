@@ -10,7 +10,7 @@ import it.unibs.fp.view.classiDiServizio.Contenitore;
 import it.unibs.fp.view.mylib.MyMenu;
 
 public class ClasseDiServizioCostituenteLogico {
-    public static void creaCostituenteLogicoMenu(Contenitore contenitore) {
+    public static void menuCreaCostituenteLogico(Contenitore contenitore) {
         CostituenteLogico costituenteLogico;
         boolean finito = false;
         String[] azione = {"Con info rilevabile", "Con orologio","Con valore parametrico","Con valore numerico"};
@@ -41,6 +41,7 @@ public class ClasseDiServizioCostituenteLogico {
         InfoRilevabile primoOpLogico;
         InfoRilevabile secondoOpLogico;
         OperatoriRelazionali opRelazionale;
+
         return CostituenteLogicoFactory.creaCostituenteLogico();
     }
 }

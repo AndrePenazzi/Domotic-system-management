@@ -32,11 +32,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +244,7 @@
       <workItem from="1602616970689" duration="708000" />
       <workItem from="1602704160773" duration="4997000" />
       <workItem from="1602832922613" duration="7515000" />
-      <workItem from="1603092293050" duration="9681000" />
+      <workItem from="1603092293050" duration="10758000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -417,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603100007671</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP">
+      <created>1603102056785</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1603102056785</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +457,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi." />
     <MESSAGE value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
     <MESSAGE value="Salvataggio in Contenitore e utilizzo metodi di Manutentore" />
     <MESSAGE value="Sensore e Attuatore hanno ora le relative categorie" />
@@ -478,7 +481,8 @@
     <MESSAGE value="Refactoring for parallel list of CostituenteLogico and OpBooleani&#10;&#10;-Add a new class Antecedenti with a smart list of Antecedente&#10;-Modify CostituenteLogicoFactory&#10;-Modify AntecedenteFactory" />
     <MESSAGE value="Refactoring MV&#10;&#10;-Modify package structure&#10;-Add new packages for model and view" />
     <MESSAGE value="Creation of ClasseDiServizioCostituenteLogico" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation of ClasseDiServizioCostituenteLogico" />
+    <MESSAGE value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
+    <option name="LAST_COMMIT_MESSAGE" value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -506,11 +510,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
-    <state x="723" y="0" key="CommitChangelistDialog2" timestamp="1603100006830">
+    <state x="723" y="0" key="CommitChangelistDialog2" timestamp="1603102056010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="723" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603100006830" />
+    <state x="723" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603102056010" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
