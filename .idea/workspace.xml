@@ -32,35 +32,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteSingolo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoOrologio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoParametrico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoValoreNumerico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/EnnesimoAntecedente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_2020_21_07_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_2020_21_07__Default_Changelist_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2020_11_31_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_10_2020_11_31__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedenti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioManutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/modalitaOperativa/ModOperativaParamentrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioAssociazioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/classiDiServizio/ClasseDiServizioAssociazioni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Attuatore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dispositiviPeriferici/Attuatore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Antecedente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteSingolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/AntecedenteSingolo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoOrologio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoOrologio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoParametrico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoParametrico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoValoreNumerico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/CostituenteLogicoValoreNumerico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/EnnesimoAntecedente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/EnnesimoAntecedente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/regola/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/regola/Regola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Artefatto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/Stanza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Fruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/utenti/Manutentore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -263,6 +260,7 @@
       <workItem from="1602616970689" duration="708000" />
       <workItem from="1602704160773" duration="4997000" />
       <workItem from="1602832922613" duration="7515000" />
+      <workItem from="1603092293050" duration="3860000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -477,10 +475,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1600074156868" />
-    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1602840139199">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="454" y="241" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1602841492390">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602840139199" />
+    <state x="454" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602841492390" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600350511340">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -545,10 +544,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1600331595904" />
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602183474580">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="724" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602840811620">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1602183474580" />
+    <state x="724" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602840811620" />
     <state x="975" y="181" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600769813819">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

@@ -8,7 +8,7 @@ public class AntecedenteFactory {
 
     }
     public Antecedente creaAntecedente(CostituenteLogico costituenteLogico , OperatoriBooleani opBooleano){
-            return new EnnesimoAntecedente(costituenteLogico,opBooleano);
+            return new EnnesimoAntecedente(opBooleano,costituenteLogico);
 
     }
 }

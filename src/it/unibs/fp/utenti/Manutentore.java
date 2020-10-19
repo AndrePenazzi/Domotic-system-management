@@ -10,7 +10,6 @@ import it.unibs.fp.unitaImmobiliare.Stanza;
 import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Manutentore implements Serializable {

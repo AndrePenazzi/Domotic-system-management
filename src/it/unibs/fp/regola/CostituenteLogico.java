@@ -8,66 +8,13 @@ import it.unibs.fp.infoRilevabile.InfoRilevabileNumerica;
 import java.io.Serializable;
 
 public abstract class CostituenteLogico implements Serializable {
-    private InfoRilevabile primoOperatoreLogico = null;
-    private InfoRilevabile secondoOperatoreLogico = null;
-    private OperatoriRelazionali operatoreRelazionale = null;
-    private Double secondoOperatoreCostante = null;
+    private InfoRilevabile primoOperatoreLogico;
+    private InfoRilevabile secondoOperatoreLogico;
+    private OperatoriRelazionali operatoreRelazionale;
+    private Double secondoOperatoreCostante;
     private String secondoOperatoreScalare = null;
-    private Orologio time = null;
+    private Orologio time;
     private Orologio secondoOperatoreOrologio = null;
-
-    /**
-     * Costruttore con valori
-     *
-     * @param primoOperatoreLogico   Informazione rilevabile 1
-     * @param secondoOperatoreLogico Informazione rilevabile 2
-     * @param operatoreRelazionale   per il confronto
-     */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
-        this.primoOperatoreLogico = primoOperatoreLogico;
-        this.secondoOperatoreLogico = secondoOperatoreLogico;
-        this.operatoreRelazionale = operatoreRelazionale;
-    }
-
-
-    /**
-     * Costruttore con costante
-     *
-     * @param primoOperatoreLogico     da confrontare
-     * @param secondoOperatoreCostante double
-     * @param operatoreRelazionale     per il confronto
-     */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, double secondoOperatoreCostante, OperatoriRelazionali operatoreRelazionale) {
-        this.secondoOperatoreLogico = null;
-        this.primoOperatoreLogico = primoOperatoreLogico;
-        this.secondoOperatoreCostante = secondoOperatoreCostante;
-        this.operatoreRelazionale = operatoreRelazionale;
-    }
-
-    /**
-     * Costruttore costituente logico
-     *
-     * @param primoOperatoreLogico    da confrontare
-     * @param secondoOperatoreScalare String
-     * @param operatoreRelazionale    per il confronto
-     */
-    public CostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreScalare, OperatoriRelazionali operatoreRelazionale) {
-        this.secondoOperatoreLogico = null;
-        this.primoOperatoreLogico = primoOperatoreLogico;
-        this.secondoOperatoreScalare = secondoOperatoreScalare;
-        this.operatoreRelazionale = operatoreRelazionale;
-    }
-
-    /**
-     * Costruttore con orologio
-     *
-     * @param secondoOperatoreLogico orologio
-     * @param operatoreRelazionale   per il confronto
-     */
-    public CostituenteLogico(Orologio secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
-        this.secondoOperatoreOrologio = secondoOperatoreLogico;
-        this.operatoreRelazionale = operatoreRelazionale;
-    }
 
     /**
      * Costruttore con valore true
@@ -191,5 +138,37 @@ public abstract class CostituenteLogico implements Serializable {
      */
     public void setOperatoreRelazionale(OperatoriRelazionali operatoreRelazionale) {
         this.operatoreRelazionale = operatoreRelazionale;
+    }
+
+    public Double getSecondoOperatoreCostante() {
+        return secondoOperatoreCostante;
+    }
+
+    public void setSecondoOperatoreCostante(Double secondoOperatoreCostante) {
+        this.secondoOperatoreCostante = secondoOperatoreCostante;
+    }
+
+    public String getSecondoOperatoreScalare() {
+        return secondoOperatoreScalare;
+    }
+
+    public void setSecondoOperatoreScalare(String secondoOperatoreScalare) {
+        this.secondoOperatoreScalare = secondoOperatoreScalare;
+    }
+
+    public Orologio getTime() {
+        return time;
+    }
+
+    public void setTime(Orologio time) {
+        this.time = time;
+    }
+
+    public Orologio getSecondoOperatoreOrologio() {
+        return secondoOperatoreOrologio;
+    }
+
+    public void setSecondoOperatoreOrologio(Orologio secondoOperatoreOrologio) {
+        this.secondoOperatoreOrologio = secondoOperatoreOrologio;
     }
 }

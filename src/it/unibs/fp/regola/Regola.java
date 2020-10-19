@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Regola implements Serializable {
-    private List<AntecedenteSingolo> antecedenti;
+    private Antecedenti antecedenti;
     private List<Azione> conseguenti;
-
     private boolean attiva;
 
 
@@ -19,7 +18,7 @@ public class Regola implements Serializable {
      * Costruttore regola
      */
     public Regola() {
-        this.antecedenti = new ArrayList<>();
+        this.antecedenti = new Antecedenti();
         this.conseguenti = new ArrayList<>();
         attiva = true;
     }
@@ -100,60 +99,6 @@ public class Regola implements Serializable {
                 "if " + antecedente + " then " + conseguenti + "\n";
     }
 
-
-    /**
-     * Getter
-     *
-     * @return antecedente
-     */
-    public List<CostituenteLogico> getAntecedente() {
-        return antecedente;
-    }
-
-    /**
-     * Setter
-     *
-     * @param antecedente scelto
-     */
-    public void setAntecedente(List<CostituenteLogico> antecedente) {
-        this.antecedente = antecedente;
-    }
-
-    /**
-     * Getter
-     *
-     * @return conseguente
-     */
-    public List<Azione> getConseguenti() {
-        return conseguenti;
-    }
-
-    /**
-     * Setter
-     *
-     * @param conseguenti scelto
-     */
-    public void setConseguenti(List<Azione> conseguenti) {
-        this.conseguenti = conseguenti;
-    }
-
-    /**
-     * Getter
-     *
-     * @return operatoriBooleani
-     */
-    public List<OperatoriBooleani> getOpBooleani() {
-        return opBooleani;
-    }
-
-    /**
-     * Setter
-     *
-     * @param opBooleani da modificare
-     */
-    public void setOpBooleani(List<OperatoriBooleani> opBooleani) {
-        this.opBooleani = opBooleani;
-    }
 
     /**
      * Getter

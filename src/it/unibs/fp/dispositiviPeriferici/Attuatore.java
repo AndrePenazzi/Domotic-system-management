@@ -4,7 +4,6 @@ import it.unibs.fp.categoria.CategoriaAttuatori;
 import it.unibs.fp.modalitaOperativa.ModOperativa;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Attuatore implements Serializable {
     private String nome;

@@ -11,7 +11,6 @@ import it.unibs.fp.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.utenti.Manutentore;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioAssociazioni {
