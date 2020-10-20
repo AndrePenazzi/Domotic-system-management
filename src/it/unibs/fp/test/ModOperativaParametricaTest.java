@@ -15,13 +15,6 @@ public class ModOperativaParametricaTest {
     private static ModOperativaParamentrica nuovaModOperativaParamentrica;
 
     @Test
-    public void inizializzazioneTest(){
-        ModOperativaParamentrica modOperativaParamentrica = new ModOperativaParamentrica();
-        assertEquals("",modOperativaParamentrica.getNome());
-        assert modOperativaParamentrica.getParamentri().size()==0;
-    }
-
-    @Test
     public void assegnazioneTest(){
         nuovaModOperativaParamentrica = new ModOperativaParamentrica(NOME_MODALITA_OPERATIVA_PARAMETRICA,PARAMETRI);
         assertEquals(NOME_MODALITA_OPERATIVA_PARAMETRICA,nuovaModOperativaParamentrica.getNome());

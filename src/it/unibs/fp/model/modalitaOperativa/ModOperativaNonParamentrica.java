@@ -13,24 +13,19 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      * @param nome della modalità operativa
      */
     public ModOperativaNonParamentrica(String nome) {
-        super(nome,1);
+        super(nome);
         valore = 0;
     }
 
     /**
      * Costruttore
      *
-     * @param nome della modalità operativa
+     * @param nome   della modalità operativa
      * @param valore richiesto
      */
     public ModOperativaNonParamentrica(String nome, double valore) {
-        super(nome,1);
+        super(nome);
         this.valore = valore;
-    }
-
-    public ModOperativaNonParamentrica() {
-        super("",1);
-        this.valore=0;
     }
 
     /**
@@ -60,8 +55,12 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
     public String toString() {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");
-        tmp.append(getNome()+"\n");
-        tmp.append("Valore: "+df2.format(valore));
+        tmp.append(getNome() + "\n");
+        tmp.append("Valore: " + df2.format(valore));
         return tmp.toString();
+    }
+
+    public int getType() {
+        return 1;
     }
 }

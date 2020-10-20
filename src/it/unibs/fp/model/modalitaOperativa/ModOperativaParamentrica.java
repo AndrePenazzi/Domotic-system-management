@@ -14,13 +14,8 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      * @param paramentri scelti
      */
     public ModOperativaParamentrica(String nome, List<String> paramentri) {
-        super(nome,2);
+        super(nome);
         this.paramentri = paramentri;
-    }
-
-    public ModOperativaParamentrica() {
-        super("",2);
-        this.paramentri = new ArrayList<>();
     }
 
     /**
@@ -77,5 +72,8 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
             tmp.append("\nNon ci sono ancora parametri associati");
         tmp.append("\nParametro attuale: ").append(parametroAttuale);
         return tmp.toString();
+    }
+    public int getType(){
+        return 2;
     }
 }
