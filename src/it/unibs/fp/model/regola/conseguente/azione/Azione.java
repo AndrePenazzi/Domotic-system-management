@@ -1,7 +1,8 @@
-package it.unibs.fp.model.regola;
+package it.unibs.fp.model.regola.conseguente.azione;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
+import it.unibs.fp.model.regola.Orologio;
 
 import java.io.Serializable;
 

@@ -1,12 +1,13 @@
-package it.unibs.fp.view.classiDiServizio.regola;
+package it.unibs.fp.view.classiDiServizio.regola.conseguente.azione;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
-import it.unibs.fp.model.regola.Azione;
+import it.unibs.fp.model.regola.conseguente.azione.Azione;
 import it.unibs.fp.model.regola.Orologio;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
 import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
+import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioOrologio;
 import it.unibs.fp.view.mylib.MyMenu;
 
 
