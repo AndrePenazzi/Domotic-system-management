@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioInfoRilevabile {
-    /**
-     * Menu di scelta utente (manutentore o fruitore)
-     */
+
     public static InfoRilevabile menuCreaInfoRilevabile() {
         InfoRilevabile infoRilevabile = null;
 

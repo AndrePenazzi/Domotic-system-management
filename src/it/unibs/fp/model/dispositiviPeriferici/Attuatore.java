@@ -2,6 +2,7 @@ package it.unibs.fp.model.dispositiviPeriferici;
 
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
+import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 
 import java.io.Serializable;
 
@@ -19,13 +20,7 @@ public class Attuatore implements Serializable {
     public Attuatore(String nome, CategoriaAttuatori categoriaAttuatori) {
         this.nome = nome;
         this.categoriaAttuatori = categoriaAttuatori;
-        this.modOperativa = new ModOperativa("Idle");
-    }
-
-    public Attuatore() {
-        this.nome="";
-        this.categoriaAttuatori=null;
-        this.modOperativa = new ModOperativa("Idle");
+        this.modOperativa = new ModOperativaNonParamentrica("Idle");
     }
 
 

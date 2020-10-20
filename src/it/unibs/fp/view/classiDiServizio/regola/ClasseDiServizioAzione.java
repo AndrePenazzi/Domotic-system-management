@@ -1,22 +1,17 @@
 package it.unibs.fp.view.classiDiServizio.regola;
 
+import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
-import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Azione;
 import it.unibs.fp.model.regola.Orologio;
-import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
-import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogicoFactory;
-import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
-import it.unibs.fp.view.classiDiServizio.operatori.ClasseDiServizioOperatoriRelazionali;
-import it.unibs.fp.view.mylib.InputDati;
+import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
+import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
 import it.unibs.fp.view.mylib.MyMenu;
 
-import java.util.InputMismatchException;
 
 public class ClasseDiServizioAzione {
-    public static Azione menuCreaAzione() {
+    public static Azione menuCreaAzione(ListaCategorie listaCategorie) {
         Azione azione = null;
         boolean finito = false;
         String[] azione_menu = {"Azione base", "Con orologio"};
@@ -32,12 +27,12 @@ public class ClasseDiServizioAzione {
                 break;
 
                 case 1: {
-                    azione = creaAzioneBase();
+                    azione = creaAzioneBase(listaCategorie);
                 }
                 break;
 
                 case 2: {
-                    azione = creaAzioneOrologio();
+                    azione = creaAzioneOrologio(listaCategorie);
                 }
                 break;
             }
@@ -46,46 +41,23 @@ public class ClasseDiServizioAzione {
         return azione;
     }
 
-    private static Azione creaAzioneOrologio() {
+    private static Azione creaAzioneOrologio(ListaCategorie listaCategorie) {
         Attuatore attuatore;
         ModOperativa modOperativa;
         Orologio start;
-
+        attuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
+        modOperativa = ClasseDiServizioModOperativa.menuCreaModOperativa();
         start = ClasseDiServizioOrologio.creaOrologio();
 
         return new Azione(attuatore, modOperativa, start);
     }
 
-    public static CostituenteLogico creaAzioneBase() {
-        InfoRilevabile primoOpLogico = null;
-        InfoRilevabile secondoOpLogico = null;
-        OperatoriRelazionali opRelazionale = null;
-        boolean finito;
-        do {
-            try {
-                primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
-                opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-                secondoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
-                if (primoOpLogico != null && secondoOpLogico != null && primoOpLogico.getType() != secondoOpLogico.getType())
-                    throw new InputMismatchException();
-                finito = true;
-            } catch (InputMismatchException e) {
-                System.out.println("Reinserisci, c'è un errore nel tipo delle informazioni rilevabili");
-                finito = false;
-            }
-        } while (!finito);
+    public static Azione creaAzioneBase(ListaCategorie listaCategorie) {
+        Attuatore attuatore;
+        ModOperativa modOperativa;
+        attuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
+        modOperativa = ClasseDiServizioModOperativa.menuCreaModOperativa();
 
-        return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
-    }
-
-    public static CostituenteLogico creaCostituenteLogicoParametrico() {
-        InfoRilevabile primoOpLogico;
-        String secondoOpLogico;
-        OperatoriRelazionali opRelazionale;
-        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
-        opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-        secondoOpLogico = InputDati.leggiStringaNonVuota("Inserisci un valore parametrico");
-
-        return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
+        return new Azione(attuatore, modOperativa);
     }
 }
