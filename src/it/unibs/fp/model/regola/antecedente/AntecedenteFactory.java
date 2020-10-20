@@ -10,7 +10,7 @@ public class AntecedenteFactory implements Serializable {
             return new AntecedenteSingolo(costituenteLogico);
 
     }
-    public static Antecedente creaAntecedente(CostituenteLogico costituenteLogico , OperatoriBooleani opBooleano){
+    public static Antecedente creaAntecedente(OperatoriBooleani opBooleano, CostituenteLogico costituenteLogico){
             return new EnnesimoAntecedente(opBooleano,costituenteLogico);
 
     }

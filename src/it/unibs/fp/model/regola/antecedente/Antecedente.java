@@ -9,8 +9,6 @@ public abstract class Antecedente implements Serializable {
     private CostituenteLogico costituenteLogico;
     private OperatoriBooleani opBooleano;
 
-
-
     public CostituenteLogico getCostituenteLogico() {
         return costituenteLogico;
     }
