@@ -32,7 +32,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/operatori/ClasseDiServizioOperatoriBooleani.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/operatori/ClasseDiServizioOperatoriRelazionali.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioOrologio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriBooleani.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriBooleani.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriRelazionali.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/operatori/OperatoriRelazionali.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,15 +120,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -244,7 +248,8 @@
       <workItem from="1602616970689" duration="708000" />
       <workItem from="1602704160773" duration="4997000" />
       <workItem from="1602832922613" duration="7515000" />
-      <workItem from="1603092293050" duration="10758000" />
+      <workItem from="1603092293050" duration="11274000" />
+      <workItem from="1603179214251" duration="2906000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -421,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603102056785</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile">
+      <created>1603103090369</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1603103090369</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +469,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile." />
     <MESSAGE value="Salvataggio in Contenitore e utilizzo metodi di Manutentore" />
     <MESSAGE value="Sensore e Attuatore hanno ora le relative categorie" />
     <MESSAGE value="fix e javadoc" />
@@ -482,7 +493,8 @@
     <MESSAGE value="Refactoring MV&#10;&#10;-Modify package structure&#10;-Add new packages for model and view" />
     <MESSAGE value="Creation of ClasseDiServizioCostituenteLogico" />
     <MESSAGE value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
-    <option name="LAST_COMMIT_MESSAGE" value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
+    <MESSAGE value="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile" />
+    <option name="LAST_COMMIT_MESSAGE" value="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -510,11 +522,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
-    <state x="723" y="0" key="CommitChangelistDialog2" timestamp="1603102056010">
+    <state x="723" y="0" key="CommitChangelistDialog2" timestamp="1603103089557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="723" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603102056010" />
+    <state x="723" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603103089557" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -551,10 +563,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602708515178">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603103103258">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603103103258" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
