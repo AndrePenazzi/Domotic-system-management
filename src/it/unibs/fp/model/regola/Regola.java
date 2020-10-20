@@ -29,29 +29,6 @@ public class Regola implements Serializable {
         this.conseguenti.setConseguenti(conseguenti.getConseguenti());
     }
 
-    /**
-     * Inserisci una nuova azione
-     *
-     * @param attuatore    nel quale inserire un'azione
-     * @param modOperativa scelta
-     */
-    public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa) {
-        Azione azione = new Azione(attuatore, modOperativa);
-        conseguenti.add(azione);
-    }
-
-    /**
-     * Inserisci una nuova azione con start
-     *
-     * @param attuatore    nel quale inserire un'azione
-     * @param modOperativa scelta
-     * @param start        con ora di assegnamento
-     */
-    public void inserisciAzione(Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
-        Azione azione = new Azione(attuatore, modOperativa, start);
-        conseguenti.add(azione);
-    }
-
     public void inserisciAntecedenti(Antecedenti antecedenti) {
         this.antecedenti.setAntecendenti(antecedenti.getAntecendenti());
     }
@@ -67,9 +44,9 @@ public class Regola implements Serializable {
             regola.append(" " + antecedenti.getAntecendenti().get(i).toString());
         }
 
-        for (int i = 0; i < conseguenti.size(); i++) {
-            regola.append(" " + conseguenti.get(i).toString());
-            if (i < conseguenti.size() - 1)
+        for (int i = 0; i < conseguenti.getConseguenti().size(); i++) {
+            regola.append(" " + conseguenti.getConseguenti().get(i).toString());
+            if (i < conseguenti.getConseguenti().size() - 1)
                 regola.append(",");
         }
 
@@ -92,9 +69,9 @@ public class Regola implements Serializable {
             regola.append(" " + antecedenti.getAntecendenti().get(i).toString());
         }
 
-        for (int i = 0; i < conseguenti.size(); i++) {
-            regola.append(" " + conseguenti.get(i).toString());
-            if (i < conseguenti.size() - 1)
+        for (int i = 0; i < conseguenti.getConseguenti().size(); i++) {
+            regola.append(" " + conseguenti.getConseguenti().get(i).toString());
+            if (i < conseguenti.getConseguenti().size() - 1)
                 regola.append(",");
         }
 
