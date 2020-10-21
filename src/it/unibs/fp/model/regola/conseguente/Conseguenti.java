@@ -1,8 +1,5 @@
 package it.unibs.fp.model.regola.conseguente;
 
-
-import it.unibs.fp.model.regola.antecedente.Antecedente;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,7 +1,9 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,8 +12,9 @@ import java.util.List;
 
 public class Artefatto implements Serializable {
     private String nome;
-    private List<Sensore> sensori;
-    private List<Attuatore> attuatori;
+    private Sensori sensori;
+    private Attuatori attuatori;
+
 
     /**
      * Costruttore dell'artefatto.
@@ -19,15 +22,15 @@ public class Artefatto implements Serializable {
      * @param nome dell'artefatto
      */
     public Artefatto(String nome) {
-        sensori = new ArrayList<>();
-        attuatori = new ArrayList<>();
+        sensori = new Sensori();
+        attuatori = new Attuatori();
         this.nome = nome;
     }
 
     public Artefatto() {
-        this.nome="";
-        sensori = new ArrayList<>();
-        attuatori = new ArrayList<>();
+        sensori = new Sensori();
+        attuatori = new Attuatori();
+        this.nome = "";
     }
 
     /**
@@ -36,7 +39,7 @@ public class Artefatto implements Serializable {
      * @param sensore inserito.
      */
     public void inserisciSensore(Sensore sensore) {
-        sensori.add(sensore);
+        sensori.inserisciSensore(sensore);
     }
 
     /**
@@ -45,7 +48,7 @@ public class Artefatto implements Serializable {
      * @param attuatore inserito.
      */
     public void inserisciAttuatore(Attuatore attuatore) {
-        attuatori.add(attuatore);
+        attuatori.inserisciAttuatore(attuatore);
     }
 
     /**
@@ -56,7 +59,7 @@ public class Artefatto implements Serializable {
     public String visualizzaAttuatori() {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Gli attuatori sono:\n");
-        for (Attuatore a : attuatori) {
+        for (Attuatore a : attuatori.getAttuatori()) {
             tmp.append(a.getNome()).append("\n");
         }
         return tmp.toString();
@@ -70,7 +73,7 @@ public class Artefatto implements Serializable {
     public String visualizzaSensori() {
         StringBuilder tmp = new StringBuilder();
         tmp.append("Gli sensori sono:\n");
-        for (Sensore s : sensori) {
+        for (Sensore s : sensori.getSensori()) {
             tmp.append(s.toString()).append("\n");
         }
         return tmp.toString();
@@ -85,20 +88,20 @@ public class Artefatto implements Serializable {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n" + nome);
 
-        if (!sensori.isEmpty()) {
+        if (!sensori.getSensori().isEmpty()) {
             int i = 1;
             tmp.append("\nSensori:\n");
-            for (Sensore s : sensori) {
+            for (Sensore s : sensori.getSensori()) {
                 tmp.append(i + " " + s.toString()).append("\n");
                 i++;
             }
         } else
             tmp.append("\nNon ci sono ancora sensori associati");
 
-        if (!attuatori.isEmpty()) {
+        if (!attuatori.getAttuatori().isEmpty()) {
             int i = 1;
             tmp.append("\nAttuatori:\n");
-            for (Attuatore a : attuatori) {
+            for (Attuatore a : attuatori.getAttuatori()) {
                 tmp.append(i + " " + a.toString()).append("\n");
                 i++;
             }
@@ -113,7 +116,7 @@ public class Artefatto implements Serializable {
      * @return List di sensori.
      */
     public List<Sensore> getSensori() {
-        return sensori;
+        return sensori.getSensori();
     }
 
     /**
@@ -122,7 +125,7 @@ public class Artefatto implements Serializable {
      * @return List di attuatori.
      */
     public List<Attuatore> getAttuatori() {
-        return attuatori;
+        return attuatori.getAttuatori();
     }
 
     /**

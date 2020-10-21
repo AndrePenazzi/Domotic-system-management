@@ -3,11 +3,6 @@ package it.unibs.fp.model.utenti;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.model.modalitaOperativa.ModOperativa;
-import it.unibs.fp.model.operatori.OperatoriBooleani;
-import it.unibs.fp.model.operatori.OperatoriRelazionali;
-import it.unibs.fp.model.regola.Orologio;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
@@ -28,146 +23,13 @@ public class Fruitore implements Serializable {
         unitaImmobiliari = new ArrayList<>();
     }
 
-    /**
-     * Inserisci la regola per la prima volta
-     *
-     * @param unitaImmobiliareIndex indice dell'unità immobiliare scelta
-     * @param attuatore        per settare la sua modalità operativa
-     * @param modOperativa     scelta
-     */
-    public void inserisciRegola(int unitaImmobiliareIndex, Attuatore attuatore, ModOperativa modOperativa) {
-        unitaImmobiliari.get(unitaImmobiliareIndex).inserisciRegola(attuatore, modOperativa);
-    }
-
-    /**
-     * Inserisci la regola per la prima volta con strat
-     *
-     * @param unitaImmobiliare scelta
-     * @param attuatore        per settare la sua modalità operativa
-     * @param modOperativa     scelta
-     * @param start            ora di assegnameto
-     */
-    public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Attuatore attuatore, ModOperativa modOperativa, Orologio start) {
-        unitaImmobiliare.inserisciRegola(attuatore, modOperativa, start);
-    }
-
-    /**
-     * Inserisci la regola per la prima volta
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param attuatore        per settare la sua modalità operativa
-     * @param modOperativa     scelta
-     */
-    public void aggiungiAzione(UnitaImmobiliare unitaImmobiliare, Regola regola, Attuatore attuatore, ModOperativa modOperativa) {
-        unitaImmobiliare.aggiungiAzione(regola, attuatore, modOperativa);
+    public void inserisciRegola(int unitaImmobiliareIndex, Regola regola) {
+        unitaImmobiliari.get(unitaImmobiliareIndex).inserisciRegola(regola);
     }
 
 
-    /**
-     * Inserisci il primo costituente logico
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    primo operatore da confrontare
-     * @param secondoOpLogico  info rilevabile
-     * @param opRelazionale    operatore relazionale per il confronto
-     */
-    public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
-    }
-
-    /**
-     * Aggiungi primo costituente logico a regola
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    scelto
-     * @param secondoOpLogico  double
-     * @param opRelazionale    per il confronto
-     */
-    public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
-    }
-
-    /**
-     * Aggiungi primo costituente logico a regola
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    scelto
-     * @param secondoOpLogico  String
-     * @param opRelazionale    per il confronto
-     */
-    public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale) {
-        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale);
-    }
-
-    /**
-     * Aggiungi primo costituente logico a regola con orologio
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param opRelazionale    per il confronto
-     * @param orologio         da confrontare
-     */
-    public void aggiungiPrimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, OperatoriRelazionali opRelazionale, Orologio orologio) {
-        unitaImmobiliare.aggiungiPrimoCosituenteLogicoARegola(regola, orologio, opRelazionale);
-    }
-
-    /**
-     * Inserisci l'ennesimo costituente logico
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    primo operatore da confrontare
-     * @param secondoOpLogico  info rilevabile
-     * @param opRelazionale    per il confronto
-     * @param opBooleano       per confrontare i costituenti logici
-     */
-    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, InfoRilevabile secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
-        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
-    }
-
-    /**
-     * Inserisci l'ennesimo costituente logico con orologio
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param opRelazionale    per il confronto
-     * @param opBooleano       per confrontare i costituenti logici
-     * @param orologio         da confrontare
-     */
-    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano, Orologio orologio) {
-        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, opRelazionale, opBooleano, orologio);
-    }
-
-    /**
-     * Aggiungi ennesimo costituente logico a regola
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    scelto
-     * @param secondoOpLogico  double
-     * @param opRelazionale    per il confronto
-     * @param opBooleano       per il confronto tra costituenti
-     */
-    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, double secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
-        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
-    }
-
-    /**
-     * Aggiungi ennesimo costituente logico a regola
-     *
-     * @param unitaImmobiliare scelta
-     * @param regola           scelta
-     * @param primoOpLogico    scelto
-     * @param secondoOpLogico  String
-     * @param opRelazionale    per il confronto
-     * @param opBooleano       per il confronto tra costituenti
-     */
-    public void aggiungiEnnesimoCosituenteLogicoARegola(UnitaImmobiliare unitaImmobiliare, Regola regola, InfoRilevabile primoOpLogico, String secondoOpLogico, OperatoriRelazionali opRelazionale, OperatoriBooleani opBooleano) {
-        unitaImmobiliare.aggiungiEnnesimoCosituenteLogicoARegola(regola, primoOpLogico, secondoOpLogico, opRelazionale, opBooleano);
+    public void inserisciRegola(UnitaImmobiliare unitaImmobiliare, Regola regola) {
+        unitaImmobiliare.inserisciRegola(regola);
     }
 
     /**

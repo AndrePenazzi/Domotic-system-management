@@ -11,7 +11,7 @@ public class ClasseDiServizioRegola {
 
     public static Regola creaRegola(ListaCategorie listaCategorie){
         Regola regola= new Regola();
-        Antecedenti antecedenti= ClasseDiServizioAntecedenti.creaAntecedenti();
+        Antecedenti antecedenti= ClasseDiServizioAntecedenti.creaAntecedenti(listaCategorie);
         regola.inserisciAntecedenti(antecedenti);
 
         Conseguenti conseguenti= ClasseDiServizioConseguenti.creaConseguenti(listaCategorie);

@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente.costituenteLogico;
 
+import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Orologio;
@@ -15,7 +16,7 @@ import java.io.Serializable;
 import java.util.InputMismatchException;
 
 public class ClasseDiServizioCostituenteLogico implements Serializable {
-    public static CostituenteLogico menuCreaCostituenteLogico() {
+    public static CostituenteLogico menuCreaCostituenteLogico(ListaCategorie listaCategorie) {
         CostituenteLogico costituenteLogico = null;
         boolean finito = false;
         String[] azione = {"Con info rilevabile", "Con orologio", "Con valore parametrico", "Con valore numerico"};
@@ -31,22 +32,22 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
                 break;
 
                 case 1: {
-                    costituenteLogico = creaCostituenteLogicoInfoRilevabile();
+                    costituenteLogico = creaCostituenteLogicoInfoRilevabile(listaCategorie);
                 }
                 break;
 
                 case 2: {
-                    costituenteLogico = creaCostituenteLogicoOrologio();
+                    costituenteLogico = creaCostituenteLogicoOrologio(listaCategorie);
                 }
                 break;
 
                 case 3: {
-                    costituenteLogico = creaCostituenteLogicoParametrico();
+                    costituenteLogico = creaCostituenteLogicoParametrico(listaCategorie);
                 }
                 break;
 
                 case 4: {
-                    costituenteLogico = creaCostituenteLogicoNumerico();
+                    costituenteLogico = creaCostituenteLogicoNumerico(listaCategorie);
                 }
                 break;
             }
@@ -55,18 +56,18 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return costituenteLogico;
     }
 
-    private static CostituenteLogico creaCostituenteLogicoNumerico() {
+    private static CostituenteLogico creaCostituenteLogicoNumerico(ListaCategorie listaCategorie) {
         InfoRilevabile primoOpLogico;
         double secondoOpLogico;
         OperatoriRelazionali opRelazionale;
-        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
+        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
         secondoOpLogico = InputDati.leggiDouble("Inserisci un valore numerico");
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
-    private static CostituenteLogico creaCostituenteLogicoOrologio() {
+    private static CostituenteLogico creaCostituenteLogicoOrologio(ListaCategorie listaCategorie) {
         Orologio secondoOpLogico;
         OperatoriRelazionali opRelazionale;
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
@@ -75,16 +76,16 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(secondoOpLogico, opRelazionale);
     }
 
-    public static CostituenteLogico creaCostituenteLogicoInfoRilevabile() {
+    public static CostituenteLogico creaCostituenteLogicoInfoRilevabile(ListaCategorie listaCategorie) {
         InfoRilevabile primoOpLogico = null;
         InfoRilevabile secondoOpLogico = null;
         OperatoriRelazionali opRelazionale = null;
         boolean finito;
         do {
             try {
-                primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
+                primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
                 opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-                secondoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
+                secondoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
                 if (primoOpLogico != null && secondoOpLogico != null && primoOpLogico.getType() != secondoOpLogico.getType())
                     throw new InputMismatchException();
                 finito = true;
@@ -97,11 +98,11 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
-    public static CostituenteLogico creaCostituenteLogicoParametrico() {
+    public static CostituenteLogico creaCostituenteLogicoParametrico(ListaCategorie listaCategorie) {
         InfoRilevabile primoOpLogico;
         String secondoOpLogico;
         OperatoriRelazionali opRelazionale;
-        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
+        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
         secondoOpLogico = InputDati.leggiStringaNonVuota("Inserisci un valore parametrico");
 

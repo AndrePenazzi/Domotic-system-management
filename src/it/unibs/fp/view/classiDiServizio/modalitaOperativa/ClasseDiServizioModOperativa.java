@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.modalitaOperativa;
 
+import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
@@ -11,7 +12,7 @@ import java.util.List;
 
 public class ClasseDiServizioModOperativa {
 
-    public static ModOperativa menuCreaModOperativa() {
+    public static ModOperativa menuCreaModOperativa(ListaCategorie listaCategorie) {
         ModOperativa modOperativa = null;
 
         String[] azione = {"Parametrica", "Non parametrica"};
@@ -23,13 +24,13 @@ public class ClasseDiServizioModOperativa {
             }
             break;
             case 1: {
-                modOperativa = creaModOperativaParametrica();
+                modOperativa = creaModOperativaParametrica(listaCategorie);
                 System.out.println("USCITA MENU Mod Operativa");
             }
             break;
 
             case 2: {
-                modOperativa = creaModOperativaNonParametrica();
+                modOperativa = creaModOperativaNonParametrica(listaCategorie);
                 System.out.println("USCITA MENU Mod Operativa");
             }
             break;
@@ -37,10 +38,10 @@ public class ClasseDiServizioModOperativa {
         return modOperativa;
     }
 
-    public static ModOperativa creaModOperativaNonParametrica() {
+    public static ModOperativa creaModOperativaNonParametrica(ListaCategorie listaCategorie) {
         String nome;
         double valore;
-        nome = InputDati.leggiStringaNonVuota("Inserisci nome Mod Operativa Non Parametrica: ");
+        nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome Mod Operativa Non Parametrica: ");
         if (InputDati.yesOrNo("Vuoi inserire il valore?")) {
             valore = InputDati.leggiDouble("Inserisci valore Mod Operativa Non Parametrica: ");
             return new ModOperativaNonParamentrica(nome, valore);
@@ -48,13 +49,13 @@ public class ClasseDiServizioModOperativa {
         return new ModOperativaNonParamentrica(nome);
     }
 
-    public static ModOperativa creaModOperativaParametrica() {
+    public static ModOperativa creaModOperativaParametrica(ListaCategorie listaCategorie) {
         String nome;
         List<String> valori = new ArrayList<>();
-        nome = InputDati.leggiStringaNonVuota("Inserisci nome Mod Operativa Parametrica: ");
+        nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome Mod Operativa Parametrica: ");
         do {
             valori.add(InputDati.leggiStringaNonVuota("Inserisci valore Mod Operativa Parametrica: "));
-        } while (InputDati.yesOrNo("Vuoi inserire un'altro valore?"));
+        } while (InputDati.yesOrNo("Vuoi inserire un'altro parametro nella modalità operativa?"));
         return new ModOperativaParamentrica(nome, valori);
     }
 

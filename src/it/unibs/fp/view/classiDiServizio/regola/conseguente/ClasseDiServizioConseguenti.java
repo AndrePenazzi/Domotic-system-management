@@ -10,7 +10,7 @@ public class ClasseDiServizioConseguenti {
 
         do {
             conseguenti.inserisciConseguente(ClasseDiServizioConseguente.creaConseguente(listaCategorie));
-        } while (InputDati.yesOrNo("vuoi continuare ad inserire un nuovo conseguente?"));
+        } while (InputDati.yesOrNo("Vuoi continuare ad inserire un nuovo conseguente?"));
 
         return conseguenti;
     }

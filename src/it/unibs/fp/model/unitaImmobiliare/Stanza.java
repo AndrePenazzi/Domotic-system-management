@@ -1,7 +1,9 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,8 +13,8 @@ import java.util.List;
 public class Stanza implements Serializable {
     private String nome;
     private List<Artefatto> artefatti;
-    private List<Sensore> sensori;
-    private List<Attuatore> attuatori;
+    private Sensori sensori;
+    private Attuatori attuatori;
 
     /**
      * Costruttore della stanza.
@@ -20,14 +22,14 @@ public class Stanza implements Serializable {
      * @param nome della stanza.
      */
     public Stanza(String nome) {
-        sensori = new ArrayList<>();
-        attuatori = new ArrayList<>();
+        sensori = new Sensori();
+        attuatori = new Attuatori();
         artefatti = new ArrayList<>();
         this.nome = nome;
     }
     public Stanza(){
-        sensori = new ArrayList<>();
-        attuatori = new ArrayList<>();
+        sensori = new Sensori();
+        attuatori = new Attuatori();
         artefatti = new ArrayList<>();
         this.nome = "";
 
@@ -49,7 +51,7 @@ public class Stanza implements Serializable {
      * @param sensore inserito.
      */
     public void inserisciSensore(Sensore sensore) {
-        sensori.add(sensore);
+        sensori.getSensori().add(sensore);
     }
 
     /**
@@ -58,7 +60,7 @@ public class Stanza implements Serializable {
      * @param attuatore inserito.
      */
     public void inserisciAttuatore(Attuatore attuatore) {
-        attuatori.add(attuatore);
+        attuatori.getAttuatori().add(attuatore);
     }
 
 
@@ -95,10 +97,10 @@ public class Stanza implements Serializable {
         } else
             tmp.append("\nNon ci sono ancora artefatti nella stanza");
 
-        if (!sensori.isEmpty()) {
+        if (!sensori.getSensori().isEmpty()) {
             int i = 1;
             tmp.append("\nSensori:\n");
-            for (Sensore s : sensori) {
+            for (Sensore s : sensori.getSensori()) {
                 tmp.append(i + " " + s.toString()).append("\n");
                 i++;
             }
@@ -124,7 +126,7 @@ public class Stanza implements Serializable {
      * @return sensori
      */
     public List<Sensore> getSensori() {
-        return sensori;
+        return sensori.getSensori();
     }
 
     /**
@@ -133,7 +135,7 @@ public class Stanza implements Serializable {
      * @return attutatori
      */
     public List<Attuatore> getAttuatori() {
-        return attuatori;
+        return attuatori.getAttuatori();
     }
 
     /**

@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.infoRilevabile;
 
+import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
@@ -12,10 +13,9 @@ import java.util.List;
 
 public class ClasseDiServizioInfoRilevabile {
 
-    public static InfoRilevabile menuCreaInfoRilevabile() {
+    public static InfoRilevabile menuCreaInfoRilevabile(ListaCategorie listaCategorie) {
         InfoRilevabile infoRilevabile = null;
 
-        boolean finito = false;
         String[] azione = {"Numerica", "Non numerica"};
         MyMenu menu = new MyMenu("Menu creazione Info Rilevabile", azione);
 
@@ -25,13 +25,13 @@ public class ClasseDiServizioInfoRilevabile {
             }
             break;
             case 1: {
-                infoRilevabile = creaInfoRilevabileNumerica();
+                infoRilevabile = creaInfoRilevabileNumerica(listaCategorie);
                 System.out.println("USCITA MENU Info Rilevabile");
             }
             break;
 
             case 2: {
-                infoRilevabile = creaInfoRilevabileNonNumerica();
+                infoRilevabile = creaInfoRilevabileNonNumerica(listaCategorie);
                 System.out.println("USCITA MENU Info Rilevabile");
             }
             break;
@@ -40,24 +40,45 @@ public class ClasseDiServizioInfoRilevabile {
     }
 
     //TODO FORSE MANCA IL TRY CATCH PER MIN MAX
-    public static InfoRilevabile creaInfoRilevabileNumerica() {
-        String nome;
-        double min;
-        double max;
-        nome = InputDati.leggiStringaNonVuota("Inserisci nome Informazione Rilevabile Numerica: ");
-        min = InputDati.leggiDouble("Inserisci minimo Informazione Rilevabile Numerica: ");
-        max = InputDati.leggiDouble("Inserisci massimo Informazione Rilevabile Numerica: ");
-        return new InfoRilevabileNumerica(nome, min, max);
+    public static InfoRilevabile creaInfoRilevabileNumerica(ListaCategorie listaCategorie) {
+        InfoRilevabile informazioneRilevabile = null;
+        boolean infoRilevabileOK = false;
+        String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
+        do {
+            try {
+                double min = InputDati.leggiDouble("Inserisci il valore minimo rilevabile: ");
+                double max = InputDati.leggiDouble("Inserisci il valore massimo rilevabile: ");
+
+                informazioneRilevabile = new InfoRilevabileNumerica(nomeInfo, min, max);
+                infoRilevabileOK = true;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (!infoRilevabileOK);
+
+        return informazioneRilevabile;
     }
 
-    public static InfoRilevabile creaInfoRilevabileNonNumerica() {
-        String nome;
-        List<String> valori = new ArrayList<>();
-        nome = InputDati.leggiStringaNonVuota("Inserisci nome Informazione Rilevabile Numerica: ");
+    public static InfoRilevabile creaInfoRilevabileNonNumerica(ListaCategorie listaCategorie) {
+        InfoRilevabile informazioneRilevabile = null;
+        boolean infoRilevabileOK = false;
+        String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
         do {
-            valori.add(InputDati.leggiStringaNonVuota("Inserisci valore Informazione Rilevabile Non Numerica: "));
-        } while (InputDati.yesOrNo("Vuoi inserire un'altro valore?"));
-        return new InfoRilevabileNonNumerica(nome, valori);
+            try {
+                List<String> valoriNonNumerici = new ArrayList<>();
+                do {
+                    valoriNonNumerici.add(InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci un valore rilevabile non numerico:"));
+
+                } while (InputDati.yesOrNo("Vuoi inserire un'altro valore non numerico ?"));
+
+                informazioneRilevabile = new InfoRilevabileNonNumerica(nomeInfo, valoriNonNumerici);
+                infoRilevabileOK = true;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        } while (!infoRilevabileOK);
+
+        return informazioneRilevabile;
     }
 
 

@@ -32,15 +32,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguenti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/conseguente/ClasseDiServizioConseguente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/conseguente/ClasseDiServizioConseguenti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Azione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/azione/Azione.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Regola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Regola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioAzione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/conseguente/azione/ClasseDiServizioAzione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatori.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensori.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioAttuatori.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioArtefatto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioStanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioRegola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioRegola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/ClasseDiServizioAntecedente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/ClasseDiServizioAntecedente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/ClasseDiServizioAntecedenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/ClasseDiServizioAntecedenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/conseguente/ClasseDiServizioConseguenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/conseguente/ClasseDiServizioConseguenti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +86,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -121,13 +134,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,7 +265,8 @@
       <workItem from="1602704160773" duration="4997000" />
       <workItem from="1602832922613" duration="7515000" />
       <workItem from="1603092293050" duration="11274000" />
-      <workItem from="1603179214251" duration="8997000" />
+      <workItem from="1603179214251" duration="9381000" />
+      <workItem from="1603265567420" duration="8799000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -469,7 +485,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603186368844</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="-Add packages for Conseguente and complete them">
+      <created>1603188270177</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1603188270177</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Regola --completed&#10;&#10;-Add methods">
+      <created>1603188538591</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1603188538591</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,8 +535,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inserita funzionalità di scelta modalità operativa per il fruitore testata lievemente" />
-    <MESSAGE value="Testing ulteriori" />
     <MESSAGE value="Push finale bee version" />
     <MESSAGE value="Creato CostituenteLogico" />
     <MESSAGE value="Aggiunte nuove funzionalità per aggiungere una Regola" />
@@ -530,7 +558,9 @@
     <MESSAGE value="ClasseDiServizioAntecedenti --completed&#10;&#10;-Add methods" />
     <MESSAGE value="Respected OCP principle in ModOperativa" />
     <MESSAGE value="ClasseDiServizioAzione --completed&#10;&#10;-Add methods&#10;&#10;ClasseDiServizioAttuatore --completed&#10;&#10;-Add methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="ClasseDiServizioAzione --completed&#10;&#10;-Add methods&#10;&#10;ClasseDiServizioAttuatore --completed&#10;&#10;-Add methods" />
+    <MESSAGE value="-Add packages for Conseguente and complete them" />
+    <MESSAGE value="Regola --completed&#10;&#10;-Add methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Regola --completed&#10;&#10;-Add methods" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
@@ -559,11 +589,11 @@
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603187246920" />
-    <state x="724" y="10" key="CommitChangelistDialog2" timestamp="1603186367965">
+    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1603188537871">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="724" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603186367965" />
+    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603188537871" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -604,11 +634,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603182297206">
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603188545036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603182297206" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603188545036" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
