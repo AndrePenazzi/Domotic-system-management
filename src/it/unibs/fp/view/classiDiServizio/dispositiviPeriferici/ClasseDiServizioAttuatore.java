@@ -24,4 +24,5 @@ public class ClasseDiServizioAttuatore {
         System.out.println("Creare almeno una categoria attuatori");
         return null;
     }
+
 }

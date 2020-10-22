@@ -1,6 +1,5 @@
 package it.unibs.fp.view.classiDiServizio.infoRilevabile;
 
-import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
@@ -13,25 +12,22 @@ import java.util.List;
 
 public class ClasseDiServizioInfoRilevabile {
 
-    public static InfoRilevabile menuCreaInfoRilevabile(ListaCategorie listaCategorie) {
+    public static InfoRilevabile menuCreaInfoRilevabile() {
         InfoRilevabile infoRilevabile = null;
 
         String[] azione = {"Numerica", "Non numerica"};
         MyMenu menu = new MyMenu("Menu creazione Info Rilevabile", azione);
 
-        int scelta = menu.scegli();
+        int scelta = menu.scegliPerMenuSenzaUscita();
         switch (scelta) {
-            case 0: {
-            }
-            break;
             case 1: {
-                infoRilevabile = creaInfoRilevabileNumerica(listaCategorie);
+                infoRilevabile = creaInfoRilevabileNumerica();
                 System.out.println("USCITA MENU Info Rilevabile");
             }
             break;
 
             case 2: {
-                infoRilevabile = creaInfoRilevabileNonNumerica(listaCategorie);
+                infoRilevabile = creaInfoRilevabileNonNumerica();
                 System.out.println("USCITA MENU Info Rilevabile");
             }
             break;
@@ -40,7 +36,7 @@ public class ClasseDiServizioInfoRilevabile {
     }
 
     //TODO FORSE MANCA IL TRY CATCH PER MIN MAX
-    public static InfoRilevabile creaInfoRilevabileNumerica(ListaCategorie listaCategorie) {
+    public static InfoRilevabile creaInfoRilevabileNumerica() {
         InfoRilevabile informazioneRilevabile = null;
         boolean infoRilevabileOK = false;
         String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
@@ -59,7 +55,7 @@ public class ClasseDiServizioInfoRilevabile {
         return informazioneRilevabile;
     }
 
-    public static InfoRilevabile creaInfoRilevabileNonNumerica(ListaCategorie listaCategorie) {
+    public static InfoRilevabile creaInfoRilevabileNonNumerica() {
         InfoRilevabile informazioneRilevabile = null;
         boolean infoRilevabileOK = false;
         String nomeInfo = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome di informazione rilevabile: ");
@@ -80,6 +76,18 @@ public class ClasseDiServizioInfoRilevabile {
 
         return informazioneRilevabile;
     }
+
+    public static String toString(InfoRilevabile infoRilevabile){
+        StringBuilder tmp = new StringBuilder();
+        if(infoRilevabile.getType()==1)
+            tmp.append(ClasseDiServizioInfoRilevabileNumerica.toString((InfoRilevabileNumerica)infoRilevabile));
+        else if(infoRilevabile.getType()==2)
+            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.toString((InfoRilevabileNonNumerica)infoRilevabile));
+
+
+        return tmp.toString();
+    }
+
 
 
 }

@@ -46,18 +46,8 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
         this.valore = valore;
     }
 
-    /**
-     * toString
-     *
-     * @return i dati della modalità operativa
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        tmp.append(getNome() + "\n");
-        tmp.append("Valore: " + df2.format(valore));
-        return tmp.toString();
+    public DecimalFormat getDf2(){
+        return df2;
     }
 
     public int getType() {

@@ -1,32 +1,25 @@
 package it.unibs.fp.view.classiDiServizio;
 
-import it.unibs.fp.model.categoria.CategoriaAttuatori;
-import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
 import it.unibs.fp.model.regola.Regola;
-import it.unibs.fp.model.regola.antecedente.Antecedenti;
-import it.unibs.fp.model.regola.conseguente.Conseguenti;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensore;
 import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
 import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
-import it.unibs.fp.view.classiDiServizio.operatori.ClasseDiServizioOperatoriRelazionali;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegola;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.ServizioFile;
-import it.unibs.fp.model.operatori.OperatoriBooleani;
-import it.unibs.fp.model.operatori.OperatoriRelazionali;
-import it.unibs.fp.model.regola.Orologio;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
@@ -49,26 +42,10 @@ public class ClasseDiServizioInserimenti {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         do {
-            boolean testoLiberoOK = false;
-            List<ModOperativa> modalitaOperative = new ArrayList<>();
-            String nome = InputDati.leggiStringaNonVuotaSenzaSpazi("Inserisci nome categoria attuatori: ");
-            do {
-                try {
-                    String testoLibero = InputDati.leggiStringaNonVuota("Inserisci un testo libero di lunghezza massima " + CategoriaAttuatori.getLunghezzaMassima() + " caratteri: ");
-                    do {
-                        modalitaOperative.add(inserisciModalitaOperativa(listaCategorie));
-                    } while (InputDati.yesOrNo("Vuoi inserire un'altra modalita operativa?"));
-                    manutentore.inserisciESalvaCategoriaAttuatori(listaCategorie, new CategoriaAttuatori(nome, testoLibero, modalitaOperative));
-                    testoLiberoOK = true;
-                } catch (IllegalArgumentException e) {
-                    System.out.println(e.getMessage());
-                }
-            } while (!testoLiberoOK);
+            manutentore.inserisciESalvaCategoriaAttuatori(listaCategorie, ClasseDiServizioCategoriaAttuatori.creaCategoriaAttuatori());
             contenitore.setListaCategorie(listaCategorie);
             contenitore.setManutentore(manutentore);
             ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
-
-
         } while (InputDati.yesOrNo("Vuoi inserire un'altra categoria attuatori?"));
         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
     }
@@ -82,22 +59,7 @@ public class ClasseDiServizioInserimenti {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         do {
-            boolean testoLiberoOK = false;
-            List<InfoRilevabile> informazioniRilevabili = new ArrayList<>();
-            String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria sensori: ");
-            do {
-                try {
-                    String testoLibero = InputDati.leggiStringaNonVuota("Inserisci un testo libero di lunghezza massima " + CategoriaSensori.getLunghezzaMassima() + " caratteri: ");
-                    do {
-                        informazioniRilevabili.add(inserisciInfoRilevabili(listaCategorie));
-                    } while (InputDati.yesOrNo("Vuoi inserire un'altra informazione rilevabile?"));
-                    manutentore.inserisciESalvaCategoriaSensori(listaCategorie, new CategoriaSensori(nome, testoLibero, informazioniRilevabili));
-                    testoLiberoOK = true;
-                } catch (IllegalArgumentException e) {
-                    System.out.println(e.getMessage());
-                }
-            } while (!testoLiberoOK);
-
+            manutentore.inserisciESalvaCategoriaSensori(listaCategorie, ClasseDiServizioCategoriaSensori.creaCategoriaSensori());
             contenitore.setListaCategorie(listaCategorie);
             contenitore.setManutentore(manutentore);
             ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
@@ -142,8 +104,8 @@ public class ClasseDiServizioInserimenti {
      *
      * @return l'informazione rilevabile con scelta se numerica o non
      */
-    private static InfoRilevabile inserisciInfoRilevabili(ListaCategorie listaCategorie) {
-        return ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
+    private static InfoRilevabile inserisciInfoRilevabili() {
+        return ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
     }
 
     /**
@@ -151,8 +113,8 @@ public class ClasseDiServizioInserimenti {
      *
      * @return la modalità operativa
      */
-    public static ModOperativa inserisciModalitaOperativa(ListaCategorie listaCategorie) {
-        return ClasseDiServizioModOperativa.menuCreaModOperativa(listaCategorie);
+    public static ModOperativa inserisciModalitaOperativa() {
+        return ClasseDiServizioModOperativa.menuCreaModOperativa();
     }
 
     public static Fruitore inserisciNuovaRegola(Contenitore contenitore, int unitaImmobiliareIndex, Regola regola) {
@@ -332,7 +294,6 @@ public class ClasseDiServizioInserimenti {
 
                         if (iTMP.getType() == 1) {
                             //numerico
-
                             unitaImm = contenitore.getManutentore().getFruitore().getUnitaImmobiliari().size() - 1;
                             contenitore.getManutentore().getFruitore().getUnitaImmobiliari().get(unitaImm).inserisciRegola(ClasseDiServizioRegola.creaRegola(contenitore.getListaCategorie()));
                         }
@@ -432,12 +393,6 @@ public class ClasseDiServizioInserimenti {
                         manutentore.setFruitore(fruitore);
                         contenitore.setManutentore(manutentore);
                         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
-                    } else {
-                        fruitore.getUnitaImmobiliari().get(unitaImm).inserisciRegola(ClasseDiServizioRegola.creaRegola(contenitore.getListaCategorie()));
-                        Manutentore manutentore = contenitore.getManutentore();
-                        manutentore.setFruitore(fruitore);
-                        contenitore.setManutentore(manutentore);
-                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
                     }
                 }
                 //attuatore di stanza
@@ -459,12 +414,6 @@ public class ClasseDiServizioInserimenti {
                         ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(unitaImm).getStanze().get(stanzaScelta).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(paremetroScelto));
                     }
                     if (InputDati.yesOrNo("Si vuole creare una conseguenza con orario ?")) {
-                        fruitore.getUnitaImmobiliari().get(unitaImm).inserisciRegola(ClasseDiServizioRegola.creaRegola(contenitore.getListaCategorie()));
-                        Manutentore manutentore = contenitore.getManutentore();
-                        manutentore.setFruitore(fruitore);
-                        contenitore.setManutentore(manutentore);
-                        ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
-                    } else {
                         fruitore.getUnitaImmobiliari().get(unitaImm).inserisciRegola(ClasseDiServizioRegola.creaRegola(contenitore.getListaCategorie()));
                         Manutentore manutentore = contenitore.getManutentore();
                         manutentore.setFruitore(fruitore);
@@ -514,9 +463,7 @@ public class ClasseDiServizioInserimenti {
 
     }
 
-
     //-----------------------------FINE SCEGLI-----------------------------------------------------
-
 
     /**
      * Cambia lo stato di una regola scelta dall'utente
@@ -534,7 +481,6 @@ public class ClasseDiServizioInserimenti {
         } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
         return fruitore;
     }
-
     /**
      * Inserisci una nuova unitàImmobiliare
      *
@@ -548,5 +494,4 @@ public class ClasseDiServizioInserimenti {
         contenitore.setManutentore(manutentore);
         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
     }
-
 }

@@ -1,14 +1,9 @@
 package it.unibs.fp.model.regola;
 
-import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.regola.antecedente.Antecedenti;
 import it.unibs.fp.model.regola.conseguente.Conseguenti;
-import it.unibs.fp.model.regola.conseguente.azione.Azione;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Regola implements Serializable {
     private Antecedenti antecedenti;
@@ -75,7 +70,6 @@ public class Regola implements Serializable {
                 regola.append(",");
         }
 
-
         return "Regola:" +
                 "if " + antecedenti.toString() + " then " + conseguenti + "\n";//era antecedente non funzionerà
     }
@@ -97,5 +91,9 @@ public class Regola implements Serializable {
      */
     public void setAttiva(boolean attiva) {
         this.attiva = attiva;
+    }
+
+    public void attivaDisattivaRegola(){
+        this.attiva= !this.attiva;
     }
 }

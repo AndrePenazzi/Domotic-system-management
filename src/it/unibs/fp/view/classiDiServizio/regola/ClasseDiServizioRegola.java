@@ -11,12 +11,14 @@ public class ClasseDiServizioRegola {
 
     public static Regola creaRegola(ListaCategorie listaCategorie){
         Regola regola= new Regola();
-        Antecedenti antecedenti= ClasseDiServizioAntecedenti.creaAntecedenti(listaCategorie);
+        Antecedenti antecedenti= ClasseDiServizioAntecedenti.creaAntecedenti(listaCategorie.getCategorieSensori().get(BOH DOBBIAMO VEDERE));
         regola.inserisciAntecedenti(antecedenti);
 
-        Conseguenti conseguenti= ClasseDiServizioConseguenti.creaConseguenti(listaCategorie);
+        Conseguenti conseguenti= ClasseDiServizioConseguenti.creaConseguenti(listaCategorie.getCategorieAttuatori().get(BOH DOBBIAMO VEDERE));
         regola.inserisciConseguenti(conseguenti);
 
         return regola;
     }
+
+
 }
