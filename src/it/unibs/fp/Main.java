@@ -2,7 +2,7 @@ package it.unibs.fp;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
-import it.unibs.fp.view.classiDiServizio.Contenitore;
+import it.unibs.fp.dao.Contenitore;
 import it.unibs.fp.view.mylib.*;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;

@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio;
 
+import it.unibs.fp.dao.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;

@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio;
 
+import it.unibs.fp.dao.Contenitore;
 import it.unibs.fp.view.mylib.MyMenu;
 
 public class ClasseDiServizio {

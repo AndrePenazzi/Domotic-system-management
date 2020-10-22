@@ -1,4 +1,4 @@
-package it.unibs.fp.view.classiDiServizio;
+package it.unibs.fp.dao;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.utenti.Manutentore;
