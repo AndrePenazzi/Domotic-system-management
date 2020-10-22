@@ -2,6 +2,7 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioAttuatore {
@@ -25,4 +26,12 @@ public class ClasseDiServizioAttuatore {
         return null;
     }
 
+    public static String toString(Attuatore attuatore) {
+        String nome = attuatore.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n" + nome);
+        tmp.append("\n" + attuatore.getCategoriaAttuatori());
+        tmp.append("\n" + attuatore.getModOperativa());
+        return tmp.toString();
+    }
 }

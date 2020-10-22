@@ -1,11 +1,16 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
+import it.unibs.fp.model.unitaImmobiliare.Artefatto;
+import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.Stanze;
 import it.unibs.fp.view.mylib.InputDati;
+
+import java.util.List;
 
 public class ClasseDiSerivizioStanze {
 
     public static Stanze creaArtefatti() {
+
         Stanze stanze = new Stanze();
 
         do {
@@ -14,4 +19,22 @@ public class ClasseDiSerivizioStanze {
 
         return stanze;
     }
+
+    public static String toString(List<Stanza> stanze) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\nLe stanze sono: \n");
+
+        if (!stanze.isEmpty()) {
+            int i = 1;
+            tmp.append("\nLe stanze sono:\n");
+            for (Stanza s : stanze) {
+                tmp.append(i + " " + ClasseDiServizioStanza.toString(s)).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora stanze nella unita immobiliare");
+
+        return tmp.toString();
+    }
+
 }

@@ -22,12 +22,6 @@ public class Sensore implements Serializable {
         this.categoriaSensori = categoriaSensori;
     }
 
-    public Sensore() {
-        this.nome="";
-        this.categoriaSensori = new CategoriaSensori();
-    }
-
-
     /**
      * Genera un numero casuale tra il minimo e il massimo della categoriaSensori
      *
@@ -79,19 +73,6 @@ public class Sensore implements Serializable {
         this.categoriaSensori = categoriaSensori;
     }
 
-    /**
-     * toString.
-     *
-     * @return descrizione del sensore.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        tmp.append(nome);
-        tmp.append("\n");
-        tmp.append(categoriaSensori);
-        return tmp.toString();
-    }
+
 
 }

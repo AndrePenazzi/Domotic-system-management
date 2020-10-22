@@ -6,7 +6,7 @@ import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 
 import java.io.Serializable;
 
-public class Attuatore implements Serializable {
+public class    Attuatore implements Serializable {
     private String nome;
     private CategoriaAttuatori categoriaAttuatori;
     private ModOperativa modOperativa;
@@ -21,21 +21,6 @@ public class Attuatore implements Serializable {
         this.nome = nome;
         this.categoriaAttuatori = categoriaAttuatori;
         this.modOperativa = new ModOperativaNonParamentrica("Idle");
-    }
-
-
-    /**
-     * toString.
-     *
-     * @return descrizione dell'attuatore.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + categoriaAttuatori);
-        tmp.append("\n" + modOperativa);
-        return tmp.toString();
     }
 
     /**

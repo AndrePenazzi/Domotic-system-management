@@ -18,4 +18,15 @@ public class ClasseDiServizioSensore {
         System.out.println("Creare almeno una categoria sensori");
         return null;
     }
+
+    public static String toString(Sensore sensore) {
+        String nome = sensore.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(nome);
+        tmp.append("\n");
+        tmp.append(sensore.getCategoriaSensori());
+        return tmp.toString();
+
+    }
 }

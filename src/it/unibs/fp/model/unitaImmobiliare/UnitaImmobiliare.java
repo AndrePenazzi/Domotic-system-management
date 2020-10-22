@@ -27,13 +27,6 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = new Regole();
     }
 
-    public UnitaImmobiliare() {
-        this.nome = "";
-        this.stanze = new Stanze();
-        this.artefatti = new Artefatti();
-        this.regole = new Regole();
-    }
-
     /**
      * Cambia lo stato delle regole da attiva a disattiva o viceversa in automatico
      *

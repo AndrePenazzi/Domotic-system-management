@@ -5,6 +5,7 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
@@ -140,7 +141,7 @@ public class ClasseDiServizioFruitore {
                             System.out.println(stanza.visualizzaArtefatti());
                             int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
                             Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(--artefattoScelto);
-                            System.out.println(artefatto.visualizzaAttuatori());
+                            System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
 
                             int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
                             Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);
@@ -184,7 +185,7 @@ public class ClasseDiServizioFruitore {
                         System.out.println(fruitore.getUnitaImmobiliari().get(--unitaImm).visualizzaArtefatti());
                         int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(--unitaImm).getSizeArtefatti());
                         Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
-                        System.out.println(artefatto.visualizzaAttuatori());
+                        System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
 
                         int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
                         Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);

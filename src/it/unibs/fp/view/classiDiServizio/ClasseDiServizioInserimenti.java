@@ -18,6 +18,7 @@ import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOp
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegola;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.ServizioFile;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
@@ -252,7 +253,8 @@ public class ClasseDiServizioInserimenti {
      * @param unitaImm    scelta
      * @param fruitore    scelto
      */
-    static void creaAntecedente(Contenitore contenitore, int unitaImm, Fruitore fruitore) {
+    static void
+    creaAntecedente(Contenitore contenitore, int unitaImm, Fruitore fruitore) {
         do {
             //in stanza
             System.out.println("Creazione di un antecedente");
@@ -266,7 +268,7 @@ public class ClasseDiServizioInserimenti {
                     System.out.println(stanza.visualizzaArtefatti());
                     int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getStanze().get(--stanzaScelta).getArtefatti().size()) - 1;
                     Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
-                    System.out.println(artefatto.visualizzaSensori());
+                    System.out.println(ClasseDiServizioArtefatto.visualizzaSensori(artefatto));
 
                     int sensoreScelto = InputDati.leggiIntero("Scegliere sensore :", 1, artefatto.getSensori().size()) - 1;
                     Sensore sensore = artefatto.getSensori().get(sensoreScelto);
@@ -305,7 +307,7 @@ public class ClasseDiServizioInserimenti {
                     System.out.println(fruitore.getUnitaImmobiliari().get(unitaImm).visualizzaArtefatti());
                     int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().size()) - 1;
                     Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
-                    System.out.println(artefatto.visualizzaSensori());
+                    System.out.println(ClasseDiServizioArtefatto.visualizzaSensori(artefatto));
 
                     int sensoreScelto = InputDati.leggiIntero("Scegliere sensore :", 1, artefatto.getSensori().size()) - 1;
                     Sensore sensore = artefatto.getSensori().get(sensoreScelto);
@@ -369,7 +371,7 @@ public class ClasseDiServizioInserimenti {
                     Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
 
                     //SCELTA ATTUATORI
-                    System.out.println(artefatto.visualizzaAttuatori());
+                    System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
                     int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size()) - 1;
                     Attuatore attuatore = artefatto.getAttuatori().get(attuatoreScelto);
                     System.out.println(attuatore.getCategoriaAttuatori().toString());
@@ -427,7 +429,7 @@ public class ClasseDiServizioInserimenti {
                 System.out.println(fruitore.getUnitaImmobiliari().get(unitaImm).visualizzaArtefatti());
                 int artefattoScelto = InputDati.leggiIntero("Scegliere artefatto :", 1, fruitore.getUnitaImmobiliari().get(unitaImm).getSizeArtefatti()) - 1;
                 Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(artefattoScelto);
-                System.out.println(artefatto.visualizzaAttuatori());
+                System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
 
                 int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size()) - 1;
                 Attuatore attuatore = artefatto.getAttuatori().get(attuatoreScelto);
@@ -488,8 +490,7 @@ public class ClasseDiServizioInserimenti {
      */
     public static void inserisciUnitaImmobiliare(Contenitore contenitore) {
         Manutentore manutentore = contenitore.getManutentore();
-        String nomeUnitaImmobiliare = InputDati.leggiStringaNonVuota("Inserisci nome della unità immobiliare da inserire :");
-        UnitaImmobiliare unitaImmobiliare = new UnitaImmobiliare(nomeUnitaImmobiliare);
+        UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliare.creaUnitaImmobiliare();
         manutentore.aggiungiUnitaImmobiliare(unitaImmobiliare);
         contenitore.setManutentore(manutentore);
         ServizioFile.salvaSingoloOggetto(new File("contenitore.dat"), contenitore);
