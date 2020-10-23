@@ -2,7 +2,6 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
-import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioAttuatore {
@@ -25,6 +24,8 @@ public class ClasseDiServizioAttuatore {
         System.out.println("Creare almeno una categoria attuatori");
         return null;
     }
+
+
 
     public static String toString(Attuatore attuatore) {
         String nome = attuatore.getNome();

@@ -6,15 +6,17 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.regola.conseguente.azione.Azione;
 import it.unibs.fp.model.regola.Orologio;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
 import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioOrologio;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.mylib.MyMenu;
 
 
 public class ClasseDiServizioAzione {
-    public static Azione menuCreaAzione(CategoriaAttuatori categoriaA) {
+    public static Azione menuCreaAzione(CategoriaAttuatori categoriaA, UnitaImmobiliare unitaImmobiliare) {
         Azione azione = null;
         boolean finito = false;
         String[] azione_menu = {"Azione base", "Con orologio"};
@@ -30,12 +32,12 @@ public class ClasseDiServizioAzione {
                 break;
 
                 case 1: {
-                    azione = creaAzioneBase(categoriaA);
+                    azione = creaAzioneBase(categoriaA, unitaImmobiliare);
                 }
                 break;
 
                 case 2: {
-                    azione = creaAzioneOrologio(categoriaA);
+                    azione = creaAzioneOrologio(categoriaA, unitaImmobiliare);
                 }
                 break;
             }
@@ -44,21 +46,22 @@ public class ClasseDiServizioAzione {
         return azione;
     }
 
-    private static Azione creaAzioneOrologio(CategoriaAttuatori categoriaA) {
+    private static Azione creaAzioneOrologio(CategoriaAttuatori categoriaA, UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore;
         ModOperativa modOperativa;
         Orologio start;
-        attuatore = ClasseDiServizioAttuatore.scegliAttuatore();
+
+        attuatore = ClasseDiServizioUnitaImmobiliare.scegliAttuatore(unitaImmobiliare);//TODO ho fatto il get attuatori e i visualizza ma non ho ancora capito come sceglierlo
         modOperativa = ClasseDiServizioCategoriaAttuatori.scegliModOperativa(categoriaA);
         start = ClasseDiServizioOrologio.creaOrologio();
 
         return new Azione(attuatore, modOperativa, start);
     }
 
-    public static Azione creaAzioneBase(CategoriaAttuatori categoriaA) {
+    public static Azione creaAzioneBase(CategoriaAttuatori categoriaA, UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore;
         ModOperativa modOperativa;
-        attuatore = ClasseDiServizioAttuatore.scegliAttuatore();
+        attuatore = ClasseDiServizioUnitaImmobiliare.scegliAttuatore(unitaImmobiliare);
         modOperativa = ClasseDiServizioCategoriaAttuatori.scegliModOperativa(categoriaA);
 
         return new Azione(attuatore, modOperativa);

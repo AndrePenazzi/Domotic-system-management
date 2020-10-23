@@ -14,6 +14,12 @@ public class ClasseDiServizioArtefatto {
         return new Artefatto(nome);
     }
 
+    public static String visualizzaAttuatori(Artefatto artefatto) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
+        return tmp.toString();
+    }
+
 
     public static String toString(Artefatto artefatto) {
         String nome = artefatto.getNome();

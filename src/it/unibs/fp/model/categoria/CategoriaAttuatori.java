@@ -31,12 +31,6 @@ public class CategoriaAttuatori implements Serializable {
         this.modalitaOperative = modalitaOperative;
     }
 
-    public CategoriaAttuatori() {
-        this.nome="";
-        this.testoLibero="";
-        this.modalitaOperative = new ArrayList<>();
-    }
-
     /**
      * Getter
      *

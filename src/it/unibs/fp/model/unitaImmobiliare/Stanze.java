@@ -1,5 +1,7 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +18,15 @@ public class Stanze {
 
     public void setStanze(List<Stanza> stanze) {
         this.stanze = stanze;
+    }
+
+    public List<Attuatore> getAttuatori(){
+        List<Attuatore> attuatori=new ArrayList<>();
+
+        for (Stanza s : stanze) {
+            attuatori.addAll(s.getAttuatori());
+        }
+        return attuatori;
     }
 
 

@@ -6,7 +6,7 @@ import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 
 import java.io.Serializable;
 
-public class    Attuatore implements Serializable {
+public class Attuatore implements Serializable {
     private String nome;
     private CategoriaAttuatori categoriaAttuatori;
     private ModOperativa modOperativa;

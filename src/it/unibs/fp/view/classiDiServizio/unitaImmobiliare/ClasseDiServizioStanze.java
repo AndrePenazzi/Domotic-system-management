@@ -1,16 +1,14 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.Stanze;
 import it.unibs.fp.view.mylib.InputDati;
 
 import java.util.List;
 
-public class ClasseDiSerivizioStanze {
+public class ClasseDiServizioStanze {
 
     public static Stanze creaArtefatti() {
-
         Stanze stanze = new Stanze();
 
         do {
@@ -18,6 +16,14 @@ public class ClasseDiSerivizioStanze {
         } while (InputDati.yesOrNo("Vuoi continuare ad inserire una nuova stanza?"));
 
         return stanze;
+    }
+
+    public static String visualizzaAttuatori(List<Stanza> stanze) {
+        StringBuilder tmp = new StringBuilder();
+        for (Stanza s : stanze) {
+            tmp.append(ClasseDiServizioStanza.visualizzaAttuatori(s));
+        }
+        return tmp.toString();
     }
 
     public static String toString(List<Stanza> stanze) {

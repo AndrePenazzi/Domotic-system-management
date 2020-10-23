@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Stanza implements Serializable {
     private String nome;
-    private List<Artefatto> artefatti;
+    private Artefatti artefatti;
     private Sensori sensori;
     private Attuatori attuatori;
 
@@ -24,15 +24,8 @@ public class Stanza implements Serializable {
     public Stanza(String nome) {
         sensori = new Sensori();
         attuatori = new Attuatori();
-        artefatti = new ArrayList<>();
+        artefatti = new Artefatti();
         this.nome = nome;
-    }
-    public Stanza(){
-        sensori = new Sensori();
-        attuatori = new Attuatori();
-        artefatti = new ArrayList<>();
-        this.nome = "";
-
     }
 
     /**
@@ -41,7 +34,7 @@ public class Stanza implements Serializable {
      * @param artefatto nuovo
      */
     public void inserisciArtefatto(Artefatto artefatto) {
-        artefatti.add(artefatto);
+        artefatti.getArtefatti().add(artefatto);
     }
 
 
@@ -79,7 +72,12 @@ public class Stanza implements Serializable {
      * @return attutatori
      */
     public List<Attuatore> getAttuatori() {
-        return attuatori.getAttuatori();
+        List<Attuatore> attuatori = new ArrayList<>();
+        for (Artefatto a : artefatti.getArtefatti()) {
+            attuatori.addAll(a.getAttuatori());
+        }
+        attuatori.addAll(this.attuatori.getAttuatori());
+        return attuatori;
     }
 
     /**
@@ -106,7 +104,7 @@ public class Stanza implements Serializable {
      * @return artefatti
      */
     public List<Artefatto> getArtefatti() {
-        return artefatti;
+        return artefatti.getArtefatti();
     }
 
     /**
@@ -114,7 +112,7 @@ public class Stanza implements Serializable {
      *
      * @param artefatti all'interno della stanza
      */
-    public void setArtefatti(List<Artefatto> artefatti) {
+    public void setArtefatti(Artefatti artefatti) {
         this.artefatti = artefatti;
     }
 }

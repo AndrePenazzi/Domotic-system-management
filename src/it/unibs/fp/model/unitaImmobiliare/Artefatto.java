@@ -45,8 +45,6 @@ public class Artefatto implements Serializable {
         attuatori.inserisciAttuatore(attuatore);
     }
 
-
-
     /**
      * Getter
      *

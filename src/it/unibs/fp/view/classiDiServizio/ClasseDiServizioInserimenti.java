@@ -165,14 +165,7 @@ public class ClasseDiServizioInserimenti {
      * @return artefatti scelti
      */
     static List<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println("Si scelgano ora gli artefatti");
-        List<Artefatto> artefatti = new ArrayList<>();
-        do {
-            System.out.println(unitaImmobiliare.visualizzaArtefatti());
-            int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeArtefatti());
-            artefatti.add(unitaImmobiliare.getArtefatti().get(--artefattoIndex));
-        } while (InputDati.yesOrNo("Vuoi scegliere un'altro artefatto?"));
-        return artefatti;
+        return ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
     }
 
     /**
@@ -182,12 +175,7 @@ public class ClasseDiServizioInserimenti {
      * @return artefatti scelti
      */
     static Artefatto scegliArtefatto(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println("Si scelga ora l'artefatto");
-        Artefatto artefatto;
-        System.out.println(unitaImmobiliare.visualizzaArtefatti());
-        int artefattoIndex = InputDati.leggiIntero("Scegli artefatto : ", 1, unitaImmobiliare.getSizeArtefatti());
-        artefatto = unitaImmobiliare.getArtefatti().get(--artefattoIndex);
-        return artefatto;
+        return ClasseDiServizioUnitaImmobiliare.scegliArtefatto(unitaImmobiliare);
     }
 
     /**
@@ -197,14 +185,11 @@ public class ClasseDiServizioInserimenti {
      * @return stanze scelte
      */
     static List<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println("Si scelga ora le stanze");
-        List<Stanza> stanze = new ArrayList<>();
-        do {
-            System.out.println(unitaImmobiliare.visualizzaStanze());
-            int stanzaIndex = InputDati.leggiIntero("Scegli stanza : ", 1, unitaImmobiliare.getSizeStanze());
-            stanze.add(unitaImmobiliare.getStanze().get(--stanzaIndex));
-        } while (InputDati.yesOrNo("Vuoi scegliere un'altra stanza?"));
-        return stanze;
+        return ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
+    }
+
+    static Stanza scegliStanza(UnitaImmobiliare unitaImmobiliare) {
+        return ClasseDiServizioUnitaImmobiliare.scegliStanza(unitaImmobiliare);
     }
 
     //-----------------------------CREA------------------------------------------------------------

@@ -1,19 +1,16 @@
 package it.unibs.fp.view.classiDiServizio.categoria;
 
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
-import it.unibs.fp.model.categoria.CategoriaSensori;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
-import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
-import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
-import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
 import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
 import it.unibs.fp.view.mylib.InputDati;
 
 import java.util.ArrayList;
 import java.util.List;
+
 //TODO CREA MENU SENZA 0 PER PROBLEMA NULL
 public class ClasseDiServizioCategoriaAttuatori {
+
     public static CategoriaAttuatori creaCategoriaAttuatori() {
         String testoLibero = "";
         boolean testoLiberoOK = false;
@@ -49,19 +46,6 @@ public class ClasseDiServizioCategoriaAttuatori {
         return categoriaAttuatori.getModalitaOperative().get(i);
     }
 
-
-    public static String toString(CategoriaAttuatori categoriaAttuatori) {
-        String nome=categoriaAttuatori.getNome();
-        String testoLibero=categoriaAttuatori.getTestoLibero();
-
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + testoLibero);
-        visualizzaModOperative(categoriaAttuatori);
-
-        return tmp.toString();
-    }
-
     public static String visualizzaModOperative(CategoriaAttuatori categoriaAttuatori) {
         StringBuilder tmp = new StringBuilder();
         List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
@@ -75,6 +59,18 @@ public class ClasseDiServizioCategoriaAttuatori {
             }
         } else
             tmp.append("\nNon ci sono ancora modalita operative associate\n");
+        return tmp.toString();
+    }
+
+    public static String toString(CategoriaAttuatori categoriaAttuatori) {
+        String nome=categoriaAttuatori.getNome();
+        String testoLibero=categoriaAttuatori.getTestoLibero();
+
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n" + nome);
+        tmp.append("\n" + testoLibero);
+        visualizzaModOperative(categoriaAttuatori);
+
         return tmp.toString();
     }
 

@@ -3,7 +3,6 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.view.mylib.InputDati;
 
 import java.util.List;
