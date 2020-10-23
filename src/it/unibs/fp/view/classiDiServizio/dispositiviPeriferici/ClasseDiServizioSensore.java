@@ -5,7 +5,7 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioSensore {
-    public static Sensore creaSensore(ListaCategorie listaCategorie) {
+    public static Sensore creaSensore(ListaCategorie listaCategorie){
         if (listaCategorie.getSizeCategorieSensori() != 0) {
             System.out.println(listaCategorie.visualizzaCategorieSensori());
             int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieSensori());

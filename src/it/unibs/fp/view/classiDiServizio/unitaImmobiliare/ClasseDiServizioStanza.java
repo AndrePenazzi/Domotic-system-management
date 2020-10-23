@@ -18,6 +18,12 @@ public class ClasseDiServizioStanza {
     public static String visualizzaAttuatori(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
+        return tmp.toString();
+    }
+
+    public static String visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(Stanza stanza) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(visualizzaAttuatori(stanza));
 
         for (Artefatto a : stanza.getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaAttuatori(a));
@@ -33,7 +39,7 @@ public class ClasseDiServizioStanza {
 
         tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
         tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
-        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
+        tmp.append(visualizzaAttuatori(stanza));
 
         return tmp.toString();
     }

@@ -84,7 +84,6 @@ public class ClasseDiServizioInfoRilevabile {
         else if(infoRilevabile.getType()==2)
             tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.toString((InfoRilevabileNonNumerica)infoRilevabile));
 
-
         return tmp.toString();
     }
 

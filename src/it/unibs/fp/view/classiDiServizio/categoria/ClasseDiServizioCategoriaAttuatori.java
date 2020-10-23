@@ -8,11 +8,10 @@ import it.unibs.fp.view.mylib.InputDati;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO CREA MENU SENZA 0 PER PROBLEMA NULL
 public class ClasseDiServizioCategoriaAttuatori {
 
     public static CategoriaAttuatori creaCategoriaAttuatori() {
-        String testoLibero = "";
+        String testoLibero;
         boolean testoLiberoOK = false;
         boolean modOperativeOK = false;
         List<ModOperativa> modOperative = new ArrayList<>();
@@ -41,8 +40,7 @@ public class ClasseDiServizioCategoriaAttuatori {
 
     public static ModOperativa scegliModOperativa(CategoriaAttuatori categoriaAttuatori) {
         System.out.println(visualizzaModOperative(categoriaAttuatori));
-        int i=InputDati.leggiIntero("Scegli la modOperativa: ",1,categoriaAttuatori.getModalitaOperative().size())-1;
-
+        int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getModalitaOperative().size()) - 1;
         return categoriaAttuatori.getModalitaOperative().get(i);
     }
 
@@ -63,8 +61,8 @@ public class ClasseDiServizioCategoriaAttuatori {
     }
 
     public static String toString(CategoriaAttuatori categoriaAttuatori) {
-        String nome=categoriaAttuatori.getNome();
-        String testoLibero=categoriaAttuatori.getTestoLibero();
+        String nome = categoriaAttuatori.getNome();
+        String testoLibero = categoriaAttuatori.getTestoLibero();
 
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n" + nome);

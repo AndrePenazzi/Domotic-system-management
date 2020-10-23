@@ -40,8 +40,6 @@ public class CategoriaAttuatori implements Serializable {
         return LUNGHEZZA_MASSIMA;
     }
 
-
-
     /**
      * Getter
      *

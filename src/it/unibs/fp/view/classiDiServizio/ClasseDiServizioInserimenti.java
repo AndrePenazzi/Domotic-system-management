@@ -100,24 +100,6 @@ public class ClasseDiServizioInserimenti {
         } while (InputDati.yesOrNo("Vuoi inserire un'altra stanza?"));
     }
 
-    /**
-     * Inserisci le informazioni rilevabili
-     *
-     * @return l'informazione rilevabile con scelta se numerica o non
-     */
-    private static InfoRilevabile inserisciInfoRilevabili() {
-        return ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile();
-    }
-
-    /**
-     * Inserisci una modalità operativa con scelta
-     *
-     * @return la modalità operativa
-     */
-    public static ModOperativa inserisciModalitaOperativa() {
-        return ClasseDiServizioModOperativa.menuCreaModOperativa();
-    }
-
     public static Fruitore inserisciNuovaRegola(Contenitore contenitore, int unitaImmobiliareIndex, Regola regola) {
         Fruitore fruitore = contenitore.getManutentore().getFruitore();
         fruitore.inserisciRegola(unitaImmobiliareIndex, regola);
@@ -156,63 +138,9 @@ public class ClasseDiServizioInserimenti {
 
     //-----------------------------FINE INSERISCI-----------------------------------------------
 
-    //-----------------------------SCEGLI-------------------------------------------------------
 
-    /**
-     * Scegli uno o più nuovi artefatti
-     *
-     * @param unitaImmobiliare dal quale prendere gli artefatti
-     * @return artefatti scelti
-     */
-    static List<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
-    }
-
-    /**
-     * Scegli un artefatto
-     *
-     * @param unitaImmobiliare dal quale prendere gli artefatti
-     * @return artefatti scelti
-     */
-    static Artefatto scegliArtefatto(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioUnitaImmobiliare.scegliArtefatto(unitaImmobiliare);
-    }
-
-    /**
-     * Scegli una o più stanze
-     *
-     * @param unitaImmobiliare dal quale prendere le stanze
-     * @return stanze scelte
-     */
-    static List<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
-    }
-
-    static Stanza scegliStanza(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioUnitaImmobiliare.scegliStanza(unitaImmobiliare);
-    }
 
     //-----------------------------CREA------------------------------------------------------------
-
-    /**
-     * Crea un nuovo attuatore
-     *
-     * @param listaCategorie per scegliere la tipologia di attuatori da creare
-     * @return un nuovo attuatore
-     */
-    static Attuatore creaAttuatore(ListaCategorie listaCategorie) {
-        return ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
-    }
-
-    /**
-     * Crea un nuovo sensore
-     *
-     * @param listaCategorie per sceglie la tipologia di sensori da creare
-     * @return un nuovo sensore
-     */
-    static Sensore creaSensore(ListaCategorie listaCategorie) {
-        return ClasseDiServizioSensore.creaSensore(listaCategorie);
-    }
 
     /**
      * Scegli un parametro con cui confrontare

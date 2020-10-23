@@ -5,7 +5,8 @@ import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
 import java.util.List;
 
 public class ClasseDiServizioModOperativaParametrica {
-    public static String toString(ModOperativaParamentrica modOperativa) {
+
+    public static String visualizzaParametri(ModOperativaParamentrica modOperativa) {
         List<String> paramentri = modOperativa.getParamentri();
         StringBuilder tmp = new StringBuilder();
         if (!paramentri.isEmpty()) {
@@ -17,8 +18,14 @@ public class ClasseDiServizioModOperativaParametrica {
             }
         } else
             tmp.append("\nNon ci sono ancora parametri associati");
-        tmp.append("\nParametro attuale: ").append(modOperativa.getParametroAttuale());
         return tmp.toString();
 
+    }
+
+    public static String toString(ModOperativaParamentrica modOperativa) {
+        StringBuilder tmp = new StringBuilder();
+        visualizzaParametri(modOperativa);
+        tmp.append("\nParametro attuale: ").append(modOperativa.getParametroAttuale());
+        return tmp.toString();
     }
 }

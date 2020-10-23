@@ -6,6 +6,7 @@ import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;

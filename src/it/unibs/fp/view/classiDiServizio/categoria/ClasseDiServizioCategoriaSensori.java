@@ -64,12 +64,10 @@ public class ClasseDiServizioCategoriaSensori {
     public static String toString(CategoriaSensori categoriaSensori) {
         String nome = categoriaSensori.getNome();
         String testoLibero = categoriaSensori.getTestoLibero();
-
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n" + nome);
         tmp.append("\n" + testoLibero);
         visualizzaInfoRilevabili(categoriaSensori);
-
         return tmp.toString();
     }
 

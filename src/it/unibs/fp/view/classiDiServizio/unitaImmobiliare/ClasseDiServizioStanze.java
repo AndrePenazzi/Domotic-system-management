@@ -21,7 +21,7 @@ public class ClasseDiServizioStanze {
     public static String visualizzaAttuatori(List<Stanza> stanze) {
         StringBuilder tmp = new StringBuilder();
         for (Stanza s : stanze) {
-            tmp.append(ClasseDiServizioStanza.visualizzaAttuatori(s));
+            tmp.append(ClasseDiServizioStanza.visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(s));
         }
         return tmp.toString();
     }

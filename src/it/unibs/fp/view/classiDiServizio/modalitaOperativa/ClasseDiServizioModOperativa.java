@@ -67,7 +67,6 @@ public class ClasseDiServizioModOperativa {
         else if(modOperativa.getType()==2)
             tmp.append(ClasseDiServizioModOperativaParametrica.toString((ModOperativaParamentrica)modOperativa));
 
-
         return tmp.toString();
     }
 

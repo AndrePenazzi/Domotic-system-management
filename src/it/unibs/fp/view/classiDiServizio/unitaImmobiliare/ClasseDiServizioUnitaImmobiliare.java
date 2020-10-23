@@ -47,11 +47,13 @@ public class ClasseDiServizioUnitaImmobiliare {
         } while (InputDati.yesOrNo("Vuoi scegliere un'altro artefatto?"));
         return artefatti;
     }
-    //TODO DA FARE
-    public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare){
 
+    //TODO DA FARE
+    public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare) {
+        return null;
     }
-    public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare){
+
+    public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioStanze.visualizzaAttuatori(unitaImmobiliare.getStanze()));
         tmp.append(ClasseDiServizioArtefatti.visualizzaAttuatori(unitaImmobiliare.getArtefatti()));
