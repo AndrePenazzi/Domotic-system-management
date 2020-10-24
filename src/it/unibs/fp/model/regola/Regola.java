@@ -11,6 +11,22 @@ public class Regola implements Serializable {
     private boolean attiva;
 
 
+    public Antecedenti getAntecedenti() {
+        return antecedenti;
+    }
+
+    public void setAntecedenti(Antecedenti antecedenti) {
+        this.antecedenti = antecedenti;
+    }
+
+    public Conseguenti getConseguenti() {
+        return conseguenti;
+    }
+
+    public void setConseguenti(Conseguenti conseguenti) {
+        this.conseguenti = conseguenti;
+    }
+
     /**
      * Costruttore regola
      */
@@ -27,53 +43,6 @@ public class Regola implements Serializable {
     public void inserisciAntecedenti(Antecedenti antecedenti) {
         this.antecedenti.setAntecendenti(antecedenti.getAntecendenti());
     }
-
-    /**
-     * Visualizza la regola con il suo stato
-     *
-     * @return la regola ed il suo stato
-     */
-    public String visualizzaStatoRegola() {
-        StringBuilder regola = new StringBuilder();
-        for (int i = 0; i < antecedenti.getAntecendenti().size(); i++) {
-            regola.append(" " + antecedenti.getAntecendenti().get(i).toString());
-        }
-
-        for (int i = 0; i < conseguenti.getConseguenti().size(); i++) {
-            regola.append(" " + conseguenti.getConseguenti().get(i).toString());
-            if (i < conseguenti.getConseguenti().size() - 1)
-                regola.append(",");
-        }
-
-        regola.append("La regola:" +
-                "if " + antecedenti.toString() + " then " + conseguenti + " è ");//era antecedente non funzionerà
-        if (attiva) {
-            return regola.append("attiva\n").toString();
-        } else return regola.append("disattiva\n").toString();
-    }
-
-    /**
-     * To String
-     *
-     * @return descrizione
-     */
-    @Override
-    public String toString() {
-        StringBuilder regola = new StringBuilder();
-        for (int i = 0; i < antecedenti.getAntecendenti().size(); i++) {
-            regola.append(" " + antecedenti.getAntecendenti().get(i).toString());
-        }
-
-        for (int i = 0; i < conseguenti.getConseguenti().size(); i++) {
-            regola.append(" " + conseguenti.getConseguenti().get(i).toString());
-            if (i < conseguenti.getConseguenti().size() - 1)
-                regola.append(",");
-        }
-
-        return "Regola:" +
-                "if " + antecedenti.toString() + " then " + conseguenti + "\n";//era antecedente non funzionerà
-    }
-
 
     /**
      * Getter

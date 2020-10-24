@@ -11,10 +11,6 @@ import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
-import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
-import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensore;
-import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
-import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegola;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
@@ -28,7 +24,6 @@ import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioInserimenti {

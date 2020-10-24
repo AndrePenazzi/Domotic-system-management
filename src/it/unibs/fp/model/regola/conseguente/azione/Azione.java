@@ -43,18 +43,12 @@ public class Azione implements Serializable {
         attuatore.setModOperativa(modOperativa);
     }
 
-    /**
-     * ToString
-     *
-     * @return Nome dell'attuatore e della modalità da assegnare
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(attuatore.getNome()).append(":=").append(modOperativa.getNome());
-        if (start != null)
-            tmp.append("," + "start := " + start);
-        return tmp.toString();
+    public Orologio getStart() {
+        return start;
+    }
+
+    public void setStart(Orologio start) {
+        this.start = start;
     }
 
     /**

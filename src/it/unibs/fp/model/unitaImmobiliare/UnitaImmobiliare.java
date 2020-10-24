@@ -231,6 +231,7 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = regole;
     }
 
+    //FORSE SBAGLIATO
     public List<Attuatore> getAttuatori(){
         List<Attuatore> attuatori=new ArrayList<>();
         attuatori.addAll(stanze.getAttuatori());
@@ -238,18 +239,5 @@ public class UnitaImmobiliare implements Serializable {
         return attuatori;
     }
 
-    /**
-     * Visualliza le regole
-     *
-     * @return la visualizzazione delle regole
-     */
-    public String visualizzaRegole() {
-        StringBuilder str = new StringBuilder();
-        if (!regole.getRegole().isEmpty())
-            for (Regola r : regole.getRegole())
-                str.append("\n" + r.toString());
-        else
-            str.append("Non ci sono ancora regole in questa unità immobiliare");
-        return str.toString();
-    }
+
 }

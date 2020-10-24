@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatori;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
@@ -29,5 +30,11 @@ public class ClasseDiServizioArtefatto {
 
         tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
         return tmp.toString();
+    }
+
+    public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
+        System.out.println(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatori().size()) - 1;
+        return artefatto.getAttuatori().get(i);
     }
 }

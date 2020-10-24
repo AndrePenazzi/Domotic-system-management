@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
+import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatori;
@@ -31,6 +32,12 @@ public class ClasseDiServizioStanza {
         return tmp.toString();
     }
 
+    public static Artefatto scegliArtefattoNellaStanza(Stanza stanza) {
+        System.out.println(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
+        int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getArtefatti().size()) - 1;
+
+        return stanza.getArtefatti().get(i);
+    }
 
     public static String toString(Stanza stanza) {
         String nome = stanza.getNome();
@@ -43,6 +50,15 @@ public class ClasseDiServizioStanza {
 
         return tmp.toString();
     }
+    public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
+        return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
+    }
 
 
+    public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
+        System.out.println(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatori().size()) - 1;
+
+        return stanza.getAttuatori().get(i);
+    }
 }

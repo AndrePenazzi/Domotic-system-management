@@ -60,7 +60,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         InfoRilevabile primoOpLogico;
         double secondoOpLogico;
         OperatoriRelazionali opRelazionale;
-        primoOpLogico=ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(categoriaS);
+        primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(categoriaS);
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
         secondoOpLogico = InputDati.leggiDouble("Inserisci un valore numerico");
 
@@ -108,4 +108,35 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
+
+    /**
+     * toString
+     *
+     * @return nomi e opeartore relazionale
+     */
+    public static String visualizzaCostituenteLogico(CostituenteLogico costituenteLogico) {
+        InfoRilevabile primoOperatoreLogico = costituenteLogico.getPrimoOperatoreLogico();
+        InfoRilevabile secondoOperatoreLogico = costituenteLogico.getSecondoOperatoreLogico();
+        OperatoriRelazionali operatoreRelazionale = costituenteLogico.getOperatoreRelazionale();
+        Double secondoOperatoreCostante = costituenteLogico.getSecondoOperatoreCostante();
+        String secondoOperatoreScalare = costituenteLogico.getSecondoOperatoreScalare();
+        Orologio time = costituenteLogico.getTime();
+        Orologio secondoOperatoreOrologio = costituenteLogico.getSecondoOperatoreOrologio();
+
+        StringBuilder tmp = new StringBuilder();
+        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
+            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+
+            if (secondoOperatoreLogico != null)
+                tmp.append(" " + secondoOperatoreLogico);
+            if (secondoOperatoreCostante != null)
+                tmp.append(" " + secondoOperatoreCostante);
+            if (secondoOperatoreScalare != null)
+                tmp.append(" " + secondoOperatoreScalare);
+        } else if (time != null) {
+            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
+        }
+        return tmp.toString();
+    }
+
 }

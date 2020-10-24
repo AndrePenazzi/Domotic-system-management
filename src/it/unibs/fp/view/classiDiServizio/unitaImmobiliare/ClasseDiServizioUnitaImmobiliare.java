@@ -1,15 +1,51 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegole;
 import it.unibs.fp.view.mylib.InputDati;
+import it.unibs.fp.view.mylib.MyMenu;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioUnitaImmobiliare {
+
+    //TODO MANCANO I VISUALIZZA
+    public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare) {
+        Attuatore attuatore = null;
+        String[] azione_menu = {"Scegli attuatore nella stanza","Scegli attuatore nell'artefatto di una stanza", "Scegli attuatore nell'artefatto"};
+        MyMenu menu = new MyMenu("Menu creazione AZIONE", azione_menu);
+
+        int scelta = menu.scegliPerMenuSenzaUscita();
+        switch (scelta) {
+
+            case 1: {
+                Stanza stanza = scegliStanza(unitaImmobiliare);
+                attuatore = scegliAttuatoreNellaStanza(stanza);
+            }
+            break;
+
+            case 2: {
+                Stanza stanza = scegliStanza(unitaImmobiliare);
+                attuatore = scegliAttuatoreNellArtefattoNellaStanza(stanza);
+            }
+            break;
+
+            case 3: {
+                Artefatto artefatto = scegliArtefatto(unitaImmobiliare);
+                attuatore = scegliAttuatoreNellArtefatto(artefatto);
+            }
+            break;
+        }
+
+        return attuatore;
+    }
+
+
     public static UnitaImmobiliare creaUnitaImmobiliare() {
         String nome;
         nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova unita immobiliare: ");
@@ -48,10 +84,24 @@ public class ClasseDiServizioUnitaImmobiliare {
         return artefatti;
     }
 
-    //TODO DA FARE
-    public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare) {
-        return null;
+    public static Artefatto scegliArtefattoNellaStanza(UnitaImmobiliare unitaImmobiliare) {
+        Stanza stanza = scegliStanza(unitaImmobiliare);
+        return ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
     }
+
+    public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
+        return ClasseDiServizioStanza.scegliAttuatoreNellaStanza(stanza);
+    }
+
+    public static Attuatore scegliAttuatoreNellArtefattoNellaStanza(Stanza stanza) {
+        Artefatto artefatto = ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
+        return ClasseDiServizioStanza.scegliAttuatoreNellArtefatto(artefatto);
+    }
+
+    public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
+        return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
+    }
+
 
     public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
         StringBuilder tmp = new StringBuilder();
@@ -69,4 +119,13 @@ public class ClasseDiServizioUnitaImmobiliare {
         tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
         return tmp.toString();
     }
+
+    public static String visualizzaRegole(UnitaImmobiliare unitaImmobiliare) {
+        List<Regola> regole= unitaImmobiliare.getRegole();
+        StringBuilder str = new StringBuilder();
+        str.append(ClasseDiServizioRegole.visualizzaRegole(regole));
+
+        return str.toString();
+    }
+
 }

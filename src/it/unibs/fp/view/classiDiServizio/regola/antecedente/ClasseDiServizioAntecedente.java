@@ -28,4 +28,16 @@ public class ClasseDiServizioAntecedente implements Serializable {
 
         return AntecedenteFactory.creaAntecedente(costituenteLogico);
     }
+
+    public static String visualizzaAntecedenteSingolo(Antecedente antecedente){
+        StringBuilder str = new StringBuilder();
+        str.append(" " + ClasseDiServizioCostituenteLogico.visualizzaCostituenteLogico(antecedente.getCostituenteLogico()));
+        return str.toString();
+    }
+    public static String visualizzaAntecedenteEnnesimo(Antecedente antecedente){
+        StringBuilder str = new StringBuilder();
+            str.append(" " + antecedente.getOpBooleano());
+            str.append(" " + ClasseDiServizioCostituenteLogico.visualizzaCostituenteLogico(antecedente.getCostituenteLogico()));
+        return str.toString();
+    }
 }

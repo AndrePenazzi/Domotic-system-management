@@ -17,6 +17,7 @@ public abstract class CostituenteLogico implements Serializable {
     private Orologio time;
     private Orologio secondoOperatoreOrologio = null;
 
+    //TODO da aggiungere alla factory
     /**
      * Costruttore con valore true
      */
@@ -38,6 +39,7 @@ public abstract class CostituenteLogico implements Serializable {
     }
 
 
+    //todo non funzionerà mai sicuro
     /**
      * Calcolo del valore booleano attuale del costituente logico
      *
@@ -64,28 +66,7 @@ public abstract class CostituenteLogico implements Serializable {
         return false;
     }
 
-    /**
-     * toString
-     *
-     * @return nomi e opeartore relazionale
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
-            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
 
-            if (secondoOperatoreLogico != null)
-                tmp.append(" " + secondoOperatoreLogico);
-            if (secondoOperatoreCostante != null)
-                tmp.append(" " + secondoOperatoreCostante);
-            if (secondoOperatoreScalare != null)
-                tmp.append(" " + secondoOperatoreScalare);
-        } else if (time != null) {
-            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
-        }
-        return tmp.toString();
-    }
 
     /**
      * Getter
