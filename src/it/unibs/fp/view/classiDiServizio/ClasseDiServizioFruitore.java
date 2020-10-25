@@ -5,8 +5,12 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
+import it.unibs.fp.model.regola.Regola;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
-import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
@@ -16,18 +20,11 @@ import it.unibs.fp.model.utenti.Manutentore;
 
 public class ClasseDiServizioFruitore {
 
-    /**
-     * Menu di visualizzazione delle descrizioni da parte del fruitore
-     *
-     * @param contenitore per ottenere gli oggetti necessari
-     */
-    static void stampaMenuFruitore(Contenitore contenitore) {
+
+    static void stampaMenuFruitore(Fruitore fruitore, UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
-        Manutentore manutentore = contenitore.getManutentore();
-        Fruitore fruitore = manutentore.getFruitore();
-        ListaCategorie listaCategorie = contenitore.getListaCategorie();
         System.out.println(fruitore.visualizzaUnitaImmobiliari());
         int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni: ", 1, fruitore.getUnitaImmobiliari().size()) - 1;
         do {
@@ -41,13 +38,13 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    stampaMenuFruitoreVisualizzazione(contenitore);
+                    stampaMenuFruitoreVisualizzazione(fruitore, unitaImmobiliari, listaCategorie);
                 }
                 break;
 
 
                 case 2: {
-                    ClasseDiServizioFruitore.stampaMenuOperazioniFruitore(contenitore, fruitore, unitaImm);
+                    ClasseDiServizioFruitore.stampaMenuOperazioniFruitore(fruitore, unitaImmobiliari, listaCategorie);
                 }
                 break;
             }
@@ -61,13 +58,10 @@ public class ClasseDiServizioFruitore {
      *
      * @param contenitore per ottenere gli oggetti necessari
      */
-    static void stampaMenuFruitoreVisualizzazione(Contenitore contenitore) {
+    static void stampaMenuFruitoreVisualizzazione(Fruitore fruitore, UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
-        Manutentore manutentore = contenitore.getManutentore();
-        Fruitore fruitore = manutentore.getFruitore();
-        ListaCategorie listaCategorie = contenitore.getListaCategorie();
         System.out.println(fruitore.visualizzaUnitaImmobiliari());
         int unitaImm = InputDati.leggiIntero("Scegli l'unità immobiliare su cui fare le operazioni: ", 1, fruitore.getUnitaImmobiliari().size()) - 1;
         do {
@@ -117,7 +111,7 @@ public class ClasseDiServizioFruitore {
      * @param fruitore    scelto
      * @param unitaImm    scelta
      */
-    public static void stampaMenuOperazioniFruitore(Contenitore contenitore, Fruitore fruitore, int unitaImm) {
+    public static void stampaMenuOperazioniFruitore(Fruitore fruitore, UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
 
         boolean finito = false;
         String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole", "Modifica stato regola"};
@@ -220,10 +214,20 @@ public class ClasseDiServizioFruitore {
                 }
                 break;
                 case 5: {
-                    ClasseDiServizioInserimenti.cambiaStatoRegola(unitaImm, fruitore);
+
+                    ClasseDiServizioFruitore.cambiaStatoRegola(unitaImm, fruitore);
                 }
                 break;
             }
         } while (!finito);
+    }
+
+    static Fruitore cambiaStatoRegola(UnitaImmobiliari unitaImmobiliari, Fruitore fruitore) {
+        UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+        do {
+            int regola=ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
+            unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
+        } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
+        return fruitore;
     }
 }

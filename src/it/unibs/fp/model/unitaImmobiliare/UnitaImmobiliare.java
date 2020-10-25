@@ -4,6 +4,7 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -33,23 +34,10 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param regola scelta
      */
-    public void cambiaRegolaAttivaDisattiva(Regola regola) {
-        int i = trovaRegola(regola);
-        regole.getRegole().get(i).attivaDisattivaRegola();
+    public void cambiaRegolaAttivaDisattiva(int regola) {
+        regole.getRegole().get(regola).attivaDisattivaRegola();
     }
 
-    /**
-     * Visualizza le regole con il loro stato
-     *
-     * @return lo stato delle regole
-     */
-    public String visualizzaStatoRegole() {
-        StringBuilder statoRegole = new StringBuilder();
-        for (int i = 0; i < regole.getRegole().size(); i++) {
-            statoRegole.append(regole.getRegole().get(i).visualizzaStatoRegola());
-        }
-        return statoRegole.toString();
-    }
 
     public void inserisciRegola(Regola regola) {
         regole.getRegole().add(regola);
@@ -218,8 +206,8 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return regole
      */
-    public List<Regola> getRegole() {
-        return regole.getRegole();
+    public Regole getRegole() {
+        return regole;
     }
 
     /**
@@ -232,8 +220,8 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     //FORSE SBAGLIATO
-    public List<Attuatore> getAttuatori(){
-        List<Attuatore> attuatori=new ArrayList<>();
+    public List<Attuatore> getAttuatori() {
+        List<Attuatore> attuatori = new ArrayList<>();
         attuatori.addAll(stanze.getAttuatori());
         attuatori.addAll(artefatti.getAttuatori());
         return attuatori;

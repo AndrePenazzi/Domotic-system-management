@@ -7,6 +7,8 @@ import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -188,7 +190,7 @@ public class Fruitore implements Serializable {
      * @return la descrizione delle categorie sensori
      */
     public String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
-        return (listaCategorie.visualizzaCategorieSensori());
+        return ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie);
     }
 
     /**
@@ -198,7 +200,7 @@ public class Fruitore implements Serializable {
      * @return la descrizione delle categorie attuatori
      */
     public String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
-        return (listaCategorie.visualizzaCategorieAttuatori());
+        return ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie);
     }
 
     /**

@@ -1,6 +1,7 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatori;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
@@ -20,6 +21,11 @@ public class ClasseDiServizioArtefatto {
         tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
         return tmp.toString();
     }
+    public static String visualizzaSensori(Artefatto artefatto) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensori()));
+        return tmp.toString();
+    }
 
 
     public static String toString(Artefatto artefatto) {
@@ -36,5 +42,10 @@ public class ClasseDiServizioArtefatto {
         System.out.println(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
         int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatori().size()) - 1;
         return artefatto.getAttuatori().get(i);
+    }
+    public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
+        System.out.println(ClasseDiServizioSensori.toString(artefatto.getSensori()));
+        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSensori().size()) - 1;
+        return artefatto.getSensori().get(i);
     }
 }

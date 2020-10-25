@@ -26,6 +26,13 @@ public class ClasseDiServizioArtefatti {
         }
         return tmp.toString();
     }
+    public static String visualizzaSensori(List<Artefatto> artefatti) {
+        StringBuilder tmp = new StringBuilder();
+        for (Artefatto a : artefatti) {
+            tmp.append(ClasseDiServizioArtefatto.visualizzaSensori(a));
+        }
+        return tmp.toString();
+    }
 
     public static String toString(List<Artefatto> artefatti) {
         StringBuilder tmp = new StringBuilder();

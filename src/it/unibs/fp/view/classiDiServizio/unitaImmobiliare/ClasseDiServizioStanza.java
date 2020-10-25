@@ -1,6 +1,7 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatori;
@@ -21,6 +22,11 @@ public class ClasseDiServizioStanza {
         tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
         return tmp.toString();
     }
+    public static String visualizzaSensori(Stanza stanza) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
+        return tmp.toString();
+    }
 
     public static String visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
@@ -28,6 +34,15 @@ public class ClasseDiServizioStanza {
 
         for (Artefatto a : stanza.getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaAttuatori(a));
+        }
+        return tmp.toString();
+    }
+    public static String visualizzaSensoriESensoriAssociatiAdArtefatti(Stanza stanza) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(visualizzaSensori(stanza));
+
+        for (Artefatto a : stanza.getArtefatti()) {
+            tmp.append(ClasseDiServizioArtefatto.visualizzaSensori(a));
         }
         return tmp.toString();
     }
@@ -50,6 +65,7 @@ public class ClasseDiServizioStanza {
 
         return tmp.toString();
     }
+
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
         return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
     }
@@ -60,5 +76,17 @@ public class ClasseDiServizioStanza {
         int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatori().size()) - 1;
 
         return stanza.getAttuatori().get(i);
+    }
+
+    public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
+        return ClasseDiServizioArtefatto.scegliSensoreNellArtefatto(artefatto);
+    }
+
+
+    public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
+        System.out.println(ClasseDiServizioSensori.toString(stanza.getSensori()));
+        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSensori().size()) - 1;
+
+        return stanza.getSensori().get(i);
     }
 }

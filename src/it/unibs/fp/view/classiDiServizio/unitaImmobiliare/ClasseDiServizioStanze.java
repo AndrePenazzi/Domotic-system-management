@@ -25,6 +25,13 @@ public class ClasseDiServizioStanze {
         }
         return tmp.toString();
     }
+    public static String visualizzaSensori(List<Stanza> stanze) {
+        StringBuilder tmp = new StringBuilder();
+        for (Stanza s : stanze) {
+            tmp.append(ClasseDiServizioStanza.visualizzaSensoriESensoriAssociatiAdArtefatti(s));
+        }
+        return tmp.toString();
+    }
 
     public static String toString(List<Stanza> stanze) {
         StringBuilder tmp = new StringBuilder();
