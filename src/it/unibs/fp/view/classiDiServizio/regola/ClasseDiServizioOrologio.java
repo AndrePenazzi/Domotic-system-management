@@ -10,5 +10,8 @@ public class ClasseDiServizioOrologio {
         return new Orologio(ora, minuti);
     }
 
+    public static String toString(Orologio orologio) {
+        return orologio.getOra() + ":" + orologio.getMinuti();
+    }
 
 }

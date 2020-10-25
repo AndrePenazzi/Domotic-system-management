@@ -3,15 +3,18 @@ package it.unibs.fp.model.unitaImmobiliare;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
+import it.unibs.fp.model.regola.Regole;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UnitaImmobiliare implements Serializable {
     private String nome;
-    private List<Stanza> stanze;
-    private List<Artefatto> artefatti;
-    private List<Regola> regole;
+    private Stanze stanze;
+    private Artefatti artefatti;
+    private Regole regole;
 
 
     /**
@@ -21,16 +24,9 @@ public class UnitaImmobiliare implements Serializable {
      */
     public UnitaImmobiliare(String nome) {
         this.nome = nome;
-        this.stanze = new ArrayList<>();
-        this.artefatti = new ArrayList<>();
-        this.regole = new ArrayList<>();
-    }
-
-    public UnitaImmobiliare() {
-        this.nome = "";
-        this.stanze = new ArrayList<>();
-        this.artefatti = new ArrayList<>();
-        this.regole = new ArrayList<>();
+        this.stanze = new Stanze();
+        this.artefatti = new Artefatti();
+        this.regole = new Regole();
     }
 
     /**
@@ -38,26 +34,13 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param regola scelta
      */
-    public void cambiaRegolaAttivaDisattiva(Regola regola) {
-        int i = trovaRegola(regola);
-        regole.get(i).setAttiva(!regole.get(i).isAttiva());
+    public void cambiaRegolaAttivaDisattiva(int regola) {
+        regole.getRegole().get(regola).attivaDisattivaRegola();
     }
 
-    /**
-     * Visualizza le regole con il loro stato
-     *
-     * @return lo stato delle regole
-     */
-    public String visualizzaStatoRegole() {
-        StringBuilder statoRegole = new StringBuilder();
-        for (int i = 0; i < regole.size(); i++) {
-            statoRegole.append(regole.get(i).visualizzaStatoRegola());
-        }
-        return statoRegole.toString();
-    }
 
     public void inserisciRegola(Regola regola) {
-        regole.add(regola);
+        regole.getRegole().add(regola);
     }
 
 
@@ -68,8 +51,8 @@ public class UnitaImmobiliare implements Serializable {
      * @return indice della regola
      */
     public int trovaRegola(Regola regola) {
-        for (int i = 0; i < regole.size(); i++) {
-            if (regole.get(i).equals(regola))
+        for (int i = 0; i < regole.getRegole().size(); i++) {
+            if (regole.getRegole().get(i).equals(regola))
                 return i;
         }
         return -1;
@@ -81,7 +64,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param stanza inserita
      */
     public void inserisciStanza(Stanza stanza) {
-        stanze.add(stanza);
+        stanze.getStanze().add(stanza);
     }
 
     /**
@@ -90,7 +73,7 @@ public class UnitaImmobiliare implements Serializable {
      * @param artefatto inserito
      */
     public void inserisciArtefatto(Artefatto artefatto) {
-        artefatti.add(artefatto);
+        artefatti.getArtefatti().add(artefatto);
     }
 
     /**
@@ -153,64 +136,6 @@ public class UnitaImmobiliare implements Serializable {
         }
     }
 
-    /**
-     * toString.
-     *
-     * @return descrizione delle stanze nell'unità immobiliare.
-     */
-    public String visualizzaStanze() {
-        StringBuilder tmp = new StringBuilder();
-        if (!stanze.isEmpty()) {
-            int i = 1;
-            tmp.append("\nStanze:\n");
-            for (Stanza s : stanze) {
-                tmp.append(i);
-                tmp.append(" ");
-                tmp.append(s.getNome());
-                tmp.append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora stanze nella unità immobiliare");
-        return tmp.toString();
-    }
-
-    /**
-     * toString.
-     *
-     * @return descrizione degli artefatti nell'unità immobiliare.
-     */
-    public String visualizzaArtefatti() {
-        StringBuilder tmp = new StringBuilder();
-        if (!artefatti.isEmpty()) {
-            int i = 1;
-            tmp.append("\nArtefatti:\n");
-            for (Artefatto s : artefatti) {
-                tmp.append(i);
-                tmp.append(" ");
-                tmp.append(s.toString());
-                tmp.append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora artefatti nella unità immobiliare");
-        return tmp.toString();
-    }
-
-    /**
-     * toString.
-     *
-     * @return descrizione dell'unita' immobiliare.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        tmp.append(nome);
-        tmp.append(visualizzaArtefatti());
-        tmp.append(visualizzaStanze());
-        return tmp.toString();
-    }
 
     /**
      * Getter.
@@ -218,7 +143,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return le stanze.
      */
     public List<Stanza> getStanze() {
-        return stanze;
+        return stanze.getStanze();
     }
 
     /**
@@ -227,7 +152,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return degli artefatti.
      */
     public List<Artefatto> getArtefatti() {
-        return artefatti;
+        return artefatti.getArtefatti();
     }
 
     /**
@@ -236,7 +161,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return il numero delle stanze.
      */
     public int getSizeStanze() {
-        return stanze.size();
+        return stanze.getStanze().size();
     }
 
     /**
@@ -245,7 +170,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return il numero degli artefatti.
      */
     public int getSizeArtefatti() {
-        return artefatti.size();
+        return artefatti.getArtefatti().size();
     }
 
     /**
@@ -273,7 +198,7 @@ public class UnitaImmobiliare implements Serializable {
      * @return il numero delle stanze.
      */
     public int getSizeRegole() {
-        return regole.size();
+        return regole.getRegole().size();
     }
 
     /**
@@ -281,7 +206,7 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return regole
      */
-    public List<Regola> getRegole() {
+    public Regole getRegole() {
         return regole;
     }
 
@@ -290,22 +215,17 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @param regole scelte
      */
-    public void setRegole(List<Regola> regole) {
+    public void setRegole(Regole regole) {
         this.regole = regole;
     }
 
-    /**
-     * Visualliza le regole
-     *
-     * @return la visualizzazione delle regole
-     */
-    public String visualizzaRegole() {
-        StringBuilder str = new StringBuilder();
-        if (!regole.isEmpty())
-            for (Regola r : regole)
-                str.append("\n" + r.toString());
-        else
-            str.append("Non ci sono ancora regole in questa unità immobiliare");
-        return str.toString();
+    //FORSE SBAGLIATO
+    public List<Attuatore> getAttuatori() {
+        List<Attuatore> attuatori = new ArrayList<>();
+        attuatori.addAll(stanze.getAttuatori());
+        attuatori.addAll(artefatti.getAttuatori());
+        return attuatori;
     }
+
+
 }

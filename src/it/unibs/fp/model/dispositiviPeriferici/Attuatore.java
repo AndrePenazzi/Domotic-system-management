@@ -23,21 +23,6 @@ public class Attuatore implements Serializable {
         this.modOperativa = new ModOperativaNonParamentrica("Idle");
     }
 
-
-    /**
-     * toString.
-     *
-     * @return descrizione dell'attuatore.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + categoriaAttuatori);
-        tmp.append("\n" + modOperativa);
-        return tmp.toString();
-    }
-
     /**
      * Ritorna le categoria a cui l'attuatore appartiene
      *

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoriaSensori implements Serializable {
-    private static final int LUNGHEZZA_MASSIMA = 25;
+    private static final int LUNGHEZZA_MASSIMA = 50;
     private String nome;
     private String testoLibero;
     private List<InfoRilevabile> informazioniRilevabili;
@@ -33,42 +33,13 @@ public class CategoriaSensori implements Serializable {
             throw new IllegalArgumentException("Deve esserci almeno un'informazione rilevabile.");
     }
 
-    public CategoriaSensori() {
-        this.nome = "";
-        this.testoLibero = "";
-        this.informazioniRilevabili = new ArrayList<>();
-    }
-
     /**
      * Getter
      *
      * @return la lunghezza massima
      */
-    public static int getLunghezzaMassima() {
+    public int getLunghezzaMassima() {
         return LUNGHEZZA_MASSIMA;
-    }
-
-    /**
-     * toString
-     *
-     * @return dati della categoriaSensori
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(nome + "\n");
-        tmp.append(testoLibero);
-
-        if (!informazioniRilevabili.isEmpty()) {
-            int i = 1;
-            tmp.append("\nInformazioni rilevabili:\n");
-            for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                tmp.append(i + " " + infoRilevabile.toString());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
-        return tmp.toString();
     }
 
     /**

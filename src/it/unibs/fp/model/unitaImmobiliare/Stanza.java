@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Stanza implements Serializable {
     private String nome;
-    private List<Artefatto> artefatti;
+    private Artefatti artefatti;
     private Sensori sensori;
     private Attuatori attuatori;
 
@@ -24,15 +24,8 @@ public class Stanza implements Serializable {
     public Stanza(String nome) {
         sensori = new Sensori();
         attuatori = new Attuatori();
-        artefatti = new ArrayList<>();
+        artefatti = new Artefatti();
         this.nome = nome;
-    }
-    public Stanza(){
-        sensori = new Sensori();
-        attuatori = new Attuatori();
-        artefatti = new ArrayList<>();
-        this.nome = "";
-
     }
 
     /**
@@ -41,7 +34,7 @@ public class Stanza implements Serializable {
      * @param artefatto nuovo
      */
     public void inserisciArtefatto(Artefatto artefatto) {
-        artefatti.add(artefatto);
+        artefatti.getArtefatti().add(artefatto);
     }
 
 
@@ -65,62 +58,6 @@ public class Stanza implements Serializable {
 
 
     /**
-     * toString.
-     *
-     * @return descrizione degli artefatti nell'unità immobiliare.
-     */
-    public String visualizzaArtefatti() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("Gli Artefatti sono:\n");
-        for (Artefatto a : artefatti) {
-            tmp.append(a.getNome()).append("\n");
-        }
-        return tmp.toString();
-    }
-
-    /**
-     * toString.
-     *
-     * @return descrizione della stanza.
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(nome);
-        if (!artefatti.isEmpty()) {
-            int i = 1;
-            tmp.append("\nArtefatti:\n");
-            for (Artefatto a : artefatti) {
-                tmp.append(i + " " + a.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora artefatti nella stanza");
-
-        if (!sensori.getSensori().isEmpty()) {
-            int i = 1;
-            tmp.append("\nSensori:\n");
-            for (Sensore s : sensori.getSensori()) {
-                tmp.append(i + " " + s.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora sensori nella stanza");
-
-        if (!artefatti.isEmpty()) {
-            int i = 1;
-            tmp.append("\nArtefatti:\n");
-            for (Artefatto a : artefatti) {
-                tmp.append(i + " " + a.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora artefatti nella stanza");
-
-        return tmp.toString();
-    }
-
-    /**
      * Getter
      *
      * @return sensori
@@ -135,7 +72,12 @@ public class Stanza implements Serializable {
      * @return attutatori
      */
     public List<Attuatore> getAttuatori() {
-        return attuatori.getAttuatori();
+        List<Attuatore> attuatori = new ArrayList<>();
+        for (Artefatto a : artefatti.getArtefatti()) {
+            attuatori.addAll(a.getAttuatori());
+        }
+        attuatori.addAll(this.attuatori.getAttuatori());
+        return attuatori;
     }
 
     /**
@@ -162,7 +104,7 @@ public class Stanza implements Serializable {
      * @return artefatti
      */
     public List<Artefatto> getArtefatti() {
-        return artefatti;
+        return artefatti.getArtefatti();
     }
 
     /**
@@ -170,7 +112,7 @@ public class Stanza implements Serializable {
      *
      * @param artefatti all'interno della stanza
      */
-    public void setArtefatti(List<Artefatto> artefatti) {
+    public void setArtefatti(Artefatti artefatti) {
         this.artefatti = artefatti;
     }
 }

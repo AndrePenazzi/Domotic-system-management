@@ -27,12 +27,19 @@ public class Orologio implements Serializable {
         minuti = calendar.get(Calendar.MINUTE);
     }
 
-    /**
-     * toString
-     * @return visualizza l'ora
-     */
-    @Override
-    public String toString() {
-        return ora + ":" + minuti;
+    public int getOra() {
+        return ora;
+    }
+
+    public void setOra(int ora) {
+        this.ora = ora;
+    }
+
+    public int getMinuti() {
+        return minuti;
+    }
+
+    public void setMinuti(int minuti) {
+        this.minuti = minuti;
     }
 }

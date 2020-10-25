@@ -1,14 +1,16 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente.costituenteLogico;
 
-import it.unibs.fp.model.categoria.ListaCategorie;
+import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Orologio;
 import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
 import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogicoFactory;
-import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.classiDiServizio.operatori.ClasseDiServizioOperatoriRelazionali;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioOrologio;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 
@@ -16,7 +18,7 @@ import java.io.Serializable;
 import java.util.InputMismatchException;
 
 public class ClasseDiServizioCostituenteLogico implements Serializable {
-    public static CostituenteLogico menuCreaCostituenteLogico(ListaCategorie listaCategorie) {
+    public static CostituenteLogico menuCreaCostituenteLogico(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico = null;
         boolean finito = false;
         String[] azione = {"Con info rilevabile", "Con orologio", "Con valore parametrico", "Con valore numerico"};
@@ -32,22 +34,22 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
                 break;
 
                 case 1: {
-                    costituenteLogico = creaCostituenteLogicoInfoRilevabile(listaCategorie);
+                    costituenteLogico = creaCostituenteLogicoInfoRilevabile(unitaImmobiliare);
                 }
                 break;
 
                 case 2: {
-                    costituenteLogico = creaCostituenteLogicoOrologio(listaCategorie);
+                    costituenteLogico = creaCostituenteLogicoOrologio();
                 }
                 break;
 
                 case 3: {
-                    costituenteLogico = creaCostituenteLogicoParametrico(listaCategorie);
+                    costituenteLogico = creaCostituenteLogicoParametrico(unitaImmobiliare);
                 }
                 break;
 
                 case 4: {
-                    costituenteLogico = creaCostituenteLogicoNumerico(listaCategorie);
+                    costituenteLogico = creaCostituenteLogicoNumerico(unitaImmobiliare);
                 }
                 break;
             }
@@ -56,18 +58,19 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return costituenteLogico;
     }
 
-    private static CostituenteLogico creaCostituenteLogicoNumerico(ListaCategorie listaCategorie) {
+    private static CostituenteLogico creaCostituenteLogicoNumerico(UnitaImmobiliare unitaImmobiliare) {
+        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;
         double secondoOpLogico;
         OperatoriRelazionali opRelazionale;
-        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
+        primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
         secondoOpLogico = InputDati.leggiDouble("Inserisci un valore numerico");
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
-    private static CostituenteLogico creaCostituenteLogicoOrologio(ListaCategorie listaCategorie) {
+    private static CostituenteLogico creaCostituenteLogicoOrologio() {
         Orologio secondoOpLogico;
         OperatoriRelazionali opRelazionale;
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
@@ -76,16 +79,17 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(secondoOpLogico, opRelazionale);
     }
 
-    public static CostituenteLogico creaCostituenteLogicoInfoRilevabile(ListaCategorie listaCategorie) {
+    public static CostituenteLogico creaCostituenteLogicoInfoRilevabile(UnitaImmobiliare unitaImmobiliare) {
+        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico = null;
         InfoRilevabile secondoOpLogico = null;
         OperatoriRelazionali opRelazionale = null;
         boolean finito;
         do {
             try {
-                primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
+                primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
                 opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-                secondoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
+                secondoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
                 if (primoOpLogico != null && secondoOpLogico != null && primoOpLogico.getType() != secondoOpLogico.getType())
                     throw new InputMismatchException();
                 finito = true;
@@ -98,14 +102,46 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
-    public static CostituenteLogico creaCostituenteLogicoParametrico(ListaCategorie listaCategorie) {
+    public static CostituenteLogico creaCostituenteLogicoParametrico(UnitaImmobiliare unitaImmobiliare) {
+        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;
         String secondoOpLogico;
         OperatoriRelazionali opRelazionale;
-        primoOpLogico = ClasseDiServizioInfoRilevabile.menuCreaInfoRilevabile(listaCategorie);
+        primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
         secondoOpLogico = InputDati.leggiStringaNonVuota("Inserisci un valore parametrico");
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
+
+    /**
+     * toString
+     *
+     * @return nomi e opeartore relazionale
+     */
+    public static String visualizzaCostituenteLogico(CostituenteLogico costituenteLogico) {
+        InfoRilevabile primoOperatoreLogico = costituenteLogico.getPrimoOperatoreLogico();
+        InfoRilevabile secondoOperatoreLogico = costituenteLogico.getSecondoOperatoreLogico();
+        OperatoriRelazionali operatoreRelazionale = costituenteLogico.getOperatoreRelazionale();
+        Double secondoOperatoreCostante = costituenteLogico.getSecondoOperatoreCostante();
+        String secondoOperatoreScalare = costituenteLogico.getSecondoOperatoreScalare();
+        Orologio time = costituenteLogico.getTime();
+        Orologio secondoOperatoreOrologio = costituenteLogico.getSecondoOperatoreOrologio();
+
+        StringBuilder tmp = new StringBuilder();
+        if (primoOperatoreLogico != null && operatoreRelazionale != null) {
+            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+
+            if (secondoOperatoreLogico != null)
+                tmp.append(" " + secondoOperatoreLogico);
+            if (secondoOperatoreCostante != null)
+                tmp.append(" " + secondoOperatoreCostante);
+            if (secondoOperatoreScalare != null)
+                tmp.append(" " + secondoOperatoreScalare);
+        } else if (time != null) {
+            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
+        }
+        return tmp.toString();
+    }
+
 }

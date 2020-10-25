@@ -27,12 +27,6 @@ public class Artefatto implements Serializable {
         this.nome = nome;
     }
 
-    public Artefatto() {
-        sensori = new Sensori();
-        attuatori = new Attuatori();
-        this.nome = "";
-    }
-
     /**
      * Inserisci un sensore.
      *
@@ -49,65 +43,6 @@ public class Artefatto implements Serializable {
      */
     public void inserisciAttuatore(Attuatore attuatore) {
         attuatori.inserisciAttuatore(attuatore);
-    }
-
-    /**
-     * Visualizza i attuatori
-     *
-     * @return descrizione attuatori
-     */
-    public String visualizzaAttuatori() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("Gli attuatori sono:\n");
-        for (Attuatore a : attuatori.getAttuatori()) {
-            tmp.append(a.getNome()).append("\n");
-        }
-        return tmp.toString();
-    }
-
-    /**
-     * Visualizza i sensori
-     *
-     * @return descrizione sensori
-     */
-    public String visualizzaSensori() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("Gli sensori sono:\n");
-        for (Sensore s : sensori.getSensori()) {
-            tmp.append(s.toString()).append("\n");
-        }
-        return tmp.toString();
-    }
-
-    /**
-     * toString.
-     *
-     * @return descrizione dell'artefatto.
-     */
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-
-        if (!sensori.getSensori().isEmpty()) {
-            int i = 1;
-            tmp.append("\nSensori:\n");
-            for (Sensore s : sensori.getSensori()) {
-                tmp.append(i + " " + s.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora sensori associati");
-
-        if (!attuatori.getAttuatori().isEmpty()) {
-            int i = 1;
-            tmp.append("\nAttuatori:\n");
-            for (Attuatore a : attuatori.getAttuatori()) {
-                tmp.append(i + " " + a.toString()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora attuatori associati");
-        return tmp.toString();
     }
 
     /**

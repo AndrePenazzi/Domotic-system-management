@@ -57,7 +57,7 @@ public class MyMenu
 
     public int scegliPerMenuSenzaUscita ()
     {
-        stampaMenu();
+        stampaMenuSenzaUscita();
         return InputDati.leggiIntero(RICHIESTA_INSERIMENTO, 1, voci.length);
     }
 		

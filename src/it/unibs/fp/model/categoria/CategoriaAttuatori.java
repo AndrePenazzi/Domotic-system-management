@@ -31,12 +31,6 @@ public class CategoriaAttuatori implements Serializable {
         this.modalitaOperative = modalitaOperative;
     }
 
-    public CategoriaAttuatori() {
-        this.nome="";
-        this.testoLibero="";
-        this.modalitaOperative = new ArrayList<>();
-    }
-
     /**
      * Getter
      *
@@ -44,32 +38,6 @@ public class CategoriaAttuatori implements Serializable {
      */
     public static int getLunghezzaMassima() {
         return LUNGHEZZA_MASSIMA;
-    }
-
-    /**
-     * toString
-     *
-     * @return dati della categoriaAtturatori
-     */
-    @Override
-    public String toString() {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + testoLibero);
-
-        if (!modalitaOperative.isEmpty()) {
-            int i = 1;
-            tmp.append("\nModalità operative:\n");
-            for (ModOperativa modOperativa : modalitaOperative) {
-                if (modOperativa.getType() == 1)
-                    tmp.append(i + " " + ((ModOperativaNonParamentrica) modOperativa).toString());
-                else
-                    tmp.append(i + " " + ((ModOperativaParamentrica) modOperativa).toString());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora modalità operative associate");
-        return tmp.toString();
     }
 
     /**
