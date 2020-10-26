@@ -14,6 +14,14 @@ public class Sensori {
         return sensori;
     }
 
+    public Sensore getSensore(int i){
+        return sensori.get(i);
+    }
+
+    public int getSize() {
+        return sensori.size();
+    }
+
     public void setSensori(List<Sensore> sensori) {
         this.sensori = sensori;
     }

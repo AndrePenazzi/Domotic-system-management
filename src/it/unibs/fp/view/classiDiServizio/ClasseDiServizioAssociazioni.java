@@ -112,7 +112,7 @@ public class ClasseDiServizioAssociazioni {
                 Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
                 List<Artefatto> artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
                 for (Artefatto a : artefatti)
-                    for (Sensore s : a.getSensori())
+                    for (Sensore s : a.getSensoriInArtefatto())
                         if (nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori())
                             System.out.println("Esite già un sensore con la stessa categoria in uno degli artefatti");
 

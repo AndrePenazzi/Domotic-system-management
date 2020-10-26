@@ -4,9 +4,8 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.model.unitaImmobiliare.Stanza;
-import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.model.unitaImmobiliare.*;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegole;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
@@ -15,12 +14,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioUnitaImmobiliare {
+    ////////////////////////////////////INIZIA CREA/////////////////////////////////////////////////
     public static UnitaImmobiliare creaUnitaImmobiliare() {
         String nome;
         nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova unita immobiliare: ");
         return new UnitaImmobiliare(nome);
     }
 
+
+    public static Regole creaRegole(UnitaImmobiliare unitaImmobiliare) {
+        return ClasseDiServizioRegole.creaRegole(unitaImmobiliare);
+    }
+    ////////////////////////////////////FINE CREA/////////////////////////////////////////////////
+
+    ////////////////////////////////////INIZIA SCELTA/////////////////////////////////////////////////
     //TODO MANCANO I VISUALIZZA
     public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore = null;
@@ -50,27 +57,6 @@ public class ClasseDiServizioUnitaImmobiliare {
         }
 
         return attuatore;
-    }
-
-    public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
-        return ClasseDiServizioStanza.scegliAttuatoreNellaStanza(stanza);
-    }
-
-    public static Attuatore scegliAttuatoreNellArtefattoNellaStanza(Stanza stanza) {
-        Artefatto artefatto = ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
-        return ClasseDiServizioStanza.scegliAttuatoreNellArtefatto(artefatto);
-    }
-
-    public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
-        return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
-    }
-
-
-    public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioStanze.visualizzaAttuatori(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.visualizzaAttuatori(unitaImmobiliare.getArtefatti()));
-        return tmp.toString();
     }
 
     public static Sensore scegliSensore(UnitaImmobiliare unitaImmobiliare) {
@@ -103,6 +89,19 @@ public class ClasseDiServizioUnitaImmobiliare {
         return sensore;
     }
 
+    public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
+        return ClasseDiServizioStanza.scegliAttuatoreNellaStanza(stanza);
+    }
+
+    public static Attuatore scegliAttuatoreNellArtefattoNellaStanza(Stanza stanza) {
+        Artefatto artefatto = ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
+        return ClasseDiServizioStanza.scegliAttuatoreNellArtefatto(artefatto);
+    }
+
+    public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
+        return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
+    }
+
     public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
         return ClasseDiServizioStanza.scegliSensoreNellaStanza(stanza);
     }
@@ -116,35 +115,8 @@ public class ClasseDiServizioUnitaImmobiliare {
         return ClasseDiServizioArtefatto.scegliSensoreNellArtefatto(artefatto);
     }
 
-
-    public static String visualizzaSensori(UnitaImmobiliare unitaImmobiliare) {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioStanze.visualizzaSensori(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.visualizzaSensori(unitaImmobiliare.getArtefatti()));
-        return tmp.toString();
-    }
-
-    //////////////////////////////////////////////////////////////////////////////
-    public static String toString(UnitaImmobiliare unitaImmobiliare) {
-        String nome = unitaImmobiliare.getNome();
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        tmp.append(nome);
-        tmp.append(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
-        return tmp.toString();
-    }
-
-    public static String visualizzaRegole(UnitaImmobiliare unitaImmobiliare) {
-        Regole regole = unitaImmobiliare.getRegole();
-        StringBuilder str = new StringBuilder();
-        str.append(ClasseDiServizioRegole.visualizzaRegole(regole));
-
-        return str.toString();
-    }
-
     public static Regola scegliRegola(UnitaImmobiliare unitaImmobiliare) {
-       return ClasseDiServizioRegole.scegliRegola(unitaImmobiliare.getRegole());
+        return ClasseDiServizioRegole.scegliRegola(unitaImmobiliare.getRegole());
     }
 
     public static int scegliIndexRegola(UnitaImmobiliare unitaImmobiliare) {
@@ -155,7 +127,7 @@ public class ClasseDiServizioUnitaImmobiliare {
         System.out.println(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
         int i = InputDati.leggiIntero("Scegli la stanza: ", 1, unitaImmobiliare.getSizeStanze()) - 1;
 
-        return unitaImmobiliare.getStanze().get(i);
+        return unitaImmobiliare.getStanza(i);
     }
 
     public static List<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
@@ -171,7 +143,7 @@ public class ClasseDiServizioUnitaImmobiliare {
         System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, unitaImmobiliare.getSizeArtefatti()) - 1;
 
-        return unitaImmobiliare.getArtefatti().get(i);
+        return unitaImmobiliare.getArtefatto(i);
     }
 
     public static List<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
@@ -188,7 +160,53 @@ public class ClasseDiServizioUnitaImmobiliare {
         return ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
     }
 
-    public static Regole creaRegole(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioRegole.creaRegole(unitaImmobiliare);
+    ////////////////////////////////////FINE SCELTA/////////////////////////////////////////////////
+
+    ////////////////////////////////////INIZIO VISUALIZZA/////////////////////////////////////////////////
+
+    public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioStanze.visualizzaAttuatori(unitaImmobiliare.getStanze()));
+        tmp.append(ClasseDiServizioArtefatti.visualizzaAttuatori(unitaImmobiliare.getArtefatti()));
+        return tmp.toString();
     }
+
+    public static String visualizzaSensori(UnitaImmobiliare unitaImmobiliare) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioStanze.visualizzaSensori(unitaImmobiliare.getStanze()));
+        tmp.append(ClasseDiServizioArtefatti.visualizzaSensori(unitaImmobiliare.getArtefatti()));
+        return tmp.toString();
+    }
+    public static void visualizzaValoriRilevati(UnitaImmobiliare unitaImmobiliare){
+        System.out.println(ClasseDiServizioStanze.visualizzaValoriRilevati(unitaImmobiliare.getStanze()));
+        System.out.println(ClasseDiServizioArtefatti.visualizzaValoriRilevati(unitaImmobiliare.getArtefatti()));
+    }
+
+
+    public static String visualizzaRegole(UnitaImmobiliare unitaImmobiliare) {
+        Regole regole = unitaImmobiliare.getRegole();
+        StringBuilder str = new StringBuilder();
+        str.append(ClasseDiServizioRegole.visualizzaRegole(regole));
+
+        return str.toString();
+    }
+
+    public static void visualizzaStanze(UnitaImmobiliare unitaImmobiliare) {
+        System.out.println(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
+    }
+
+    public static void visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
+        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
+    }
+
+    public static String toString(UnitaImmobiliare unitaImmobiliare) {
+        String nome = unitaImmobiliare.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(nome);
+        tmp.append(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
+        tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
+        return tmp.toString();
+    }
+    ////////////////////////////////////FINE VISUALIZZA/////////////////////////////////////////////////
 }

@@ -17,16 +17,16 @@ class ArtefattoTest {
     public void inizializzazioneTest() {
         Artefatto artefatto = new Artefatto();
         assertEquals("", artefatto.getNome());
-        assert artefatto.getSensori().size() == 0;
-        assert artefatto.getAttuatori().size() == 0;
+        assert artefatto.getSensoriInArtefatto().size() == 0;
+        assert artefatto.getAttuatoriInArtefatto().size() == 0;
     }
 
     @Test
     public void assegnazioneTest() {
         artefattoNuovo = new Artefatto(NOME_ARTEFATTO);
         assertEquals(NOME_ARTEFATTO, artefattoNuovo.getNome());
-        assert artefattoNuovo.getSensori().size() == 0;
-        assert artefattoNuovo.getAttuatori().size() == 0;
+        assert artefattoNuovo.getSensoriInArtefatto().size() == 0;
+        assert artefattoNuovo.getAttuatoriInArtefatto().size() == 0;
 
     }
 
@@ -35,8 +35,8 @@ class ArtefattoTest {
         artefattoNuovo = new Artefatto(NOME_ARTEFATTO);
         Sensore sensore = new Sensore();
         artefattoNuovo.inserisciSensore(sensore);
-        assert artefattoNuovo.getSensori().size() == 1;
-        assert artefattoNuovo.getAttuatori().size() == 0;
+        assert artefattoNuovo.getSensoriInArtefatto().size() == 1;
+        assert artefattoNuovo.getAttuatoriInArtefatto().size() == 0;
     }
 
     @Test
@@ -44,8 +44,8 @@ class ArtefattoTest {
         artefattoNuovo = new Artefatto(NOME_ARTEFATTO);
         Attuatore attuatore = new Attuatore();
         artefattoNuovo.inserisciAttuatore(attuatore);
-        assert artefattoNuovo.getSensori().size() == 0;
-        assert artefattoNuovo.getAttuatori().size() == 1;
+        assert artefattoNuovo.getSensoriInArtefatto().size() == 0;
+        assert artefattoNuovo.getAttuatoriInArtefatto().size() == 1;
     }
 
 }

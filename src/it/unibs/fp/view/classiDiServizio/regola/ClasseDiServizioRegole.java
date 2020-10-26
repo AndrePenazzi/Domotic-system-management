@@ -5,7 +5,6 @@ import it.unibs.fp.model.regola.Regole;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 
-import java.util.List;
 
 public class ClasseDiServizioRegole {
     public static Regole creaRegole( UnitaImmobiliare unitaImmobiliare) {

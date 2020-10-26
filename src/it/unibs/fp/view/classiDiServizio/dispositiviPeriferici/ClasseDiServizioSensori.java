@@ -5,8 +5,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 import it.unibs.fp.view.mylib.InputDati;
 
-import java.util.List;
-
 public class ClasseDiServizioSensori {
 
     public static Sensori creaSensori(ListaCategorie listaCategorie) {
@@ -19,14 +17,45 @@ public class ClasseDiServizioSensori {
         return sensori;
     }
 
-    public static String toString(List<Sensore> sensori) {
+    public static String visualizzaInfoRilevabili(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\nI sensori sono: \n");
 
-        if (!sensori.isEmpty()) {
+        if (!sensori.getSensori().isEmpty()) {
             int i = 1;
-            tmp.append("\nGli sensori sono:\n");
-            for (Sensore s : sensori) {
+            tmp.append("\nI sensori sono:\n");
+            for (Sensore s : sensori.getSensori()) {
+                tmp.append(i + " " + ClasseDiServizioSensore.visualizzaInfoRilevabili(s)).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori associati");
+        return tmp.toString();
+    }
+    public static String visualizzaValoriRilevati(Sensori sensori) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\nI sensori sono: \n");
+
+        if (!sensori.getSensori().isEmpty()) {
+            int i = 1;
+            tmp.append("\nI sensori sono:\n");
+            for (Sensore s : sensori.getSensori()) {
+                tmp.append(i + " " + ClasseDiServizioSensore.visualizzaValoreRilevato(s)).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori associati");
+        return tmp.toString();
+    }
+
+    public static String toString(Sensori sensori) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\nI sensori sono: \n");
+
+        if (!sensori.getSensori().isEmpty()) {
+            int i = 1;
+            tmp.append("\nI sensori sono:\n");
+            for (Sensore s : sensori.getSensori()) {
                 tmp.append(i + " " + ClasseDiServizioSensore.toString(s)).append("\n");
                 i++;
             }

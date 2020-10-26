@@ -24,7 +24,7 @@ public class Stanze {
         List<Attuatore> attuatori=new ArrayList<>();
 
         for (Stanza s : stanze) {
-            attuatori.addAll(s.getAttuatori());
+            attuatori.addAll(s.getAttuatoriInStanza().getAttuatori());
         }
         return attuatori;
     }

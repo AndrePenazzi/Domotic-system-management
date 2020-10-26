@@ -5,9 +5,9 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
-import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
@@ -16,10 +16,12 @@ import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.utenti.Fruitore;
-import it.unibs.fp.model.utenti.Manutentore;
 
 public class ClasseDiServizioFruitore {
-
+    public static Fruitore creaFruitore() {
+        String nome = InputDati.leggiStringaNonVuota("Inserisci il nome del fruitore");
+        return new Fruitore(nome);
+    }
 
     static void stampaMenuFruitore(Fruitore fruitore, UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
@@ -138,8 +140,8 @@ public class ClasseDiServizioFruitore {
                             Artefatto artefatto = fruitore.getUnitaImmobiliari().get(unitaImm).getArtefatti().get(--artefattoScelto);
                             System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
 
-                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
-                            Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);
+                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatoriInArtefatto().size());
+                            Attuatore attuatore = artefatto.getAttuatoriInArtefatto().get(--attuatoreScelto);
                             System.out.println(attuatore.getCategoriaAttuatori().toString());
 
                             int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
@@ -147,16 +149,16 @@ public class ClasseDiServizioFruitore {
 
                             if (modOperativa.getType() == 1) {
                                 double valore = InputDati.leggiDouble("Inserisci valore : ");
-                                ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
+                                ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatoriInArtefatto().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
                             } else {
                                 ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) modOperativa;
                                 System.out.println(modOperativaParamentrica.toString());
                                 int paremetroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
-                                ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--paremetroScelto));
+                                ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getStanze().get(stanzaScelta).getArtefatti().get(artefattoScelto).getAttuatoriInArtefatto().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--paremetroScelto));
                             }
                         } else {
-                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, stanza.getAttuatori().size());
-                            Attuatore attuatore = stanza.getAttuatori().get(--attuatoreScelto);
+                            int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, stanza.getAttuatoriInStanza().size());
+                            Attuatore attuatore = stanza.getAttuatoriInStanza().get(--attuatoreScelto);
                             System.out.println(attuatore.getCategoriaAttuatori().toString());
 
                             int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
@@ -182,8 +184,8 @@ public class ClasseDiServizioFruitore {
                         Artefatto artefatto = fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(--artefattoScelto);
                         System.out.println(ClasseDiServizioArtefatto.visualizzaAttuatori(artefatto));
 
-                        int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatori().size());
-                        Attuatore attuatore = artefatto.getAttuatori().get(--attuatoreScelto);
+                        int attuatoreScelto = InputDati.leggiIntero("Scegliere attuatore :", 1, artefatto.getAttuatoriInArtefatto().size());
+                        Attuatore attuatore = artefatto.getAttuatoriInArtefatto().get(--attuatoreScelto);
                         System.out.println(attuatore.getCategoriaAttuatori().toString());
 
                         int modalitaOperativaScelta = InputDati.leggiIntero("Scegliere modalità operativa :", 1, attuatore.getCategoriaAttuatori().getModalitaOperative().size());
@@ -191,43 +193,112 @@ public class ClasseDiServizioFruitore {
 
                         if (modOperativa.getType() == 1) {
                             double valore = InputDati.leggiDouble("Inserisci valore : ");
-                            ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
+                            ((ModOperativaNonParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatoriInArtefatto().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setValore(valore);
                         } else {
                             ModOperativaParamentrica modOperativaParamentrica = (ModOperativaParamentrica) modOperativa;
                             System.out.println(modOperativaParamentrica.toString());
                             int parametroScelto = InputDati.leggiIntero("Scegliere parametro modalità operativa", 1, modOperativaParamentrica.getParamentri().size());
-                            ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatori().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--parametroScelto));
+                            ((ModOperativaParamentrica) fruitore.getUnitaImmobiliari().get(--unitaImm).getArtefatti().get(artefattoScelto).getAttuatoriInArtefatto().get(attuatoreScelto).getCategoriaAttuatori().getModalitaOperative().get(modalitaOperativaScelta)).setParametroAttuale(modOperativaParamentrica.getParamentri().get(--parametroScelto));
                         }
                     }
                 }
                 break;
 
                 case 3: {
-                    ClasseDiServizioInserimenti.creaConseguenze(contenitore, unitaImm, fruitore);
-
-                    ClasseDiServizioInserimenti.creaAntecedente(contenitore, unitaImm, fruitore);
+                    creaRegole(fruitore);
                 }
                 break;
 
                 case 4: {
-                    System.out.println(fruitore.getUnitaImmobiliari().get(unitaImm).visualizzaRegole());
+                    visualizzaRegole(fruitore);
                 }
                 break;
                 case 5: {
 
-                    ClasseDiServizioFruitore.cambiaStatoRegola(unitaImm, fruitore);
+                    cambiaStatoRegola(fruitore);
                 }
                 break;
             }
         } while (!finito);
     }
 
-    static Fruitore cambiaStatoRegola(UnitaImmobiliari unitaImmobiliari, Fruitore fruitore) {
-        UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+    public static Fruitore creaRegole(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
         do {
-            int regola=ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
-            unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
-        } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            do {
+                ClasseDiServizioUnitaImmobiliare.creaRegole(unitaImmobiliare);
+            } while (InputDati.yesOrNo("Vuoi creare un'altra regola di questa unità immobiliare?"));
+        } while (InputDati.yesOrNo("Vuoi creare un'altra regola di un'altra unità immobiliare?"));
         return fruitore;
     }
+
+    public static Fruitore visualizzaRegole(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        do {
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            System.out.println(ClasseDiServizioUnitaImmobiliare.visualizzaRegole(unitaImmobiliare));
+        } while (InputDati.yesOrNo("Vuoi visualizzare le regole di un'altra unità immobiliare?"));
+        return fruitore;
+    }
+
+
+    public static Fruitore cambiaStatoRegola(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        do {
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            do {
+                int regola = ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
+                unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
+            } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
+        } while (InputDati.yesOrNo("Vuoi cambiare lo stato di un'altra regola di un'altra unità immobiliare?"));
+        return fruitore;
+    }
+
+    public String visualizzaUnitaImmobiliari(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari));
+        return tmp.toString();
+    }
+
+    public String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
+        return ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie);
+    }
+
+    public String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
+        return ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie);
+    }
+
+    public void visualizzaStanze(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        StringBuilder tmp = new StringBuilder();
+        do {
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            ClasseDiServizioUnitaImmobiliare.visualizzaStanze(unitaImmobiliare);
+        } while (InputDati.yesOrNo("Vuoi visualizzare le stanze di un'altra unita immobiliare?"));
+    }
+
+    public void visualizzaArtefatti(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        do {
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            ClasseDiServizioUnitaImmobiliare.visualizzaArtefatti(unitaImmobiliare);
+        } while (InputDati.yesOrNo("Vuoi visualizzare gli artefatti di un'altra unita immobiliare?"));
+    }
+
+    /**
+     * Visualizza i valori rilevati dai sensori
+     *
+     * @return i valori rilevati
+     */
+    public void valoriRilevati(Fruitore fruitore) {
+        UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliari();
+        do {
+            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+            ClasseDiServizioUnitaImmobiliare.visualizzaValoriRilevati(unitaImmobiliare);
+        } while (InputDati.yesOrNo("Vuoi visualizzare gli artefatti di un'altra unita immobiliare?"));
+    }
+
+
 }

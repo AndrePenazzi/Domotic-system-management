@@ -13,6 +13,12 @@ public class Attuatori {
     public List<Attuatore> getAttuatori() {
         return attuatori;
     }
+    public Attuatore getAttuatore(int i){
+        return attuatori.get(i);
+    }
+    public int getSize() {
+        return attuatori.size();
+    }
 
     public void setAttuatori(List<Attuatore> attuatori) {
         this.attuatori = attuatori;

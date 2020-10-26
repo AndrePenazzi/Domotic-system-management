@@ -39,7 +39,7 @@ class StanzaTest {
         CategoriaAttuatori categoriaAttuatori = new CategoriaAttuatori();
         Attuatore attuatore = new Attuatore(nomeAttuatore, categoriaAttuatori);
         stanza.inserisciAttuatore(attuatore);
-        assertEquals(attuatore,stanza.getAttuatori().get(0));
+        assertEquals(attuatore,stanza.getAttuatoriInStanza().get(0));
     }
 
     //TODO

@@ -2,7 +2,6 @@ package it.unibs.fp.view.classiDiServizio;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
@@ -12,7 +11,6 @@ import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaI
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.ServizioFile;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
-import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
 
 import java.io.File;
@@ -87,29 +85,6 @@ public class ClasseDiServizioInserimenti {
         } while (InputDati.yesOrNo("Vuoi inserire un'altra stanza?"));
     }
 
-    public static Fruitore inserisciNuovaRegola(Contenitore contenitore, int unitaImmobiliareIndex, Regola regola) {
-        Fruitore fruitore = contenitore.getManutentore().getFruitore();
-        fruitore.inserisciRegola(unitaImmobiliareIndex, regola);
-        return fruitore;
-    }
-
-    public static Fruitore inserisciNuovaRegola(Contenitore contenitore, UnitaImmobiliare unitaImmobiliare, Regola regola) {
-        Fruitore fruitore = contenitore.getManutentore().getFruitore();
-        fruitore.inserisciRegola(unitaImmobiliare, regola);
-        return fruitore;
-    }
-
-    /**
-     * Scegli la regola
-     *
-     * @param unitaImmobiliare scelta
-     * @return indice della regola
-     */
-    public static int scegliRegola(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioUnitaImmobiliare.visualizzaRegole(unitaImmobiliare));
-        return InputDati.leggiIntero("Scegli la regola:", 1, unitaImmobiliare.getRegole().size()) - 1;
-    }
-
     /**
      * Scegli un unità immobiliare
      *
@@ -142,13 +117,6 @@ public class ClasseDiServizioInserimenti {
         }
         int scelta = InputDati.leggiIntero("Scegliere parametro con cui confrontare");
         return infoRilevabileNonNumerica.getValori().get(scelta);
-    }
-    //-----------------------------FINE CREA-----------------------------------------------------
-
-
-    static Regole creaRegole(UnitaImmobiliare unitaImmobiliare){
-        return ClasseDiServizioUnitaImmobiliare.creaRegole(unitaImmobiliare);
-
     }
 
     //-----------------------------FINE SCEGLI-----------------------------------------------------

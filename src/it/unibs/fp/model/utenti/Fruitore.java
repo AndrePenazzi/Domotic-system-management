@@ -7,7 +7,7 @@ import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 
 import java.io.Serializable;
@@ -16,17 +16,19 @@ import java.util.List;
 
 
 public class Fruitore implements Serializable {
-    private List<UnitaImmobiliare> unitaImmobiliari;
+    private UnitaImmobiliari unitaImmobiliari;
+    private String nome;
 
     /**
      * Costruttore fruitore
      */
-    public Fruitore() {
-        unitaImmobiliari = new ArrayList<>();
+    public Fruitore(String nome) {
+        unitaImmobiliari = new UnitaImmobiliari();
+        this.nome=nome;
     }
 
     public void inserisciRegola(int unitaImmobiliareIndex, Regola regola) {
-        unitaImmobiliari.get(unitaImmobiliareIndex).inserisciRegola(regola);
+        unitaImmobiliari.getUnitaImmobiliari().get(unitaImmobiliareIndex).inserisciRegola(regola);
     }
 
 
@@ -40,7 +42,7 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare scelta per essere inserita
      */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliari.add(unitaImmobiliare);
+        unitaImmobiliari.getUnitaImmobiliari().add(unitaImmobiliare);
     }
 
     /**
@@ -50,8 +52,8 @@ public class Fruitore implements Serializable {
      * @return indice unità immobiliare
      */
     public int trovaIndiceUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        for (int i = 0; i < unitaImmobiliari.size(); i++) {
-            if (unitaImmobiliari.get(i).equals(unitaImmobiliare))
+        for (int i = 0; i < unitaImmobiliari.getUnitaImmobiliari().size(); i++) {
+            if (unitaImmobiliari.getUnitaImmobiliari().get(i).equals(unitaImmobiliare))
                 return i;
         }
         return -1;
@@ -64,8 +66,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare esistente
      */
     public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciStanza(stanza);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciStanza(stanza);
         }
     }
 
@@ -76,8 +78,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare esistente
      */
     public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciArtefatto(artefatto);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciArtefatto(artefatto);
         }
     }
 
@@ -89,8 +91,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare che contiene le stanze
      */
     public void associaSensoreAStanze(Sensore sensoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAStanze(sensoreAss, stanzeAss);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAStanze(sensoreAss, stanzeAss);
         }
     }
 
@@ -102,8 +104,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare che contiene le stanze
      */
     public void associaAttuatoreAStanze(Attuatore attuatoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAStanze(attuatoreAss, stanzeAss);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAStanze(attuatoreAss, stanzeAss);
         }
     }
 
@@ -115,8 +117,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare che contiene gli artefatti
      */
     public void associaSensoreAdArtefatti(Sensore sensoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAdArtefatti(sensoreAss, artefattoAss);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAdArtefatti(sensoreAss, artefattoAss);
         }
     }
 
@@ -128,8 +130,8 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare che contiene gli artefatti
      */
     public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
         }
     }
 
@@ -141,139 +143,19 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare che contiene gli artefatti
      */
     public void associaArtefattoAStanze(Artefatto artefatto, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaArtefattoAStanze(artefatto, stanzeAss);
+        if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
+            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaArtefattoAStanze(artefatto, stanzeAss);
         }
     }
 
-    /**
-     * Lista delle unità immobilari e loro caratteristiche
-     *
-     * @return lista unità immobilari
-     */
-    public String visualizzaUnitaImmobiliari() {
-        StringBuilder tmp = new StringBuilder();
-        if (!unitaImmobiliari.isEmpty()) {
-            int i = 1;
-            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
-                tmp.append(i + " " + unitaImmobiliare.getNome()).append("\n");
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
-        return tmp.toString();
-    }
 
-    /**
-     * Lista delle unità immobilari con solo i nomi
-     *
-     * @return lista unità immobilari
-     */
-    public String visualizzaListaUnitaImmobiliari() {
-        StringBuilder tmp = new StringBuilder();
-        if (!unitaImmobiliari.isEmpty()) {
-            int i = 1;
-            for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari) {
-                tmp.append("\n");
-                tmp.append(i + " " + unitaImmobiliare.getNome());
-                i++;
-            }
-        } else
-            tmp.append("\nNon ci sono ancora unità immobiliare che si possiedono");
-        return tmp.toString();
-    }
-
-    /**
-     * Visualizza la descrizione delle categorie sensori
-     *
-     * @param listaCategorie scelta
-     * @return la descrizione delle categorie sensori
-     */
-    public String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie);
-    }
-
-    /**
-     * Visualizza la descrizione delle categorie attuatori
-     *
-     * @param listaCategorie scelta
-     * @return la descrizione delle categorie attuatori
-     */
-    public String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie);
-    }
-
-    /**
-     * Visualizza la descrizione delle stanze dell'unità immobiliare
-     *
-     * @param unitaImmobiliare scelta
-     * @return la descrizione delle stanze
-     */
-    public String visualizzaStanze(UnitaImmobiliare unitaImmobiliare) {
-        String tmp = "";
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            tmp = unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).visualizzaStanze();
-        }
-        return tmp;
-    }
-
-    /**
-     * Visualizza la descrizione degli artefatti dell'unità immobiliare
-     *
-     * @param unitaImmobiliare scelta
-     * @return la descrizione degli artefatti
-     */
-    public String visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        String tmp = "";
-        if (unitaImmobiliari.contains(unitaImmobiliare)) {
-            tmp = unitaImmobiliari.get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).visualizzaArtefatti();
-        }
-        return tmp;
-    }
-
-    /**
-     * Visualizza i valori rilevati dai sensori
-     *
-     * @param unitaImmobiliare scelta
-     * @return i valori rilevati
-     */
-    public String valoriRilevati(UnitaImmobiliare unitaImmobiliare) {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append("\n");
-        if (!unitaImmobiliare.getStanze().isEmpty())
-            for (Stanza stanza :
-                    unitaImmobiliare.getStanze()) {
-                tmp.append("\n");
-                tmp.append(stanza.getNome());
-                if (!stanza.getSensori().isEmpty())
-                    for (Sensore sensore :
-                            stanza.getSensori()) {
-                        tmp.append("\n" + sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
-                    }
-                else tmp.append("\nNon ci sono sensori nella stanza");
-                if (!stanza.getArtefatti().isEmpty())
-                    for (Artefatto artefatto :
-                            stanza.getArtefatti()) {
-                        tmp.append("\n" + artefatto.getNome());
-                        if (!artefatto.getSensori().isEmpty())
-                            for (Sensore sensore :
-                                    artefatto.getSensori()) {
-                                tmp.append("\n" + sensore.getNome()).append(" ").append(sensore.rilevaVariabileFisica());
-                            }
-                        else tmp.append("\nNon ci sono sensori nell'artefatto");
-                    }
-                else tmp.append("\nNon ci sono artefatti nella stanza");
-            }
-        else tmp.append("\nNon ci sono stanze nella unità immobiliare");
-        return tmp.toString();
-    }
 
     /**
      * Getter delle unità immobiliari del fruitore
      *
      * @return le varie unità immobiliari
      */
-    public List<UnitaImmobiliare> getUnitaImmobiliari() {
+    public UnitaImmobiliari getUnitaImmobiliari() {
         return unitaImmobiliari;
     }
 
@@ -282,7 +164,7 @@ public class Fruitore implements Serializable {
      *
      * @param unitaImmobiliari da modificare
      */
-    public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
+    public void setUnitaImmobiliari(UnitaImmobiliari unitaImmobiliari) {
         this.unitaImmobiliari = unitaImmobiliari;
     }
 

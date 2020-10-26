@@ -2,8 +2,7 @@ package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.unitaImmobiliare.Artefatti;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.model.unitaImmobiliare.Stanza;
-import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatori;
+import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
 import it.unibs.fp.view.mylib.InputDati;
 
 import java.util.List;
@@ -19,29 +18,39 @@ public class ClasseDiServizioArtefatti {
 
         return artefatti;
     }
-    public static String visualizzaAttuatori(List<Artefatto> artefatti) {
+
+    public static String visualizzaAttuatori(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
-        for (Artefatto a : artefatti) {
+        for (Artefatto a : artefatti.getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaAttuatori(a));
         }
         return tmp.toString();
     }
-    public static String visualizzaSensori(List<Artefatto> artefatti) {
+
+    public static String visualizzaSensori(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
-        for (Artefatto a : artefatti) {
+        for (Artefatto a : artefatti.getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaSensori(a));
         }
         return tmp.toString();
     }
 
-    public static String toString(List<Artefatto> artefatti) {
+    public static String visualizzaValoriRilevati(Artefatti artefatti) {
+        StringBuilder tmp = new StringBuilder();
+        for (Artefatto a : artefatti.getArtefatti()) {
+            tmp.append(ClasseDiServizioArtefatto.visualizzaValoriRilevati(a));
+        }
+        return tmp.toString();
+    }
+
+    public static String toString(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\nGli artefatti sono: \n");
 
-        if (!artefatti.isEmpty()) {
+        if (!artefatti.getArtefatti().isEmpty()) {
             int i = 1;
             tmp.append("\nGli artefatti sono:\n");
-            for (Artefatto a : artefatti) {
+            for (Artefatto a : artefatti.getArtefatti()) {
                 tmp.append(i + " " + ClasseDiServizioArtefatto.toString(a)).append("\n");
                 i++;
             }

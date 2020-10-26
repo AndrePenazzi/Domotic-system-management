@@ -10,12 +10,13 @@ public class ClasseDiServizioListaCategorie {
 
     public static CategoriaSensori scegliCategoriaSensori(ListaCategorie listaCategorie) {
         visualizzaCategorieSensori(listaCategorie);
-        int i= InputDati.leggiIntero("Scgli la categoria sensori: ",1,listaCategorie.getSizeCategorieSensori())-1;
+        int i = InputDati.leggiIntero("Scgli la categoria sensori: ", 1, listaCategorie.getSizeCategorieSensori()) - 1;
         return listaCategorie.getCategorieSensori().get(i);
     }
+
     public static CategoriaAttuatori scegliCategoriaAttuatori(ListaCategorie listaCategorie) {
         visualizzaCategorieAttuatori(listaCategorie);
-        int i= InputDati.leggiIntero("Scgli la categoria attuatori: ",1,listaCategorie.getSizeCategorieAttuatori())-1;
+        int i = InputDati.leggiIntero("Scgli la categoria attuatori: ", 1, listaCategorie.getSizeCategorieAttuatori()) - 1;
         return listaCategorie.getCategorieAttuatori().get(i);
     }
 

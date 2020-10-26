@@ -106,7 +106,7 @@ class ManutentoreTest {
         sensoreNuovo=new Sensore();
         manutentore.inserisciArtefatto(artefattoNuovo,manutentore.getUnitaImmobiliari().get(0));
         manutentore.associaSensoreAdArtefatti(sensoreNuovo,manutentore.getUnitaImmobiliari().get(0).getArtefatti(),manutentore.getUnitaImmobiliari().get(0));
-        assertEquals("",manutentore.getUnitaImmobiliari().get(0).getArtefatti().get(0).getSensori().get(0).getNome());
+        assertEquals("",manutentore.getUnitaImmobiliari().get(0).getArtefatti().get(0).getSensoriInArtefatto().get(0).getNome());
         assert manutentore.getUnitaImmobiliari().get(0).getSizeStanze() == 0;
         assert manutentore.getUnitaImmobiliari().get(0).getSizeArtefatti() == 1;
         assert manutentore.getUnitaImmobiliari().get(0).getSizeRegole() == 0;
@@ -121,7 +121,7 @@ class ManutentoreTest {
         attuatoreNuovo=new Attuatore();
         manutentore.inserisciArtefatto(artefattoNuovo,manutentore.getUnitaImmobiliari().get(0));
         manutentore.associaAttuatoreAdArtefatti(attuatoreNuovo,manutentore.getUnitaImmobiliari().get(0).getArtefatti(),manutentore.getUnitaImmobiliari().get(0));
-        assertEquals("",manutentore.getUnitaImmobiliari().get(0).getArtefatti().get(0).getAttuatori().get(0).getNome());
+        assertEquals("",manutentore.getUnitaImmobiliari().get(0).getArtefatti().get(0).getAttuatoriInArtefatto().get(0).getNome());
         assert manutentore.getUnitaImmobiliari().get(0).getSizeStanze() == 0;
         assert manutentore.getUnitaImmobiliari().get(0).getSizeArtefatti() == 1;
         assert manutentore.getUnitaImmobiliari().get(0).getSizeRegole() == 0;
