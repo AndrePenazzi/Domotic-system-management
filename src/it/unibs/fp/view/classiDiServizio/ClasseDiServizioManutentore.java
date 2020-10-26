@@ -352,15 +352,15 @@ public class ClasseDiServizioManutentore {
                         //Categorie sensori in artefatti nelle stanze
                         for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
                             for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getArtefatti().size(); j++) {
-                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().size(); l++) {
-                                    categorieSensoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().get(l).getCategoriaSensori());
+                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensoriInArtefatto().size(); l++) {
+                                    categorieSensoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensoriInArtefatto().get(l).getCategoriaSensori());
                                 }
                             }
                         }
                         //Categorie sensori in artefatti
                         for (int i = 0; i < unitaImmobiliare.getSizeArtefatti(); i++) {
-                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensori().size(); j++) {
-                                categorieSensoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getSensori().get(j).getCategoriaSensori());
+                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensoriInArtefatto().size(); j++) {
+                                categorieSensoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getSensoriInArtefatto().get(j).getCategoriaSensori());
                             }
                         }
                         //Categorie attuatori in stanze
@@ -372,15 +372,15 @@ public class ClasseDiServizioManutentore {
                         //Categorie attuatori in artefatti nelle stanze
                         for (int i = 0; i < unitaImmobiliare.getSizeStanze(); i++) {
                             for (int j = 0; j < unitaImmobiliare.getStanze().get(i).getArtefatti().size(); j++) {
-                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensori().size(); l++) {
-                                    categorieAttuatoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getAttuatori().get(l).getCategoriaAttuatori());
+                                for (int l = 0; l < unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getSensoriInArtefatto().size(); l++) {
+                                    categorieAttuatoriCompatibilita.add(unitaImmobiliare.getStanze().get(i).getArtefatti().get(j).getAttuatoriInArtefatto().get(l).getCategoriaAttuatori());
                                 }
                             }
                         }
                         //Categorie attuatori in artefatti
                         for (int i = 0; i < unitaImmobiliare.getSizeArtefatti(); i++) {
-                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensori().size(); j++) {
-                                categorieAttuatoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getAttuatori().get(j).getCategoriaAttuatori());
+                            for (int j = 0; j < unitaImmobiliare.getArtefatti().get(i).getSensoriInArtefatto().size(); j++) {
+                                categorieAttuatoriCompatibilita.add(unitaImmobiliare.getArtefatti().get(i).getAttuatoriInArtefatto().get(j).getCategoriaAttuatori());
                             }
                         }
                     }

@@ -5,8 +5,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 import it.unibs.fp.view.mylib.InputDati;
 
-import java.util.List;
-
 public class ClasseDiServizioAttuatori {
 
     public static Attuatori creaAttuatori(ListaCategorie listaCategorie) {
@@ -19,14 +17,14 @@ public class ClasseDiServizioAttuatori {
         return attuatori;
     }
 
-    public static String toString(List<Attuatore> attuatori) {
+    public static String toString(Attuatori attuatori) {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\nGli attuatori sono: \n");
 
-        if (!attuatori.isEmpty()) {
+        if (!attuatori.getAttuatori().isEmpty()) {
             int i = 1;
             tmp.append("\nGli attuatori sono:\n");
-            for (Attuatore a : attuatori) {
+            for (Attuatore a : attuatori.getAttuatori()) {
                 tmp.append(i + " " + ClasseDiServizioAttuatore.toString(a)).append("\n");
                 i++;
             }

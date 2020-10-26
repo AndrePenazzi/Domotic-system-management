@@ -58,7 +58,22 @@ public class ClasseDiServizioCategoriaSensori {
         } else
             tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
         return tmp.toString();
+    }
 
+    public static String visualizzaValoreRilevato(CategoriaSensori categoriaSensori) {
+        StringBuilder tmp = new StringBuilder();
+        List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
+
+        if (!informazioniRilevabili.isEmpty()) {
+            int i = 1;
+            tmp.append("\nInformazioni rilevabili:\n");
+            for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
+                tmp.append(i + " " + ClasseDiServizioInfoRilevabile.visualizzaValoreRilevato(infoRilevabile));
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
+        return tmp.toString();
     }
 
     public static String toString(CategoriaSensori categoriaSensori) {

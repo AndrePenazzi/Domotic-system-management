@@ -6,6 +6,15 @@ import java.util.List;
 
 public class ClasseDiServizioInfoRilevabileNonNumerica {
 
+    public static String visualizzaValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
+        StringBuilder tmp = new StringBuilder();
+
+        int i = 1;
+        tmp.append("\nValore attuale:\n");
+        tmp.append(i + " " + infoRilevabile.rilevaVariabile()).append("\n");
+        return tmp.toString();
+    }
+
     public static String visualizzaValori(InfoRilevabileNonNumerica infoRilevabile) {
         List<String> valori = infoRilevabile.getValori();
         StringBuilder tmp = new StringBuilder();

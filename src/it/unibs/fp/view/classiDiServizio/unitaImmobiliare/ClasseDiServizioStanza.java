@@ -9,7 +9,6 @@ import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioS
 import it.unibs.fp.view.mylib.InputDati;
 
 
-
 public class ClasseDiServizioStanza {
     public static Stanza creaStanza() {
         String nome;
@@ -19,29 +18,32 @@ public class ClasseDiServizioStanza {
 
     public static String visualizzaAttuatori(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
+        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
         return tmp.toString();
     }
+
     public static String visualizzaSensori(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
         return tmp.toString();
     }
 
+
     public static String visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(visualizzaAttuatori(stanza));
 
-        for (Artefatto a : stanza.getArtefatti()) {
+        for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaAttuatori(a));
         }
         return tmp.toString();
     }
+
     public static String visualizzaSensoriESensoriAssociatiAdArtefatti(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(visualizzaSensori(stanza));
 
-        for (Artefatto a : stanza.getArtefatti()) {
+        for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaSensori(a));
         }
         return tmp.toString();
@@ -49,9 +51,9 @@ public class ClasseDiServizioStanza {
 
     public static Artefatto scegliArtefattoNellaStanza(Stanza stanza) {
         System.out.println(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
-        int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getArtefatti().size()) - 1;
+        int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getSizeArtefatti()) - 1;
 
-        return stanza.getArtefatti().get(i);
+        return stanza.getArtefatto(i);
     }
 
     public static String toString(Stanza stanza) {
@@ -72,10 +74,10 @@ public class ClasseDiServizioStanza {
 
 
     public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioAttuatori.toString(stanza.getAttuatori()));
-        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatori().size()) - 1;
+        System.out.println(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatoriInStanza().getSize()) - 1;
 
-        return stanza.getAttuatori().get(i);
+        return stanza.getAttuatoriInStanza().getAttuatore(i);
     }
 
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
@@ -85,8 +87,24 @@ public class ClasseDiServizioStanza {
 
     public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
         System.out.println(ClasseDiServizioSensori.toString(stanza.getSensori()));
-        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSensori().size()) - 1;
+        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSizeSensori()) - 1;
 
-        return stanza.getSensori().get(i);
+        return stanza.getSensore(i);
+    }
+
+    public static String visualizzaValoriRilevati(Stanza stanza) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioSensori.visualizzaValoriRilevati(stanza.getSensori()));
+        return tmp.toString();
+    }
+
+    public static String visualizzaValoriRilevatiEValoriRilevatiInArtefatti(Stanza stanza) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(visualizzaValoriRilevati(stanza));
+
+        for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
+            tmp.append(ClasseDiServizioArtefatto.visualizzaValoriRilevati(a));
+        }
+        return tmp.toString();
     }
 }

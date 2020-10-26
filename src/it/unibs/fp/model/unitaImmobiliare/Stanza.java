@@ -6,7 +6,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -62,8 +61,15 @@ public class Stanza implements Serializable {
      *
      * @return sensori
      */
-    public List<Sensore> getSensori() {
-        return sensori.getSensori();
+    public Sensori getSensori() {
+        return sensori;
+    }
+
+    public Sensore getSensore(int i) {
+        return sensori.getSensore(i);
+    }
+    public int getSizeSensori() {
+        return sensori.getSize();
     }
 
     /**
@@ -71,15 +77,14 @@ public class Stanza implements Serializable {
      *
      * @return attutatori
      */
-    public List<Attuatore> getAttuatori() {
-        List<Attuatore> attuatori = new ArrayList<>();
+    public Attuatori getAttuatoriInStanza() {
+        Attuatori attuatori = new Attuatori();
         for (Artefatto a : artefatti.getArtefatti()) {
-            attuatori.addAll(a.getAttuatori());
+            attuatori.getAttuatori().addAll(a.getAttuatoriInArtefatto().getAttuatori());
         }
-        attuatori.addAll(this.attuatori.getAttuatori());
+        attuatori.getAttuatori().addAll(this.attuatori.getAttuatori());
         return attuatori;
     }
-
     /**
      * Getter
      *
@@ -103,8 +108,17 @@ public class Stanza implements Serializable {
      *
      * @return artefatti
      */
-    public List<Artefatto> getArtefatti() {
-        return artefatti.getArtefatti();
+    public Artefatti getArtefatti() {
+        return artefatti;
+    }
+    public Artefatti getArtefattiInStanza() {
+        return artefatti;
+    }
+    public Artefatto getArtefatto(int i) {
+        return artefatti.getArtefatti().get(i);
+    }
+    public int getSizeArtefatti() {
+        return artefatti.getArtefatti().size();
     }
 
     /**

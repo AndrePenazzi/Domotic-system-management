@@ -1,46 +1,52 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
+import it.unibs.fp.model.unitaImmobiliare.Artefatti;
+import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.Stanze;
+import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
 import it.unibs.fp.view.mylib.InputDati;
-
-import java.util.List;
 
 public class ClasseDiServizioStanze {
 
-    public static Stanze creaArtefatti() {
+    public static Stanze creaStanza() {
         Stanze stanze = new Stanze();
-
         do {
             stanze.inserisciStanza(ClasseDiServizioStanza.creaStanza());
         } while (InputDati.yesOrNo("Vuoi continuare ad inserire una nuova stanza?"));
 
         return stanze;
     }
-
-    public static String visualizzaAttuatori(List<Stanza> stanze) {
+    public static String visualizzaAttuatori(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
-        for (Stanza s : stanze) {
+        for (Stanza s : stanze.getStanze()) {
             tmp.append(ClasseDiServizioStanza.visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(s));
         }
         return tmp.toString();
     }
-    public static String visualizzaSensori(List<Stanza> stanze) {
+    public static String visualizzaSensori(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
-        for (Stanza s : stanze) {
+        for (Stanza s : stanze.getStanze()) {
             tmp.append(ClasseDiServizioStanza.visualizzaSensoriESensoriAssociatiAdArtefatti(s));
         }
         return tmp.toString();
     }
+    public static String visualizzaValoriRilevati(Stanze stanze) {
+        StringBuilder tmp = new StringBuilder();
+        for (Stanza s : stanze.getStanze()) {
+            tmp.append(ClasseDiServizioStanza.visualizzaValoriRilevati(s));
+        }
+        return tmp.toString();
+    }
 
-    public static String toString(List<Stanza> stanze) {
+    public static String toString(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\nLe stanze sono: \n");
 
-        if (!stanze.isEmpty()) {
+        if (!stanze.getStanze().isEmpty()) {
             int i = 1;
             tmp.append("\nLe stanze sono:\n");
-            for (Stanza s : stanze) {
+            for (Stanza s : stanze.getStanze()) {
                 tmp.append(i + " " + ClasseDiServizioStanza.toString(s)).append("\n");
                 i++;
             }

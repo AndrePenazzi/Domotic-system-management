@@ -33,20 +33,37 @@
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contenitore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/CategoriaAttuatoriDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/CategoriaAttuatoriFileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/CategoriaSensoriDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/CategoriaSensoriFileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/Contenitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/FruitoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/FruitoreFileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/ManutentoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/ManutentoreFileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioAssociazioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioAssociazioni.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioFruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioManutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/MyMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/mylib/MyMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioCategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioCategoriaSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioRegole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/ClasseDiServizioRegole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioArtefatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioArtefatti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioArtefatto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioArtefatto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioStanza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioStanza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioStanze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioStanze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliari.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +145,17 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="it.unibs.fp.Main" />
       <module name="Domotic-system-management" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -258,9 +286,9 @@
       <workItem from="1603438782908" duration="9859000" />
       <workItem from="1603469680541" duration="4606000" />
       <workItem from="1603524157426" duration="9716000" />
-      <workItem from="1603618242247" duration="6823000" />
-      <workItem from="1603645555167" duration="1531000" />
-      <workItem from="1603699098678" duration="1901000" />
+      <workItem from="1603618242247" duration="6973000" />
+      <workItem from="1603647994732" duration="3597000" />
+      <workItem from="1603703773904" duration="6072000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -535,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603533834251</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Finish&#10;-Regole --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed">
+      <created>1603621515813</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1603621515813</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +606,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inserite funzionalità di import e salvataggio" />
     <MESSAGE value="Inserite funzionalità di import e salvataggio e fixati alcuni bug" />
     <MESSAGE value="Inserite funzionalità di import e salvataggio e fixati alcuni bug ulteriori" />
     <MESSAGE value="Inseriti primi test" />
@@ -596,17 +630,18 @@
     <MESSAGE value="--Add getAttuatori in:&#10;&#10;-ClasseDiServizioStanze&#10;-ClasseDiServizioStanza&#10;-ClasseDiServizioArtefatti&#10;-ClasseDiServizioArtefatto" />
     <MESSAGE value="--Fix toString:&#10;&#10;-ClasseDiServizioStanze&#10;-ClasseDiServizioStanza&#10;-ClasseDiServizioArtefatti&#10;-ClasseDiServizioArtefatto" />
     <MESSAGE value="-UnitaImmobilare --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="-UnitaImmobilare --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed" />
+    <MESSAGE value="Finish&#10;-Regole --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish&#10;-Regole --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1600074156868" />
-    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1603646436339">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="454" y="241" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1603531778867">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1603646436339" />
+    <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602840139199" />
     <state x="454" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603531778867" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600350511340">
       <screen x="0" y="0" width="1536" height="834" />
@@ -620,16 +655,16 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="551" y="311" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834@0.0.1536.834" timestamp="1602183790741" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603646087970">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603353742571">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1603646087970" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603353742571" />
-    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1603533833358">
+    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1603621514596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603533833358" />
+    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603621514596" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -666,15 +701,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603187556678" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1603645883360">
+    <state x="277" y="0" key="SettingsEditor" timestamp="1600071631217">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1603645883360" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603533879473">
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603621522923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603533879473" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603621522923" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

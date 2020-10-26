@@ -4,7 +4,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
-import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -142,19 +141,25 @@ public class UnitaImmobiliare implements Serializable {
      *
      * @return le stanze.
      */
-    public List<Stanza> getStanze() {
-        return stanze.getStanze();
+    public Stanze getStanze() {
+        return stanze;
     }
 
+    public Stanza getStanza(int i) {
+        return stanze.getStanze().get(i);
+    }
     /**
      * Getter
      *
      * @return degli artefatti.
      */
-    public List<Artefatto> getArtefatti() {
-        return artefatti.getArtefatti();
+    public Artefatti getArtefatti() {
+        return artefatti;
     }
 
+    public Artefatto getArtefatto(int i) {
+        return artefatti.getArtefatti().get(i);
+    }
     /**
      * Getter
      *

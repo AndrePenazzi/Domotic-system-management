@@ -18,12 +18,17 @@ public class ClasseDiServizioArtefatto {
 
     public static String visualizzaAttuatori(Artefatto artefatto) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
+        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
         return tmp.toString();
     }
     public static String visualizzaSensori(Artefatto artefatto) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensori()));
+        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
+        return tmp.toString();
+    }
+    public static String visualizzaValoriRilevati(Artefatto artefatto) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(ClasseDiServizioSensori.visualizzaValoriRilevati(artefatto.getSensoriInArtefatto()));
         return tmp.toString();
     }
 
@@ -32,20 +37,20 @@ public class ClasseDiServizioArtefatto {
         String nome = artefatto.getNome();
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n" + nome);
-        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensori()));
+        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
 
-        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
+        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
         return tmp.toString();
     }
 
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioAttuatori.toString(artefatto.getAttuatori()));
-        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatori().size()) - 1;
-        return artefatto.getAttuatori().get(i);
+        System.out.println(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatoriInArtefatto().getSize()) - 1;
+        return artefatto.getAttuatoriInArtefatto().getAttuatore(i);
     }
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioSensori.toString(artefatto.getSensori()));
-        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSensori().size()) - 1;
-        return artefatto.getSensori().get(i);
+        System.out.println(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
+        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSensoriInArtefatto().getSize()) - 1;
+        return artefatto.getSensoriInArtefatto().getSensore(i);
     }
 }

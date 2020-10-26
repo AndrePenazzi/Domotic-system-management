@@ -50,8 +50,8 @@ public class Artefatto implements Serializable {
      *
      * @return List di sensori.
      */
-    public List<Sensore> getSensori() {
-        return sensori.getSensori();
+    public Sensori getSensoriInArtefatto() {
+        return sensori;
     }
 
     /**
@@ -59,8 +59,8 @@ public class Artefatto implements Serializable {
      *
      * @return List di attuatori.
      */
-    public List<Attuatore> getAttuatori() {
-        return attuatori.getAttuatori();
+    public Attuatori getAttuatoriInArtefatto() {
+        return attuatori;
     }
 
     /**

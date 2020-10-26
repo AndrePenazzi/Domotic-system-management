@@ -2,6 +2,7 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.mylib.InputDati;
 
@@ -18,6 +19,26 @@ public class ClasseDiServizioSensore {
         }
         System.out.println("Creare almeno una categoria sensori");
         return null;
+    }
+
+    public static String visualizzaInfoRilevabili(Sensore sensore) {
+        String nome = sensore.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(nome);
+        tmp.append("\n");
+        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaInfoRilevabili(sensore.getCategoriaSensori()));
+        return tmp.toString();
+    }
+
+    public static String visualizzaValoreRilevato(Sensore sensore) {
+        String nome = sensore.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append("\n");
+        tmp.append(nome);
+        tmp.append("\n");
+        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaValoreRilevato(sensore.getCategoriaSensori()));
+        return tmp.toString();
     }
 
     public static String toString(Sensore sensore) {
