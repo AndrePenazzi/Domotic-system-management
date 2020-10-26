@@ -1,12 +1,10 @@
 package it.unibs.fp.view.classiDiServizio;
 
-import it.unibs.fp.dao.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
-import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
@@ -17,7 +15,6 @@ import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.utenti.Fruitore;
-import it.unibs.fp.model.utenti.Manutentore;
 
 public class ClasseDiServizioFruitore {
 

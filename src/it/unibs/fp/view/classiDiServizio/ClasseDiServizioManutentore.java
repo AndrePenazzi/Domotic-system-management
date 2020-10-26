@@ -1,6 +1,6 @@
 package it.unibs.fp.view.classiDiServizio;
 
-import it.unibs.fp.dao.Contenitore;
+import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;

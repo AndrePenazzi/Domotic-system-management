@@ -1,32 +1,38 @@
 package it.unibs.fp;
 
+import it.unibs.fp.dao.file.CategoriaAttuatoriFileDAO;
+import it.unibs.fp.dao.file.CategoriaSensoriFileDAO;
+import it.unibs.fp.dao.file.FruitoreFileDAO;
+import it.unibs.fp.dao.file.ManutentoreFileDAO;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
-import it.unibs.fp.dao.Contenitore;
 import it.unibs.fp.view.mylib.*;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
 
-import java.io.File;
-
 public class Main {
-    public static void main(String[] args) {
-        File cFile = new File("contenitore.dat");
-        Contenitore contenitore;
+    private static ManutentoreFileDAO manutentoreFileDAO;
+    private static FruitoreFileDAO fruitoreFileDAO;
+    private static CategoriaAttuatoriFileDAO categoriaAttuatoriFileDAO;
+    private static CategoriaSensoriFileDAO categoriaSensoriFileDAO;
 
-        if (cFile.exists()) {
-            System.out.println("File caricati correttamente");
-            contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(cFile);
-        } else {
-            Fruitore fruitore = new Fruitore();
-            Manutentore manutentore = new Manutentore(fruitore);
-            ListaCategorie listaCategorie = new ListaCategorie();
-            contenitore = new Contenitore(manutentore, listaCategorie);
-            ServizioFile.salvaSingoloOggetto(new File("contenitore"), contenitore);
-        }
+    public static void main(String[] args) {
+        creaFileDAO();
+        Fruitore fruitore = fruitoreFileDAO.carica().get(0);
+        Manutentore manutentore = manutentoreFileDAO.carica().get(0);
+        ListaCategorie listaCategorie = new ListaCategorie();
+        listaCategorie.setCategorieAttuatori(categoriaAttuatoriFileDAO.carica());
+        listaCategorie.setCategorieSensori(categoriaSensoriFileDAO.carica());
+
 
         System.out.println(BelleStringhe.incornicia("Benvenuto"));
 
-        ClasseDiServizio.menuPrincipale(contenitore);
+    }
+
+    private static void creaFileDAO(){
+        fruitoreFileDAO = new FruitoreFileDAO();
+        manutentoreFileDAO = new ManutentoreFileDAO();
+        categoriaAttuatoriFileDAO = new CategoriaAttuatoriFileDAO();
+        categoriaSensoriFileDAO = new CategoriaSensoriFileDAO();
     }
 }

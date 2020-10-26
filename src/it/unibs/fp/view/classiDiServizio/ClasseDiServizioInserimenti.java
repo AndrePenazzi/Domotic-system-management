@@ -1,5 +1,6 @@
 package it.unibs.fp.view.classiDiServizio;
 
+import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
 import it.unibs.fp.model.regola.Regola;

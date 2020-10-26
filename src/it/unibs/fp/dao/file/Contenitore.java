@@ -1,4 +1,4 @@
-package it.unibs.fp.dao;
+package it.unibs.fp.dao.file;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.utenti.Manutentore;
@@ -9,6 +9,8 @@ public class Contenitore implements Serializable {
     private Manutentore manutentore;
     private ListaCategorie listaCategorie;
 
+    public Contenitore() {
+    }
     /**
      * Costruttore del contenitore degli oggetti importanti da salvare
      *

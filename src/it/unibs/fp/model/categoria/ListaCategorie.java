@@ -73,4 +73,11 @@ public class ListaCategorie implements Serializable {
         return categorieAttuatori;
     }
 
+    public void setCategorieSensori(List<CategoriaSensori> categorieSensori) {
+        this.categorieSensori = categorieSensori;
+    }
+
+    public void setCategorieAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
+        this.categorieAttuatori = categorieAttuatori;
+    }
 }

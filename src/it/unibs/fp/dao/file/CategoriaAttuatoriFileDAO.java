@@ -1,18 +1,25 @@
-package it.unibs.fp.dao;
+package it.unibs.fp.dao.file;
 
+import it.unibs.fp.dao.DAO;
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.view.mylib.ServizioFile;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
-public class CategoriaAttuatoriDAO implements DAO<CategoriaAttuatori>{
+public class CategoriaAttuatoriFileDAO implements DAO<CategoriaAttuatori> {
 
     Contenitore contenitore;
+
     @Override
     public void connetti() {
-        contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(new File("Contenitore.dat"));
+        File cFile = new File("Contenitore.dat");
+        if (cFile.exists()) {
+            contenitore = (Contenitore) ServizioFile.caricaSingoloOggetto(new File("Contenitore.dat"));
+        } else {
+            Contenitore contenitore = new Contenitore();
+            ServizioFile.salvaSingoloOggetto(cFile, contenitore);
+        }
     }
 
     @Override

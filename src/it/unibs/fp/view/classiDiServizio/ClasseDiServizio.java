@@ -1,7 +1,12 @@
 package it.unibs.fp.view.classiDiServizio;
 
-import it.unibs.fp.dao.Contenitore;
+import it.unibs.fp.dao.file.Contenitore;
+import it.unibs.fp.model.categoria.ListaCategorie;
+import it.unibs.fp.model.utenti.Fruitore;
+import it.unibs.fp.model.utenti.Manutentore;
 import it.unibs.fp.view.mylib.MyMenu;
+
+import java.util.List;
 
 public class ClasseDiServizio {
 
@@ -10,7 +15,7 @@ public class ClasseDiServizio {
      *
      * @param contenitore per ottenere gli oggetti necessari
      */
-    public static void menuPrincipale(Contenitore contenitore) {
+    public static void menuPrincipale(Fruitore fruitore, Manutentore manutentore, ListaCategorie listaCategorie) {
 
         boolean finito = false;
         String[] azione = {"Accedi come manutentore", "Accedi come fruitore"};
@@ -31,7 +36,7 @@ public class ClasseDiServizio {
                 break;
 
                 case 2: {
-                    ClasseDiServizioFruitore.stampaMenuFruitore(contenitore);
+                    ClasseDiServizioFruitore.stampaMenuFruitore(fruitore,listaCategorie);
                 }
                 break;
             }
