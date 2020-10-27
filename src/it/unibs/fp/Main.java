@@ -5,7 +5,6 @@ import it.unibs.fp.dao.file.CategoriaSensoriFileDAO;
 import it.unibs.fp.dao.file.FruitoreFileDAO;
 import it.unibs.fp.dao.file.ManutentoreFileDAO;
 import it.unibs.fp.model.categoria.ListaCategorie;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
 import it.unibs.fp.view.mylib.*;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;

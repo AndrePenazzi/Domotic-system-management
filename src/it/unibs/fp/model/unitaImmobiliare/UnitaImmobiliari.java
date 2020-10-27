@@ -13,9 +13,18 @@ public class UnitaImmobiliari {
     public List<UnitaImmobiliare> getUnitaImmobiliari() {
         return unitaImmobiliari;
     }
+    public UnitaImmobiliare getUnitaImmobiliare(int i) {
+        return unitaImmobiliari.get(i);
+    }
+    public int getSizeUnitaImmobiliari() {
+        return unitaImmobiliari.size();
+    }
 
     public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
         this.unitaImmobiliari = unitaImmobiliari;
+    }
+    public boolean isEmpty(){
+        return unitaImmobiliari.isEmpty();
     }
 
     public void inserisciUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {

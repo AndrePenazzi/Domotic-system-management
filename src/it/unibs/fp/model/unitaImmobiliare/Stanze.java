@@ -1,6 +1,6 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
-import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,11 +20,11 @@ public class Stanze {
         this.stanze = stanze;
     }
 
-    public List<Attuatore> getAttuatori(){
-        List<Attuatore> attuatori=new ArrayList<>();
+    public Attuatori getAttuatoriInStanze(){
+        Attuatori attuatori=new Attuatori();
 
         for (Stanza s : stanze) {
-            attuatori.addAll(s.getAttuatoriInStanza().getAttuatori());
+            attuatori.getAttuatori().addAll(s.getAttuatoriInStanza().getAttuatori());
         }
         return attuatori;
     }

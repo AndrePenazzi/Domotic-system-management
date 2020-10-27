@@ -98,6 +98,10 @@ public class ClasseDiServizioStanza {
         return tmp.toString();
     }
 
+    public static void modificaModOperative(Stanza stanza) {
+        ClasseDiServizioAttuatori.modificaModOperative(stanza.getAttuatoriInStanza());
+    }
+
     public static String visualizzaValoriRilevatiEValoriRilevatiInArtefatti(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(visualizzaValoriRilevati(stanza));
@@ -106,5 +110,12 @@ public class ClasseDiServizioStanza {
             tmp.append(ClasseDiServizioArtefatto.visualizzaValoriRilevati(a));
         }
         return tmp.toString();
+    }
+
+    public static void modificaModOperativeEModOperativeInArtefatti(Stanza stanza) {
+        modificaModOperative(stanza);
+        for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
+            ClasseDiServizioArtefatto.modificaModOperativa(a);
+        }
     }
 }

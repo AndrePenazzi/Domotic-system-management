@@ -2,10 +2,8 @@ package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.unitaImmobiliare.Artefatti;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
 import it.unibs.fp.view.mylib.InputDati;
 
-import java.util.List;
 
 public class ClasseDiServizioArtefatti {
 
@@ -41,6 +39,12 @@ public class ClasseDiServizioArtefatti {
             tmp.append(ClasseDiServizioArtefatto.visualizzaValoriRilevati(a));
         }
         return tmp.toString();
+    }
+
+    public static void modificaModOperative(Artefatti artefatti) {
+        for (Artefatto a : artefatti.getArtefatti()) {
+            ClasseDiServizioArtefatto.visualizzaValoriRilevati(a);
+        }
     }
 
     public static String toString(Artefatti artefatti) {

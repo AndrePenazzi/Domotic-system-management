@@ -5,13 +5,9 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
 import it.unibs.fp.model.unitaImmobiliare.*;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioRegole;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ClasseDiServizioUnitaImmobiliare {
     ////////////////////////////////////INIZIA CREA/////////////////////////////////////////////////
@@ -55,7 +51,6 @@ public class ClasseDiServizioUnitaImmobiliare {
             }
             break;
         }
-
         return attuatore;
     }
 
@@ -130,27 +125,27 @@ public class ClasseDiServizioUnitaImmobiliare {
         return unitaImmobiliare.getStanza(i);
     }
 
-    public static List<Stanza> scegliStanze(UnitaImmobiliare unitaImmobiliare) {
+    public static Stanze scegliStanze(UnitaImmobiliare unitaImmobiliare) {
         System.out.println("Si scelga ora le stanze");
-        List<Stanza> stanze = new ArrayList<>();
+        Stanze stanze = new Stanze();
         do {
-            stanze.add(scegliStanza(unitaImmobiliare));
+            stanze.getStanze().add(scegliStanza(unitaImmobiliare));
         } while (InputDati.yesOrNo("Vuoi scegliere un'altra stanza?"));
         return stanze;
     }
 
     public static Artefatto scegliArtefatto(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
+        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, unitaImmobiliare.getSizeArtefatti()) - 1;
 
         return unitaImmobiliare.getArtefatto(i);
     }
 
-    public static List<Artefatto> scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
+    public static Artefatti scegliArtefatti(UnitaImmobiliare unitaImmobiliare) {
         System.out.println("Si scelgano ora gli artefatti");
-        List<Artefatto> artefatti = new ArrayList<>();
+        Artefatti artefatti = new Artefatti();
         do {
-            artefatti.add(scegliArtefatto(unitaImmobiliare));
+            artefatti.getArtefatti().add(scegliArtefatto(unitaImmobiliare));
         } while (InputDati.yesOrNo("Vuoi scegliere un'altro artefatto?"));
         return artefatti;
     }
@@ -167,19 +162,20 @@ public class ClasseDiServizioUnitaImmobiliare {
     public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioStanze.visualizzaAttuatori(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.visualizzaAttuatori(unitaImmobiliare.getArtefatti()));
+        tmp.append(ClasseDiServizioArtefatti.visualizzaAttuatori(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         return tmp.toString();
     }
 
     public static String visualizzaSensori(UnitaImmobiliare unitaImmobiliare) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioStanze.visualizzaSensori(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.visualizzaSensori(unitaImmobiliare.getArtefatti()));
+        tmp.append(ClasseDiServizioArtefatti.visualizzaSensori(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         return tmp.toString();
     }
-    public static void visualizzaValoriRilevati(UnitaImmobiliare unitaImmobiliare){
+
+    public static void visualizzaValoriRilevati(UnitaImmobiliare unitaImmobiliare) {
         System.out.println(ClasseDiServizioStanze.visualizzaValoriRilevati(unitaImmobiliare.getStanze()));
-        System.out.println(ClasseDiServizioArtefatti.visualizzaValoriRilevati(unitaImmobiliare.getArtefatti()));
+        System.out.println(ClasseDiServizioArtefatti.visualizzaValoriRilevati(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
     }
 
 
@@ -196,7 +192,7 @@ public class ClasseDiServizioUnitaImmobiliare {
     }
 
     public static void visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
+        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
     }
 
     public static String toString(UnitaImmobiliare unitaImmobiliare) {
@@ -205,8 +201,17 @@ public class ClasseDiServizioUnitaImmobiliare {
         tmp.append("\n");
         tmp.append(nome);
         tmp.append(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefatti()));
+        tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         return tmp.toString();
     }
+
     ////////////////////////////////////FINE VISUALIZZA/////////////////////////////////////////////////
+    public static void modificaModOperativeInUnaStanza(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioStanze.modModOperative(unitaImmobiliare.getStanze());
+    }
+
+    public static void modificaModOperativeInUnArtefatto(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioArtefatti.modificaModOperative(unitaImmobiliare.getArtefattiInUnitaImmobiliare());
+    }
+
 }

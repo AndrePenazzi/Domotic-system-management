@@ -1,8 +1,7 @@
 package it.unibs.fp.model.categoria;
 
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
-import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParamentrica;
-import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
+import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParametrica;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class CategoriaAttuatori implements Serializable {
         if (testoLibero.length() > LUNGHEZZA_MASSIMA)
             throw new IllegalArgumentException("Il testo non può contenere più di " + LUNGHEZZA_MASSIMA + " caratteri.");
         this.testoLibero = testoLibero;
-        this.modalitaOperative.add(new ModOperativaNonParamentrica("Idle"));
+        this.modalitaOperative.add(new ModOperativaNonParametrica("Idle"));
         this.modalitaOperative = modalitaOperative;
     }
 

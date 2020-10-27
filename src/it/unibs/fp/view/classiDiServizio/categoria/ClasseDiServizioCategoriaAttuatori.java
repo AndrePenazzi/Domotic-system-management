@@ -38,6 +38,17 @@ public class ClasseDiServizioCategoriaAttuatori {
         return categoriaAttuatori;
     }
 
+    public static void modificaModOperativa(CategoriaAttuatori categoriaAttuatori) {
+        List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
+        if (!modalitaOperative.isEmpty()) {
+            System.out.println("\nMod Operative:\n");
+            for (ModOperativa modOperativa : modalitaOperative) {
+                ClasseDiServizioModOperativa.modificaModOperativa(modOperativa);
+            }
+        } else
+            System.out.println("\nNon ci sono ancora informazioni rilevabili associate\n");
+    }
+
     public static ModOperativa scegliModOperativa(CategoriaAttuatori categoriaAttuatori) {
         System.out.println(visualizzaModOperative(categoriaAttuatori));
         int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getModalitaOperative().size()) - 1;

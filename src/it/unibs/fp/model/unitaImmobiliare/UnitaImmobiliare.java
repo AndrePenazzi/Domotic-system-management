@@ -1,13 +1,12 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
+import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.regola.Regole;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 public class UnitaImmobiliare implements Serializable {
     private String nome;
@@ -129,8 +128,8 @@ public class UnitaImmobiliare implements Serializable {
      * @param artefattoAss artefatto da associare
      * @param stanzeAss    stanze scelte
      */
-    public void associaArtefattoAStanze(Artefatto artefattoAss, Iterable<Stanza> stanzeAss) {
-        for (Stanza s : stanzeAss) {
+    public void associaArtefattoAStanze(Artefatto artefattoAss, Stanze stanzeAss) {
+        for (Stanza s : stanzeAss.getStanze()) {
             s.inserisciArtefatto(artefattoAss);
         }
     }
@@ -148,18 +147,20 @@ public class UnitaImmobiliare implements Serializable {
     public Stanza getStanza(int i) {
         return stanze.getStanze().get(i);
     }
+
     /**
      * Getter
      *
      * @return degli artefatti.
      */
-    public Artefatti getArtefatti() {
+    public Artefatti getArtefattiInUnitaImmobiliare() {
         return artefatti;
     }
 
     public Artefatto getArtefatto(int i) {
         return artefatti.getArtefatti().get(i);
     }
+
     /**
      * Getter
      *
@@ -225,10 +226,10 @@ public class UnitaImmobiliare implements Serializable {
     }
 
     //FORSE SBAGLIATO
-    public List<Attuatore> getAttuatori() {
-        List<Attuatore> attuatori = new ArrayList<>();
-        attuatori.addAll(stanze.getAttuatori());
-        attuatori.addAll(artefatti.getAttuatori());
+    public Attuatori getAttuatori() {
+        Attuatori attuatori = new Attuatori();
+        attuatori.getAttuatori().addAll(stanze.getAttuatoriInStanze().getAttuatori());
+        attuatori.getAttuatori().addAll(artefatti.getAttuatoriInArtefatti().getAttuatori());
         return attuatori;
     }
 

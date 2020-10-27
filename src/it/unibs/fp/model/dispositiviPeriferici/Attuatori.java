@@ -16,6 +16,9 @@ public class Attuatori {
     public Attuatore getAttuatore(int i){
         return attuatori.get(i);
     }
+    public boolean isEmpty(){
+        return attuatori.isEmpty();
+    }
     public int getSize() {
         return attuatori.size();
     }

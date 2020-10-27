@@ -4,6 +4,7 @@ import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.unitaImmobiliare.Stanze;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensore;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
@@ -30,10 +31,10 @@ public class ClasseDiServizioAssociazioni {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioInserimenti.scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
-        if (!unitaImmobiliare.getArtefatti().isEmpty())
+        if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty())
             do {
                 Artefatto artefatto = ClasseDiServizioUnitaImmobiliare.scegliArtefatto(unitaImmobiliare);
-                List<Stanza> stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
+                Stanze stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
                 manutentore.associaArtefattoAStanze(artefatto, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setManutentore(manutentore);

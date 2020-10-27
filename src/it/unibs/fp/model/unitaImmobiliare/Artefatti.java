@@ -22,7 +22,7 @@ public class Artefatti {
         this.artefatti = artefatti;
     }
 
-    public Attuatori getAttuatori(){
+    public Attuatori getAttuatoriInArtefatti(){
         Attuatori attuatori=new Attuatori();
         for (Artefatto a : artefatti) {
             attuatori.getAttuatori().addAll(a.getAttuatoriInArtefatto().getAttuatori());

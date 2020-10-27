@@ -18,16 +18,16 @@ public class ClasseDiServizioUnitaImmobiliari {
     }
 
     public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
-        for (int i = 0; i < unitaImmobiliari.getUnitaImmobiliari().size(); i++) {
-            System.out.println(ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliari.getUnitaImmobiliari().get(i)));
+        for (int i = 0; i < unitaImmobiliari.getSizeUnitaImmobiliari(); i++) {
+            System.out.println(ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliari.getUnitaImmobiliare(i)));
         }
-        int i = InputDati.leggiIntero("Scegli l'unità immobiliare: ", 1, unitaImmobiliari.getUnitaImmobiliari().size()) - 1;
+        int i = InputDati.leggiIntero("Scegli l'unità immobiliare: ", 1, unitaImmobiliari.getSizeUnitaImmobiliari()) - 1;
         return unitaImmobiliari.getUnitaImmobiliari().get(i);
     }
 
     public static String visualizzaUnitaImmobiliari(UnitaImmobiliari unitaImmobiliari) {
         StringBuilder tmp = new StringBuilder();
-        if (!unitaImmobiliari.getUnitaImmobiliari().isEmpty()) {
+        if (!unitaImmobiliari.isEmpty()) {
             int i = 1;
             for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari.getUnitaImmobiliari()) {
                 tmp.append(i + " " + ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliare)+"\n");

@@ -1,4 +1,4 @@
-package it.unibs.fp.view.classiDiServizio;
+package it.unibs.fp.view.classiDiServizio.utenti;
 
 import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
@@ -6,6 +6,9 @@ import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizioAssociazioni;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizioInserimenti;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 import it.unibs.fp.view.mylib.ServizioFile;

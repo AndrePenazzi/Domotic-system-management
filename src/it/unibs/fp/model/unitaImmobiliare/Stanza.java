@@ -6,7 +6,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 
 import java.io.Serializable;
-import java.util.List;
 
 
 public class Stanza implements Serializable {

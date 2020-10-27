@@ -23,21 +23,6 @@ public class Sensore implements Serializable {
     }
 
     /**
-     * Genera un numero casuale tra il minimo e il massimo della categoriaSensori
-     *
-     * @return misura
-     */
-    public String rilevaVariabileFisica() {
-        for(InfoRilevabile infoRilevabile : categoriaSensori.getInformazioniRilevabili()) {
-            if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 1)
-                return String.valueOf(((InfoRilevabileNumerica) infoRilevabile).rilevaVariabile());
-            if (categoriaSensori.getInformazioniRilevabili().get(0).getType() == 2)
-                return String.valueOf(((InfoRilevabileNonNumerica) infoRilevabile).rilevaVariabile());
-        }
-        return "C'è stato qualche errore";
-    }
-
-    /**
      * Getter.
      *
      * @return name.

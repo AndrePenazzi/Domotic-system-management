@@ -3,7 +3,7 @@ package it.unibs.fp.model.modalitaOperativa;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 
-public class ModOperativaNonParamentrica extends ModOperativa implements Serializable {
+public class ModOperativaNonParametrica extends ModOperativa implements Serializable {
     private static DecimalFormat df2 = new DecimalFormat("#.##");
     private double valore;
 
@@ -12,7 +12,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      *
      * @param nome della modalità operativa
      */
-    public ModOperativaNonParamentrica(String nome) {
+    public ModOperativaNonParametrica(String nome) {
         super(nome);
         valore = 0;
     }
@@ -23,7 +23,7 @@ public class ModOperativaNonParamentrica extends ModOperativa implements Seriali
      * @param nome   della modalità operativa
      * @param valore richiesto
      */
-    public ModOperativaNonParamentrica(String nome, double valore) {
+    public ModOperativaNonParametrica(String nome, double valore) {
         super(nome);
         this.valore = valore;
     }

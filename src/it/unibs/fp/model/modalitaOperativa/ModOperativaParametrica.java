@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ModOperativaParamentrica extends ModOperativa implements Serializable {
+public class ModOperativaParametrica extends ModOperativa implements Serializable {
     private List<String> paramentri;
     private String parametroAttuale;
 
@@ -13,7 +13,7 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      * @param nome della modalità operativa
      * @param paramentri scelti
      */
-    public ModOperativaParamentrica(String nome, List<String> paramentri) {
+    public ModOperativaParametrica(String nome, List<String> paramentri) {
         super(nome);
         this.paramentri = paramentri;
     }
@@ -25,6 +25,14 @@ public class ModOperativaParamentrica extends ModOperativa implements Serializab
      */
     public List<String> getParamentri() {
         return paramentri;
+    }
+
+    public int getSizeParamentri() {
+        return paramentri.size();
+    }
+
+    public String getParametro(int i) {
+        return paramentri.get(i);
     }
 
     /**

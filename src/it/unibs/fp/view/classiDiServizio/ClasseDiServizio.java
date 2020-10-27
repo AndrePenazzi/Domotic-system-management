@@ -1,12 +1,11 @@
 package it.unibs.fp.view.classiDiServizio;
 
-import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
+import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioFruitore;
+import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioManutentore;
 import it.unibs.fp.view.mylib.MyMenu;
-
-import java.util.List;
 
 public class ClasseDiServizio {
 

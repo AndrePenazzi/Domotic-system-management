@@ -7,6 +7,7 @@ import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
+import it.unibs.fp.model.unitaImmobiliare.Stanze;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 
 import java.io.Serializable;
@@ -116,7 +117,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaArtefattoAStanze(Artefatto artefatto, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaArtefattoAStanze(Artefatto artefatto, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaArtefattoAStanze(artefatto, stanzeAss, unitaImmobiliare);
     }
 

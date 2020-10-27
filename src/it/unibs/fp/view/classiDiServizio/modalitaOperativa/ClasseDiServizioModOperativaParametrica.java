@@ -1,12 +1,18 @@
 package it.unibs.fp.view.classiDiServizio.modalitaOperativa;
 
-import it.unibs.fp.model.modalitaOperativa.ModOperativaParamentrica;
+import it.unibs.fp.model.modalitaOperativa.ModOperativaParametrica;
+import it.unibs.fp.view.mylib.InputDati;
 
 import java.util.List;
 
 public class ClasseDiServizioModOperativaParametrica {
+    public static void modificaValoreModOperativaAttuale(ModOperativaParametrica modOperativa) {
+        visualizzaParametri(modOperativa);
+        int i = InputDati.leggiIntero("Scegli la modalità operativa: ", 1, modOperativa.getSizeParamentri()) - 1;
+        modOperativa.setParametroAttuale(modOperativa.getParametro(i));
+    }
 
-    public static String visualizzaParametri(ModOperativaParamentrica modOperativa) {
+    public static String visualizzaParametri(ModOperativaParametrica modOperativa) {
         List<String> paramentri = modOperativa.getParamentri();
         StringBuilder tmp = new StringBuilder();
         if (!paramentri.isEmpty()) {
@@ -19,10 +25,9 @@ public class ClasseDiServizioModOperativaParametrica {
         } else
             tmp.append("\nNon ci sono ancora parametri associati");
         return tmp.toString();
-
     }
 
-    public static String toString(ModOperativaParamentrica modOperativa) {
+    public static String toString(ModOperativaParametrica modOperativa) {
         StringBuilder tmp = new StringBuilder();
         visualizzaParametri(modOperativa);
         tmp.append("\nParametro attuale: ").append(modOperativa.getParametroAttuale());

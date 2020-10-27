@@ -1,10 +1,7 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
-import it.unibs.fp.model.unitaImmobiliare.Artefatti;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
 import it.unibs.fp.model.unitaImmobiliare.Stanza;
 import it.unibs.fp.model.unitaImmobiliare.Stanze;
-import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensori;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioStanze {
@@ -34,9 +31,14 @@ public class ClasseDiServizioStanze {
     public static String visualizzaValoriRilevati(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
         for (Stanza s : stanze.getStanze()) {
-            tmp.append(ClasseDiServizioStanza.visualizzaValoriRilevati(s));
+            tmp.append(ClasseDiServizioStanza.visualizzaValoriRilevatiEValoriRilevatiInArtefatti(s));
         }
         return tmp.toString();
+    }
+    public static void modModOperative(Stanze stanze) {
+        for (Stanza s : stanze.getStanze()) {
+            ClasseDiServizioStanza.modificaModOperativeEModOperativeInArtefatti(s);
+        }
     }
 
     public static String toString(Stanze stanze) {

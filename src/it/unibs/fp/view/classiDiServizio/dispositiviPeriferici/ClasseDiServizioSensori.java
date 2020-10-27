@@ -34,8 +34,6 @@ public class ClasseDiServizioSensori {
     }
     public static String visualizzaValoriRilevati(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\nI sensori sono: \n");
-
         if (!sensori.getSensori().isEmpty()) {
             int i = 1;
             tmp.append("\nI sensori sono:\n");

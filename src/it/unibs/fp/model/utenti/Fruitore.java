@@ -1,17 +1,11 @@
 package it.unibs.fp.model.utenti;
 
-import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.regola.Regola;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.model.unitaImmobiliare.Stanza;
-import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
-import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
-import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
+import it.unibs.fp.model.unitaImmobiliare.*;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -142,7 +136,7 @@ public class Fruitore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaArtefattoAStanze(Artefatto artefatto, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaArtefattoAStanze(Artefatto artefatto, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
             unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaArtefattoAStanze(artefatto, stanzeAss);
         }
@@ -155,10 +149,21 @@ public class Fruitore implements Serializable {
      *
      * @return le varie unità immobiliari
      */
-    public UnitaImmobiliari getUnitaImmobiliari() {
+    public UnitaImmobiliari getUnitaImmobiliariInFruitore() {
         return unitaImmobiliari;
     }
+    
+    public int getSizeUnitaImmobiliariInFruitore() {
+        return unitaImmobiliari.getSizeUnitaImmobiliari();
+    }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     /**
      * Setter
      *
