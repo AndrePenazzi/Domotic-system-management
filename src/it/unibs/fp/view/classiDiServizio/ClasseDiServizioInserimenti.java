@@ -3,11 +3,13 @@ package it.unibs.fp.view.classiDiServizio;
 import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioArtefatto;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioStanza;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioManutentore;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.ServizioFile;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
@@ -92,10 +94,10 @@ public class ClasseDiServizioInserimenti {
      * @return unitaImmobiliare scelta
      */
     static UnitaImmobiliare scegliUnitaImmobiliare(Manutentore manutentore) {
-        List<UnitaImmobiliare> unitaImmobiliari = manutentore.getUnitaImmobiliari();
-        System.out.println(manutentore.visualizzaListaUnitaImmobiliari());
+        UnitaImmobiliari unitaImmobiliari = manutentore.getUnitaImmobiliari();
+        System.out.println(ClasseDiServizioManutentore.visualizzaListaUnitaImmobiliari(manutentore));
         int unitaImmobiliareScelta = InputDati.leggiIntero("Scegli UnitaImmobiliare : ", 1, manutentore.getSizeUnitaImmobiliari());
-        return unitaImmobiliari.get(--unitaImmobiliareScelta);
+        return unitaImmobiliari.getUnitaImmobiliari().get(--unitaImmobiliareScelta);
     }
 
     //-----------------------------FINE INSERISCI-----------------------------------------------

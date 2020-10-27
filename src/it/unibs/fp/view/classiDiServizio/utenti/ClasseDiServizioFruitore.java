@@ -12,11 +12,11 @@ import it.unibs.fp.model.utenti.Fruitore;
 
 public class ClasseDiServizioFruitore {
     public static Fruitore creaFruitore() {
-        String nome = InputDati.leggiStringaNonVuota("Inserisci il nome del fruitore");
+        String nome = InputDati.leggiStringaNonVuota("Inserisci il nome del fruitore:\n");
         return new Fruitore(nome);
     }
 
-    static void stampaMenuFruitore(Fruitore fruitore, ListaCategorie listaCategorie) {
+    public static void stampaMenuFruitore(Fruitore fruitore, ListaCategorie listaCategorie) {
         UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliariInFruitore();
         boolean finito = false;
         String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare"};
@@ -47,7 +47,7 @@ public class ClasseDiServizioFruitore {
         while (!finito);
     }
 
-    static void stampaMenuFruitoreVisualizzazione(Fruitore fruitore, ListaCategorie listaCategorie) {
+    public static void stampaMenuFruitoreVisualizzazione(Fruitore fruitore, ListaCategorie listaCategorie) {
         UnitaImmobiliari unitaImmobiliari = fruitore.getUnitaImmobiliariInFruitore();
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};

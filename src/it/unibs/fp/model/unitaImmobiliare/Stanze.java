@@ -2,10 +2,11 @@ package it.unibs.fp.model.unitaImmobiliare;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stanze {
+public class Stanze implements Serializable {
     private List<Stanza> stanze;
 
     public Stanze() {

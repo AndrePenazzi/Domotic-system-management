@@ -4,7 +4,6 @@ package it.unibs.fp.view.classiDiServizio.categoria;
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioListaCategorie {

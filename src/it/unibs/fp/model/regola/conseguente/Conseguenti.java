@@ -1,9 +1,10 @@
 package it.unibs.fp.model.regola.conseguente;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Conseguenti {
+public class Conseguenti implements Serializable {
     private List<Conseguente> conseguenti;
 
     public Conseguenti() {

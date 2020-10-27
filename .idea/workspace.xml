@@ -35,13 +35,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Contenitore.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contenitore.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/CategoriaAttuatoriFileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/CategoriaSensoriFileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/ContenitoreDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/Contenitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/Contenitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/FruitoreFileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/file/ManutentoreFileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Attuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/dispositiviPeriferici/Sensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Regole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/Regole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/AntecedenteSingolo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/AntecedenteSingolo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/conseguente/Conseguenti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Artefatti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/Stanze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/unitaImmobiliare/UnitaImmobiliari.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioAssociazioni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioAssociazioni.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioInserimenti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +74,7 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -96,14 +114,15 @@
       <recent name="it.unibs.fp.test" />
       <recent name="it.unibs.fp.infoRilevabile" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="it.unibs.fp" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
       <recent name="it.unibs.fp.infoRilevabile.InfoRilevabile" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.unibs.fp" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.unibs.fp.dao" />
       <recent name="it.unibs.fp.view.classiDiServizio.modalitaOperativa" />
     </key>
   </component>
@@ -272,7 +291,7 @@
       <workItem from="1603703773904" duration="6667000" />
       <workItem from="1603730426442" duration="3474000" />
       <workItem from="1603787186723" duration="9190000" />
-      <workItem from="1603827563444" duration="3014000" />
+      <workItem from="1603827563444" duration="6719000" />
     </task>
     <task id="LOCAL-00001" summary="toString added">
       <created>1590681359283</created>
@@ -568,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603797510857</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Modify Manutentore">
+      <created>1603830878390</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1603830878390</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +630,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inseriti primi test" />
     <MESSAGE value="Inseriti i test" />
     <MESSAGE value="Inseriti i test completi" />
     <MESSAGE value="Refactoring of lists for ISP &#10;&#10;-Modify ArrayLists to List" />
@@ -629,18 +654,19 @@
     <MESSAGE value="Finish&#10;-Regole --Completed&#10;-Regola --Completed&#10;-ClasseDiServizioUnitaImmobiliare --Completed&#10;-ClasseDiServizioRegola --Completed" />
     <MESSAGE value="Finish method Fruitore visualizza valoreRilevato" />
     <MESSAGE value="Add modificaModOperativa in UnitaImmobiliare" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add modificaModOperativa in UnitaImmobiliare" />
+    <MESSAGE value="Modify Manutentore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify Manutentore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600074156868">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="524" y="219" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1600074156868" />
-    <state x="454" y="241" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1603790410149">
+    <state x="454" y="241" width="967" height="568" key="#com.intellij.ide.util.MemberChooser" timestamp="1603832192041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="363" y="193" width="967" height="568" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1602840139199" />
-    <state x="454" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603790410149" />
+    <state x="454" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603832192041" />
     <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1600350511340">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -658,11 +684,11 @@
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1602836824091" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603794237822" />
-    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1603797509984">
+    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1603830877505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603797509984" />
+    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1603830877505" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -671,22 +697,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1602836217721" />
-    <state width="1493" height="508" key="GridCell.Tab.0.bottom" timestamp="1602709223540">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603833838943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="508" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
-    <state width="1493" height="508" key="GridCell.Tab.0.center" timestamp="1602709223540">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603833838943" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603833838943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="508" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
-    <state width="1493" height="508" key="GridCell.Tab.0.left" timestamp="1602709223540">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603833838943" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603833838943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="508" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
-    <state width="1493" height="508" key="GridCell.Tab.0.right" timestamp="1602709223540">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603833838943" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603833838943">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="508" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1602709223540" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603833838943" />
     <state x="247" y="65" key="MergeDialog" timestamp="1602183663056">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -703,11 +733,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603797519071">
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1603830885569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603797519071" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603830885569" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

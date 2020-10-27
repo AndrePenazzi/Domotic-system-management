@@ -1,9 +1,10 @@
 package it.unibs.fp.model.dispositiviPeriferici;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sensori {
+public class Sensori implements Serializable {
     private List<Sensore> sensori;
 
     public Sensori() {

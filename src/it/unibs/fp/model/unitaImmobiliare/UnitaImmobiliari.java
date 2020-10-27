@@ -1,9 +1,10 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UnitaImmobiliari {
+public class UnitaImmobiliari implements Serializable {
     private List<UnitaImmobiliare> unitaImmobiliari;
 
     public UnitaImmobiliari() {

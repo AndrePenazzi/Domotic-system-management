@@ -1,13 +1,12 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
-
-import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Artefatti {
+public class Artefatti implements Serializable {
     private List<Artefatto> artefatti;
 
     public Artefatti() {

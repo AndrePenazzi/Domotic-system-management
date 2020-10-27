@@ -2,14 +2,17 @@ package it.unibs.fp.dao.file;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.utenti.Manutentore;
+import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioManutentore;
 
 import java.io.Serializable;
 
-public class Contenitore implements Serializable {
+public class Contenitore implements Serializable{
     private Manutentore manutentore;
     private ListaCategorie listaCategorie;
 
     public Contenitore() {
+        manutentore = ClasseDiServizioManutentore.creaManutentore();
+        listaCategorie=new ListaCategorie();
     }
     /**
      * Costruttore del contenitore degli oggetti importanti da salvare

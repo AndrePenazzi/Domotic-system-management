@@ -30,7 +30,7 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    ClasseDiServizioManutentore.stampaMenuManutentore(contenitore);
+                    ClasseDiServizioManutentore.stampaMenuManutentore(manutentore);
                 }
                 break;
 

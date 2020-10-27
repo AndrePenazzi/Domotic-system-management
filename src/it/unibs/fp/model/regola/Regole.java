@@ -1,10 +1,11 @@
 package it.unibs.fp.model.regola;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Regole {
+public class Regole implements Serializable {
     private List<Regola> regole;
 
     public Regole() {

@@ -28,13 +28,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioManutentore {
+    public static Manutentore creaManutentore(){
+        String nome=InputDati.leggiStringaNonVuota("Inserisci il nome del manutentore:\n");
+        return new Manutentore(nome);
+    }
 
-    /**
-     * Menu scelta manutentore con le varie possibilità
-     *
-     * @param contenitore per ottenere gli oggetti necessari
-     */
-    static void stampaMenuManutentore(Contenitore contenitore) {
+    public static void stampaMenuManutentore(Manutentore manutentore) {
         boolean finito = false;
         String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori", "Operazioni di import", "Operazioni di salvataggio"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
@@ -53,25 +52,25 @@ public class ClasseDiServizioManutentore {
                 break;
 
                 case 2: {
-                    ClasseDiServizioInserimenti.inserisciUnitaImmobiliare(contenitore);
+                    //ClasseDiServizioInserimenti.inserisciUnitaImmobiliare(contenitore);
                 }
                 break;
 
                 case 3: {
-                    stampaMenuInserisciCategorie(contenitore.getListaCategorie());
+                   // stampaMenuInserisciCategorie(contenitore.getListaCategorie());
                 }
                 break;
 
                 case 4: {
-                    stampaMenuVisualizzazioneCategorie(contenitore);
+                   // stampaMenuVisualizzazioneCategorie(contenitore);
                 }
                 break;
                 case 5: {
-                    stampaMenuSalvataggiLibrerie(contenitore);
+                 //   stampaMenuSalvataggiLibrerie(contenitore);
                 }
 
                 case 6: {
-                    stampaMenuImportLibrerie(contenitore);
+                    //stampaMenuImportLibrerie(contenitore);
                 }
                 break;
             }

@@ -6,7 +6,6 @@ import it.unibs.fp.model.regola.Regola;
 import it.unibs.fp.model.unitaImmobiliare.*;
 
 import java.io.Serializable;
-import java.util.List;
 
 
 public class Fruitore implements Serializable {

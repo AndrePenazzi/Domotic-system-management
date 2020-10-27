@@ -2,7 +2,9 @@ package it.unibs.fp.model.regola.conseguente;
 
 import it.unibs.fp.model.regola.conseguente.azione.Azione;
 
-public class Conseguente {
+import java.io.Serializable;
+
+public class Conseguente implements Serializable {
     private Azione azione;
 
     public Conseguente(Azione azione){

@@ -1,9 +1,10 @@
 package it.unibs.fp.model.dispositiviPeriferici;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Attuatori {
+public class Attuatori implements Serializable {
     private List<Attuatore> attuatori;
 
     public Attuatori() {
