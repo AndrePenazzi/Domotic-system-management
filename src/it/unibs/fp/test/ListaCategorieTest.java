@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
@@ -32,3 +33,4 @@ public class ListaCategorieTest {
     }
 
 }
+*/

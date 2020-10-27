@@ -1,5 +1,5 @@
 package it.unibs.fp.test;
-
+/*
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
@@ -49,3 +49,5 @@ class ArtefattoTest {
     }
 
 }
+
+ */

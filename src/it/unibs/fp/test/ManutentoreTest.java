@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
@@ -169,4 +170,4 @@ class ManutentoreTest {
         assert manutentore.getUnitaImmobiliari().get(0).getSizeRegole() == 0;
     }
 
-}
+}*/

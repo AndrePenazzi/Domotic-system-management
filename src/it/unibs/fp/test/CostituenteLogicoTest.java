@@ -6,7 +6,7 @@ import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
 //TODO unpo di roba
 class CostituenteLogicoTest {
 
@@ -70,3 +70,5 @@ class CostituenteLogicoTest {
     void setOperatoreRelazionale() {
     }
 }
+
+ */

@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
@@ -266,4 +267,4 @@ class FruitoreTest {
     @Test
     void setUnitaImmobiliari() {
     }
-}
+}*/

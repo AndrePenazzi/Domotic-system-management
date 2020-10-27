@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+/*
 public class CategoriaAttuatoriTest {
     private static final String NOME_CATEGORIA_ATTUATORE="MOTORE ELETTRICO";
     private static final String TESTO_LIBERO="Motore elettrico per la casa";
@@ -36,3 +36,5 @@ public class CategoriaAttuatoriTest {
 
 
 }
+
+ */

@@ -1,5 +1,5 @@
 package it.unibs.fp.test;
-
+/*
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
@@ -39,3 +39,5 @@ class AzioneTest {
     }
 
 }
+
+ */

@@ -28,6 +28,9 @@ public class Stanze {
         }
         return attuatori;
     }
+    public boolean isEmpty() {
+        return stanze.isEmpty();
+    }
 
 
     public void inserisciStanza(Stanza stanza) {

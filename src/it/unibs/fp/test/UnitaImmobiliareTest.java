@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
@@ -209,4 +210,4 @@ class UnitaImmobiliareTest {
     }
 
 
-}
+}*/

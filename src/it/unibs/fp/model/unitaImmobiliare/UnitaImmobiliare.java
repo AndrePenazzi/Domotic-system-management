@@ -80,8 +80,8 @@ public class UnitaImmobiliare implements Serializable {
      * @param sensoreAss sensore da associare alle stanze
      * @param stanzeAss  stanze scelte
      */
-    public void associaSensoreAStanze(Sensore sensoreAss, Iterable<Stanza> stanzeAss) {
-        for (Stanza s : stanzeAss) {
+    public void associaSensoreAStanze(Sensore sensoreAss, Stanze stanzeAss) {
+        for (Stanza s : stanzeAss.getStanze()) {
             s.inserisciSensore(sensoreAss);
         }
     }
@@ -92,8 +92,8 @@ public class UnitaImmobiliare implements Serializable {
      * @param attuatoreAss attuatore da associare
      * @param stanzeAss    stanze scelte
      */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, Iterable<Stanza> stanzeAss) {
-        for (Stanza s : stanzeAss) {
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, Stanze stanzeAss) {
+        for (Stanza s : stanzeAss.getStanze()) {
             s.inserisciAttuatore(attuatoreAss);
         }
     }
@@ -104,8 +104,8 @@ public class UnitaImmobiliare implements Serializable {
      * @param sensoreAss   sensore da associare
      * @param artefattoAss artefatto scelto
      */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, Iterable<Artefatto> artefattoAss) {
-        for (Artefatto a : artefattoAss) {
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, Artefatti artefattoAss) {
+        for (Artefatto a : artefattoAss.getArtefatti()) {
             a.inserisciSensore(sensoreAss);
         }
     }
@@ -116,8 +116,8 @@ public class UnitaImmobiliare implements Serializable {
      * @param attuatoreAss attuatore da associare
      * @param artefattoAss artefatti scelti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, Iterable<Artefatto> artefattoAss) {
-        for (Artefatto a : artefattoAss) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, Artefatti artefattoAss) {
+        for (Artefatto a : artefattoAss.getArtefatti()) {
             a.inserisciAttuatore(attuatoreAss);
         }
     }
@@ -142,6 +142,9 @@ public class UnitaImmobiliare implements Serializable {
      */
     public Stanze getStanze() {
         return stanze;
+    }
+    public boolean stanzeIsEmpty() {
+        return stanze.isEmpty();
     }
 
     public Stanza getStanza(int i) {

@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
@@ -88,4 +89,4 @@ class InfoRilevabileNonNumericaTest extends InfoRilevabile {
     @Test
     void setValoreAttuale() {
     }
-}
+}*/

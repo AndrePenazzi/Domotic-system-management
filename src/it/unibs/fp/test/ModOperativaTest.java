@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
@@ -60,3 +61,4 @@ public class ModOperativaTest {
 
 
 }
+*/

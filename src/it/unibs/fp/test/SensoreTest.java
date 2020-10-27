@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.categoria.CategoriaSensori;
@@ -70,4 +71,4 @@ class SensoreTest {
     @Test
     void testToString() {
     }
-}
+}*/

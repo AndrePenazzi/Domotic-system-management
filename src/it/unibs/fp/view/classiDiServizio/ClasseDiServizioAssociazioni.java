@@ -4,15 +4,12 @@ import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
-import it.unibs.fp.model.unitaImmobiliare.Stanze;
+import it.unibs.fp.model.unitaImmobiliare.*;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioAttuatore;
 import it.unibs.fp.view.classiDiServizio.dispositiviPeriferici.ClasseDiServizioSensore;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.ServizioFile;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.model.unitaImmobiliare.Stanza;
-import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.utenti.Manutentore;
 
 import java.io.File;
@@ -58,7 +55,7 @@ public class ClasseDiServizioAssociazioni {
         if (!listaCategorie.getCategorieSensori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
-                List<Stanza> stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
+                Stanze stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
                 manutentore.associaSensoreAStanze(nuovoSensore, stanze, unitaImmobiliare);
 
                 contenitore.setListaCategorie(listaCategorie);
@@ -86,7 +83,7 @@ public class ClasseDiServizioAssociazioni {
         if (!listaCategorie.getCategorieAttuatori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
-                List<Stanza> stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
+                Stanze stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
                 manutentore.associaAttuatoreAStanze(nuovoAttuatore, stanze, unitaImmobiliare);
                 contenitore.setListaCategorie(listaCategorie);
                 contenitore.setManutentore(manutentore);
@@ -109,12 +106,12 @@ public class ClasseDiServizioAssociazioni {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioInserimenti.scegliUnitaImmobiliare(manutentore);
-        if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieSensori().isEmpty()) {
+        if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty() && !listaCategorie.getCategorieSensori().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
-                List<Artefatto> artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
-                for (Artefatto a : artefatti)
-                    for (Sensore s : a.getSensoriInArtefatto())
+                Artefatti artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
+                for (Artefatto a : artefatti.getArtefatti())
+                    for (Sensore s : a.getSensoriInArtefatto().getSensori())
                         if (nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori())
                             System.out.println("Esite già un sensore con la stessa categoria in uno degli artefatti");
 
@@ -127,7 +124,7 @@ public class ClasseDiServizioAssociazioni {
         } else {
             if (listaCategorie.getCategorieSensori().isEmpty())
                 System.out.println("Bisogna prima creare una categoria sensori");
-            if (unitaImmobiliare.getArtefatti().isEmpty())
+            if (unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty())
                 System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
         }
     }
@@ -141,10 +138,10 @@ public class ClasseDiServizioAssociazioni {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
         Manutentore manutentore = contenitore.getManutentore();
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioInserimenti.scegliUnitaImmobiliare(manutentore);//TODO DA SPOSTARE ALL'ESTERNO fallo scegliere prima
-        if (!unitaImmobiliare.getArtefatti().isEmpty() && !listaCategorie.getCategorieAttuatori().isEmpty()) {
+        if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty() && !listaCategorie.getCategorieAttuatori().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
-                List<Artefatto> artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
+                Artefatti artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
                 manutentore.associaAttuatoreAdArtefatti(nuovoAttuatore, artefatti, unitaImmobiliare);
 
                 contenitore.setListaCategorie(listaCategorie);
@@ -154,7 +151,7 @@ public class ClasseDiServizioAssociazioni {
         } else {
             if (listaCategorie.getCategorieAttuatori().isEmpty())
                 System.out.println("Bisogna prima creare una categoria attuatori");
-            if (unitaImmobiliare.getArtefatti().isEmpty())
+            if (unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty())
                 System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
         }
     }

@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParametrica;
@@ -22,3 +23,4 @@ public class ModOperativaParametricaTest {
         assert nuovaModOperativaParametrica.getParamentri().size()==2;
     }
 }
+*/

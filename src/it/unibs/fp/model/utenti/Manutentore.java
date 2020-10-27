@@ -5,27 +5,24 @@ import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
-import it.unibs.fp.model.unitaImmobiliare.Artefatto;
-import it.unibs.fp.model.unitaImmobiliare.Stanza;
-import it.unibs.fp.model.unitaImmobiliare.Stanze;
-import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
+import it.unibs.fp.model.unitaImmobiliare.*;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
+import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
+import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioFruitore;
 
 import java.io.Serializable;
 import java.util.List;
 
 public class Manutentore implements Serializable {
     private Fruitore fruitore;
+    private String nome;
 
-    /**
-     * Costruttore
-     *
-     * @param fruitore l'unico fruitore associato
-     */
-    public Manutentore(Fruitore fruitore) {
-        this.fruitore = fruitore;
-    }
-    public Manutentore() {
-        this.fruitore = new Fruitore();
+
+    public Manutentore(String nome) {
+        this.nome = nome;
+        this.fruitore = ClasseDiServizioFruitore.creaFruitore();
     }
 
     /**
@@ -37,14 +34,6 @@ public class Manutentore implements Serializable {
         fruitore.aggiungiUnitaImmobiliare(unitaImmobiliare);
     }
 
-    /**
-     * visualizza la lista dei nomi delle unità immobiliari
-     *
-     * @return la lista dei nomi delle unità immobiliari
-     */
-    public String visualizzaListaUnitaImmobiliari() {
-        return fruitore.visualizzaListaUnitaImmobiliari();
-    }
 
     /**
      * Inserisci una nuova stanza nell'unità immobiliare
@@ -73,7 +62,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaSensoreAStanze(Sensore sensoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAStanze(Sensore sensoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaSensoreAStanze(sensoreAss, stanzeAss, unitaImmobiliare);
     }
 
@@ -84,7 +73,7 @@ public class Manutentore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaAttuatoreAStanze(attuatoreAss, stanzeAss, unitaImmobiliare);
     }
 
@@ -95,7 +84,7 @@ public class Manutentore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaSensoreAdArtefatti(sensoreAss, artefattoAss, unitaImmobiliare);
     }
 
@@ -106,7 +95,7 @@ public class Manutentore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         fruitore.associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss, unitaImmobiliare);
     }
 
@@ -157,45 +146,7 @@ public class Manutentore implements Serializable {
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
 
-    /**
-     * Visualizza la descrizione dei sensori delle categorie sensori
-     *
-     * @param listaCategorie scelta
-     * @return la descrizione delle categorie sensori
-     */
-    public String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
-        return (listaCategorie.visualizzaCategorieSensori());
-    }
 
-    /**
-     * Visualizza la descrizione degli attuatori delle categorie attuatori
-     *
-     * @param listaCategorie scelta
-     * @return la descrizione delle categorie attuatori
-     */
-    public String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
-        return (listaCategorie.visualizzaCategorieAttuatori());
-    }
-
-    /**
-     * Visualizza la descrizione delle stanze dell'unità immobiliare
-     *
-     * @param unitaImmobiliare scelta
-     * @return la descrizione delle stanze
-     */
-    public String visualizzaStanze(UnitaImmobiliare unitaImmobiliare) {
-        return (unitaImmobiliare.visualizzaStanze());
-    }
-
-    /**
-     * Visualizza la descrizione degli artefatti dell'unità immobiliare
-     *
-     * @param unitaImmobiliare scelta
-     * @return la descrizione degli artefatti
-     */
-    public String visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        return (fruitore.visualizzaArtefatti(unitaImmobiliare));
-    }
 
     /**
      * Getter
@@ -221,7 +172,7 @@ public class Manutentore implements Serializable {
      * @return SizeUnitaImmobiliare
      */
     public int getSizeUnitaImmobiliari() {
-        return fruitore.getUnitaImmobiliari().size();
+        return fruitore.getSizeUnitaImmobiliariInFruitore();
     }
 
     /**
@@ -229,8 +180,8 @@ public class Manutentore implements Serializable {
      *
      * @return unitaImmobiliare
      */
-    public List<UnitaImmobiliare> getUnitaImmobiliari() {
-        return fruitore.getUnitaImmobiliari();
+    public UnitaImmobiliari getUnitaImmobiliari() {
+        return fruitore.getUnitaImmobiliariInFruitore();
     }
 
     /**
@@ -238,7 +189,7 @@ public class Manutentore implements Serializable {
      *
      * @param unitaImmobiliari da modificare
      */
-    public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
+    public void setUnitaImmobiliari(UnitaImmobiliari unitaImmobiliari) {
         fruitore.setUnitaImmobiliari(unitaImmobiliari);
     }
 }

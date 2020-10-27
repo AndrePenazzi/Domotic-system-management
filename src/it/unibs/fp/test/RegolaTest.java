@@ -1,3 +1,4 @@
+/*
 package it.unibs.fp.test;
 
     import it.unibs.fp.model.categoria.CategoriaAttuatori;
@@ -158,4 +159,4 @@ class RegolaTest {
     @Test
     void setAttiva() {
     }
-}
+}*/

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
 class CategoriaSensoriTest {
     private static final String NOME_CATEGORIA_SENSORE="Termometro";
     private static final String TESTO_LIBERO="Termometro per il COVID19";
@@ -84,3 +84,5 @@ class CategoriaSensoriTest {
         categoriaNuova.setNome(NOME_CATEGORIA_SENSORE);
     }
 }
+
+ */

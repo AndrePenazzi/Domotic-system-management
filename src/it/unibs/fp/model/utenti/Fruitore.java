@@ -84,7 +84,7 @@ public class Fruitore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaSensoreAStanze(Sensore sensoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAStanze(Sensore sensoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
             unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAStanze(sensoreAss, stanzeAss);
         }
@@ -97,7 +97,7 @@ public class Fruitore implements Serializable {
      * @param stanzeAss        stanze scelte
      * @param unitaImmobiliare che contiene le stanze
      */
-    public void associaAttuatoreAStanze(Attuatore attuatoreAss, List<Stanza> stanzeAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAStanze(Attuatore attuatoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
             unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAStanze(attuatoreAss, stanzeAss);
         }
@@ -110,7 +110,7 @@ public class Fruitore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaSensoreAdArtefatti(Sensore sensoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaSensoreAdArtefatti(Sensore sensoreAss, Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
             unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAdArtefatti(sensoreAss, artefattoAss);
         }
@@ -123,7 +123,7 @@ public class Fruitore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, List<Artefatto> artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss,Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
             unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
         }
