@@ -7,18 +7,15 @@ import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategori
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioSensore {
-    public static Sensore creaSensore(ListaCategorie listaCategorie){
-        if (listaCategorie.getSizeCategorieSensori() != 0) {
-            System.out.println(ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie));
-            int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieSensori());
-            categoria--;
-            String nome = InputDati.leggiStringaNonVuota("Inserisci nome sensore : ");
-            nome += "_" + listaCategorie.getCategorieSensori().get(categoria).getNome();
-            System.out.println("Si è creato il sensore " + nome);
-            return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
-        }
-        System.out.println("Creare almeno una categoria sensori");
-        return null;
+    public static Sensore creaSensore(ListaCategorie listaCategorie) {
+        System.out.println(ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie));
+        int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieSensori());
+        categoria--;
+        String nome = InputDati.leggiStringaNonVuota("Inserisci nome sensore : ");
+        nome += "_" + listaCategorie.getCategorieSensori().get(categoria).getNome() + ": ";
+        System.out.println("Si è creato il sensore " + nome);
+        return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
+
     }
 
     public static String visualizzaInfoRilevabili(Sensore sensore) {
@@ -27,7 +24,7 @@ public class ClasseDiServizioSensore {
         tmp.append("\n");
         tmp.append(nome);
         tmp.append("\n");
-        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaInfoRilevabili(sensore.getCategoriaSensori()));
+        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaInfoRilevabiliNonNumerate(sensore.getCategoriaSensori()));
         return tmp.toString();
     }
 

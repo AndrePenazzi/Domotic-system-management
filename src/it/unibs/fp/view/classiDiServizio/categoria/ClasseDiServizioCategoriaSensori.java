@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioCategoriaSensori {
+    /**
+     * CreaCategoriaSensori
+     *
+     * @return una CategoriaSensori
+     */
     public static CategoriaSensori creaCategoriaSensori() {
         String testoLibero = "";
         boolean testoLiberoOK = false;
@@ -38,13 +43,13 @@ public class ClasseDiServizioCategoriaSensori {
     }
 
     public static InfoRilevabile scegliInfoRilevabile(CategoriaSensori categoriaSensori) {
-        System.out.println(visualizzaInfoRilevabili(categoriaSensori));
+        System.out.println(visualizzaInfoRilevabiliNumerate(categoriaSensori));
         int i = InputDati.leggiIntero("Scegli la infoRilevabile: ", 1, categoriaSensori.getInformazioniRilevabili().size()) - 1;
 
         return categoriaSensori.getInformazioniRilevabili().get(i);
     }
 
-    public static String visualizzaInfoRilevabili(CategoriaSensori categoriaSensori) {
+    public static String visualizzaInfoRilevabiliNumerate(CategoriaSensori categoriaSensori) {
         StringBuilder tmp = new StringBuilder();
         List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
 
@@ -54,6 +59,26 @@ public class ClasseDiServizioCategoriaSensori {
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
                 tmp.append(i + " " + ClasseDiServizioInfoRilevabile.toString(infoRilevabile));
                 i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
+        return tmp.toString();
+    }
+
+    /**
+     * Visualizza le InfoRilvabili non numerate
+     *
+     * @param categoriaSensori da visualizzare
+     * @return la String di infoRilevabili
+     */
+    public static String visualizzaInfoRilevabiliNonNumerate(CategoriaSensori categoriaSensori) {
+        StringBuilder tmp = new StringBuilder();
+        List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
+
+        if (!informazioniRilevabili.isEmpty()) {
+            tmp.append("\nInformazioni rilevabili:\n");
+            for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
+                tmp.append("-" + ClasseDiServizioInfoRilevabile.toString(infoRilevabile) + "\n");
             }
         } else
             tmp.append("\nNon ci sono ancora informazioni rilevabili associate\n");
@@ -76,13 +101,20 @@ public class ClasseDiServizioCategoriaSensori {
         return tmp.toString();
     }
 
+
+    /**
+     * toString della categoria sensori
+     *
+     * @param categoriaSensori da visualizzare
+     * @return nome, testo libero e infoRilevabili
+     */
     public static String toString(CategoriaSensori categoriaSensori) {
         String nome = categoriaSensori.getNome();
         String testoLibero = categoriaSensori.getTestoLibero();
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + testoLibero);
-        visualizzaInfoRilevabili(categoriaSensori);
+        tmp.append(nome + ": ");
+        tmp.append(testoLibero);
+        tmp.append(visualizzaInfoRilevabiliNonNumerate(categoriaSensori));
         return tmp.toString();
     }
 

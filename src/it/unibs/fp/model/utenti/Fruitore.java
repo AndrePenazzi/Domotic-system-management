@@ -35,7 +35,7 @@ public class Fruitore implements Serializable {
      * @param unitaImmobiliare scelta per essere inserita
      */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        unitaImmobiliari.getUnitaImmobiliari().add(unitaImmobiliare);
+        unitaImmobiliari.inserisciUnitaImmobiliare(unitaImmobiliare);
     }
 
     /**

@@ -1,7 +1,6 @@
 package it.unibs.fp.model.modalitaOperativa;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ModOperativaParametrica extends ModOperativa implements Serializable {

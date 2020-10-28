@@ -9,11 +9,12 @@ public class ClasseDiServizioSensori {
 
     public static Sensori creaSensori(ListaCategorie listaCategorie) {
         Sensori sensori = new Sensori();
-
-        do {
-            sensori.inserisciSensore(ClasseDiServizioSensore.creaSensore(listaCategorie));
-        } while (InputDati.yesOrNo("Vuoi continuare ad inserire un nuovo sensore?"));
-
+        if (!listaCategorie.categorieSensoriIsEmpty()) {
+            do {
+                sensori.inserisciSensore(ClasseDiServizioSensore.creaSensore(listaCategorie));
+            } while (InputDati.yesOrNo("Vuoi continuare ad inserire un nuovo sensore?"));
+        } else
+            System.out.println("Mancano le categorieSensori, bisogna prima crearle");
         return sensori;
     }
 
@@ -32,6 +33,7 @@ public class ClasseDiServizioSensori {
             tmp.append("\nNon ci sono ancora sensori associati");
         return tmp.toString();
     }
+
     public static String visualizzaValoriRilevati(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
         if (!sensori.getSensori().isEmpty()) {

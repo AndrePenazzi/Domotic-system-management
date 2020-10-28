@@ -20,13 +20,19 @@ public class ClasseDiServizioListaCategorie {
         return listaCategorie.getCategorieAttuatori().get(i);
     }
 
+    /**
+     * Visualizza le categorieSensori
+     *
+     * @param listaCategorie per visualizzare la categoriaSensori
+     * @return la String delle categorieSensori
+     */
     public static String visualizzaCategorieSensori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
         if (!listaCategorie.getCategorieSensori().isEmpty()) {
             int i = 1;
             tmp.append("\nCategorie sensori:\n");
             for (CategoriaSensori categoriaSensori : listaCategorie.getCategorieSensori()) {
-                tmp.append(i + " " + ClasseDiServizioCategoriaSensori.toString(categoriaSensori)).append("\n");
+                tmp.append(i + " " + ClasseDiServizioCategoriaSensori.toString(categoriaSensori));
                 i++;
             }
         } else
@@ -36,6 +42,12 @@ public class ClasseDiServizioListaCategorie {
     }
 
 
+    /**
+     * Visualizza le categorieAttuatori
+     *
+     * @param listaCategorie per visualizzare la categoriaAttuatori
+     * @return Descrizione categorieAttuatori
+     */
     public static String visualizzaCategorieAttuatori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
 
@@ -58,10 +70,21 @@ public class ClasseDiServizioListaCategorie {
                 visualizzaCategorieAttuatori(listaCategorie) + "\n";
     }
 
-    public static CategoriaSensori creaCategoriaSensori(){
+    /**
+     * CreaCategoriaSensori
+     *
+     * @return categoria sensori
+     */
+    public static CategoriaSensori creaCategoriaSensori() {
         return ClasseDiServizioCategoriaSensori.creaCategoriaSensori();
     }
-    public static CategoriaAttuatori creaCategoriaAttuatori(){
+
+    /**
+     * CreaCategoriaAttuatori
+     *
+     * @return categoria attuatori
+     */
+    public static CategoriaAttuatori creaCategoriaAttuatori() {
         return ClasseDiServizioCategoriaAttuatori.creaCategoriaAttuatori();
     }
 

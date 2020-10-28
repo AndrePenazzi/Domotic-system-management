@@ -12,6 +12,11 @@ import java.util.List;
 
 public class ClasseDiServizioInfoRilevabile {
 
+    /**
+     * MenuCreaInfoRilevabile
+     *
+     * @return una InfoRilevabile
+     */
     public static InfoRilevabile menuCreaInfoRilevabile() {
         InfoRilevabile infoRilevabile = null;
 
@@ -35,7 +40,12 @@ public class ClasseDiServizioInfoRilevabile {
         return infoRilevabile;
     }
 
-    //TODO FORSE MANCA IL TRY CATCH PER MIN MAX
+
+    /**
+     * CreaInfoRilevabileNumerica
+     *
+     * @return infoRilevabile numerica
+     */
     public static InfoRilevabile creaInfoRilevabileNumerica() {
         InfoRilevabile informazioneRilevabile = null;
         boolean infoRilevabileOK = false;
@@ -55,6 +65,11 @@ public class ClasseDiServizioInfoRilevabile {
         return informazioneRilevabile;
     }
 
+    /**
+     * CreaInfoRilevabileNonNumerica
+     *
+     * @return infoRilevabile non numerica
+     */
     public static InfoRilevabile creaInfoRilevabileNonNumerica() {
         InfoRilevabile informazioneRilevabile = null;
         boolean infoRilevabileOK = false;
@@ -77,26 +92,31 @@ public class ClasseDiServizioInfoRilevabile {
         return informazioneRilevabile;
     }
 
-    public static String visualizzaValoreRilevato(InfoRilevabile infoRilevabile){
+    public static String visualizzaValoreRilevato(InfoRilevabile infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
-        if(infoRilevabile.getType()==1)
-            tmp.append(ClasseDiServizioInfoRilevabileNumerica.visualizzaValoreRilevato((InfoRilevabileNumerica)infoRilevabile));
-        else if(infoRilevabile.getType()==2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.visualizzaValoreRilevato((InfoRilevabileNonNumerica)infoRilevabile));
+        if (infoRilevabile.getType() == 1)
+            tmp.append(ClasseDiServizioInfoRilevabileNumerica.visualizzaValoreRilevato((InfoRilevabileNumerica) infoRilevabile));
+        else if (infoRilevabile.getType() == 2)
+            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.visualizzaValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
 
         return tmp.toString();
     }
 
-    public static String toString(InfoRilevabile infoRilevabile){
+    /**
+     * toStringInfoRilevabile
+     *
+     * @param infoRilevabile può essere sia numerica che non numerica
+     * @return le infoRilevabili
+     */
+    public static String toString(InfoRilevabile infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
-        if(infoRilevabile.getType()==1)
-            tmp.append(ClasseDiServizioInfoRilevabileNumerica.toString((InfoRilevabileNumerica)infoRilevabile));
-        else if(infoRilevabile.getType()==2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.toString((InfoRilevabileNonNumerica)infoRilevabile));
+        if (infoRilevabile.getType() == 1)
+            tmp.append(ClasseDiServizioInfoRilevabileNumerica.toString((InfoRilevabileNumerica) infoRilevabile));
+        else if (infoRilevabile.getType() == 2)
+            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.toString((InfoRilevabileNonNumerica) infoRilevabile));
 
         return tmp.toString();
     }
-
 
 
 }

@@ -28,12 +28,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClasseDiServizioManutentore {
-    public static Manutentore creaManutentore(){
-        String nome=InputDati.leggiStringaNonVuota("Inserisci il nome del manutentore:\n");
+    public static Manutentore creaManutentore() {
+        String nome = InputDati.leggiStringaNonVuota("Inserisci il nome del manutentore:\n");
         return new Manutentore(nome);
     }
 
-    public static void stampaMenuManutentore(Manutentore manutentore) {
+    public static void stampaMenuManutentore(Manutentore manutentore, ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori", "Operazioni di import", "Operazioni di salvataggio"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
@@ -52,21 +52,21 @@ public class ClasseDiServizioManutentore {
                 break;
 
                 case 2: {
-                    //ClasseDiServizioInserimenti.inserisciUnitaImmobiliare(contenitore);
+                    inserisciUnitaImmobiliare(manutentore);
                 }
                 break;
 
                 case 3: {
-                   // stampaMenuInserisciCategorie(contenitore.getListaCategorie());
+                    stampaMenuInserisciCategorie(listaCategorie);
                 }
                 break;
 
                 case 4: {
-                   // stampaMenuVisualizzazioneCategorie(contenitore);
+                    stampaMenuVisualizzazioneCategorie(listaCategorie);
                 }
                 break;
                 case 5: {
-                 //   stampaMenuSalvataggiLibrerie(contenitore);
+                    //   stampaMenuSalvataggiLibrerie(contenitore);
                 }
 
                 case 6: {
@@ -77,65 +77,65 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-/*
-    private static void stampaMenuManutentoreOperazioniSuUnitaImmobiliare(Contenitore contenitore) {
-        boolean finito = false;
-        String[] azione = {"Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
-        MyMenu menu = new MyMenu("Menu manutentore", azione);
-        do {
-            int scelta = menu.scegli();
-            switch (scelta) {
+    /*
+        private static void stampaMenuManutentoreOperazioniSuUnitaImmobiliare(Contenitore contenitore) {
+            boolean finito = false;
+            String[] azione = {"Inserisci nuova stanza", "Inserisci nuovo artefatto", "Associa sensore a stanze", "Associa attuatore a stanze", "Associa sensore ad artefatto", "Associa attuatore ad artefatto", "Associa artefatto a stanze", "Visualizza caratteristiche unità immobiliare"};
+            MyMenu menu = new MyMenu("Menu manutentore", azione);
+            do {
+                int scelta = menu.scegli();
+                switch (scelta) {
 
-                case 0: {
-                    finito = true;
-                    System.out.println("Uscita verso menu principale");
+                    case 0: {
+                        finito = true;
+                        System.out.println("Uscita verso menu principale");
+                    }
+                    break;
+
+
+                    case 1: {
+                        ClasseDiServizioManutentore.inserisciNuovaStanza(contenitore);
+                    }
+                    break;
+
+                    case 2: {
+                        ClasseDiServizioInserimenti.inserisciNuovoArtefatto(contenitore);
+                    }
+                    break;
+
+                    case 3: {
+                        ClasseDiServizioAssociazioni.associaSensoreAStanze(contenitore);
+                    }
+                    break;
+
+                    case 4: {
+                        ClasseDiServizioAssociazioni.associaAttuatoreAStanze(contenitore);
+                    }
+                    break;
+
+                    case 5: {
+                        ClasseDiServizioAssociazioni.associaSensoreAdArtefatti(contenitore);
+                    }
+                    break;
+
+                    case 6: {
+                        ClasseDiServizioAssociazioni.associaAttuatoreAdArtefatti(contenitore);
+                    }
+                    break;
+
+                    case 7: {
+                        ClasseDiServizioAssociazioni.associaArtefattoAStanze(contenitore);
+                    }
+                    break;
+
+                    case 8: {
+                        stampaMenuVisualizzazioneCaratteristicheUnitaImmobiliare(contenitore);
+                    }
                 }
-                break;
+            } while (!finito);
 
-
-                case 1: {
-                    ClasseDiServizioManutentore.inserisciNuovaStanza(contenitore);
-                }
-                break;
-
-                case 2: {
-                    ClasseDiServizioInserimenti.inserisciNuovoArtefatto(contenitore);
-                }
-                break;
-
-                case 3: {
-                    ClasseDiServizioAssociazioni.associaSensoreAStanze(contenitore);
-                }
-                break;
-
-                case 4: {
-                    ClasseDiServizioAssociazioni.associaAttuatoreAStanze(contenitore);
-                }
-                break;
-
-                case 5: {
-                    ClasseDiServizioAssociazioni.associaSensoreAdArtefatti(contenitore);
-                }
-                break;
-
-                case 6: {
-                    ClasseDiServizioAssociazioni.associaAttuatoreAdArtefatti(contenitore);
-                }
-                break;
-
-                case 7: {
-                    ClasseDiServizioAssociazioni.associaArtefattoAStanze(contenitore);
-                }
-                break;
-
-                case 8: {
-                    stampaMenuVisualizzazioneCaratteristicheUnitaImmobiliare(contenitore);
-                }
-            }
-        } while (!finito);
-
-    }
-*/
+        }
+    */
     private static void stampaMenuVisualizzazioneCaratteristicheUnitaImmobiliare(Manutentore manutentore) {
         boolean finito = false;
         String[] azione = {"Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
@@ -191,16 +191,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-    /**
-     * Menu di visualizzazione delle descrizioni da parte del manutentore
-     *
-     * @param contenitore per ottenere gli oggetti necessari
-     */
-    private static void stampaMenuVisualizzazioneCategorie(Contenitore contenitore) {
+
+    private static void stampaMenuVisualizzazioneCategorie(ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
-        ListaCategorie listaCategorie = contenitore.getListaCategorie();
         do {
             int scelta = menu.scegli();
             switch (scelta) {
@@ -226,11 +221,6 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-    /**
-     * Menu salvataggi librerie
-     *
-     * @param contenitore per gli oggetti necessari
-     */
     private static void stampaMenuSalvataggiLibrerie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Salva categorie sensori", "Salva categorie attuatori", "Salva unità immobiliare", "Salva regole"};
@@ -279,6 +269,7 @@ public class ClasseDiServizioManutentore {
 
 
     //TODO PENSACI TU
+
     /**
      * Menu importa librerie
      *
@@ -363,14 +354,31 @@ public class ClasseDiServizioManutentore {
     public static String visualizzaListaUnitaImmobiliari(Manutentore manutentore) {
         return ClasseDiServizioFruitore.visualizzaUnitaImmobiliari(manutentore.getFruitore());
     }
+
     //TODO salvataggio su File
+
+    /**
+     * inserisciESalvaNuovaCategoriaDiSensori
+     *
+     * @param listaCategorie nel quale salvare
+     */
     public static void inserisciESalvaNuovaCategoriaDiSensori(ListaCategorie listaCategorie) {
-        CategoriaSensori categoriaSensori= ClasseDiServizioListaCategorie.creaCategoriaSensori();
+        CategoriaSensori categoriaSensori = ClasseDiServizioListaCategorie.creaCategoriaSensori();
         listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
 
+    /**
+     * inserisciESalvaNuovaCategoriaDiAttuatori
+     *
+     * @param listaCategorie nel quale salvare
+     */
     public static void inserisciESalvaNuovaCategoriaDiAttuatori(ListaCategorie listaCategorie) {
-        CategoriaAttuatori categoriaAttuatori= ClasseDiServizioListaCategorie.creaCategoriaAttuatori();
+        CategoriaAttuatori categoriaAttuatori = ClasseDiServizioListaCategorie.creaCategoriaAttuatori();
         listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
+    }
+
+    public static void inserisciUnitaImmobiliare(Manutentore manutentore) {
+        UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliare.creaUnitaImmobiliare();
+        manutentore.aggiungiUnitaImmobiliare(unitaImmobiliare);
     }
 }

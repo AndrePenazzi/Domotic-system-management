@@ -11,6 +11,10 @@ import java.util.List;
 
 public class ClasseDiServizioModOperativa {
 
+    /**
+     * MenuCreaModOperativa
+     * @return ModOperativa creata
+     */
     public static ModOperativa menuCreaModOperativa() {
         ModOperativa modOperativa = null;
 
@@ -34,6 +38,11 @@ public class ClasseDiServizioModOperativa {
         return modOperativa;
     }
 
+    /**
+     * CreaModOperativaNonParametrica
+     *
+     * @return ModOperativaNonParametrica
+     */
     public static ModOperativa creaModOperativaNonParametrica() {
         String nome;
         double valore;
@@ -45,6 +54,11 @@ public class ClasseDiServizioModOperativa {
         return new ModOperativaNonParametrica(nome);
     }
 
+    /**
+     * CreaModOperativaParametrica
+     *
+     * @return ModOperativaParametrica
+     */
     public static ModOperativa creaModOperativaParametrica() {
         String nome;
         List<String> valori = new ArrayList<>();
@@ -55,20 +69,26 @@ public class ClasseDiServizioModOperativa {
         return new ModOperativaParametrica(nome, valori);
     }
 
-    public static void modificaModOperativa(ModOperativa modOperativa){
-        if(modOperativa.getType()==1)
-            ClasseDiServizioModOperativaNonParametrica.modificaValoreModOperativaAttuale((ModOperativaNonParametrica)modOperativa);
-        else if(modOperativa.getType()==2)
-            ClasseDiServizioModOperativaParametrica.modificaValoreModOperativaAttuale((ModOperativaParametrica)modOperativa);
+    public static void modificaModOperativa(ModOperativa modOperativa) {
+        if (modOperativa.getType() == 1)
+            ClasseDiServizioModOperativaNonParametrica.modificaValoreModOperativaAttuale((ModOperativaNonParametrica) modOperativa);
+        else if (modOperativa.getType() == 2)
+            ClasseDiServizioModOperativaParametrica.modificaValoreModOperativaAttuale((ModOperativaParametrica) modOperativa);
 
     }
 
-    public static String toString(ModOperativa modOperativa){
+    /**
+     * toStringModOperativa
+     *
+     * @param modOperativa da visualizzare
+     * @return Descrizione modOperativa
+     */
+    public static String toString(ModOperativa modOperativa) {
         StringBuilder tmp = new StringBuilder();
-        if(modOperativa.getType()==1)
-            tmp.append(ClasseDiServizioModOperativaNonParametrica.toString((ModOperativaNonParametrica)modOperativa));
-        else if(modOperativa.getType()==2)
-            tmp.append(ClasseDiServizioModOperativaParametrica.toString((ModOperativaParametrica)modOperativa));
+        if (modOperativa.getType() == 1)
+            tmp.append(ClasseDiServizioModOperativaNonParametrica.toString((ModOperativaNonParametrica) modOperativa));
+        else if (modOperativa.getType() == 2)
+            tmp.append(ClasseDiServizioModOperativaParametrica.toString((ModOperativaParametrica) modOperativa));
 
         return tmp.toString();
     }

@@ -15,7 +15,8 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
         return tmp.toString();
     }
 
-    public static String visualizzaValori(InfoRilevabileNonNumerica infoRilevabile) {
+
+    public static String visualizzaValoriNumerato(InfoRilevabileNonNumerica infoRilevabile) {
         List<String> valori = infoRilevabile.getValori();
         StringBuilder tmp = new StringBuilder();
 
@@ -31,11 +32,35 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
         return tmp.toString();
     }
 
+    /**
+     * Visualizza i valori non numerati
+     * @param infoRilevabile non numerica
+     * @return i valori non numerici
+     */
+    public static String visualizzaValoriNonNumerato(InfoRilevabileNonNumerica infoRilevabile) {
+        List<String> valori = infoRilevabile.getValori();
+        StringBuilder tmp = new StringBuilder();
+
+        if (!valori.isEmpty()) {
+            tmp.append("\nValori:\n");
+            for (String s : valori) {
+                tmp.append("--" + s).append("\n");
+            }
+        } else
+            tmp.append("\nNon ci sono ancora valori associati");
+        return tmp.toString();
+    }
+
+    /**
+     * toStringInfoRilevabileNonNumerica
+     * @param infoRilevabile non numerica
+     * @return infoRilevabileNonNumerica
+     */
     public static String toString(InfoRilevabileNonNumerica infoRilevabile) {
         String nome = infoRilevabile.getNome();
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append(visualizzaValori(infoRilevabile));
+        tmp.append(nome);
+        tmp.append(visualizzaValoriNonNumerato(infoRilevabile));
         return tmp.toString();
     }
 

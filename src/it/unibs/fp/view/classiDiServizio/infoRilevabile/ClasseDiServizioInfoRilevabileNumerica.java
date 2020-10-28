@@ -11,6 +11,11 @@ public class ClasseDiServizioInfoRilevabileNumerica {
         return tmp.toString();
     }
 
+    /**
+     * toStringInfoRilevabileNumerica
+     * @param infoRilevabile numerica
+     * @return infoRilevabileNumerica
+     */
     public static String toString(InfoRilevabileNumerica infoRilevabile) {
         String nome=infoRilevabile.getNome();
         double min=infoRilevabile.getMin();

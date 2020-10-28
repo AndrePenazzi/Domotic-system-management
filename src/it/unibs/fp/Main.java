@@ -3,6 +3,7 @@ package it.unibs.fp;
 import it.unibs.fp.dao.file.Contenitore;
 import it.unibs.fp.dao.file.ContenitoreDAO;
 import it.unibs.fp.model.categoria.ListaCategorie;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
 import it.unibs.fp.view.mylib.*;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
@@ -18,10 +19,11 @@ public class Main {
         ListaCategorie listaCategorie = contenitore.getListaCategorie();
 
         System.out.println(BelleStringhe.incornicia("Benvenuto"));
+        ClasseDiServizio.menuPrincipale(fruitore, manutentore, listaCategorie);
 
     }
 
-    private static void creaFileDAO(){
+    private static void creaFileDAO() {
         contenitoreDAO = new ContenitoreDAO();
     }
 }

@@ -9,11 +9,7 @@ import it.unibs.fp.view.mylib.MyMenu;
 
 public class ClasseDiServizio {
 
-    /**
-     * Menu di scelta utente (manutentore o fruitore)
-     *
-     * @param contenitore per ottenere gli oggetti necessari
-     */
+
     public static void menuPrincipale(Fruitore fruitore, Manutentore manutentore, ListaCategorie listaCategorie) {
 
         boolean finito = false;
@@ -30,12 +26,12 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    ClasseDiServizioManutentore.stampaMenuManutentore(manutentore);
+                    ClasseDiServizioManutentore.stampaMenuManutentore(manutentore, listaCategorie);
                 }
                 break;
 
                 case 2: {
-                    ClasseDiServizioFruitore.stampaMenuFruitore(fruitore,listaCategorie);
+                    ClasseDiServizioFruitore.stampaMenuFruitore(fruitore, listaCategorie);
                 }
                 break;
             }

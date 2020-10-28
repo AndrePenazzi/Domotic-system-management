@@ -10,12 +10,17 @@ import java.util.List;
 
 public class ClasseDiServizioCategoriaAttuatori {
 
+    /**
+     * CreaCategoriaAttuatori
+     *
+     * @return CategoriaAttuatori
+     */
     public static CategoriaAttuatori creaCategoriaAttuatori() {
         String testoLibero;
         boolean testoLiberoOK = false;
         boolean modOperativeOK = false;
         List<ModOperativa> modOperative = new ArrayList<>();
-        String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria sensori: ");
+        String nome = InputDati.leggiStringaNonVuota("Inserisci nome categoria attuatori: ");
         CategoriaAttuatori categoriaAttuatori = null;
 
         do {
@@ -24,7 +29,7 @@ public class ClasseDiServizioCategoriaAttuatori {
                 if (!modOperativeOK) {
                     do {
                         modOperative.add(ClasseDiServizioModOperativa.menuCreaModOperativa());
-                    } while (InputDati.yesOrNo("Vuoi inserire un'altra informazione rilevabile?"));
+                    } while (InputDati.yesOrNo("Vuoi inserire un'altra modalita operativa?"));
                     modOperativeOK = true;
                 }
 
@@ -50,12 +55,12 @@ public class ClasseDiServizioCategoriaAttuatori {
     }
 
     public static ModOperativa scegliModOperativa(CategoriaAttuatori categoriaAttuatori) {
-        System.out.println(visualizzaModOperative(categoriaAttuatori));
+        System.out.println(visualizzaModOperativeNumerate(categoriaAttuatori));
         int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getModalitaOperative().size()) - 1;
         return categoriaAttuatori.getModalitaOperative().get(i);
     }
 
-    public static String visualizzaModOperative(CategoriaAttuatori categoriaAttuatori) {
+    public static String visualizzaModOperativeNumerate(CategoriaAttuatori categoriaAttuatori) {
         StringBuilder tmp = new StringBuilder();
         List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
 
@@ -71,14 +76,40 @@ public class ClasseDiServizioCategoriaAttuatori {
         return tmp.toString();
     }
 
+    /**
+     * VisualizzaModOperativeNonNumerate
+     *
+     * @param categoriaAttuatori da visualizzare
+     * @return Descrizione modOperative
+     */
+    public static String visualizzaModOperativeNonNumerate(CategoriaAttuatori categoriaAttuatori) {
+        StringBuilder tmp = new StringBuilder();
+        List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
+
+        if (!modalitaOperative.isEmpty()) {
+            tmp.append("\n-Modalita Operative:\n");
+            for (ModOperativa modOperativa : modalitaOperative) {
+                tmp.append(ClasseDiServizioModOperativa.toString(modOperativa));
+            }
+        } else
+            tmp.append("\nNon ci sono ancora modalita operative associate\n");
+        return tmp.toString();
+    }
+
+    /**
+     * toStringCategoriaAttuatori
+     *
+     * @param categoriaAttuatori da visualizzare
+     * @return categoriaAttuatori
+     */
     public static String toString(CategoriaAttuatori categoriaAttuatori) {
         String nome = categoriaAttuatori.getNome();
         String testoLibero = categoriaAttuatori.getTestoLibero();
 
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + testoLibero);
-        visualizzaModOperative(categoriaAttuatori);
+        tmp.append(nome + ": ");
+        tmp.append(testoLibero);
+        tmp.append(visualizzaModOperativeNonNumerate(categoriaAttuatori));
 
         return tmp.toString();
     }

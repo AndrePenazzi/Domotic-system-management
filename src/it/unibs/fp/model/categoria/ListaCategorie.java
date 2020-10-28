@@ -35,8 +35,6 @@ public class ListaCategorie implements Serializable {
     }
 
 
-
-
     /**
      * Getter
      *
@@ -64,6 +62,10 @@ public class ListaCategorie implements Serializable {
         return categorieSensori;
     }
 
+    public void setCategorieSensori(List<CategoriaSensori> categorieSensori) {
+        this.categorieSensori = categorieSensori;
+    }
+
     /**
      * Getter
      *
@@ -73,11 +75,14 @@ public class ListaCategorie implements Serializable {
         return categorieAttuatori;
     }
 
-    public void setCategorieSensori(List<CategoriaSensori> categorieSensori) {
-        this.categorieSensori = categorieSensori;
-    }
-
     public void setCategorieAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
         this.categorieAttuatori = categorieAttuatori;
+    }
+
+    public boolean categorieAttuatoriIsEmpty() {
+        return categorieAttuatori.isEmpty();
+    }
+    public boolean categorieSensoriIsEmpty() {
+        return categorieSensori.isEmpty();
     }
 }

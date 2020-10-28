@@ -14,9 +14,11 @@ public class UnitaImmobiliari implements Serializable {
     public List<UnitaImmobiliare> getUnitaImmobiliari() {
         return unitaImmobiliari;
     }
+
     public UnitaImmobiliare getUnitaImmobiliare(int i) {
         return unitaImmobiliari.get(i);
     }
+
     public int getSizeUnitaImmobiliari() {
         return unitaImmobiliari.size();
     }
