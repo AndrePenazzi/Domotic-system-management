@@ -10,7 +10,7 @@ public class ListaCategorieDAO implements DAO<ListaCategorie> {
     @Override
     public void inserisci(ListaCategorie listaCategorie) {
         File cFile = new File("salvataggiSuDisco/listaCategorie.dat");
-        ServizioFile.salvaSingoloOggetto(cFile,listaCategorie);
+        ServizioFile.salvaSingoloOggetto(cFile, listaCategorie);
     }
 
     @Override

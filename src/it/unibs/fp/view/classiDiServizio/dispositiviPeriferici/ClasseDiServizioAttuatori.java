@@ -31,7 +31,6 @@ public class ClasseDiServizioAttuatori {
 
     public static String toString(Attuatori attuatori) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\nGli attuatori sono: \n");
 
         if (!attuatori.isEmpty()) {
             int i = 1;

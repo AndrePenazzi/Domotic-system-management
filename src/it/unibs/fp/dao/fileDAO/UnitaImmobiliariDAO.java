@@ -2,7 +2,7 @@ package it.unibs.fp.dao.fileDAO;
 
 import it.unibs.fp.dao.DAO;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
-import it.unibs.fp.model.utenti.Fruitore;
+import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
 import it.unibs.fp.view.mylib.ServizioFile;
 
 import java.io.File;
@@ -23,7 +23,7 @@ public class UnitaImmobiliariDAO implements DAO<UnitaImmobiliari> {
     public UnitaImmobiliari carica() {
         File cFile = new File("salvataggiSuDisco/unitaImmobiliari.dat");
         if (!cFile.exists()) {
-            inserisci(new UnitaImmobiliari());
+            inserisci(ClasseDiServizioUnitaImmobiliari.creaUnitaImmobiliari());
         }
         return (UnitaImmobiliari) ServizioFile.caricaSingoloOggetto(cFile);
     }

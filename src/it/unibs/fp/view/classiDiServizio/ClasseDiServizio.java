@@ -1,16 +1,18 @@
 package it.unibs.fp.view.classiDiServizio;
 
 import it.unibs.fp.model.categoria.ListaCategorie;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
 import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioFruitore;
 import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioManutentore;
+import it.unibs.fp.view.mylib.BelleStringhe;
 import it.unibs.fp.view.mylib.MyMenu;
 
 public class ClasseDiServizio {
 
 
-    public static void menuPrincipale(Fruitore fruitore, Manutentore manutentore, ListaCategorie listaCategorie) {
+    public static void menuPrincipale(Manutentore manutentore, Fruitore fruitore, UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
 
         boolean finito = false;
         String[] azione = {"Accedi come manutentore", "Accedi come fruitore"};
@@ -26,12 +28,14 @@ public class ClasseDiServizio {
                 break;
 
                 case 1: {
-                    ClasseDiServizioManutentore.stampaMenuManutentore(manutentore, listaCategorie);
+                    System.out.println(BelleStringhe.incornicia(manutentore.getNome()));
+                    ClasseDiServizioManutentore.stampaMenuManutentore(unitaImmobiliari, listaCategorie);
                 }
                 break;
 
                 case 2: {
-                    ClasseDiServizioFruitore.stampaMenuFruitore(fruitore, listaCategorie);
+                    System.out.println(BelleStringhe.incornicia(fruitore.getNome()));
+                    ClasseDiServizioFruitore.stampaMenuFruitore(unitaImmobiliari, listaCategorie);
                 }
                 break;
             }

@@ -80,6 +80,13 @@ public class ListaCategorie implements Serializable {
     public CategoriaSensori getCategoriaSensori(int i) {
         return categorieSensori.get(i);
     }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return CategoriaSensori alla posizione i
+     */
     public String getNomeCategoriaSensori(int i) {
         return getCategoriaSensori(i).getNome();
     }
