@@ -74,4 +74,23 @@ public class CategoriaAttuatori implements Serializable {
     public List<ModOperativa> getModalitaOperative() {
         return modalitaOperative;
     }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return posizione della modalità operativa
+     */
+    public ModOperativa getModalitaOperativa(int i) {
+        return modalitaOperative.get(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di ModalitaOperative
+     */
+    public int getSizeModalitaOperative() {
+        return modalitaOperative.size();
+    }
 }

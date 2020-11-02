@@ -10,6 +10,11 @@ import it.unibs.fp.view.mylib.InputDati;
 
 
 public class ClasseDiServizioStanza {
+    /**
+     * Costruttore Stanza
+     *
+     * @return crea una nuova stanza
+     */
     public static Stanza creaStanza() {
         String nome;
         nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova stanza: ");

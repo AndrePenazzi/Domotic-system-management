@@ -32,7 +32,7 @@ public class Stanza implements Serializable {
      * @param artefatto nuovo
      */
     public void inserisciArtefatto(Artefatto artefatto) {
-        artefatti.getArtefatti().add(artefatto);
+        artefatti.inserisciArtefatto(artefatto);
     }
 
 
@@ -42,7 +42,7 @@ public class Stanza implements Serializable {
      * @param sensore inserito.
      */
     public void inserisciSensore(Sensore sensore) {
-        sensori.getSensori().add(sensore);
+        sensori.inserisciSensore(sensore);
     }
 
     /**
@@ -51,7 +51,7 @@ public class Stanza implements Serializable {
      * @param attuatore inserito.
      */
     public void inserisciAttuatore(Attuatore attuatore) {
-        attuatori.getAttuatori().add(attuatore);
+        attuatori.inserisciAttuatore(attuatore);
     }
 
 
@@ -64,9 +64,21 @@ public class Stanza implements Serializable {
         return sensori;
     }
 
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return sensore
+     */
     public Sensore getSensore(int i) {
         return sensori.getSensore(i);
     }
+
+    /**
+     * Getter
+     *
+     * @return size di sensori
+     */
     public int getSizeSensori() {
         return sensori.getSize();
     }
@@ -79,11 +91,25 @@ public class Stanza implements Serializable {
     public Attuatori getAttuatoriInStanza() {
         Attuatori attuatori = new Attuatori();
         for (Artefatto a : artefatti.getArtefatti()) {
-            attuatori.getAttuatori().addAll(a.getAttuatoriInArtefatto().getAttuatori());
+            for (int i = 0; i < a.getSizeAttuatoriInArtefatto(); i++)
+                attuatori.inserisciAttuatore(a.getAttuatoreInArtefatto(i));
         }
-        attuatori.getAttuatori().addAll(this.attuatori.getAttuatori());
+        for (Attuatore a : this.attuatori.getAttuatori()) {
+            attuatori.inserisciAttuatore(a);
+        }
         return attuatori;
     }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return attuatorie alla posizione i
+     */
+    public Attuatore getAttuatoreInStanza(int i) {
+        return attuatori.getAttuatore(i);
+    }
+
     /**
      * Getter
      *
@@ -110,15 +136,6 @@ public class Stanza implements Serializable {
     public Artefatti getArtefatti() {
         return artefatti;
     }
-    public Artefatti getArtefattiInStanza() {
-        return artefatti;
-    }
-    public Artefatto getArtefatto(int i) {
-        return artefatti.getArtefatti().get(i);
-    }
-    public int getSizeArtefatti() {
-        return artefatti.getArtefatti().size();
-    }
 
     /**
      * Setter
@@ -127,5 +144,42 @@ public class Stanza implements Serializable {
      */
     public void setArtefatti(Artefatti artefatti) {
         this.artefatti = artefatti;
+    }
+
+    /**
+     * Getter
+     *
+     * @return Artefatti in stanza
+     */
+    public Artefatti getArtefattiInStanza() {
+        return artefatti;
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return Artefatto
+     */
+    public Artefatto getArtefatto(int i) {
+        return artefatti.getArtefatto(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return size Artefatti
+     */
+    public int getSizeArtefatti() {
+        return artefatti.getSizeArtefatti();
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di attuatori
+     */
+    public int getSizeAttuatori() {
+        return attuatori.getSize();
     }
 }

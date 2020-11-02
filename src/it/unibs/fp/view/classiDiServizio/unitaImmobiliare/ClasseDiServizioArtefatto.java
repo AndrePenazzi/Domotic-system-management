@@ -10,6 +10,11 @@ import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioArtefatto {
 
+    /**
+     * Costruttore Artefatto
+     *
+     * @return l'artefatto creato
+     */
     public static Artefatto creaArtefatto() {
         String nome;
         nome = InputDati.leggiStringaNonVuota("Inserisci nome nuovo artefatto: ");
@@ -24,8 +29,8 @@ public class ClasseDiServizioArtefatto {
 
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
         System.out.println(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
-        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSensoriInArtefatto().getSize()) - 1;
-        return artefatto.getSensoriInArtefatto().getSensore(i);
+        int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSizeSensoriInArtefatto()) - 1;
+        return artefatto.getSensoreInArtefatto(i);
     }
 
     public static String visualizzaAttuatori(Artefatto artefatto) {
@@ -45,6 +50,7 @@ public class ClasseDiServizioArtefatto {
         tmp.append(ClasseDiServizioSensori.visualizzaValoriRilevati(artefatto.getSensoriInArtefatto()));
         return tmp.toString();
     }
+
     public static void modificaModOperativa(Artefatto artefatto) {
         ClasseDiServizioAttuatori.modificaModOperative(artefatto.getAttuatoriInArtefatto());
     }

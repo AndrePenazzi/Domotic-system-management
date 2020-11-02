@@ -17,11 +17,11 @@ public class Fruitore implements Serializable {
      */
     public Fruitore(String nome) {
         unitaImmobiliari = new UnitaImmobiliari();
-        this.nome=nome;
+        this.nome = nome;
     }
 
     public void inserisciRegola(int unitaImmobiliareIndex, Regola regola) {
-        unitaImmobiliari.getUnitaImmobiliari().get(unitaImmobiliareIndex).inserisciRegola(regola);
+        unitaImmobiliari.getUnitaImmobiliare(unitaImmobiliareIndex).inserisciRegola(regola);
     }
 
 
@@ -34,7 +34,7 @@ public class Fruitore implements Serializable {
      *
      * @param unitaImmobiliare scelta per essere inserita
      */
-    public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
+    public void inserisciUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliari.inserisciUnitaImmobiliare(unitaImmobiliare);
     }
 
@@ -45,8 +45,8 @@ public class Fruitore implements Serializable {
      * @return indice unità immobiliare
      */
     public int trovaIndiceUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        for (int i = 0; i < unitaImmobiliari.getUnitaImmobiliari().size(); i++) {
-            if (unitaImmobiliari.getUnitaImmobiliari().get(i).equals(unitaImmobiliare))
+        for (int i = 0; i < unitaImmobiliari.getSizeUnitaImmobiliari(); i++) {
+            if (unitaImmobiliari.getUnitaImmobiliare(i).equals(unitaImmobiliare))
                 return i;
         }
         return -1;
@@ -60,7 +60,7 @@ public class Fruitore implements Serializable {
      */
     public void inserisciStanza(Stanza stanza, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciStanza(stanza);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciStanza(stanza);
         }
     }
 
@@ -72,7 +72,7 @@ public class Fruitore implements Serializable {
      */
     public void inserisciArtefatto(Artefatto artefatto, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciArtefatto(artefatto);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).inserisciArtefatto(artefatto);
         }
     }
 
@@ -85,7 +85,7 @@ public class Fruitore implements Serializable {
      */
     public void associaSensoreAStanze(Sensore sensoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAStanze(sensoreAss, stanzeAss);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAStanze(sensoreAss, stanzeAss);
         }
     }
 
@@ -98,7 +98,7 @@ public class Fruitore implements Serializable {
      */
     public void associaAttuatoreAStanze(Attuatore attuatoreAss, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAStanze(attuatoreAss, stanzeAss);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAStanze(attuatoreAss, stanzeAss);
         }
     }
 
@@ -111,7 +111,7 @@ public class Fruitore implements Serializable {
      */
     public void associaSensoreAdArtefatti(Sensore sensoreAss, Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAdArtefatti(sensoreAss, artefattoAss);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaSensoreAdArtefatti(sensoreAss, artefattoAss);
         }
     }
 
@@ -122,9 +122,9 @@ public class Fruitore implements Serializable {
      * @param artefattoAss     artefatti scelti
      * @param unitaImmobiliare che contiene gli artefatti
      */
-    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss,Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
+    public void associaAttuatoreAdArtefatti(Attuatore attuatoreAss, Artefatti artefattoAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaAttuatoreAdArtefatti(attuatoreAss, artefattoAss);
         }
     }
 
@@ -137,10 +137,9 @@ public class Fruitore implements Serializable {
      */
     public void associaArtefattoAStanze(Artefatto artefatto, Stanze stanzeAss, UnitaImmobiliare unitaImmobiliare) {
         if (unitaImmobiliari.getUnitaImmobiliari().contains(unitaImmobiliare)) {
-            unitaImmobiliari.getUnitaImmobiliari().get(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaArtefattoAStanze(artefatto, stanzeAss);
+            unitaImmobiliari.getUnitaImmobiliare(trovaIndiceUnitaImmobiliare(unitaImmobiliare)).associaArtefattoAStanze(artefatto, stanzeAss);
         }
     }
-
 
 
     /**
@@ -151,7 +150,7 @@ public class Fruitore implements Serializable {
     public UnitaImmobiliari getUnitaImmobiliariInFruitore() {
         return unitaImmobiliari;
     }
-    
+
     public int getSizeUnitaImmobiliariInFruitore() {
         return unitaImmobiliari.getSizeUnitaImmobiliari();
     }
@@ -163,6 +162,7 @@ public class Fruitore implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     /**
      * Setter
      *

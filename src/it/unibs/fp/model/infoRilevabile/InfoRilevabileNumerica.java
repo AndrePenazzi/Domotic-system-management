@@ -82,7 +82,13 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
     public void setValore(double valore) {
         this.valore = valore;
     }
-    public int getType(){
+
+    /**
+     * Getter
+     *
+     * @return type
+     */
+    public int getType() {
         return 1;
     }
 }

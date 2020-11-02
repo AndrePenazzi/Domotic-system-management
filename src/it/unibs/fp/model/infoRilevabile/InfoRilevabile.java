@@ -14,11 +14,8 @@ public abstract class InfoRilevabile implements Serializable {
         this.nome = nome;
     }
 
-    public InfoRilevabile() {
-    }
-
     /**
-     * Getter del nome dell'info rilevabile
+     * Getter
      *
      * @return il nome
      */
@@ -27,7 +24,7 @@ public abstract class InfoRilevabile implements Serializable {
     }
 
     /**
-     * Setter del nome dell'informazione rilevabile
+     * Setter
      *
      * @param nome della informazione rilevabile
      */
@@ -37,7 +34,7 @@ public abstract class InfoRilevabile implements Serializable {
 
 
     /**
-     * Getter del tipo di informazione rilevabile
+     * Getter
      *
      * @return il tipo sottoforma di intero
      */

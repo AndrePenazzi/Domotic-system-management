@@ -44,9 +44,9 @@ public class ClasseDiServizioCategoriaSensori {
 
     public static InfoRilevabile scegliInfoRilevabile(CategoriaSensori categoriaSensori) {
         System.out.println(visualizzaInfoRilevabiliNumerate(categoriaSensori));
-        int i = InputDati.leggiIntero("Scegli la infoRilevabile: ", 1, categoriaSensori.getInformazioniRilevabili().size()) - 1;
+        int i = InputDati.leggiIntero("Scegli la infoRilevabile: ", 1, categoriaSensori.getSizeInformazioniRilevabili()) - 1;
 
-        return categoriaSensori.getInformazioniRilevabili().get(i);
+        return categoriaSensori.getInformazioneRilevabile(i);
     }
 
     public static String visualizzaInfoRilevabiliNumerate(CategoriaSensori categoriaSensori) {

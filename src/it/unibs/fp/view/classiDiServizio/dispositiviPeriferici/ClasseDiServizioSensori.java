@@ -20,9 +20,8 @@ public class ClasseDiServizioSensori {
 
     public static String visualizzaInfoRilevabili(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\nI sensori sono: \n");
 
-        if (!sensori.getSensori().isEmpty()) {
+        if (!sensori.isEmpty()) {
             int i = 1;
             tmp.append("\nI sensori sono:\n");
             for (Sensore s : sensori.getSensori()) {
@@ -36,7 +35,7 @@ public class ClasseDiServizioSensori {
 
     public static String visualizzaValoriRilevati(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
-        if (!sensori.getSensori().isEmpty()) {
+        if (!sensori.isEmpty()) {
             int i = 1;
             tmp.append("\nI sensori sono:\n");
             for (Sensore s : sensori.getSensori()) {
@@ -50,13 +49,12 @@ public class ClasseDiServizioSensori {
 
     public static String toString(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\nI sensori sono: \n");
 
-        if (!sensori.getSensori().isEmpty()) {
+        if (!sensori.isEmpty()) {
             int i = 1;
-            tmp.append("\nI sensori sono:\n");
+            tmp.append("I sensori sono:\n");
             for (Sensore s : sensori.getSensori()) {
-                tmp.append(i + " " + ClasseDiServizioSensore.toString(s)).append("\n");
+                tmp.append(i + ") " + ClasseDiServizioSensore.toString(s)).append("\n");
                 i++;
             }
         } else

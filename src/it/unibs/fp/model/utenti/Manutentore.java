@@ -6,23 +6,18 @@ import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.unitaImmobiliare.*;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizio;
-import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
-import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
-import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
 import it.unibs.fp.view.classiDiServizio.utenti.ClasseDiServizioFruitore;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class Manutentore implements Serializable {
     private Fruitore fruitore;
     private String nome;
 
 
-    public Manutentore(String nome) {
+    public Manutentore(String nome, Fruitore fruitore) {
         this.nome = nome;
-        this.fruitore = ClasseDiServizioFruitore.creaFruitore();
+        this.fruitore = fruitore;
     }
 
     /**
@@ -31,7 +26,7 @@ public class Manutentore implements Serializable {
      * @param unitaImmobiliare da inserire nella lista
      */
     public void aggiungiUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
-        fruitore.aggiungiUnitaImmobiliare(unitaImmobiliare);
+        fruitore.inserisciUnitaImmobiliare(unitaImmobiliare);
     }
 
 
@@ -145,7 +140,6 @@ public class Manutentore implements Serializable {
         if (!found)
             listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
-
 
 
     /**

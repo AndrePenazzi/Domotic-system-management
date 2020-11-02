@@ -3,8 +3,6 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatori;
-import it.unibs.fp.model.dispositiviPeriferici.Sensore;
-import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioAttuatori {
@@ -35,7 +33,7 @@ public class ClasseDiServizioAttuatori {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\nGli attuatori sono: \n");
 
-        if (!attuatori.getAttuatori().isEmpty()) {
+        if (!attuatori.isEmpty()) {
             int i = 1;
             tmp.append("\nGli attuatori sono:\n");
             for (Attuatore a : attuatori.getAttuatori()) {

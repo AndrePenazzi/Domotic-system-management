@@ -1,11 +1,8 @@
 package it.unibs.fp.model.categoria;
 
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CategoriaSensori implements Serializable {
@@ -52,15 +49,6 @@ public class CategoriaSensori implements Serializable {
     }
 
     /**
-     * Setter
-     *
-     * @param testoLibero modificato
-     */
-    public void setTestoLibero(String testoLibero) {
-        this.testoLibero = testoLibero;
-    }
-
-    /**
      * Getter
      *
      * @return informazioni rilevabili
@@ -70,12 +58,22 @@ public class CategoriaSensori implements Serializable {
     }
 
     /**
-     * Setter
+     * Getter
      *
-     * @param informazioniRilevabili dalla categoria di sensori
+     * @param i posizione
+     * @return informazione rilevabile alla posizione i
      */
-    public void setInformazioniRilevabili(List<InfoRilevabile> informazioniRilevabili) {
-        this.informazioniRilevabili = informazioniRilevabili;
+    public InfoRilevabile getInformazioneRilevabile(int i) {
+        return informazioniRilevabili.get(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di informazioni rilevabili
+     */
+    public int getSizeInformazioniRilevabili() {
+        return informazioniRilevabili.size();
     }
 
     /**

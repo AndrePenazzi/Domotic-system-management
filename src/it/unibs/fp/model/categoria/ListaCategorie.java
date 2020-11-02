@@ -62,8 +62,46 @@ public class ListaCategorie implements Serializable {
         return categorieSensori;
     }
 
+    /**
+     * Setter
+     *
+     * @param categorieSensori da modificare
+     */
     public void setCategorieSensori(List<CategoriaSensori> categorieSensori) {
         this.categorieSensori = categorieSensori;
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return categoriaSensori alla posizione i
+     */
+    public CategoriaSensori getCategoriaSensori(int i) {
+        return categorieSensori.get(i);
+    }
+    public String getNomeCategoriaSensori(int i) {
+        return getCategoriaSensori(i).getNome();
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return categoriaAttuatori alla posizione i
+     */
+    public CategoriaAttuatori getCategoriaAttuatori(int i) {
+        return categorieAttuatori.get(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return nome della categoria attuatori alla posizione i
+     */
+    public String getNomeCategoriaAttuatori(int i) {
+        return getCategoriaAttuatori(i).getNome();
     }
 
     /**
@@ -75,13 +113,29 @@ public class ListaCategorie implements Serializable {
         return categorieAttuatori;
     }
 
+    /**
+     * Setter
+     *
+     * @param categorieAttuatori da modificare
+     */
     public void setCategorieAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
         this.categorieAttuatori = categorieAttuatori;
     }
 
+    /**
+     * Controlla se categorieAttuatori è vuota
+     *
+     * @return true if is Empty
+     */
     public boolean categorieAttuatoriIsEmpty() {
         return categorieAttuatori.isEmpty();
     }
+
+    /**
+     * Controlla se categorieSensori è vuota
+     *
+     * @return true if is Empty
+     */
     public boolean categorieSensoriIsEmpty() {
         return categorieSensori.isEmpty();
     }

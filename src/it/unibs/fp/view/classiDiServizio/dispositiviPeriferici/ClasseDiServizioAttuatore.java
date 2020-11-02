@@ -20,9 +20,9 @@ public class ClasseDiServizioAttuatore {
             int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieAttuatori());
             categoria--;
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome attuatore : ");
-            nome += "_" + listaCategorie.getCategorieAttuatori().get(categoria).getNome();
+            nome += "_" + listaCategorie.getNomeCategoriaAttuatori(categoria);
             System.out.println("Si è creato l'attuatore " + nome);
-            return new Attuatore(nome, listaCategorie.getCategorieAttuatori().get(categoria));
+            return new Attuatore(nome, listaCategorie.getCategoriaAttuatori(categoria));
         }
         System.out.println("Creare almeno una categoria attuatori");
         return null;
@@ -33,7 +33,6 @@ public class ClasseDiServizioAttuatore {
         System.out.println(nome);
         ClasseDiServizioCategoriaAttuatori.modificaModOperativa(attuatore.getCategoriaAttuatori());
     }
-
 
 
     public static String toString(Attuatore attuatore) {

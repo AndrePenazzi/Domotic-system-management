@@ -2,18 +2,22 @@ package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
 import it.unibs.fp.model.unitaImmobiliare.Artefatti;
 import it.unibs.fp.model.unitaImmobiliare.Artefatto;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 
 
 public class ClasseDiServizioArtefatti {
 
-    public static Artefatti creaArtefatti() {
-        Artefatti artefatti = new Artefatti();
-
+    /**
+     * CreaEdInserisciArtefatti
+     * @param unitaImmobiliare nella quale creare ed inserire artefatti
+     * @return gli Artefatti creati
+     */
+    public static Artefatti creaEInserisciArtefatti(UnitaImmobiliare unitaImmobiliare) {
+        Artefatti artefatti = unitaImmobiliare.getArtefattiInUnitaImmobiliare();
         do {
             artefatti.inserisciArtefatto(ClasseDiServizioArtefatto.creaArtefatto());
         } while (InputDati.yesOrNo("Vuoi continuare ad inserire un nuovo artefatto?"));
-
         return artefatti;
     }
 
@@ -47,19 +51,34 @@ public class ClasseDiServizioArtefatti {
         }
     }
 
-    public static String toString(Artefatti artefatti) {
+    public static String descrizioneNomeArtefatti(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\nGli artefatti sono: \n");
 
         if (!artefatti.getArtefatti().isEmpty()) {
             int i = 1;
-            tmp.append("\nGli artefatti sono:\n");
+            tmp.append("Gli artefatti sono:\n");
             for (Artefatto a : artefatti.getArtefatti()) {
-                tmp.append(i + " " + ClasseDiServizioArtefatto.toString(a)).append("\n");
+                tmp.append(i + ") " + a.getNome()).append("\n");
                 i++;
             }
         } else
-            tmp.append("\nNon ci sono ancora artefatti nella stanza o nella unita immobiliare");
+            tmp.append("Non ci sono ancora artefatti nella stanza o nella unita immobiliare");
+
+        return tmp.toString();
+    }
+
+    public static String toString(Artefatti artefatti) {
+        StringBuilder tmp = new StringBuilder();
+
+        if (!artefatti.getArtefatti().isEmpty()) {
+            int i = 1;
+            tmp.append("Gli artefatti sono:\n");
+            for (Artefatto a : artefatti.getArtefatti()) {
+                tmp.append(i + ") " + ClasseDiServizioArtefatto.toString(a)).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("Non ci sono ancora artefatti nella stanza o nella unita immobiliare");
 
         return tmp.toString();
     }

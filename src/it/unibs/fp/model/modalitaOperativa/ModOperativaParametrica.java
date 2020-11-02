@@ -9,7 +9,8 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
 
     /**
      * Costruttore
-     * @param nome della modalità operativa
+     *
+     * @param nome       della modalità operativa
      * @param paramentri scelti
      */
     public ModOperativaParametrica(String nome, List<String> paramentri) {
@@ -26,14 +27,6 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
         return paramentri;
     }
 
-    public int getSizeParamentri() {
-        return paramentri.size();
-    }
-
-    public String getParametro(int i) {
-        return paramentri.get(i);
-    }
-
     /**
      * Setter
      *
@@ -41,6 +34,25 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
      */
     public void setParamentri(List<String> paramentri) {
         this.paramentri = paramentri;
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di parametri
+     */
+    public int getSizeParamentri() {
+        return paramentri.size();
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return parametro alla posizione i
+     */
+    public String getParametro(int i) {
+        return paramentri.get(i);
     }
 
     /**
@@ -54,14 +66,19 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
 
     /**
      * Setter
+     *
      * @param parametroAttuale da modificare
      */
     public void setParametroAttuale(String parametroAttuale) {
         this.parametroAttuale = parametroAttuale;
     }
 
-
-    public int getType(){
+    /**
+     * Getter
+     *
+     * @return type
+     */
+    public int getType() {
         return 2;
     }
 }

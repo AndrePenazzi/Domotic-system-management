@@ -14,12 +14,9 @@ public abstract class ModOperativa implements Serializable {
         this.nome = nome;
     }
 
-    public ModOperativa() {
-        this.nome="";
-    }
 
     /**
-     * Getter del tipo di modalitò operativa
+     * Getter
      *
      * @return la tipologia della modalità operativa
      */
@@ -27,7 +24,7 @@ public abstract class ModOperativa implements Serializable {
 
 
     /**
-     * Getter del nome
+     * Getter
      *
      * @return nome che descrive ogni singola modalità operativa
      */
@@ -36,7 +33,7 @@ public abstract class ModOperativa implements Serializable {
     }
 
     /**
-     * Setter del nome
+     * Setter
      *
      * @param nome da modificare
      */

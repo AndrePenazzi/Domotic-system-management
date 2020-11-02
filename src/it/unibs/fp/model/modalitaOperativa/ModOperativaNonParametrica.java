@@ -46,10 +46,20 @@ public class ModOperativaNonParametrica extends ModOperativa implements Serializ
         this.valore = valore;
     }
 
-    public DecimalFormat getDf2(){
+    /**
+     * Getter
+     *
+     * @return DecimalFormat per il valore
+     */
+    public DecimalFormat getDf2() {
         return df2;
     }
 
+    /**
+     * Getter
+     *
+     * @return type
+     */
     public int getType() {
         return 1;
     }

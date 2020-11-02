@@ -11,13 +11,13 @@ public class ClasseDiServizioListaCategorie {
     public static CategoriaSensori scegliCategoriaSensori(ListaCategorie listaCategorie) {
         visualizzaCategorieSensori(listaCategorie);
         int i = InputDati.leggiIntero("Scgli la categoria sensori: ", 1, listaCategorie.getSizeCategorieSensori()) - 1;
-        return listaCategorie.getCategorieSensori().get(i);
+        return listaCategorie.getCategoriaSensori(i);
     }
 
     public static CategoriaAttuatori scegliCategoriaAttuatori(ListaCategorie listaCategorie) {
         visualizzaCategorieAttuatori(listaCategorie);
         int i = InputDati.leggiIntero("Scgli la categoria attuatori: ", 1, listaCategorie.getSizeCategorieAttuatori()) - 1;
-        return listaCategorie.getCategorieAttuatori().get(i);
+        return listaCategorie.getCategoriaAttuatori(i);
     }
 
     /**
@@ -28,7 +28,7 @@ public class ClasseDiServizioListaCategorie {
      */
     public static String visualizzaCategorieSensori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
-        if (!listaCategorie.getCategorieSensori().isEmpty()) {
+        if (!listaCategorie.categorieSensoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie sensori:\n");
             for (CategoriaSensori categoriaSensori : listaCategorie.getCategorieSensori()) {
@@ -51,7 +51,7 @@ public class ClasseDiServizioListaCategorie {
     public static String visualizzaCategorieAttuatori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
 
-        if (!listaCategorie.getCategorieAttuatori().isEmpty()) {
+        if (!listaCategorie.categorieAttuatoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie attuatori:\n");
             for (CategoriaAttuatori categorieAttuatori : listaCategorie.getCategorieAttuatori()) {

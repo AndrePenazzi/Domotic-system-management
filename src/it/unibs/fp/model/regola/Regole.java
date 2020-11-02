@@ -20,6 +20,18 @@ public class Regole implements Serializable {
         this.regole = regole;
     }
 
+    public Regola getRegola(int i) {
+        return regole.get(i);
+    }
+
+    public void attivaDsattivaRegola(int i) {
+        getRegola(i).attivaDisattivaRegola();
+    }
+
+    public int getSizeRegole() {
+        return regole.size();
+    }
+
     public void inserisciRegola(Regola regola) {
         regole.add(regola);
     }

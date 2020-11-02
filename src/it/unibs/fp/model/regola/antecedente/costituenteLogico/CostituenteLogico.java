@@ -29,16 +29,6 @@ public abstract class CostituenteLogico implements Serializable {
         this.time = null;
     }
 
-    /**
-     * Controlla se esiste il primo operatore logico
-     *
-     * @return true se esiste falso altrimenti
-     */
-    public boolean isTrue() {
-        return primoOperatoreLogico != null || time != null;
-    }
-
-
     //todo non funzionerà mai sicuro
     /**
      * Calcolo del valore booleano attuale del costituente logico
@@ -152,5 +142,14 @@ public abstract class CostituenteLogico implements Serializable {
 
     public void setSecondoOperatoreOrologio(Orologio secondoOperatoreOrologio) {
         this.secondoOperatoreOrologio = secondoOperatoreOrologio;
+    }
+
+    /**
+     * Controlla se esiste il primo operatore logico
+     *
+     * @return true se esiste falso altrimenti
+     */
+    public boolean isTrue() {
+        return primoOperatoreLogico != null || time != null;
     }
 }

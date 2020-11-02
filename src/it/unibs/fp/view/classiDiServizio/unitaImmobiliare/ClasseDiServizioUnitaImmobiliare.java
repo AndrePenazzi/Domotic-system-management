@@ -14,6 +14,12 @@ import it.unibs.fp.view.mylib.MyMenu;
 
 public class ClasseDiServizioUnitaImmobiliare {
     ////////////////////////////////////INIZIA CREA/////////////////////////////////////////////////
+
+    /**
+     * Costruttore UnitaImmobiliare
+     *
+     * @return unitaImmobiliare creata
+     */
     public static UnitaImmobiliare creaUnitaImmobiliare() {
         String nome;
         nome = InputDati.leggiStringaNonVuota("Inserisci nome nuova unita immobiliare: ");
@@ -23,6 +29,24 @@ public class ClasseDiServizioUnitaImmobiliare {
 
     public static Regole creaRegole(UnitaImmobiliare unitaImmobiliare) {
         return ClasseDiServizioRegole.creaRegole(unitaImmobiliare);
+    }
+
+    /**
+     * CreaEInserisciStanze nell'unita immobiliare
+     *
+     * @param unitaImmobiliare nella quale creare ed inserire stanze
+     */
+    public static void creaEInserisciStanze(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioStanze.creaEInserisciStanze(unitaImmobiliare);
+    }
+
+    /**
+     * CreaEInserisciArtefatti nell'unita immobiliare
+     *
+     * @param unitaImmobiliare nella quale creare ed inserire artefatti
+     */
+    public static void creaEInserisciArtefatti(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioArtefatti.creaEInserisciArtefatti(unitaImmobiliare);
     }
     ////////////////////////////////////FINE CREA/////////////////////////////////////////////////
 
@@ -191,11 +215,21 @@ public class ClasseDiServizioUnitaImmobiliare {
     }
 
     public static void visualizzaStanze(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
+        System.out.println(ClasseDiServizioStanze.descrizioneNomeStanze(unitaImmobiliare.getStanze()));
     }
 
     public static void visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
+        System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
+    }
+
+    /**
+     * Descrivi il nome dell'unità immobiliare
+     *
+     * @param unitaImmobiliare dal quale prendere il nome
+     * @return il nome dell'unità immobiliare
+     */
+    public static String descrizioneNomeUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
+        return unitaImmobiliare.getNome();
     }
 
     public static String toString(UnitaImmobiliare unitaImmobiliare) {
@@ -211,7 +245,7 @@ public class ClasseDiServizioUnitaImmobiliare {
     ////////////////////////////////////FINE VISUALIZZA/////////////////////////////////////////////////
     ////////////////////////////////////INIZIO ASSOCIA/////////////////////////////////////////////////
 
-    static void associaArtefattoAStanze(UnitaImmobiliare unitaImmobiliare) {
+    public static void associaArtefattoAStanze(UnitaImmobiliare unitaImmobiliare) {
         if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty())
             do {
                 Artefatto artefatto = ClasseDiServizioUnitaImmobiliare.scegliArtefatto(unitaImmobiliare);
@@ -223,7 +257,7 @@ public class ClasseDiServizioUnitaImmobiliare {
 
     }
 
-    static void associaSensoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    public static void associaSensoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!listaCategorie.getCategorieSensori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
@@ -238,7 +272,7 @@ public class ClasseDiServizioUnitaImmobiliare {
         }
     }
 
-    static void associaAttuatoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    public static void associaAttuatoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!listaCategorie.getCategorieAttuatori().isEmpty() && !unitaImmobiliare.getStanze().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
@@ -253,7 +287,7 @@ public class ClasseDiServizioUnitaImmobiliare {
         }
     }
 
-    static void associaSensoreAdArtefatti(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+    public static void associaSensoreAdArtefatti(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty() && !listaCategorie.getCategorieSensori().isEmpty()) {
             do {
                 Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
@@ -272,7 +306,8 @@ public class ClasseDiServizioUnitaImmobiliare {
                 System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
         }
     }
-    static void associaAttuatoreAdArtefatti(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+
+    public static void associaAttuatoreAdArtefatti(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!unitaImmobiliare.getArtefattiInUnitaImmobiliare().getArtefatti().isEmpty() && !listaCategorie.getCategorieAttuatori().isEmpty()) {
             do {
                 Attuatore nuovoAttuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
@@ -296,4 +331,6 @@ public class ClasseDiServizioUnitaImmobiliare {
     public static void modificaModOperativeInUnArtefatto(UnitaImmobiliare unitaImmobiliare) {
         ClasseDiServizioArtefatti.modificaModOperative(unitaImmobiliare.getArtefattiInUnitaImmobiliare());
     }
+
+
 }

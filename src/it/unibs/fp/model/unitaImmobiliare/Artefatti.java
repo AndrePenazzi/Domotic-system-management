@@ -9,27 +9,69 @@ import java.util.List;
 public class Artefatti implements Serializable {
     private List<Artefatto> artefatti;
 
+    /**
+     * Costruttore Artefatti
+     */
     public Artefatti() {
         artefatti = new ArrayList<>();
     }
 
+    /**
+     * @param artefatto
+     */
+    public void inserisciArtefatto(Artefatto artefatto) {
+        artefatti.add(artefatto);
+    }
+
+    /**
+     * Getter Artefatti
+     *
+     * @return Artefatti
+     */
     public List<Artefatto> getArtefatti() {
         return artefatti;
     }
 
+    /**
+     * Setter
+     *
+     * @param artefatti da modificare
+     */
     public void setArtefatti(List<Artefatto> artefatti) {
         this.artefatti = artefatti;
     }
 
-    public Attuatori getAttuatoriInArtefatti(){
-        Attuatori attuatori=new Attuatori();
+    /**
+     * Getter
+     *
+     * @return size di Artefatti
+     */
+    public int getSizeArtefatti() {
+        return artefatti.size();
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return artefatto alla posizione i
+     */
+    public Artefatto getArtefatto(int i) {
+        return artefatti.get(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return Attuatori in artefatti
+     */
+    public Attuatori getAttuatoriInArtefatti() {
+        Attuatori attuatori = new Attuatori();
         for (Artefatto a : artefatti) {
-            attuatori.getAttuatori().addAll(a.getAttuatoriInArtefatto().getAttuatori());
+            for (int i = 0; i < a.getSizeAttuatoriInArtefatto(); i++)
+                attuatori.inserisciAttuatore(a.getAttuatoreInArtefatto(i));
         }
         return attuatori;
     }
 
-    public void inserisciArtefatto(Artefatto artefatto) {
-        artefatti.add(artefatto);
-    }
 }

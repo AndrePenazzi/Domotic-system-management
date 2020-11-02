@@ -1,5 +1,7 @@
 package it.unibs.fp.model.unitaImmobiliare;
 
+import it.unibs.fp.model.regola.Regola;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,10 @@ public class UnitaImmobiliari implements Serializable {
         return unitaImmobiliari;
     }
 
+    public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
+        this.unitaImmobiliari = unitaImmobiliari;
+    }
+
     public UnitaImmobiliare getUnitaImmobiliare(int i) {
         return unitaImmobiliari.get(i);
     }
@@ -23,14 +29,15 @@ public class UnitaImmobiliari implements Serializable {
         return unitaImmobiliari.size();
     }
 
-    public void setUnitaImmobiliari(List<UnitaImmobiliare> unitaImmobiliari) {
-        this.unitaImmobiliari = unitaImmobiliari;
-    }
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return unitaImmobiliari.isEmpty();
     }
 
     public void inserisciUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliari.add(unitaImmobiliare);
+    }
+
+    public void inserisciRegolaInUnitaImmobiliare(int unitaImmobiliare, Regola regola) {
+        getUnitaImmobiliare(unitaImmobiliare).inserisciRegola(regola);
     }
 }

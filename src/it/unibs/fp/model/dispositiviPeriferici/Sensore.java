@@ -1,9 +1,6 @@
 package it.unibs.fp.model.dispositiviPeriferici;
 
 import it.unibs.fp.model.categoria.CategoriaSensori;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 
 import java.io.Serializable;
 
@@ -14,7 +11,7 @@ public class Sensore implements Serializable {
     /**
      * Costruttore sensore
      *
-     * @param nome del sensore
+     * @param nome             del sensore
      * @param categoriaSensori tipologia di sensore
      */
     public Sensore(String nome, CategoriaSensori categoriaSensori) {
@@ -57,7 +54,6 @@ public class Sensore implements Serializable {
     public void setCategoriaSensori(CategoriaSensori categoriaSensori) {
         this.categoriaSensori = categoriaSensori;
     }
-
 
 
 }

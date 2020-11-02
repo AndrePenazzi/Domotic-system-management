@@ -56,8 +56,8 @@ public class ClasseDiServizioCategoriaAttuatori {
 
     public static ModOperativa scegliModOperativa(CategoriaAttuatori categoriaAttuatori) {
         System.out.println(visualizzaModOperativeNumerate(categoriaAttuatori));
-        int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getModalitaOperative().size()) - 1;
-        return categoriaAttuatori.getModalitaOperative().get(i);
+        int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getSizeModalitaOperative()) - 1;
+        return categoriaAttuatori.getModalitaOperativa(i);
     }
 
     public static String visualizzaModOperativeNumerate(CategoriaAttuatori categoriaAttuatori) {

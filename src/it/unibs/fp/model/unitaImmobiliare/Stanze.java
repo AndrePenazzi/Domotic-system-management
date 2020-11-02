@@ -21,14 +21,30 @@ public class Stanze implements Serializable {
         this.stanze = stanze;
     }
 
-    public Attuatori getAttuatoriInStanze(){
-        Attuatori attuatori=new Attuatori();
+    public int getSizeStanze() {
+        return stanze.size();
+    }
+
+    public Stanza getStanza(int i) {
+        return stanze.get(i);
+    }
+
+    public Attuatori getAttuatoriInStanze() {
+        Attuatori attuatori = new Attuatori();
 
         for (Stanza s : stanze) {
-            attuatori.getAttuatori().addAll(s.getAttuatoriInStanza().getAttuatori());
+            for (int i = 0; i < s.getSizeArtefatti(); i++) {
+                Artefatto artefatto = s.getArtefatto(i);
+                for (int j = 0; j < artefatto.getSizeAttuatoriInArtefatto(); j++) {
+                    attuatori.inserisciAttuatore(artefatto.getAttuatoreInArtefatto(j));
+                }
+            }
+            for (int k = 0; k < s.getSizeAttuatori(); k++)
+                attuatori.inserisciAttuatore(s.getAttuatoreInStanza(k));
         }
         return attuatori;
     }
+
     public boolean isEmpty() {
         return stanze.isEmpty();
     }

@@ -17,9 +17,15 @@ public class ClasseDiServizioUnitaImmobiliari {
         return unitaImmobiliari;
     }
 
+    /**
+     * Scegli un'unita immobiliare
+     *
+     * @param unitaImmobiliari dalle quali sceglierne una
+     * @return l'unita immobiliare scelta
+     */
     public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         for (int i = 0; i < unitaImmobiliari.getSizeUnitaImmobiliari(); i++) {
-            System.out.println(ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliari.getUnitaImmobiliare(i)));
+            System.out.println(i + 1 + ") " + ClasseDiServizioUnitaImmobiliare.descrizioneNomeUnitaImmobiliare(unitaImmobiliari.getUnitaImmobiliare(i)));
         }
         int i = InputDati.leggiIntero("Scegli l'unità immobiliare: ", 1, unitaImmobiliari.getSizeUnitaImmobiliari()) - 1;
         return unitaImmobiliari.getUnitaImmobiliari().get(i);
@@ -30,7 +36,7 @@ public class ClasseDiServizioUnitaImmobiliari {
         if (!unitaImmobiliari.isEmpty()) {
             int i = 1;
             for (UnitaImmobiliare unitaImmobiliare : unitaImmobiliari.getUnitaImmobiliari()) {
-                tmp.append(i + " " + ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliare)+"\n");
+                tmp.append(i + " " + ClasseDiServizioUnitaImmobiliare.toString(unitaImmobiliare) + "\n");
                 i++;
             }
         } else

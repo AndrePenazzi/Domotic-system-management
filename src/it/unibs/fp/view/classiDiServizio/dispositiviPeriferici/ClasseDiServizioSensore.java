@@ -12,9 +12,9 @@ public class ClasseDiServizioSensore {
         int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieSensori());
         categoria--;
         String nome = InputDati.leggiStringaNonVuota("Inserisci nome sensore : ");
-        nome += "_" + listaCategorie.getCategorieSensori().get(categoria).getNome() + ": ";
+        nome += "_" + listaCategorie.getNomeCategoriaSensori(categoria) + ": ";
         System.out.println("Si è creato il sensore " + nome);
-        return new Sensore(nome, listaCategorie.getCategorieSensori().get(categoria));
+        return new Sensore(nome, listaCategorie.getCategoriaSensori(categoria));
 
     }
 

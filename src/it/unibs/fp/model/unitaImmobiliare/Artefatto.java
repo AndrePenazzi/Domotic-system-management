@@ -6,9 +6,6 @@ import it.unibs.fp.model.dispositiviPeriferici.Sensore;
 import it.unibs.fp.model.dispositiviPeriferici.Sensori;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class Artefatto implements Serializable {
     private String nome;
@@ -57,10 +54,48 @@ public class Artefatto implements Serializable {
     /**
      * Getter
      *
+     * @param i posizione
+     * @return sensore alla posizione i
+     */
+    public Sensore getSensoreInArtefatto(int i) {
+        return sensori.getSensore(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di sensori
+     */
+    public int getSizeSensoriInArtefatto() {
+        return sensori.getSize();
+    }
+
+    /**
+     * Getter
+     *
      * @return List di attuatori.
      */
     public Attuatori getAttuatoriInArtefatto() {
         return attuatori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return size di attuatori in artefatto
+     */
+    public int getSizeAttuatoriInArtefatto() {
+        return attuatori.getSize();
+    }
+
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return attuatore alla posizione i
+     */
+    public Attuatore getAttuatoreInArtefatto(int i) {
+        return attuatori.getAttuatore(i);
     }
 
     /**

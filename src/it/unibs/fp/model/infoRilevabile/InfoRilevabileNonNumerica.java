@@ -75,7 +75,13 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
     public void setValoreAttuale(String valoreAttuale) {
         this.valoreAttuale = valoreAttuale;
     }
-    public int getType(){
+
+    /**
+     * Getter
+     *
+     * @return type
+     */
+    public int getType() {
         return 2;
     }
 }
