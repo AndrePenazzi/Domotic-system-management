@@ -5,6 +5,7 @@ import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
+import it.unibs.fp.view.ClasseDiServizioDAO;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
@@ -30,6 +31,10 @@ public class ClasseDiServizioManutentore {
                 case 0: {
                     finito = true;
                     System.out.println("Uscita verso menu principale");
+                    //salvataggio
+                    ClasseDiServizioDAO.salvaListaCategorie(listaCategorie);
+                    //salvataggio
+                    ClasseDiServizioDAO.salvaUnitaImmboliari(unitaImmobiliari);
                 }
                 break;
 
@@ -77,6 +82,10 @@ public class ClasseDiServizioManutentore {
                 case 0: {
                     finito = true;
                     System.out.println("Uscita verso menu principale");
+                    //salvataggio
+                    ClasseDiServizioDAO.salvaListaCategorie(listaCategorie);
+                    //salvataggio
+                    ClasseDiServizioDAO.salvaUnitaImmboliari(unitaImmobiliari);
                 }
                 break;
 
@@ -263,7 +272,7 @@ public class ClasseDiServizioManutentore {
 
     //TODO PENSACI TU
 
-    /**
+    /*
      * Menu importa librerie
      *
      * @param contenitore per gli oggetti necessari
@@ -371,7 +380,6 @@ public class ClasseDiServizioManutentore {
     public static void inserisciUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliare.creaUnitaImmobiliare();
         unitaImmobiliari.inserisciUnitaImmobiliare(unitaImmobiliare);
-
     }
 
     /**

@@ -27,33 +27,19 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2020_10_17_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2020_10_17__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salvataggiSuDisco/fruitore.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salvataggiSuDisco/listaCategorie.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salvataggiSuDisco/manutentore.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/salvataggiSuDisco/unitaImmobiliari.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/ClasseDiServizioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2020_10_17__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_11_2020_10_17__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/FruitoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/FruitoreDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/ListaCategorieDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/ListaCategorieDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/ManutentoreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/ManutentoreDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/UnitaImmobiliariDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/dao/fileDAO/UnitaImmobiliariDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Fruitore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/listaCategorie.dat" beforeDir="false" afterPath="$PROJECT_DIR$/salvataggiSuDisco/listaCategorie.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/unitaImmobiliari.dat" beforeDir="false" afterPath="$PROJECT_DIR$/salvataggiSuDisco/unitaImmobiliari.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/ClasseDiServizioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/ClasseDiServizioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,13 +133,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -707,25 +695,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1602836217721" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604312089037">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="333" key="GridCell.Tab.0.bottom" timestamp="1604314189560">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="416" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604308295238" />
+    <state width="1493" height="333" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604312089037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604312089037">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="333" key="GridCell.Tab.0.center" timestamp="1604314189560">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="416" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604308295238" />
+    <state width="1493" height="333" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604312089037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604312089037">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="333" key="GridCell.Tab.0.left" timestamp="1604314189560">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="416" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604308295237" />
+    <state width="1493" height="333" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604312089037" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604312089037">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="333" key="GridCell.Tab.0.right" timestamp="1604314189560">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="416" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604308295238" />
+    <state width="1493" height="333" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604312089037" />
     <state x="178" y="64" width="1358" height="703" key="MergeDialog" timestamp="1604307982514">
       <screen x="0" y="0" width="1536" height="834" />
