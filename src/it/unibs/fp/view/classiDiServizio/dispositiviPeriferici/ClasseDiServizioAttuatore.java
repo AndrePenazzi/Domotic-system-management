@@ -3,7 +3,6 @@ package it.unibs.fp.view.classiDiServizio.dispositiviPeriferici;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
-import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.mylib.InputDati;
 
@@ -16,7 +15,7 @@ public class ClasseDiServizioAttuatore {
      */
     public static Attuatore creaAttuatore(ListaCategorie listaCategorie) {
         if (listaCategorie.getSizeCategorieAttuatori() != 0) {
-            System.out.println(ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie));
+            System.out.println(ClasseDiServizioListaCategorie.descrizioneCategorieAttuatori(listaCategorie));
             int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieAttuatori());
             categoria--;
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome attuatore : ");

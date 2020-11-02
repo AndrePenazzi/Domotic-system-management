@@ -8,7 +8,7 @@ import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioSensore {
     public static Sensore creaSensore(ListaCategorie listaCategorie) {
-        System.out.println(ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie));
+        System.out.println(ClasseDiServizioListaCategorie.descrizioneCategorieSensori(listaCategorie));
         int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieSensori());
         categoria--;
         String nome = InputDati.leggiStringaNonVuota("Inserisci nome sensore : ");
@@ -24,7 +24,7 @@ public class ClasseDiServizioSensore {
         tmp.append("\n");
         tmp.append(nome);
         tmp.append("\n");
-        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaInfoRilevabiliNonNumerate(sensore.getCategoriaSensori()));
+        tmp.append(ClasseDiServizioCategoriaSensori.descrizioneInfoRilevabiliNonNumerate(sensore.getCategoriaSensori()));
         return tmp.toString();
     }
 

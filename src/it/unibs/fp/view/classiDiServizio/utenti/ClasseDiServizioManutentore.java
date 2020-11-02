@@ -1,6 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.utenti;
 
-import it.unibs.fp.dao.file.Contenitore;
+
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
@@ -11,11 +11,9 @@ import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaI
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
-import it.unibs.fp.view.mylib.ServizioFile;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.utenti.Manutentore;
 
-import java.io.File;
 
 public class ClasseDiServizioManutentore {
     public static Manutentore creaManutentore() {
@@ -218,6 +216,7 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
+    /*
     private static void stampaMenuSalvataggiLibrerie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Salva categorie sensori", "Salva categorie attuatori", "Salva unità immobiliare", "Salva regole"};
@@ -262,7 +261,7 @@ public class ClasseDiServizioManutentore {
                 break;
             }
         } while (!finito);
-    }
+    }*/
 
 
     //TODO PENSACI TU
@@ -272,6 +271,7 @@ public class ClasseDiServizioManutentore {
      *
      * @param contenitore per gli oggetti necessari
      */
+    /*
     private static void stampaMenuImportLibrerie(Contenitore contenitore) {
         boolean finito = false;
         String[] azione = {"Importa categorie di sensori", "Importa categorie di attuatori", "Importa unità immobiliare", "Importa set di regole"};
@@ -307,7 +307,7 @@ public class ClasseDiServizioManutentore {
         while (!finito);
     }
 
-
+*/
     /**
      * Visualizza la descrizione dei sensori delle categorie sensori
      *
@@ -315,7 +315,7 @@ public class ClasseDiServizioManutentore {
      * @return la descrizione delle categorie sensori
      */
     public static String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie);
+        return ClasseDiServizioListaCategorie.descrizioneCategorieSensori(listaCategorie);
     }
 
     /**
@@ -325,7 +325,7 @@ public class ClasseDiServizioManutentore {
      * @return la descrizione delle categorie attuatori
      */
     public static String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie);
+        return ClasseDiServizioListaCategorie.descrizioneCategorieAttuatori(listaCategorie);
     }
 
 
@@ -382,6 +382,7 @@ public class ClasseDiServizioManutentore {
     public static void inserisciUnitaImmobiliare(Manutentore manutentore) {
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliare.creaUnitaImmobiliare();
         manutentore.aggiungiUnitaImmobiliare(unitaImmobiliare);
+
     }
 
     /**

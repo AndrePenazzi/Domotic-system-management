@@ -3,9 +3,9 @@ package it.unibs.fp.dao;
 
 public interface DAO<T> {
 
-    void connetti();
+    void inserisci(T t);
 
-    void aggiungiESalva(T t);
+    void aggiorna(T t);
+
     T carica();
-
 }

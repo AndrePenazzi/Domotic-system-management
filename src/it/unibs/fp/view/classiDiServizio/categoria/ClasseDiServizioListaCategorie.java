@@ -9,13 +9,13 @@ import it.unibs.fp.view.mylib.InputDati;
 public class ClasseDiServizioListaCategorie {
 
     public static CategoriaSensori scegliCategoriaSensori(ListaCategorie listaCategorie) {
-        visualizzaCategorieSensori(listaCategorie);
+        descrizioneCategorieSensori(listaCategorie);
         int i = InputDati.leggiIntero("Scgli la categoria sensori: ", 1, listaCategorie.getSizeCategorieSensori()) - 1;
         return listaCategorie.getCategoriaSensori(i);
     }
 
     public static CategoriaAttuatori scegliCategoriaAttuatori(ListaCategorie listaCategorie) {
-        visualizzaCategorieAttuatori(listaCategorie);
+        descrizioneCategorieAttuatori(listaCategorie);
         int i = InputDati.leggiIntero("Scgli la categoria attuatori: ", 1, listaCategorie.getSizeCategorieAttuatori()) - 1;
         return listaCategorie.getCategoriaAttuatori(i);
     }
@@ -26,13 +26,13 @@ public class ClasseDiServizioListaCategorie {
      * @param listaCategorie per visualizzare la categoriaSensori
      * @return la String delle categorieSensori
      */
-    public static String visualizzaCategorieSensori(ListaCategorie listaCategorie) {
+    public static String descrizioneCategorieSensori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
         if (!listaCategorie.categorieSensoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie sensori:\n");
             for (CategoriaSensori categoriaSensori : listaCategorie.getCategorieSensori()) {
-                tmp.append(i + " " + ClasseDiServizioCategoriaSensori.toString(categoriaSensori));
+                tmp.append(i + ") " + ClasseDiServizioCategoriaSensori.toStringVisualizzazione(categoriaSensori));
                 i++;
             }
         } else
@@ -48,14 +48,14 @@ public class ClasseDiServizioListaCategorie {
      * @param listaCategorie per visualizzare la categoriaAttuatori
      * @return Descrizione categorieAttuatori
      */
-    public static String visualizzaCategorieAttuatori(ListaCategorie listaCategorie) {
+    public static String descrizioneCategorieAttuatori(ListaCategorie listaCategorie) {
         StringBuilder tmp = new StringBuilder();
 
         if (!listaCategorie.categorieAttuatoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie attuatori:\n");
             for (CategoriaAttuatori categorieAttuatori : listaCategorie.getCategorieAttuatori()) {
-                tmp.append(i + " " + ClasseDiServizioCategoriaAttuatori.toString(categorieAttuatori)).append("\n");
+                tmp.append(i + ") " + ClasseDiServizioCategoriaAttuatori.toStringVisualizzazione(categorieAttuatori)).append("\n");
                 i++;
             }
         } else
@@ -66,8 +66,8 @@ public class ClasseDiServizioListaCategorie {
 
     public static String toString(ListaCategorie listaCategorie) {
         return "ListaCategorie:\n" +
-                visualizzaCategorieSensori(listaCategorie) + "\n" +
-                visualizzaCategorieAttuatori(listaCategorie) + "\n";
+                descrizioneCategorieSensori(listaCategorie) + "\n" +
+                descrizioneCategorieAttuatori(listaCategorie) + "\n";
     }
 
     /**

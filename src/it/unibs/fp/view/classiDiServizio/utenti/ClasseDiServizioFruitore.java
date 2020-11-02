@@ -183,11 +183,11 @@ public class ClasseDiServizioFruitore {
     }
 
     public static String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieSensori(listaCategorie);
+        return ClasseDiServizioListaCategorie.descrizioneCategorieSensori(listaCategorie);
     }
 
     public static String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
-        return ClasseDiServizioListaCategorie.visualizzaCategorieAttuatori(listaCategorie);
+        return ClasseDiServizioListaCategorie.descrizioneCategorieAttuatori(listaCategorie);
     }
 
     public static void visualizzaStanze(Fruitore fruitore) {
