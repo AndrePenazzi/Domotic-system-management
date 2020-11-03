@@ -47,12 +47,18 @@ public class ClasseDiServizioSensori {
         return tmp.toString();
     }
 
+    /**
+     * toString
+     *
+     * @param sensori da visualizzare
+     * @return descrizione di sensori
+     */
     public static String toString(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
 
         if (!sensori.isEmpty()) {
             int i = 1;
-            tmp.append("I sensori sono:\n");
+            tmp.append("\nI sensori sono:\n");
             for (Sensore s : sensori.getSensori()) {
                 tmp.append(i + ") " + ClasseDiServizioSensore.toString(s)).append("\n");
                 i++;

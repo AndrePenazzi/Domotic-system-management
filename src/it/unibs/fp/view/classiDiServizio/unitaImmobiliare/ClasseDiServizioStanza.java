@@ -21,12 +21,6 @@ public class ClasseDiServizioStanza {
         return new Stanza(nome);
     }
 
-    public static String visualizzaAttuatori(Stanza stanza) {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
-        return tmp.toString();
-    }
-
     public static String visualizzaSensori(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
@@ -36,7 +30,7 @@ public class ClasseDiServizioStanza {
 
     public static String visualizzaAttuatoriEAttuatoriAssociatiAdArtefatti(Stanza stanza) {
         StringBuilder tmp = new StringBuilder();
-        tmp.append(visualizzaAttuatori(stanza));
+        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
 
         for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
             tmp.append(ClasseDiServizioArtefatto.visualizzaAttuatori(a));
@@ -61,17 +55,6 @@ public class ClasseDiServizioStanza {
         return stanza.getArtefatto(i);
     }
 
-    public static String toString(Stanza stanza) {
-        String nome = stanza.getNome();
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(nome);
-
-        tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
-        tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
-        tmp.append(visualizzaAttuatori(stanza));
-
-        return tmp.toString();
-    }
 
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
         return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
@@ -122,5 +105,23 @@ public class ClasseDiServizioStanza {
         for (Artefatto a : stanza.getArtefattiInStanza().getArtefatti()) {
             ClasseDiServizioArtefatto.modificaModOperativa(a);
         }
+    }
+
+    /**
+     * toString
+     *
+     * @param stanza da visualizzare
+     * @return descrizione della stanza
+     */
+    public static String toString(Stanza stanza) {
+        String nome = stanza.getNome();
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(nome + "\n");
+
+        tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
+        tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
+        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()) + "\n");
+
+        return tmp.toString();
     }
 }

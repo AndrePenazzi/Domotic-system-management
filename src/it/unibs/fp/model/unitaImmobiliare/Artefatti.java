@@ -17,7 +17,9 @@ public class Artefatti implements Serializable {
     }
 
     /**
-     * @param artefatto
+     * Inserisci un artefatto
+     *
+     * @param artefatto da inserire
      */
     public void inserisciArtefatto(Artefatto artefatto) {
         artefatti.add(artefatto);
@@ -39,6 +41,15 @@ public class Artefatti implements Serializable {
      */
     public void setArtefatti(List<Artefatto> artefatti) {
         this.artefatti = artefatti;
+    }
+
+    /**
+     * check if artefatti is empty
+     *
+     * @return true if artefatti is empty
+     */
+    public boolean isEmpty() {
+        return artefatti.isEmpty();
     }
 
     /**

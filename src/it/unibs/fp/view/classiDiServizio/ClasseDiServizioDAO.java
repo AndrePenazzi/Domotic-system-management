@@ -1,4 +1,4 @@
-package it.unibs.fp.view;
+package it.unibs.fp.view.classiDiServizio;
 
 import it.unibs.fp.dao.fileDAO.FruitoreDAO;
 import it.unibs.fp.dao.fileDAO.ListaCategorieDAO;

@@ -13,6 +13,11 @@ public class Stanze implements Serializable {
         stanze = new ArrayList<>();
     }
 
+    /**
+     * Getter
+     *
+     * @return stanze
+     */
     public List<Stanza> getStanze() {
         return stanze;
     }
@@ -45,6 +50,11 @@ public class Stanze implements Serializable {
         return attuatori;
     }
 
+    /**
+     * Check if stanze is empty
+     *
+     * @return true if is empty
+     */
     public boolean isEmpty() {
         return stanze.isEmpty();
     }

@@ -4,6 +4,7 @@ import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.dispositiviPeriferici.Attuatore;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaAttuatori;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
+import it.unibs.fp.view.classiDiServizio.modalitaOperativa.ClasseDiServizioModOperativa;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioAttuatore {
@@ -15,7 +16,7 @@ public class ClasseDiServizioAttuatore {
      */
     public static Attuatore creaAttuatore(ListaCategorie listaCategorie) {
         if (listaCategorie.getSizeCategorieAttuatori() != 0) {
-            System.out.println(ClasseDiServizioListaCategorie.descrizioneCategorieAttuatori(listaCategorie));
+            System.out.println(ClasseDiServizioListaCategorie.descrizioneNomeCategorieAttuatori(listaCategorie));
             int categoria = InputDati.leggiIntero("Scegli categoria : ", 1, listaCategorie.getSizeCategorieAttuatori());
             categoria--;
             String nome = InputDati.leggiStringaNonVuota("Inserisci nome attuatore : ");
@@ -33,13 +34,18 @@ public class ClasseDiServizioAttuatore {
         ClasseDiServizioCategoriaAttuatori.modificaModOperativa(attuatore.getCategoriaAttuatori());
     }
 
-
+    /**
+     * toString
+     *
+     * @param attuatore da visualizzare
+     * @return descrizione attuatore
+     */
     public static String toString(Attuatore attuatore) {
         String nome = attuatore.getNome();
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append("\n" + attuatore.getCategoriaAttuatori());
-        tmp.append("\n" + attuatore.getModOperativa());
+        tmp.append(nome);
+        tmp.append("\n" + ClasseDiServizioCategoriaAttuatori.toString(attuatore.getCategoriaAttuatori()));
+        tmp.append("\n" + ClasseDiServizioModOperativa.toString(attuatore.getModOperativa()));
         return tmp.toString();
     }
 }

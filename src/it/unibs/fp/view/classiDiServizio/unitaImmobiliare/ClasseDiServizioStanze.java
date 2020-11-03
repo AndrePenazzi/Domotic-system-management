@@ -1,6 +1,8 @@
 package it.unibs.fp.view.classiDiServizio.unitaImmobiliare;
 
-import it.unibs.fp.model.unitaImmobiliare.*;
+import it.unibs.fp.model.unitaImmobiliare.Stanza;
+import it.unibs.fp.model.unitaImmobiliare.Stanze;
+import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioStanze {
@@ -43,12 +45,18 @@ public class ClasseDiServizioStanze {
         return tmp.toString();
     }
 
-    public static void modModOperative(Stanze stanze) {
+    public static void modificaModOperative(Stanze stanze) {
         for (Stanza s : stanze.getStanze()) {
             ClasseDiServizioStanza.modificaModOperativeEModOperativeInArtefatti(s);
         }
     }
 
+    /**
+     * Descrizione nome delle stanze
+     *
+     * @param stanze da visualizzare
+     * @return la descrizione dei nomi delle stanze
+     */
     public static String descrizioneNomeStanze(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
 
@@ -65,14 +73,20 @@ public class ClasseDiServizioStanze {
         return tmp.toString();
     }
 
+    /**
+     * toString
+     *
+     * @param stanze da visualizzare
+     * @return descrizione delle stanze
+     */
     public static String toString(Stanze stanze) {
         StringBuilder tmp = new StringBuilder();
 
-        if (!stanze.getStanze().isEmpty()) {
+        if (!stanze.isEmpty()) {
             int i = 1;
             tmp.append("Le stanze sono:\n");
             for (Stanza s : stanze.getStanze()) {
-                tmp.append(i + " " + ClasseDiServizioStanza.toString(s)).append("\n");
+                tmp.append(i + ") " + ClasseDiServizioStanza.toString(s)).append("\n");
                 i++;
             }
         } else

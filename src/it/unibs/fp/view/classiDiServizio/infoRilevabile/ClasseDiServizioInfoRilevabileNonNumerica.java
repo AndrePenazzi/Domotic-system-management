@@ -34,6 +34,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
 
     /**
      * Visualizza i valori non numerati
+     *
      * @param infoRilevabile non numerica
      * @return i valori non numerici
      */
@@ -53,6 +54,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
 
     /**
      * toStringInfoRilevabileNonNumerica
+     *
      * @param infoRilevabile non numerica
      * @return infoRilevabileNonNumerica
      */

@@ -15,7 +15,7 @@ public class ClasseDiServizioCategoriaSensori {
      * @return una CategoriaSensori
      */
     public static CategoriaSensori creaCategoriaSensori() {
-        String testoLibero = "";
+        String testoLibero;
         boolean testoLiberoOK = false;
         boolean infoRilevabiliOK = false;
         List<InfoRilevabile> informazioniRilevabili = new ArrayList<>();
@@ -49,6 +49,12 @@ public class ClasseDiServizioCategoriaSensori {
         return categoriaSensori.getInformazioneRilevabile(i);
     }
 
+    /**
+     * Visualizza la descrizione delle infoRilevabili numerate
+     *
+     * @param categoriaSensori da visualizzare
+     * @return descrizione infoRilevabiliNumerate
+     */
     public static String descrizioneInfoRilevabiliNumerate(CategoriaSensori categoriaSensori) {
         StringBuilder tmp = new StringBuilder();
         List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
@@ -76,9 +82,9 @@ public class ClasseDiServizioCategoriaSensori {
         List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
 
         if (!informazioniRilevabili.isEmpty()) {
-            tmp.append(", le informazioni rilevabili sono: ");
+            tmp.append("\n le informazioni rilevabili sono:");
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                tmp.append("\n-"+ ClasseDiServizioInfoRilevabile.toString(infoRilevabile) + "\n");
+                tmp.append("\n-" + ClasseDiServizioInfoRilevabile.toString(infoRilevabile) + "\n");
             }
         } else
             tmp.append(", Non ci sono ancora informazioni rilevabili associate");
@@ -109,11 +115,9 @@ public class ClasseDiServizioCategoriaSensori {
      * @return nome, testo libero e infoRilevabili
      */
     public static String toString(CategoriaSensori categoriaSensori) {
-        String nome = categoriaSensori.getNome();
-        String testoLibero = categoriaSensori.getTestoLibero();
         StringBuilder tmp = new StringBuilder();
-        tmp.append(nome + ": ");
-        tmp.append(testoLibero);
+        tmp.append(categoriaSensori.getNome() + ": ");
+        tmp.append(categoriaSensori.getTestoLibero());
         tmp.append(descrizioneInfoRilevabiliNumerate(categoriaSensori));
         return tmp.toString();
     }

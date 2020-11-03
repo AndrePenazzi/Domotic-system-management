@@ -87,12 +87,12 @@ public class ClasseDiServizioCategoriaAttuatori {
         List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
 
         if (!modalitaOperative.isEmpty()) {
-            tmp.append(", le modalita operative sono: ");
+            tmp.append("\nle modalita operative sono:\n");
             for (ModOperativa modOperativa : modalitaOperative) {
                 tmp.append(ClasseDiServizioModOperativa.toString(modOperativa));
             }
         } else
-            tmp.append(", Non ci sono ancora modalita operative associate");
+            tmp.append("\nNon ci sono ancora modalita operative associate");
         return tmp.toString();
     }
 

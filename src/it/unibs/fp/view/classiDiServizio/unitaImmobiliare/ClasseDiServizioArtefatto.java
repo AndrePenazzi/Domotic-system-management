@@ -56,12 +56,17 @@ public class ClasseDiServizioArtefatto {
     }
 
 
+    /**
+     * toString Artefatto
+     *
+     * @param artefatto da visualizzare
+     * @return la descrizione dell'artefatto
+     */
     public static String toString(Artefatto artefatto) {
-        String nome = artefatto.getNome();
         StringBuilder tmp = new StringBuilder();
-        tmp.append("\n" + nome);
-        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
+        tmp.append(artefatto.getNome());
 
+        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
         tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
         return tmp.toString();
     }

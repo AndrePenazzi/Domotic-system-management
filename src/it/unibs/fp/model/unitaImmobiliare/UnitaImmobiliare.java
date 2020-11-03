@@ -10,8 +10,8 @@ import java.io.Serializable;
 
 public class UnitaImmobiliare implements Serializable {
     private String nome;
-    private Stanze stanze;
-    private Artefatti artefatti;
+    private final Stanze stanze;
+    private final Artefatti artefatti;
     private Regole regole;
 
 
@@ -40,7 +40,6 @@ public class UnitaImmobiliare implements Serializable {
     public void inserisciRegola(Regola regola) {
         regole.inserisciRegola(regola);
     }
-
 
 
     /**
@@ -149,6 +148,12 @@ public class UnitaImmobiliare implements Serializable {
         return stanze.isEmpty();
     }
 
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return la stanza alla posizione i
+     */
     public Stanza getStanza(int i) {
         return stanze.getStanza(i);
     }
@@ -162,6 +167,21 @@ public class UnitaImmobiliare implements Serializable {
         return artefatti;
     }
 
+    /**
+     * Check if artefattiInUnitaImmobiliare is empty
+     *
+     * @return true se è vuoto
+     */
+    public boolean artefattiInUnitaImmobiliareIsEmpty() {
+        return artefatti.isEmpty();
+    }
+
+    /**
+     * Getter
+     *
+     * @param i la posizione dell'artefatto
+     * @return l'artefatto alla posizione i
+     */
     public Artefatto getArtefatto(int i) {
         return artefatti.getArtefatto(i);
     }

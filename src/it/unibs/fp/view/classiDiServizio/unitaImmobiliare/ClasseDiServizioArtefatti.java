@@ -10,6 +10,7 @@ public class ClasseDiServizioArtefatti {
 
     /**
      * CreaEdInserisciArtefatti
+     *
      * @param unitaImmobiliare nella quale creare ed inserire artefatti
      * @return gli Artefatti creati
      */
@@ -51,6 +52,12 @@ public class ClasseDiServizioArtefatti {
         }
     }
 
+    /**
+     * Descrizione dei nomi degli artefatti
+     *
+     * @param artefatti da visualizzare
+     * @return il nome degli artefatti
+     */
     public static String descrizioneNomeArtefatti(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
 
@@ -67,6 +74,12 @@ public class ClasseDiServizioArtefatti {
         return tmp.toString();
     }
 
+    /**
+     * toString
+     *
+     * @param artefatti da visualizzare
+     * @return la descrizione degli artefatti
+     */
     public static String toString(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
 
