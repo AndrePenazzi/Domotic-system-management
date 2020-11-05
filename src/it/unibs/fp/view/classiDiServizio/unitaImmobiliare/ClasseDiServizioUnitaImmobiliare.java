@@ -277,8 +277,8 @@ public class ClasseDiServizioUnitaImmobiliare {
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");
         tmp.append(nome);
-        tmp.append(ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
-        tmp.append(ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
+        tmp.append("\n" + ClasseDiServizioStanze.toString(unitaImmobiliare.getStanze()));
+        tmp.append("\n" + ClasseDiServizioArtefatti.toString(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         return tmp.toString();
     }
 
@@ -302,6 +302,12 @@ public class ClasseDiServizioUnitaImmobiliare {
 
     }
 
+    /**
+     * Associa un nuovo sensore ad una o più stanze
+     *
+     * @param unitaImmobiliare nella quale scegliere le stanze
+     * @param listaCategorie   per la creazione di sensori
+     */
     public static void associaSensoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!listaCategorie.categorieSensoriIsEmpty() && !unitaImmobiliare.stanzeIsEmpty()) {
             do {
@@ -317,6 +323,12 @@ public class ClasseDiServizioUnitaImmobiliare {
         }
     }
 
+    /**
+     * Associa un nuovo attuatore ad una o più stanze
+     *
+     * @param unitaImmobiliare nella quale scegliere le stanze
+     * @param listaCategorie   per la creazione di sensori
+     */
     public static void associaAttuatoreAStanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         if (!listaCategorie.categorieAttuatoriIsEmpty() && !unitaImmobiliare.stanzeIsEmpty()) {
             do {

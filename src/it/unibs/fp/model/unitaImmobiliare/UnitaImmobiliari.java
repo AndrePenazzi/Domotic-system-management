@@ -33,6 +33,11 @@ public class UnitaImmobiliari implements Serializable {
         return unitaImmobiliari.isEmpty();
     }
 
+    /**
+     * Inserisci un'unità immobiliare
+     *
+     * @param unitaImmobiliare da inserire
+     */
     public void inserisciUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         unitaImmobiliari.add(unitaImmobiliare);
     }

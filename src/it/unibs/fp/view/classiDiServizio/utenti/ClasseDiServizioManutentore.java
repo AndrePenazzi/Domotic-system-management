@@ -58,11 +58,11 @@ public class ClasseDiServizioManutentore {
                 }
                 break;
                 case 5: {
-                    //   stampaMenuSalvataggiLibrerie(contenitore);
+                    //stampaMenuImportLibrerie(contenitore);
                 }
 
                 case 6: {
-                    //stampaMenuImportLibrerie(contenitore);
+                    //   stampaMenuSalvataggiLibrerie(contenitore);
                 }
                 break;
             }
@@ -166,6 +166,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
+    /**
+     * Stampa il menu per inserire nuove categorie
+     *
+     * @param listaCategorie nella quale inserire nuove categorie
+     */
     private static void stampaMenuInserisciCategorie(ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Inserisci e salva categoria sensori", "Inserisci e salva categoria attuatori"};
@@ -192,7 +197,11 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-
+    /**
+     * Stampa il menu per visualizzare le categorie
+     *
+     * @param listaCategorie contentente le categorie sensori ed attuatori
+     */
     private static void stampaMenuVisualizzazioneCategorie(ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori"};
@@ -352,12 +361,6 @@ public class ClasseDiServizioManutentore {
     public static void descrizioneArtefatti(UnitaImmobiliare unitaImmobiliare) {
         ClasseDiServizioUnitaImmobiliare.descrizioneArtefatti(unitaImmobiliare);
     }
-
-
-    public static String visualizzaListaUnitaImmobiliari(UnitaImmobiliari unitaImmobiliari) {
-        return ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari);
-    }
-
     //TODO salvataggio su File
 
     /**
@@ -380,6 +383,11 @@ public class ClasseDiServizioManutentore {
         listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
     }
 
+    /**
+     * Inserisci una nuova unita immobiliare
+     *
+     * @param unitaImmobiliari nella quale aggiungere un'unita immobiliare
+     */
     public static void inserisciUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliare.creaUnitaImmobiliare();
         unitaImmobiliari.inserisciUnitaImmobiliare(unitaImmobiliare);
@@ -403,10 +411,22 @@ public class ClasseDiServizioManutentore {
         ClasseDiServizioUnitaImmobiliare.creaEInserisciArtefatti(unitaImmobiliare);
     }
 
+    /**
+     * Associa un nuovo sensore ad una o più stanze
+     *
+     * @param unitaImmobiliare nella quale scegliere le stanze
+     * @param listaCategorie   per la categoria di sensori
+     */
     private static void associaSensoreAstanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
-        ClasseDiServizioUnitaImmobiliare.associaAttuatoreAStanze(unitaImmobiliare, listaCategorie);
+        ClasseDiServizioUnitaImmobiliare.associaSensoreAStanze(unitaImmobiliare, listaCategorie);
     }
 
+    /**
+     * Associa un nuovo attuatore ad una o più stanze
+     *
+     * @param unitaImmobiliare nella quale scegliere le stanze
+     * @param listaCategorie   per la categoria di attuatori
+     */
     private static void associaAttuatoreAstanze(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
         ClasseDiServizioUnitaImmobiliare.associaAttuatoreAStanze(unitaImmobiliare, listaCategorie);
     }
@@ -440,6 +460,12 @@ public class ClasseDiServizioManutentore {
         ClasseDiServizioUnitaImmobiliare.associaArtefattoAStanze(unitaImmobiliare);
     }
 
+    /**
+     * Scegli l'unita immobiliare
+     *
+     * @param unitaImmobiliari tra le quali scegliere
+     * @return l'unita immobiliare scelta
+     */
     public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
     }

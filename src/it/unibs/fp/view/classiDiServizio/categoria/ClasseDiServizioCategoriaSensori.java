@@ -63,7 +63,7 @@ public class ClasseDiServizioCategoriaSensori {
             int i = 1;
             tmp.append("\nInformazioni rilevabili:\n");
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                tmp.append(i + " " + ClasseDiServizioInfoRilevabile.toString(infoRilevabile));
+                tmp.append(i + " " + ClasseDiServizioInfoRilevabile.toString(infoRilevabile) + "\n");
                 i++;
             }
         } else

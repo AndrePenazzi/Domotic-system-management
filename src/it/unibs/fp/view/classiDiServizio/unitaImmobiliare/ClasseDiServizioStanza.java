@@ -118,9 +118,10 @@ public class ClasseDiServizioStanza {
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome + "\n");
 
-        tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
         tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
-        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()) + "\n");
+        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
+        tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()) + "\n");
+
 
         return tmp.toString();
     }

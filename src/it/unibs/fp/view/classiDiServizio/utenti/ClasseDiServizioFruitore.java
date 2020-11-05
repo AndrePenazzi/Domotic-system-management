@@ -3,12 +3,12 @@ package it.unibs.fp.view.classiDiServizio.utenti;
 import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
+import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
-import it.unibs.fp.model.utenti.Fruitore;
 
 public class ClasseDiServizioFruitore {
     public static Fruitore creaFruitore() {
@@ -18,9 +18,8 @@ public class ClasseDiServizioFruitore {
 
     public static void stampaMenuFruitore(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
-        String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare"};
+        String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare", "Visualizza categorie"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
-        System.out.println(ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari));
         do {
             int scelta = menu.scegli();
             switch (scelta) {
@@ -38,7 +37,11 @@ public class ClasseDiServizioFruitore {
 
 
                 case 2: {
-                    ClasseDiServizioFruitore.stampaMenuOperazioniFruitore(unitaImmobiliari);
+                    stampaMenuOperazioniUnitaImmobiliare(unitaImmobiliari);
+                }
+                break;
+                case 3: {
+                    stampaMenuVisualizzazioneCategorie(listaCategorie);
                 }
                 break;
             }
@@ -48,7 +51,7 @@ public class ClasseDiServizioFruitore {
 
     public static void stampaMenuFruitoreVisualizzazione(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
-        String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori", "Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
+        String[] azione = {"Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
         System.out.println(ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari));
         do {
@@ -62,26 +65,16 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    visualizzaDescrizioneCatergorieSensori(listaCategorie);
-                }
-                break;
-
-                case 2: {
-                    visualizzaDescrizioneCatergorieAttuatori(listaCategorie);
-                }
-                break;
-
-                case 3: {
                     visualizzaStanze(unitaImmobiliari);
                 }
                 break;
 
-                case 4: {
+                case 2: {
                     visualizzaArtefatti(unitaImmobiliari);
                 }
                 break;
 
-                case 5: {
+                case 3: {
                     visualizzaValoriRilevati(unitaImmobiliari);
                 }
                 break;
@@ -91,7 +84,7 @@ public class ClasseDiServizioFruitore {
         while (!finito);
     }
 
-    public static void stampaMenuOperazioniFruitore(UnitaImmobiliari unitaImmobiliari) {
+    public static void stampaMenuOperazioniUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         boolean finito = false;
         String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole", "Modifica stato regola"};
         MyMenu menu = new MyMenu("Menu fruitore operazioni:", azione);
@@ -135,6 +128,35 @@ public class ClasseDiServizioFruitore {
                     cambiaStatoRegola(unitaImmobiliari);
                 }
                 break;
+            }
+        } while (!finito);
+    }
+
+    private static void stampaMenuVisualizzazioneCategorie(ListaCategorie listaCategorie) {
+        boolean finito = false;
+        String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori"};
+        MyMenu menu = new MyMenu("Menu fruitore", azione);
+        do {
+            int scelta = menu.scegli();
+            switch (scelta) {
+
+                case 0: {
+                    finito = true;
+                    System.out.println("Uscita verso menu manutentore");
+
+                }
+                break;
+
+                case 1: {
+                    System.out.println(visualizzaDescrizioneCatergorieSensori(listaCategorie));
+                }
+                break;
+
+                case 2: {
+                    System.out.println(visualizzaDescrizioneCatergorieAttuatori(listaCategorie));
+                }
+                break;
+
             }
         } while (!finito);
     }

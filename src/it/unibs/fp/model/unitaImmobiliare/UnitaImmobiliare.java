@@ -9,9 +9,9 @@ import it.unibs.fp.model.regola.Regole;
 import java.io.Serializable;
 
 public class UnitaImmobiliare implements Serializable {
-    private String nome;
     private final Stanze stanze;
     private final Artefatti artefatti;
+    private String nome;
     private Regole regole;
 
 
@@ -144,6 +144,11 @@ public class UnitaImmobiliare implements Serializable {
         return stanze;
     }
 
+    /**
+     * Checks if stanze is Empty
+     *
+     * @return true se è vuoto false altrimenti
+     */
     public boolean stanzeIsEmpty() {
         return stanze.isEmpty();
     }
