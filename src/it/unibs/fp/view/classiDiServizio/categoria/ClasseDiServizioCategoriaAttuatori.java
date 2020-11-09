@@ -68,7 +68,7 @@ public class ClasseDiServizioCategoriaAttuatori {
             int i = 1;
             tmp.append("\nModalita Operative:\n");
             for (ModOperativa modOperativa : modalitaOperative) {
-                tmp.append(i + " " + ClasseDiServizioModOperativa.toString(modOperativa));
+                tmp.append(i + ") " + modOperativa.getNome()+"\n");
                 i++;
             }
         } else

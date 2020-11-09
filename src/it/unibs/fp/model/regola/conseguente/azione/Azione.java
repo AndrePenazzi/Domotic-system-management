@@ -43,6 +43,11 @@ public class Azione implements Serializable {
         attuatore.setModOperativa(modOperativa);
     }
 
+    /**
+     * Getter
+     *
+     * @return start
+     */
     public Orologio getStart() {
         return start;
     }
@@ -72,6 +77,15 @@ public class Azione implements Serializable {
     /**
      * Getter
      *
+     * @return nome attuatore
+     */
+    public String getNomeAttuatore() {
+        return attuatore.getNome();
+    }
+
+    /**
+     * Getter
+     *
      * @return modOperativa scelta
      */
     public ModOperativa getModOperativa() {
@@ -85,6 +99,15 @@ public class Azione implements Serializable {
      */
     public void setModOperativa(ModOperativa modOperativa) {
         this.modOperativa = modOperativa;
+    }
+
+    /**
+     * Getter
+     *
+     * @return nome modOperativa
+     */
+    public String getNomeModOperativa() {
+        return modOperativa.getNome();
     }
 
 }

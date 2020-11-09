@@ -20,19 +20,30 @@ public class ClasseDiServizioRegola {
         return regola;
     }
 
-    public static String visualizzaStatoRegola(Regola regola) {
+    /**
+     * Descrivi stato regola
+     *
+     * @param regola da visualizzare
+     * @return descrizione dello stato della regola
+     */
+    public static String descriviStatoRegola(Regola regola) {
         StringBuilder str = new StringBuilder();
-        str.append("La regola:");
-        str.append("if " + ClasseDiServizioAntecedenti.visualizzaAntecedenti(regola.getAntecedenti()));
-        str.append(" then " + ClasseDiServizioConseguenti.visualizzaConseguenti(regola.getConseguenti()));
+        str.append("La regola: if");
+        str.append(ClasseDiServizioAntecedenti.descriviAntecedenti(regola.getAntecedenti()));
+        str.append(" then" + ClasseDiServizioConseguenti.descriviConseguenti(regola.getConseguenti()));
         return str.toString();
-
     }
 
+    /**
+     * Descrizione regola
+     *
+     * @param regola da visualizzare
+     * @return descrizione regola
+     */
     public static String toString(Regola regola) {
         StringBuilder str = new StringBuilder();
-        toString(regola);
-        str.append(" è ");
+        str.append(descriviStatoRegola(regola));
+        str.append(" ||| questa regola è ");
         if (regola.isAttiva()) {
             return str.append("attiva\n").toString();
         } else return str.append("disattiva\n").toString();

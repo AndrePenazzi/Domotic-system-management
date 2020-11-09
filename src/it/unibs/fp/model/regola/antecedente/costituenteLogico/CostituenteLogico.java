@@ -1,9 +1,9 @@
 package it.unibs.fp.model.regola.antecedente.costituenteLogico;
 
-import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Orologio;
 
 import java.io.Serializable;
@@ -18,6 +18,7 @@ public abstract class CostituenteLogico implements Serializable {
     private Orologio secondoOperatoreOrologio = null;
 
     //TODO da aggiungere alla factory
+
     /**
      * Costruttore con valore true
      */
@@ -30,6 +31,7 @@ public abstract class CostituenteLogico implements Serializable {
     }
 
     //todo non funzionerà mai sicuro
+
     /**
      * Calcolo del valore booleano attuale del costituente logico
      *
@@ -55,7 +57,6 @@ public abstract class CostituenteLogico implements Serializable {
         } else return true;
         return false;
     }
-
 
 
     /**
@@ -112,22 +113,47 @@ public abstract class CostituenteLogico implements Serializable {
         this.operatoreRelazionale = operatoreRelazionale;
     }
 
+    /**
+     * Getter
+     *
+     * @return secondoOperatoreCostante
+     */
     public Double getSecondoOperatoreCostante() {
         return secondoOperatoreCostante;
     }
 
+    /**
+     * Setter
+     *
+     * @param secondoOperatoreCostante da settare
+     */
     public void setSecondoOperatoreCostante(Double secondoOperatoreCostante) {
         this.secondoOperatoreCostante = secondoOperatoreCostante;
     }
 
+    /**
+     * Getter
+     *
+     * @return secondoOperatoreScalare
+     */
     public String getSecondoOperatoreScalare() {
         return secondoOperatoreScalare;
     }
 
+    /**
+     * Setter
+     *
+     * @param secondoOperatoreScalare da settare
+     */
     public void setSecondoOperatoreScalare(String secondoOperatoreScalare) {
         this.secondoOperatoreScalare = secondoOperatoreScalare;
     }
 
+    /**
+     * Getter
+     *
+     * @return time
+     */
     public Orologio getTime() {
         return time;
     }
@@ -136,10 +162,20 @@ public abstract class CostituenteLogico implements Serializable {
         this.time = time;
     }
 
+    /**
+     * Getter
+     *
+     * @return SecondoOperatoreOrologio
+     */
     public Orologio getSecondoOperatoreOrologio() {
         return secondoOperatoreOrologio;
     }
 
+    /**
+     * Setter
+     *
+     * @param secondoOperatoreOrologio da settare
+     */
     public void setSecondoOperatoreOrologio(Orologio secondoOperatoreOrologio) {
         this.secondoOperatoreOrologio = secondoOperatoreOrologio;
     }

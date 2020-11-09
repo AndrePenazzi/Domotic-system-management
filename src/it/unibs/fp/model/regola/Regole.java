@@ -20,14 +20,34 @@ public class Regole implements Serializable {
         this.regole = regole;
     }
 
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return regola alla posizione i
+     */
     public Regola getRegola(int i) {
         return regole.get(i);
+    }
+
+    /**
+     * isEmpty
+     *
+     * @return true se è vuoto, false altrimenti
+     */
+    public Boolean isEmpty() {
+        return regole.isEmpty();
     }
 
     public void attivaDsattivaRegola(int i) {
         getRegola(i).attivaDisattivaRegola();
     }
 
+    /**
+     * Getter
+     *
+     * @return size regole
+     */
     public int getSizeRegole() {
         return regole.size();
     }

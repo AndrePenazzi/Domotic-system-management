@@ -10,7 +10,8 @@ public class Orologio implements Serializable {
 
     /**
      * Costruttore orologio
-     * @param ora scelta
+     *
+     * @param ora    scelta
      * @param minuti scelti
      */
     public Orologio(int ora, int minuti) {
@@ -27,6 +28,11 @@ public class Orologio implements Serializable {
         minuti = calendar.get(Calendar.MINUTE);
     }
 
+    /**
+     * Getter
+     *
+     * @return ora
+     */
     public int getOra() {
         return ora;
     }
@@ -35,6 +41,11 @@ public class Orologio implements Serializable {
         this.ora = ora;
     }
 
+    /**
+     * Getter
+     *
+     * @return minuti
+     */
     public int getMinuti() {
         return minuti;
     }

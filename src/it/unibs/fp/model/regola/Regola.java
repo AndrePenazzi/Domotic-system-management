@@ -11,6 +11,20 @@ public class Regola implements Serializable {
     private boolean attiva;
 
 
+    /**
+     * Costruttore regola
+     */
+    public Regola() {
+        this.antecedenti = new Antecedenti();
+        this.conseguenti = new Conseguenti();
+        attiva = true;
+    }
+
+    /**
+     * Getter
+     *
+     * @return antecedenti
+     */
     public Antecedenti getAntecedenti() {
         return antecedenti;
     }
@@ -19,21 +33,17 @@ public class Regola implements Serializable {
         this.antecedenti = antecedenti;
     }
 
+    /**
+     * Getter
+     *
+     * @return conseguenti
+     */
     public Conseguenti getConseguenti() {
         return conseguenti;
     }
 
     public void setConseguenti(Conseguenti conseguenti) {
         this.conseguenti = conseguenti;
-    }
-
-    /**
-     * Costruttore regola
-     */
-    public Regola() {
-        this.antecedenti = new Antecedenti();
-        this.conseguenti = new Conseguenti();
-        attiva = true;
     }
 
     public void inserisciConseguenti(Conseguenti conseguenti) {
@@ -62,7 +72,7 @@ public class Regola implements Serializable {
         this.attiva = attiva;
     }
 
-    public void attivaDisattivaRegola(){
-        this.attiva= !this.attiva;
+    public void attivaDisattivaRegola() {
+        this.attiva = !this.attiva;
     }
 }

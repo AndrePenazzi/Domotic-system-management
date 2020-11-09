@@ -47,6 +47,21 @@ public class ClasseDiServizioSensori {
         return tmp.toString();
     }
 
+    public static String descriviNomiSensori(Sensori sensori) {
+        StringBuilder tmp = new StringBuilder();
+
+        if (!sensori.isEmpty()) {
+            int i = 1;
+            tmp.append("\nI sensori sono:\n");
+            for (Sensore s : sensori.getSensori()) {
+                tmp.append(i + ") " + s.getNome()).append("\n");
+                i++;
+            }
+        } else
+            tmp.append("\nNon ci sono ancora sensori associati");
+        return tmp.toString();
+    }
+
     /**
      * toString
      *

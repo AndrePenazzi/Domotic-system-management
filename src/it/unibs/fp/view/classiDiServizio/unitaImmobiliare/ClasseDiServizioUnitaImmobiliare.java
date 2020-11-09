@@ -27,8 +27,8 @@ public class ClasseDiServizioUnitaImmobiliare {
     }
 
 
-    public static Regole creaRegole(UnitaImmobiliare unitaImmobiliare) {
-        return ClasseDiServizioRegole.creaRegole(unitaImmobiliare);
+    public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioRegole.creaEInserisciRegole(unitaImmobiliare);
     }
 
     /**
@@ -228,21 +228,19 @@ public class ClasseDiServizioUnitaImmobiliare {
         System.out.println(ClasseDiServizioArtefatti.visualizzaValoriRilevati(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
     }
 
-    public static String visualizzaRegole(UnitaImmobiliare unitaImmobiliare) {
+    /**
+     * Descrivi regole in unita immobiliare
+     *
+     * @param unitaImmobiliare per prendere le regole
+     * @return descrizione regole
+     */
+    public static String descriviRegole(UnitaImmobiliare unitaImmobiliare) {
         Regole regole = unitaImmobiliare.getRegole();
         StringBuilder str = new StringBuilder();
-        str.append(ClasseDiServizioRegole.visualizzaRegole(regole));
-
+        str.append(ClasseDiServizioRegole.descrizioneRegole(regole));
         return str.toString();
     }
 
-    public static void visualizzaStanze(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioStanze.descrizioneNomeStanze(unitaImmobiliare.getStanze()));
-    }
-
-    public static void visualizzaArtefatti(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
-    }
 
     /**
      * Descrivi il nome dell'unità immobiliare
@@ -335,7 +333,7 @@ public class ClasseDiServizioUnitaImmobiliare {
                 Attuatore nuovoAttuatore = ClasseDiServizioAttuatore.creaAttuatore(listaCategorie);
                 Stanze stanze = ClasseDiServizioUnitaImmobiliare.scegliStanze(unitaImmobiliare);
                 unitaImmobiliare.associaAttuatoreAStanze(nuovoAttuatore, stanze);
-            } while (InputDati.yesOrNo("Vuoi associare un'altro sensore a stanze?"));
+            } while (InputDati.yesOrNo("Vuoi associare un'altro attuatore a stanze?"));
         } else {
             if (listaCategorie.categorieAttuatoriIsEmpty())
                 System.out.println("Bisogna prima creare una categoria attuatori");

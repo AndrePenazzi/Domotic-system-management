@@ -15,10 +15,16 @@ public class ClasseDiServizioConseguenti {
         return conseguenti;
     }
 
-    public static String visualizzaConseguenti(Conseguenti conseguenti){
+    /**
+     * Descrivi conseguenti
+     *
+     * @param conseguenti visualizza conseguenti
+     * @return descrizione conseguenti
+     */
+    public static String descriviConseguenti(Conseguenti conseguenti) {
         StringBuilder str = new StringBuilder();
-        for (int i = 0; i < conseguenti.getConseguenti().size(); i++) {
-            str.append(" " + ClasseDiServizioConseguente.visualizzaConseguente(conseguenti.getConseguenti().get(i)));
+        for (int i = 0; i < conseguenti.getConseguentiSize(); i++) {
+            str.append(ClasseDiServizioConseguente.descriviConseguente(conseguenti.getConseguente(i)));
         }
         return str.toString();
     }

@@ -1,6 +1,5 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente;
 
-import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.regola.antecedente.Antecedenti;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
@@ -18,11 +17,17 @@ public class ClasseDiServizioAntecedenti implements Serializable {
         return antecedenti;
     }
 
-    public static String visualizzaAntecedenti(Antecedenti antecedenti) {
+    /**
+     * Descrivi antecedenti
+     *
+     * @param antecedenti da visualizzare
+     * @return descrizione antecedenti
+     */
+    public static String descriviAntecedenti(Antecedenti antecedenti) {
         StringBuilder str = new StringBuilder();
-        str.append(ClasseDiServizioAntecedente.visualizzaAntecedenteSingolo(antecedenti.getAntecendenti().get(0)));
-        for (int i = 1; i < antecedenti.getAntecendenti().size(); i++) {
-            str.append(" " + ClasseDiServizioAntecedente.visualizzaAntecedenteEnnesimo(antecedenti.getAntecendenti().get(i)));
+        str.append(ClasseDiServizioAntecedente.descriviAntecedenteSingolo(antecedenti.getAntecendente(0)));
+        for (int i = 1; i < antecedenti.getAntecendentiSize(); i++) {
+            str.append(ClasseDiServizioAntecedente.descriviAntecedenteEnnesimo(antecedenti.getAntecendente(i)));
         }
         return str.toString();
     }

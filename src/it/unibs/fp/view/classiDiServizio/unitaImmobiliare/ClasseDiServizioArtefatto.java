@@ -22,13 +22,13 @@ public class ClasseDiServizioArtefatto {
     }
 
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
+        System.out.println(ClasseDiServizioAttuatori.descriviNomeAttuatori(artefatto.getAttuatoriInArtefatto()));
         int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatoriInArtefatto().getSize()) - 1;
         return artefatto.getAttuatoriInArtefatto().getAttuatore(i);
     }
 
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
+        System.out.println(ClasseDiServizioSensori.descriviNomiSensori(artefatto.getSensoriInArtefatto()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSizeSensoriInArtefatto()) - 1;
         return artefatto.getSensoreInArtefatto(i);
     }

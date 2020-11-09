@@ -20,52 +20,42 @@ import java.util.InputMismatchException;
 public class ClasseDiServizioCostituenteLogico implements Serializable {
     public static CostituenteLogico menuCreaCostituenteLogico(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico = null;
-        boolean finito = false;
         String[] azione = {"Con info rilevabile", "Con orologio", "Con valore parametrico", "Con valore numerico"};
         MyMenu menu = new MyMenu("Menu creazione COSTITUENTE LOGICO", azione);
-        do {
-            int scelta = menu.scegli();
-            switch (scelta) {
-
-                case 0: {
-                    finito = true;
-                    System.out.println("USCITA MENU Costituente Logico");
-                }
-                break;
-
-                case 1: {
-                    costituenteLogico = creaCostituenteLogicoInfoRilevabile(unitaImmobiliare);
-                }
-                break;
-
-                case 2: {
-                    costituenteLogico = creaCostituenteLogicoOrologio();
-                }
-                break;
-
-                case 3: {
-                    costituenteLogico = creaCostituenteLogicoParametrico(unitaImmobiliare);
-                }
-                break;
-
-                case 4: {
-                    costituenteLogico = creaCostituenteLogicoNumerico(unitaImmobiliare);
-                }
-                break;
+        int scelta = menu.scegliPerMenuSenzaUscita();
+        switch (scelta) {
+            case 1: {
+                costituenteLogico = creaCostituenteLogicoInfoRilevabile(unitaImmobiliare);
             }
-        } while (!finito);
+            break;
+
+            case 2: {
+                costituenteLogico = creaCostituenteLogicoOrologio();
+            }
+            break;
+
+            case 3: {
+                costituenteLogico = creaCostituenteLogicoParametrico(unitaImmobiliare);
+            }
+            break;
+
+            case 4: {
+                costituenteLogico = creaCostituenteLogicoNumerico(unitaImmobiliare);
+            }
+            break;
+        }
 
         return costituenteLogico;
     }
 
     private static CostituenteLogico creaCostituenteLogicoNumerico(UnitaImmobiliare unitaImmobiliare) {
-        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
+        Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;
         double secondoOpLogico;
         OperatoriRelazionali opRelazionale;
         primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-        secondoOpLogico = InputDati.leggiDouble("Inserisci un valore numerico");
+        secondoOpLogico = InputDati.leggiDouble("Inserisci un valore numerico: ");
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
@@ -80,7 +70,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
     }
 
     public static CostituenteLogico creaCostituenteLogicoInfoRilevabile(UnitaImmobiliare unitaImmobiliare) {
-        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
+        Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico = null;
         InfoRilevabile secondoOpLogico = null;
         OperatoriRelazionali opRelazionale = null;
@@ -103,23 +93,24 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
     }
 
     public static CostituenteLogico creaCostituenteLogicoParametrico(UnitaImmobiliare unitaImmobiliare) {
-        Sensore sensore= ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
+        Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;
         String secondoOpLogico;
         OperatoriRelazionali opRelazionale;
         primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
         opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
-        secondoOpLogico = InputDati.leggiStringaNonVuota("Inserisci un valore parametrico");
+        secondoOpLogico = InputDati.leggiStringaNonVuota("Inserisci un valore parametrico: ");
 
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
     /**
-     * toString
+     * Descrivi costituente logico
      *
-     * @return nomi e opeartore relazionale
+     * @param costituenteLogico da visualizzare
+     * @return la descrizione del costituente logico
      */
-    public static String visualizzaCostituenteLogico(CostituenteLogico costituenteLogico) {
+    public static String descriviCostituenteLogico(CostituenteLogico costituenteLogico) {
         InfoRilevabile primoOperatoreLogico = costituenteLogico.getPrimoOperatoreLogico();
         InfoRilevabile secondoOperatoreLogico = costituenteLogico.getSecondoOperatoreLogico();
         OperatoriRelazionali operatoreRelazionale = costituenteLogico.getOperatoreRelazionale();
@@ -130,7 +121,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
 
         StringBuilder tmp = new StringBuilder();
         if (primoOperatoreLogico != null && operatoreRelazionale != null) {
-            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.toString());
+            tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.getValue());
 
             if (secondoOperatoreLogico != null)
                 tmp.append(" " + secondoOperatoreLogico);
@@ -138,8 +129,8 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
                 tmp.append(" " + secondoOperatoreCostante);
             if (secondoOperatoreScalare != null)
                 tmp.append(" " + secondoOperatoreScalare);
-        } else if (time != null) {
-            tmp.append(time).append(" ").append(operatoreRelazionale.toString()).append(secondoOperatoreOrologio);
+        } else if (time != null && operatoreRelazionale != null) {
+            tmp.append(time).append(" ").append(operatoreRelazionale.getValue()).append(secondoOperatoreOrologio);
         }
         return tmp.toString();
     }

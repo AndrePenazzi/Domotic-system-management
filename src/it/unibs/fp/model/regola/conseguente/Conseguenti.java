@@ -19,6 +19,24 @@ public class Conseguenti implements Serializable {
         this.conseguenti = conseguenti;
     }
 
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return conseguente alla posizione i
+     */
+    public Conseguente getConseguente(int i) {
+        return conseguenti.get(i);
+    }
+
+    /**
+     * Getter
+     *
+     * @return size conseguenti
+     */
+    public int getConseguentiSize() {
+        return conseguenti.size();
+    }
 
     public void inserisciConseguente(Conseguente conseguente) {
         conseguenti.add(conseguente);

@@ -10,6 +10,12 @@ public class ClasseDiServizioOrologio {
         return new Orologio(ora, minuti);
     }
 
+    /**
+     * toString
+     *
+     * @param orologio da visualizzare
+     * @return descrizione dell'orologio
+     */
     public static String toString(Orologio orologio) {
         return orologio.getOra() + ":" + orologio.getMinuti();
     }

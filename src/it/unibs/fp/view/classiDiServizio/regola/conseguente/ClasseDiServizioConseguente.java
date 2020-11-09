@@ -14,9 +14,15 @@ public class ClasseDiServizioConseguente {
         return new Conseguente(azione);
     }
 
-    public static String visualizzaConseguente(Conseguente conseguente) {
+    /**
+     * Descrivi conseguente
+     *
+     * @param conseguente da visualizzare
+     * @return descrizione conseguente
+     */
+    public static String descriviConseguente(Conseguente conseguente) {
         StringBuilder str = new StringBuilder();
-        str.append(" " + ClasseDiServizioAzione.visualizzaAzione(conseguente.getAzione()));
+        str.append(" " + ClasseDiServizioAzione.descriviAzione(conseguente.getAzione()));
 
         return str.toString();
     }

@@ -3,14 +3,13 @@ package it.unibs.fp.model.operatori;
 import java.io.Serializable;
 
 public enum OperatoriRelazionali implements Serializable {
-
     MAGGIORE(">"),
     MINORE("<"),
     MAGGIORE_UGUALE("≥"),
     MINORE_UGUALE("≤"),
     UGUALE("=");
 
-    private String value;
+    private final String value;
 
     /**
      * Costruttore operatori relazionali
@@ -21,14 +20,12 @@ public enum OperatoriRelazionali implements Serializable {
         this.value = value;
     }
 
-
     /**
-     * toString
+     * Getter
      *
-     * @return il valore
+     * @return value
      */
-    public String toString() {
-        return this.value;
+    public String getValue() {
+        return value;
     }
-
 }

@@ -18,7 +18,7 @@ public class ClasseDiServizioFruitore {
 
     public static void stampaMenuFruitore(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
-        String[] azione = {"Operazioni di visualizzazione", "Operazioni su un'unità immobiliare", "Visualizza categorie"};
+        String[] azione = {"Operazioni di visualizzazione su un'unità immobiliare", "Operazioni su un'unità immobiliare", "Visualizza categorie"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
         do {
             int scelta = menu.scegli();
@@ -31,15 +31,15 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    stampaMenuFruitoreVisualizzazione(unitaImmobiliari, listaCategorie);
+                    stampaMenuFruitoreVisualizzazione(unitaImmobiliari);
                 }
                 break;
-
 
                 case 2: {
                     stampaMenuOperazioniUnitaImmobiliare(unitaImmobiliari);
                 }
                 break;
+
                 case 3: {
                     stampaMenuVisualizzazioneCategorie(listaCategorie);
                 }
@@ -49,11 +49,12 @@ public class ClasseDiServizioFruitore {
         while (!finito);
     }
 
-    public static void stampaMenuFruitoreVisualizzazione(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
+    public static void stampaMenuFruitoreVisualizzazione(UnitaImmobiliari unitaImmobiliari) {
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(unitaImmobiliari);
         boolean finito = false;
         String[] azione = {"Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
-        System.out.println(ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari));
+
         do {
             int scelta = menu.scegli();
             switch (scelta) {
@@ -65,17 +66,17 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    visualizzaStanze(unitaImmobiliari);
+                    descrizioneStanze(unitaImmobiliare);
                 }
                 break;
 
                 case 2: {
-                    visualizzaArtefatti(unitaImmobiliari);
+                    descrizioneArtefatti(unitaImmobiliare);
                 }
                 break;
 
                 case 3: {
-                    visualizzaValoriRilevati(unitaImmobiliari);
+                    visualizzaValoriRilevati(unitaImmobiliare);
                 }
                 break;
 
@@ -85,6 +86,7 @@ public class ClasseDiServizioFruitore {
     }
 
     public static void stampaMenuOperazioniUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(unitaImmobiliari);
         boolean finito = false;
         String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole", "Modifica stato regola"};
         MyMenu menu = new MyMenu("Menu fruitore operazioni:", azione);
@@ -100,14 +102,12 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
                     if (InputDati.yesOrNo("Si vuole cambiare modalità operativa di un attautore in una stanza ?")) {
                         ClasseDiServizioUnitaImmobiliare.modificaModOperativeInUnaStanza(unitaImmobiliare);
                     }
                 }
                 break;
                 case 2: {
-                    UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
                     if (InputDati.yesOrNo("Si vuole cambiare modalità operativa di un attautore in un artefatto ?")) {
                         ClasseDiServizioUnitaImmobiliare.modificaModOperativeInUnArtefatto(unitaImmobiliare);
                     }
@@ -115,23 +115,29 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 3: {
-                    creaRegole(unitaImmobiliari);
+                    creaEInserisciRegole(unitaImmobiliare);
                 }
                 break;
 
                 case 4: {
-                    visualizzaRegole(unitaImmobiliari);
+                    descriviRegole(unitaImmobiliare);
                 }
                 break;
+
                 case 5: {
 
-                    cambiaStatoRegola(unitaImmobiliari);
+                    cambiaStatoRegola(unitaImmobiliare);
                 }
                 break;
             }
         } while (!finito);
     }
 
+    /**
+     * Stampa il menu di visualizzazione di categorie
+     *
+     * @param listaCategorie da visualizzare
+     */
     private static void stampaMenuVisualizzazioneCategorie(ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori"};
@@ -161,75 +167,76 @@ public class ClasseDiServizioFruitore {
         } while (!finito);
     }
 
-    public static UnitaImmobiliari creaRegole(UnitaImmobiliari unitaImmobiliari) {
+    public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioUnitaImmobiliare.creaEInserisciRegole(unitaImmobiliare);
+    }
+
+    /**
+     * Descrivi regole
+     *
+     * @param unitaImmobiliare per prendere le regole
+     */
+    public static void descriviRegole(UnitaImmobiliare unitaImmobiliare) {
+        System.out.println(ClasseDiServizioUnitaImmobiliare.descriviRegole(unitaImmobiliare));
+    }
+
+
+    public static void cambiaStatoRegola(UnitaImmobiliare unitaImmobiliare) {
         do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            do {
-                ClasseDiServizioUnitaImmobiliare.creaRegole(unitaImmobiliare);
-            } while (InputDati.yesOrNo("Vuoi creare un'altra regola di questa unità immobiliare?"));
-        } while (InputDati.yesOrNo("Vuoi creare un'altra regola di un'altra unità immobiliare?"));
-        return unitaImmobiliari;
+            int regola = ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
+            unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
+        } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
     }
 
-    public static UnitaImmobiliari visualizzaRegole(UnitaImmobiliari unitaImmobiliari) {
-        do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            System.out.println(ClasseDiServizioUnitaImmobiliare.visualizzaRegole(unitaImmobiliare));
-        } while (InputDati.yesOrNo("Vuoi visualizzare le regole di un'altra unità immobiliare?"));
-        return unitaImmobiliari;
-    }
-
-
-    public static UnitaImmobiliari cambiaStatoRegola(UnitaImmobiliari unitaImmobiliari) {
-        do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            do {
-                int regola = ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
-                unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);
-            } while (InputDati.yesOrNo("Vuoi modificare altre regole?"));
-        } while (InputDati.yesOrNo("Vuoi cambiare lo stato di un'altra regola di un'altra unità immobiliare?"));
-        return unitaImmobiliari;
-    }
-
-    public static String visualizzaUnitaImmobiliari(UnitaImmobiliari unitaImmobiliari) {
-        StringBuilder tmp = new StringBuilder();
-        tmp.append(ClasseDiServizioUnitaImmobiliari.visualizzaUnitaImmobiliari(unitaImmobiliari));
-        return tmp.toString();
-    }
-
+    /**
+     * Visualizza le categorie di sensori
+     *
+     * @param listaCategorie per visualizzare le categorie sensori
+     * @return descrizione categorie sensori
+     */
     public static String visualizzaDescrizioneCatergorieSensori(ListaCategorie listaCategorie) {
         return ClasseDiServizioListaCategorie.descrizioneCategorieSensori(listaCategorie);
     }
 
+    /**
+     * Visualizza le categorie di attuatori
+     *
+     * @param listaCategorie per visualizzare le categorie attuatori
+     * @return descrizione categorie attuatori
+     */
     public static String visualizzaDescrizioneCatergorieAttuatori(ListaCategorie listaCategorie) {
         return ClasseDiServizioListaCategorie.descrizioneCategorieAttuatori(listaCategorie);
     }
 
-    public static void visualizzaStanze(UnitaImmobiliari unitaImmobiliari) {
-        do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            ClasseDiServizioUnitaImmobiliare.visualizzaStanze(unitaImmobiliare);
-        } while (InputDati.yesOrNo("Vuoi visualizzare le stanze di un'altra unita immobiliare?"));
-    }
-
-    public static void visualizzaArtefatti(UnitaImmobiliari unitaImmobiliari) {
-        do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            ClasseDiServizioUnitaImmobiliare.visualizzaArtefatti(unitaImmobiliare);
-        } while (InputDati.yesOrNo("Vuoi visualizzare gli artefatti di un'altra unita immobiliare?"));
+    /**
+     * Descrizione delle stanze
+     *
+     * @param unitaImmobiliare scelta
+     */
+    public static void descrizioneStanze(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioUnitaImmobiliare.descrizioneStanze(unitaImmobiliare);
     }
 
     /**
-     * Visualizza i valori rilevati dai sensori
+     * Descrizione degli artefatti
      *
-     * @return i valori rilevati
+     * @param unitaImmobiliare scelta
      */
-    public static void visualizzaValoriRilevati(UnitaImmobiliari unitaImmobiliari) {
-        do {
-            UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
-            ClasseDiServizioUnitaImmobiliare.visualizzaValoriRilevati(unitaImmobiliare);
-        } while (InputDati.yesOrNo("Vuoi visualizzare gli artefatti di un'altra unita immobiliare?"));
+    public static void descrizioneArtefatti(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioUnitaImmobiliare.descrizioneArtefatti(unitaImmobiliare);
     }
 
+    public static void visualizzaValoriRilevati(UnitaImmobiliare unitaImmobiliare) {
+        ClasseDiServizioUnitaImmobiliare.visualizzaValoriRilevati(unitaImmobiliare);
+    }
 
+    /**
+     * Scegli l'unita immobiliare
+     *
+     * @param unitaImmobiliari tra le quali scegliere
+     * @return l'unita immobiliare scelta
+     */
+    public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
+        return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+    }
 }

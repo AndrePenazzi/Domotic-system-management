@@ -49,7 +49,7 @@ public class ClasseDiServizioStanza {
     }
 
     public static Artefatto scegliArtefattoNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()));
+        System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(stanza.getArtefatti()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getSizeArtefatti()) - 1;
 
         return stanza.getArtefatto(i);
@@ -62,7 +62,7 @@ public class ClasseDiServizioStanza {
 
 
     public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
+        System.out.println(ClasseDiServizioAttuatori.descriviNomeAttuatori(stanza.getAttuatoriInStanza()));
         int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatoriInStanza().getSize()) - 1;
 
         return stanza.getAttuatoriInStanza().getAttuatore(i);
@@ -74,7 +74,7 @@ public class ClasseDiServizioStanza {
 
 
     public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioSensori.toString(stanza.getSensori()));
+        System.out.println(ClasseDiServizioSensori.descriviNomiSensori(stanza.getSensori()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSizeSensori()) - 1;
 
         return stanza.getSensore(i);

@@ -1,6 +1,5 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente;
 
-import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.operatori.OperatoriBooleani;
 import it.unibs.fp.model.regola.antecedente.Antecedente;
 import it.unibs.fp.model.regola.antecedente.AntecedenteFactory;
@@ -17,29 +16,41 @@ public class ClasseDiServizioAntecedente implements Serializable {
     public static Antecedente creaAntecedenteEnnesimo(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico;
         OperatoriBooleani opBooleano;
-        costituenteLogico = ClasseDiServizioCostituenteLogico.menuCreaCostituenteLogico( unitaImmobiliare);
         opBooleano = ClasseDiServizioOperatoriBooleani.sceltaOperatoreBooleano();
+        costituenteLogico = ClasseDiServizioCostituenteLogico.menuCreaCostituenteLogico(unitaImmobiliare);
 
         return AntecedenteFactory.creaAntecedente(opBooleano, costituenteLogico);
     }
 
     public static Antecedente creaAntecedenteSingolo(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico;
-        costituenteLogico = ClasseDiServizioCostituenteLogico.menuCreaCostituenteLogico( unitaImmobiliare);
+        costituenteLogico = ClasseDiServizioCostituenteLogico.menuCreaCostituenteLogico(unitaImmobiliare);
 
         return AntecedenteFactory.creaAntecedente(costituenteLogico);
     }
 
-    public static String visualizzaAntecedenteSingolo(Antecedente antecedente) {
+    /**
+     * Descrivi antecedente singolo
+     *
+     * @param antecedente da visualizzare
+     * @return descrizione antecedente
+     */
+    public static String descriviAntecedenteSingolo(Antecedente antecedente) {
         StringBuilder str = new StringBuilder();
-        str.append(" " + ClasseDiServizioCostituenteLogico.visualizzaCostituenteLogico(antecedente.getCostituenteLogico()));
+        str.append(" " + ClasseDiServizioCostituenteLogico.descriviCostituenteLogico(antecedente.getCostituenteLogico()));
         return str.toString();
     }
 
-    public static String visualizzaAntecedenteEnnesimo(Antecedente antecedente) {
+    /**
+     * Descrivi antecedente ennesimo
+     *
+     * @param antecedente da visualizzare
+     * @return descrizione antecedente
+     */
+    public static String descriviAntecedenteEnnesimo(Antecedente antecedente) {
         StringBuilder str = new StringBuilder();
         str.append(" " + antecedente.getOpBooleano());
-        str.append(" " + ClasseDiServizioCostituenteLogico.visualizzaCostituenteLogico(antecedente.getCostituenteLogico()));
+        str.append(" " + ClasseDiServizioCostituenteLogico.descriviCostituenteLogico(antecedente.getCostituenteLogico()));
         return str.toString();
     }
 }

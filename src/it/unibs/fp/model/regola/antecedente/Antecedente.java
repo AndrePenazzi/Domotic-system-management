@@ -9,6 +9,11 @@ public abstract class Antecedente implements Serializable {
     private CostituenteLogico costituenteLogico;
     private OperatoriBooleani opBooleano;
 
+    /**
+     * Getter
+     *
+     * @return costituente logico
+     */
     public CostituenteLogico getCostituenteLogico() {
         return costituenteLogico;
     }
@@ -17,6 +22,11 @@ public abstract class Antecedente implements Serializable {
         this.costituenteLogico = costituenteLogico;
     }
 
+    /**
+     * Getter
+     *
+     * @return opBooleano
+     */
     public OperatoriBooleani getOpBooleano() {
         return opBooleano;
     }

@@ -7,29 +7,34 @@ import it.unibs.fp.view.mylib.InputDati;
 
 
 public class ClasseDiServizioRegole {
-    public static Regole creaRegole( UnitaImmobiliare unitaImmobiliare) {
-        Regole regole = new Regole();
+    public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
         do {
-            regole.inserisciRegola(ClasseDiServizioRegola.creaRegola( unitaImmobiliare));
+            unitaImmobiliare.inserisciRegola(ClasseDiServizioRegola.creaRegola(unitaImmobiliare));
         } while (InputDati.yesOrNo("Vuoi continuare ad inserire una nuova regola?"));
-
-        return regole;
     }
+
     public static Regola scegliRegola(Regole regole) {
-        visualizzaRegole(regole);
-        int i=InputDati.leggiIntero("Scegli la regola: ",1, regole.getRegole().size())-1;
-        return regole.getRegole().get(i);
-    }
-    public static int scegliIndexRegola(Regole regole) {
-        visualizzaRegole(regole);
-        return InputDati.leggiIntero("Scegli la regola: ",1, regole.getRegole().size())-1;
+        descrizioneRegole(regole);
+        int i = InputDati.leggiIntero("Scegli la regola: ", 1, regole.getSizeRegole()) - 1;
+        return regole.getRegola(i);
     }
 
-    public static String visualizzaRegole(Regole regole) {
+    public static int scegliIndexRegola(Regole regole) {
+        descrizioneRegole(regole);
+        return InputDati.leggiIntero("Scegli la regola: ", 1, regole.getSizeRegole()) - 1;
+    }
+
+    /**
+     * Descrivi regole
+     *
+     * @param regole da visualizzare
+     * @return descrizione regole
+     */
+    public static String descrizioneRegole(Regole regole) {
         StringBuilder str = new StringBuilder();
-        if (!regole.getRegole().isEmpty())
-            for (int i=1; i<=regole.getRegole().size();i++) {
-                str.append(i + ClasseDiServizioRegola.toString(regole.getRegole().get(i-1)));
+        if (!regole.isEmpty())
+            for (int i = 1; i <= regole.getSizeRegole(); i++) {
+                str.append(i + ") " + ClasseDiServizioRegola.toString(regole.getRegola(i - 1)));
             }
         else
             str.append("Non ci sono ancora regole in questa unità immobiliare");

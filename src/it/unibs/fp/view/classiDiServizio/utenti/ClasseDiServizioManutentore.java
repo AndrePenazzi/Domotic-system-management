@@ -1,6 +1,5 @@
 package it.unibs.fp.view.classiDiServizio.utenti;
 
-
 import it.unibs.fp.model.categoria.CategoriaAttuatori;
 import it.unibs.fp.model.categoria.CategoriaSensori;
 import it.unibs.fp.model.categoria.ListaCategorie;
@@ -205,7 +204,7 @@ public class ClasseDiServizioManutentore {
     private static void stampaMenuVisualizzazioneCategorie(ListaCategorie listaCategorie) {
         boolean finito = false;
         String[] azione = {"Visualizza categorie sensori", "Visualizza categorie attuatori"};
-        MyMenu menu = new MyMenu("Menu fruitore", azione);
+        MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
             switch (scelta) {
