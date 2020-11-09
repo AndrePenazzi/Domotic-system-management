@@ -48,6 +48,12 @@ public class ClasseDiServizioStanza {
         return tmp.toString();
     }
 
+    /**
+     * Scegli artefatto nella stanza
+     *
+     * @param stanza nella quale scegliere un artefatto
+     * @return artefatto
+     */
     public static Artefatto scegliArtefattoNellaStanza(Stanza stanza) {
         System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(stanza.getArtefatti()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getSizeArtefatti()) - 1;
@@ -65,14 +71,25 @@ public class ClasseDiServizioStanza {
         System.out.println(ClasseDiServizioAttuatori.descriviNomeAttuatori(stanza.getAttuatoriInStanza()));
         int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatoriInStanza().getSize()) - 1;
 
-        return stanza.getAttuatoriInStanza().getAttuatore(i);
+        return stanza.getAttuatoreInStanza(i);
     }
 
+    /**
+     * scegli un sensore nell'artefatto
+     *
+     * @param artefatto nel quale scegliere un sensore
+     * @return sensore
+     */
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
         return ClasseDiServizioArtefatto.scegliSensoreNellArtefatto(artefatto);
     }
 
-
+    /**
+     * Scegli il sensore nella stanza
+     *
+     * @param stanza nella quale scegliere il sensore
+     * @return il sensore scelto
+     */
     public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
         System.out.println(ClasseDiServizioSensori.descriviNomiSensori(stanza.getSensori()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSizeSensori()) - 1;

@@ -61,7 +61,7 @@ public class ClasseDiServizioArtefatti {
     public static String descrizioneNomeArtefatti(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
 
-        if (!artefatti.getArtefatti().isEmpty()) {
+        if (!artefatti.isEmpty()) {
             int i = 1;
             tmp.append("Gli artefatti sono:\n");
             for (Artefatto a : artefatti.getArtefatti()) {

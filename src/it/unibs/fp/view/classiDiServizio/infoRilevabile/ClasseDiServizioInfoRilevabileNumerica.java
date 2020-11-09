@@ -3,8 +3,15 @@ package it.unibs.fp.view.classiDiServizio.infoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
 
 public class ClasseDiServizioInfoRilevabileNumerica {
-    public static String visualizzaValoreRilevato(InfoRilevabileNumerica infoRilevabile) {
-        String nome=infoRilevabile.getNome();
+
+    /**
+     * Descrivi il valore rilevato con nome infoRilevabile
+     *
+     * @param infoRilevabile dal quale prendere la variabile da rilevare
+     * @return descrizione valore rilevato e nome infoRilevabile
+     */
+    public static String descriviValoreRilevato(InfoRilevabileNumerica infoRilevabile) {
+        String nome = infoRilevabile.getNome();
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome);
         tmp.append(infoRilevabile.rilevaVariabile());
@@ -12,14 +19,27 @@ public class ClasseDiServizioInfoRilevabileNumerica {
     }
 
     /**
+     * Descrivi solo il valore rilevato
+     *
+     * @param infoRilevabile dal quale prendere la variabile da rilevare
+     * @return descrizione valore rilevato
+     */
+    public static String descriviSoloValoreRilevato(InfoRilevabileNumerica infoRilevabile) {
+        StringBuilder tmp = new StringBuilder();
+        tmp.append(infoRilevabile.rilevaVariabile());
+        return tmp.toString();
+    }
+
+    /**
      * toStringInfoRilevabileNumerica
+     *
      * @param infoRilevabile numerica
      * @return infoRilevabileNumerica
      */
     public static String toString(InfoRilevabileNumerica infoRilevabile) {
-        String nome=infoRilevabile.getNome();
-        double min=infoRilevabile.getMin();
-        double max=infoRilevabile.getMax();
+        String nome = infoRilevabile.getNome();
+        double min = infoRilevabile.getMin();
+        double max = infoRilevabile.getMax();
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome);
         tmp.append("\nMin: " + min);

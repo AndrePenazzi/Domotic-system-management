@@ -42,6 +42,12 @@ public class ClasseDiServizioCategoriaSensori {
         return categoriaSensori;
     }
 
+    /**
+     * Scelta infoRilevabile
+     *
+     * @param categoriaSensori per la scelta dell'inforilevabile
+     * @return infoRilevabile
+     */
     public static InfoRilevabile scegliInfoRilevabile(CategoriaSensori categoriaSensori) {
         System.out.println(descrizioneInfoRilevabiliNumerate(categoriaSensori));
         int i = InputDati.leggiIntero("Scegli la infoRilevabile: ", 1, categoriaSensori.getSizeInformazioniRilevabili()) - 1;

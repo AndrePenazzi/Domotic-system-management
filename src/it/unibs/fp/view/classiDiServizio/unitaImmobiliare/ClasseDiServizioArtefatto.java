@@ -27,6 +27,12 @@ public class ClasseDiServizioArtefatto {
         return artefatto.getAttuatoriInArtefatto().getAttuatore(i);
     }
 
+    /**
+     * Scegli un sensore nell'artefatto
+     *
+     * @param artefatto nel quale scegliere un sensore
+     * @return sensore
+     */
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
         System.out.println(ClasseDiServizioSensori.descriviNomiSensori(artefatto.getSensoriInArtefatto()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSizeSensoriInArtefatto()) - 1;

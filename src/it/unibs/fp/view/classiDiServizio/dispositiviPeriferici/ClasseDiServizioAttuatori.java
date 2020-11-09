@@ -55,13 +55,13 @@ public class ClasseDiServizioAttuatori {
 
         if (!attuatori.isEmpty()) {
             int i = 1;
-            tmp.append("\nGli attuatori sono:\n");
+            tmp.append("Gli attuatori sono:\n");
             for (Attuatore a : attuatori.getAttuatori()) {
                 tmp.append(i + ") " + ClasseDiServizioAttuatore.toString(a)).append("\n");
                 i++;
             }
         } else
-            tmp.append("\nNon ci sono ancora attuatori associati");
+            tmp.append("Non ci sono ancora attuatori associati\n");
         return tmp.toString();
     }
 }

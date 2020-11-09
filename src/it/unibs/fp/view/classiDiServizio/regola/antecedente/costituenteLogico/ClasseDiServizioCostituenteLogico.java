@@ -8,6 +8,7 @@ import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
 import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogicoFactory;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioCategoriaSensori;
+import it.unibs.fp.view.classiDiServizio.infoRilevabile.ClasseDiServizioInfoRilevabile;
 import it.unibs.fp.view.classiDiServizio.operatori.ClasseDiServizioOperatoriRelazionali;
 import it.unibs.fp.view.classiDiServizio.regola.ClasseDiServizioOrologio;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
@@ -18,6 +19,13 @@ import java.io.Serializable;
 import java.util.InputMismatchException;
 
 public class ClasseDiServizioCostituenteLogico implements Serializable {
+
+    /**
+     * Menu per creare un costituente logico
+     *
+     * @param unitaImmobiliare per permettere la creazione del costituente logico
+     * @return un costituente logico
+     */
     public static CostituenteLogico menuCreaCostituenteLogico(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico = null;
         String[] azione = {"Con info rilevabile", "Con orologio", "Con valore parametrico", "Con valore numerico"};
@@ -48,6 +56,12 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return costituenteLogico;
     }
 
+    /**
+     * Crea costituente logico numerico
+     *
+     * @param unitaImmobiliare per scelta sensore
+     * @return costituente logico
+     */
     private static CostituenteLogico creaCostituenteLogicoNumerico(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;
@@ -60,6 +74,11 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
+    /**
+     * Crea costituente logico orologio
+     *
+     * @return costituente logico creato
+     */
     private static CostituenteLogico creaCostituenteLogicoOrologio() {
         Orologio secondoOpLogico;
         OperatoriRelazionali opRelazionale;
@@ -116,7 +135,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         OperatoriRelazionali operatoreRelazionale = costituenteLogico.getOperatoreRelazionale();
         Double secondoOperatoreCostante = costituenteLogico.getSecondoOperatoreCostante();
         String secondoOperatoreScalare = costituenteLogico.getSecondoOperatoreScalare();
-        Orologio time = costituenteLogico.getTime();
+        Orologio oraAttuale = ClasseDiServizioOrologio.creaOraAttuale();
         Orologio secondoOperatoreOrologio = costituenteLogico.getSecondoOperatoreOrologio();
 
         StringBuilder tmp = new StringBuilder();
@@ -124,13 +143,14 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
             tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.getValue());
 
             if (secondoOperatoreLogico != null)
-                tmp.append(" " + secondoOperatoreLogico);
+                tmp.append(" " + ClasseDiServizioInfoRilevabile.visualizzaSoloValoreRilevato(secondoOperatoreLogico));
             if (secondoOperatoreCostante != null)
                 tmp.append(" " + secondoOperatoreCostante);
             if (secondoOperatoreScalare != null)
                 tmp.append(" " + secondoOperatoreScalare);
-        } else if (time != null && operatoreRelazionale != null) {
-            tmp.append(time).append(" ").append(operatoreRelazionale.getValue()).append(secondoOperatoreOrologio);
+        } else if (secondoOperatoreOrologio != null && operatoreRelazionale != null) {
+            tmp.append(ClasseDiServizioOrologio.toString(oraAttuale)).append(" ");
+            tmp.append(operatoreRelazionale.getValue()).append(" " + ClasseDiServizioOrologio.toString(secondoOperatoreOrologio));
         }
         return tmp.toString();
     }

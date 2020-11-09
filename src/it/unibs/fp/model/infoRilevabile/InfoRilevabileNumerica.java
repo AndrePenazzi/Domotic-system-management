@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 
 public class InfoRilevabileNumerica extends InfoRilevabile implements Serializable {
-    private static DecimalFormat df2 = new DecimalFormat("#.##");
+    private static DecimalFormat df2 = new DecimalFormat("#,##");
     private double min;
     private double max;
     private double valore;

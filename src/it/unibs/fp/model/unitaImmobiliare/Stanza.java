@@ -90,10 +90,6 @@ public class Stanza implements Serializable {
      */
     public Attuatori getAttuatoriInStanza() {
         Attuatori attuatori = new Attuatori();
-        for (Artefatto a : artefatti.getArtefatti()) {
-            for (int i = 0; i < a.getSizeAttuatoriInArtefatto(); i++)
-                attuatori.inserisciAttuatore(a.getAttuatoreInArtefatto(i));
-        }
         for (Attuatore a : this.attuatori.getAttuatori()) {
             attuatori.inserisciAttuatore(a);
         }

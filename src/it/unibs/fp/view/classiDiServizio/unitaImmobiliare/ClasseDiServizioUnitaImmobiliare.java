@@ -81,6 +81,12 @@ public class ClasseDiServizioUnitaImmobiliare {
         return attuatore;
     }
 
+    /**
+     * Menu scelta sensore
+     *
+     * @param unitaImmobiliare per la scelta del sensore
+     * @return sensore scelto
+     */
     public static Sensore scegliSensore(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = null;
         String[] sensore_menu = {"Scegli sensore nella stanza", "Scegli sensore nell'artefatto di una stanza", "Scegli sensore nell'artefatto"};
@@ -91,7 +97,7 @@ public class ClasseDiServizioUnitaImmobiliare {
 
             case 1: {
                 Stanza stanza = scegliStanza(unitaImmobiliare);
-                sensore = scegliSensoreNellaStanza(stanza);
+                sensore = ClasseDiServizioStanza.scegliSensoreNellaStanza(stanza);
             }
             break;
 
@@ -103,11 +109,10 @@ public class ClasseDiServizioUnitaImmobiliare {
 
             case 3: {
                 Artefatto artefatto = scegliArtefatto(unitaImmobiliare);
-                sensore = scegliSensoreNellArtefatto(artefatto);
+                sensore = ClasseDiServizioArtefatto.scegliSensoreNellArtefatto(artefatto);
             }
             break;
         }
-
         return sensore;
     }
 
@@ -124,17 +129,15 @@ public class ClasseDiServizioUnitaImmobiliare {
         return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
     }
 
-    public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
-        return ClasseDiServizioStanza.scegliSensoreNellaStanza(stanza);
-    }
-
+    /**
+     * Scegli il sensore nell' artefatto nella stanza
+     *
+     * @param stanza per la scelta del sensore nell'artefatto
+     * @return sensore
+     */
     public static Sensore scegliSensoreNellArtefattoNellaStanza(Stanza stanza) {
         Artefatto artefatto = ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
         return ClasseDiServizioStanza.scegliSensoreNellArtefatto(artefatto);
-    }
-
-    public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
-        return ClasseDiServizioArtefatto.scegliSensoreNellArtefatto(artefatto);
     }
 
     public static Regola scegliRegola(UnitaImmobiliare unitaImmobiliare) {

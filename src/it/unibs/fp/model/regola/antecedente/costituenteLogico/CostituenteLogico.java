@@ -165,17 +165,12 @@ public abstract class CostituenteLogico implements Serializable {
     /**
      * Getter
      *
-     * @return SecondoOperatoreOrologio
+     * @return secondoOperatoreOrologio
      */
     public Orologio getSecondoOperatoreOrologio() {
         return secondoOperatoreOrologio;
     }
 
-    /**
-     * Setter
-     *
-     * @param secondoOperatoreOrologio da settare
-     */
     public void setSecondoOperatoreOrologio(Orologio secondoOperatoreOrologio) {
         this.secondoOperatoreOrologio = secondoOperatoreOrologio;
     }

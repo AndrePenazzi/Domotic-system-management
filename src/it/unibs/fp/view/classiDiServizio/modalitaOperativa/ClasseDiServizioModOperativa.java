@@ -13,6 +13,7 @@ public class ClasseDiServizioModOperativa {
 
     /**
      * MenuCreaModOperativa
+     *
      * @return ModOperativa creata
      */
     public static ModOperativa menuCreaModOperativa() {

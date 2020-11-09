@@ -47,6 +47,12 @@ public class ClasseDiServizioSensori {
         return tmp.toString();
     }
 
+    /**
+     * Descrivi i nomi dei sensori
+     *
+     * @param sensori da visualizzare
+     * @return descrizione nomi sensori
+     */
     public static String descriviNomiSensori(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
 
