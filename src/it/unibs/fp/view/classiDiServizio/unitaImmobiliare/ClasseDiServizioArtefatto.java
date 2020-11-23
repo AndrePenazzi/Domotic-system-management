@@ -21,10 +21,16 @@ public class ClasseDiServizioArtefatto {
         return new Artefatto(nome);
     }
 
+    /**
+     * Scegli l'attuatore nell'artefatto
+     *
+     * @param artefatto nel quale sceglie l'attuatore
+     * @return l'attuatore scelto
+     */
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioAttuatori.descriviNomeAttuatori(artefatto.getAttuatoriInArtefatto()));
-        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getAttuatoriInArtefatto().getSize()) - 1;
-        return artefatto.getAttuatoriInArtefatto().getAttuatore(i);
+        System.out.println(ClasseDiServizioAttuatori.visualizzaNomeAttuatori(artefatto.getAttuatoriInArtefatto()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, artefatto.getSizeAttuatoriInArtefatto()) - 1;
+        return artefatto.getAttuatoreInArtefatto(i);
     }
 
     /**
@@ -34,7 +40,7 @@ public class ClasseDiServizioArtefatto {
      * @return sensore
      */
     public static Sensore scegliSensoreNellArtefatto(Artefatto artefatto) {
-        System.out.println(ClasseDiServizioSensori.descriviNomiSensori(artefatto.getSensoriInArtefatto()));
+        System.out.println(ClasseDiServizioSensori.visualizzaNomiSensori(artefatto.getSensoriInArtefatto()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, artefatto.getSizeSensoriInArtefatto()) - 1;
         return artefatto.getSensoreInArtefatto(i);
     }

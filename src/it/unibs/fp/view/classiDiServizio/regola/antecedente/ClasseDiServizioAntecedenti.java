@@ -7,6 +7,13 @@ import it.unibs.fp.view.mylib.InputDati;
 import java.io.Serializable;
 
 public class ClasseDiServizioAntecedenti implements Serializable {
+
+    /**
+     * Crea antecedenti
+     *
+     * @param unitaImmobiliare per la creazione degli antecedenti
+     * @return Antecedenti
+     */
     public static Antecedenti creaAntecedenti(UnitaImmobiliare unitaImmobiliare) {
         Antecedenti antecedenti = new Antecedenti();
         antecedenti.inserisciAntecedente(ClasseDiServizioAntecedente.creaAntecedenteSingolo(unitaImmobiliare));

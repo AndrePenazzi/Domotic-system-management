@@ -7,6 +7,11 @@ import it.unibs.fp.view.mylib.InputDati;
 
 
 public class ClasseDiServizioRegole {
+    /**
+     * Crea ed inserisci delle nuove regole
+     *
+     * @param unitaImmobiliare nella quale inserire una o più regole
+     */
     public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
         do {
             unitaImmobiliare.inserisciRegola(ClasseDiServizioRegola.creaRegola(unitaImmobiliare));
@@ -14,13 +19,19 @@ public class ClasseDiServizioRegole {
     }
 
     public static Regola scegliRegola(Regole regole) {
-        descrizioneRegole(regole);
+        descriviRegole(regole);
         int i = InputDati.leggiIntero("Scegli la regola: ", 1, regole.getSizeRegole()) - 1;
         return regole.getRegola(i);
     }
 
+    /**
+     * Scegli l'indice della regola
+     *
+     * @param regole per la scelta
+     * @return l'indice della regola
+     */
     public static int scegliIndexRegola(Regole regole) {
-        descrizioneRegole(regole);
+        descriviRegole(regole);
         return InputDati.leggiIntero("Scegli la regola: ", 1, regole.getSizeRegole()) - 1;
     }
 
@@ -30,7 +41,7 @@ public class ClasseDiServizioRegole {
      * @param regole da visualizzare
      * @return descrizione regole
      */
-    public static String descrizioneRegole(Regole regole) {
+    public static String descriviRegole(Regole regole) {
         StringBuilder str = new StringBuilder();
         if (!regole.isEmpty())
             for (int i = 1; i <= regole.getSizeRegole(); i++) {

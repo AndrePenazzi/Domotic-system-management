@@ -55,21 +55,31 @@ public class ClasseDiServizioStanza {
      * @return artefatto
      */
     public static Artefatto scegliArtefattoNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(stanza.getArtefatti()));
+        System.out.println(ClasseDiServizioArtefatti.visualizzaNomeArtefatti(stanza.getArtefatti()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, stanza.getSizeArtefatti()) - 1;
 
         return stanza.getArtefatto(i);
     }
 
-
+    /**
+     * Scegli un attuatore nell'artefatto
+     *
+     * @param artefatto nel quale scegliere un attuatore
+     * @return l'attuatore scelto
+     */
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
         return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
     }
 
-
+    /**
+     * Scegli un attuatore nella stanza
+     *
+     * @param stanza nel quale scegliere un attuatore
+     * @return l'attuatore scelto
+     */
     public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioAttuatori.descriviNomeAttuatori(stanza.getAttuatoriInStanza()));
-        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getAttuatoriInStanza().getSize()) - 1;
+        System.out.println(ClasseDiServizioAttuatori.visualizzaNomeAttuatori(stanza.getAttuatoriInStanza()));
+        int i = InputDati.leggiIntero("Scegli l'attuatore: ", 1, stanza.getSizeAttuatori()) - 1;
 
         return stanza.getAttuatoreInStanza(i);
     }
@@ -91,7 +101,7 @@ public class ClasseDiServizioStanza {
      * @return il sensore scelto
      */
     public static Sensore scegliSensoreNellaStanza(Stanza stanza) {
-        System.out.println(ClasseDiServizioSensori.descriviNomiSensori(stanza.getSensori()));
+        System.out.println(ClasseDiServizioSensori.visualizzaNomiSensori(stanza.getSensori()));
         int i = InputDati.leggiIntero("Scegli il sensore: ", 1, stanza.getSizeSensori()) - 1;
 
         return stanza.getSensore(i);

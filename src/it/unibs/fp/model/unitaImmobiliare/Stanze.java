@@ -9,6 +9,9 @@ import java.util.List;
 public class Stanze implements Serializable {
     private List<Stanza> stanze;
 
+    /**
+     * Costruttore Stanze
+     */
     public Stanze() {
         stanze = new ArrayList<>();
     }

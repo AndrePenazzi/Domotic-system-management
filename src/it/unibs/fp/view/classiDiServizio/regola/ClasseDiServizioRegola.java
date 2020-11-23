@@ -9,6 +9,11 @@ import it.unibs.fp.view.classiDiServizio.regola.conseguente.ClasseDiServizioCons
 
 public class ClasseDiServizioRegola {
 
+    /**
+     * Crea una nuova regola
+     * @param unitaImmobiliare nella quale creare una regola
+     * @return una regola
+     */
     public static Regola creaRegola(UnitaImmobiliare unitaImmobiliare) {
         Regola regola = new Regola();
         Antecedenti antecedenti = ClasseDiServizioAntecedenti.creaAntecedenti(unitaImmobiliare);

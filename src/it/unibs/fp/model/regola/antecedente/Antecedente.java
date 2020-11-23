@@ -18,6 +18,11 @@ public abstract class Antecedente implements Serializable {
         return costituenteLogico;
     }
 
+    /**
+     * Setter
+     *
+     * @param costituenteLogico da settare
+     */
     public void setCostituenteLogico(CostituenteLogico costituenteLogico) {
         this.costituenteLogico = costituenteLogico;
     }
@@ -31,6 +36,11 @@ public abstract class Antecedente implements Serializable {
         return opBooleano;
     }
 
+    /**
+     * Setter
+     *
+     * @param opBooleano da settare
+     */
     public void setOpBooleano(OperatoriBooleani opBooleano) {
         this.opBooleano = opBooleano;
     }

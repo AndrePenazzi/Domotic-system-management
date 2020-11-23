@@ -5,6 +5,13 @@ import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.view.mylib.InputDati;
 
 public class ClasseDiServizioConseguenti {
+
+    /**
+     * Crea Conseguenti
+     *
+     * @param unitaImmobiliare per la creazione di conseguenti
+     * @return conseguenti
+     */
     public static Conseguenti creaConseguenti(UnitaImmobiliare unitaImmobiliare) {
         Conseguenti conseguenti = new Conseguenti();
 

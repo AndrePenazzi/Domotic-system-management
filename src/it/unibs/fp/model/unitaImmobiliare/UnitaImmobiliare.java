@@ -36,7 +36,11 @@ public class UnitaImmobiliare implements Serializable {
         regole.attivaDsattivaRegola(regola);
     }
 
-
+    /**
+     * Inserisci una nuova regola nell'unita immobiliare
+     *
+     * @param regola da inserire
+     */
     public void inserisciRegola(Regola regola) {
         regole.inserisciRegola(regola);
     }
@@ -133,7 +137,6 @@ public class UnitaImmobiliare implements Serializable {
             s.inserisciArtefatto(artefattoAss);
         }
     }
-
 
     /**
      * Getter.

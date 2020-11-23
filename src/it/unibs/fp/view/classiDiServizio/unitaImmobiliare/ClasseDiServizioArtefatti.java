@@ -58,7 +58,7 @@ public class ClasseDiServizioArtefatti {
      * @param artefatti da visualizzare
      * @return il nome degli artefatti
      */
-    public static String descrizioneNomeArtefatti(Artefatti artefatti) {
+    public static String visualizzaNomeArtefatti(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
 
         if (!artefatti.isEmpty()) {
@@ -83,7 +83,7 @@ public class ClasseDiServizioArtefatti {
     public static String toString(Artefatti artefatti) {
         StringBuilder tmp = new StringBuilder();
 
-        if (!artefatti.getArtefatti().isEmpty()) {
+        if (!artefatti.isEmpty()) {
             int i = 1;
             tmp.append("Gli artefatti sono:\n");
             for (Artefatto a : artefatti.getArtefatti()) {

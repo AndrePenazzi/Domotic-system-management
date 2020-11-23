@@ -29,7 +29,13 @@ public class ClasseDiServizioAttuatori {
             System.out.println("\nNon ci sono ancora sensori associati");
     }
 
-    public static String descriviNomeAttuatori(Attuatori attuatori) {
+    /**
+     * Visualizza il nome degli attuatori
+     *
+     * @param attuatori da visualizzare
+     * @return descrivi gli attuatori
+     */
+    public static String visualizzaNomeAttuatori(Attuatori attuatori) {
         StringBuilder tmp = new StringBuilder();
 
         if (!attuatori.isEmpty()) {

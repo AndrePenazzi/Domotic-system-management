@@ -26,7 +26,11 @@ public class ClasseDiServizioUnitaImmobiliare {
         return new UnitaImmobiliare(nome);
     }
 
-
+    /**
+     * Crea e inserisci nuove regole
+     *
+     * @param unitaImmobiliare nella quale inserire regole
+     */
     public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
         ClasseDiServizioRegole.creaEInserisciRegole(unitaImmobiliare);
     }
@@ -51,7 +55,13 @@ public class ClasseDiServizioUnitaImmobiliare {
     ////////////////////////////////////FINE CREA/////////////////////////////////////////////////
 
     ////////////////////////////////////INIZIA SCELTA/////////////////////////////////////////////////
-    //TODO MANCANO I VISUALIZZA
+
+    /**
+     * Menu scelta attuatore
+     *
+     * @param unitaImmobiliare per la scelta del sensore
+     * @return attuatore scelto
+     */
     public static Attuatore scegliAttuatore(UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore = null;
         String[] attuatore_menu = {"Scegli attuatore nella stanza", "Scegli attuatore nell'artefatto di una stanza", "Scegli attuatore nell'artefatto"};
@@ -116,15 +126,33 @@ public class ClasseDiServizioUnitaImmobiliare {
         return sensore;
     }
 
+    /**
+     * Scegli un attuatore nella stanza
+     *
+     * @param stanza nella quale scegliere un attuatore
+     * @return l'attuatore scelto
+     */
     public static Attuatore scegliAttuatoreNellaStanza(Stanza stanza) {
         return ClasseDiServizioStanza.scegliAttuatoreNellaStanza(stanza);
     }
 
+    /**
+     * Scegli l'attuatore nell'artefatto nella stanza
+     *
+     * @param stanza nel quale sceglie l'attuatore in un artefatto
+     * @return l'attuatore scelto
+     */
     public static Attuatore scegliAttuatoreNellArtefattoNellaStanza(Stanza stanza) {
         Artefatto artefatto = ClasseDiServizioStanza.scegliArtefattoNellaStanza(stanza);
         return ClasseDiServizioStanza.scegliAttuatoreNellArtefatto(artefatto);
     }
 
+    /**
+     * Scegli un attuatore nell'artefatto
+     *
+     * @param artefatto nel quale scegliere un attuatore
+     * @return l'attuatore da scegliere
+     */
     public static Attuatore scegliAttuatoreNellArtefatto(Artefatto artefatto) {
         return ClasseDiServizioArtefatto.scegliAttuatoreNellArtefatto(artefatto);
     }
@@ -144,6 +172,12 @@ public class ClasseDiServizioUnitaImmobiliare {
         return ClasseDiServizioRegole.scegliRegola(unitaImmobiliare.getRegole());
     }
 
+    /**
+     * Scegli indice regola
+     *
+     * @param unitaImmobiliare per la scelta dell'unita immobiliare
+     * @return l'indice dell'unità immobiliare
+     */
     public static int scegliIndexRegola(UnitaImmobiliare unitaImmobiliare) {
         return ClasseDiServizioRegole.scegliIndexRegola(unitaImmobiliare.getRegole());
     }
@@ -182,7 +216,7 @@ public class ClasseDiServizioUnitaImmobiliare {
      * @return l'artefatto scelto
      */
     public static Artefatto scegliArtefatto(UnitaImmobiliare unitaImmobiliare) {
-        System.out.println(ClasseDiServizioArtefatti.descrizioneNomeArtefatti(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
+        System.out.println(ClasseDiServizioArtefatti.visualizzaNomeArtefatti(unitaImmobiliare.getArtefattiInUnitaImmobiliare()));
         int i = InputDati.leggiIntero("Scegli l'artefatto: ", 1, unitaImmobiliare.getSizeArtefatti()) - 1;
 
         return unitaImmobiliare.getArtefatto(i);
@@ -240,7 +274,7 @@ public class ClasseDiServizioUnitaImmobiliare {
     public static String descriviRegole(UnitaImmobiliare unitaImmobiliare) {
         Regole regole = unitaImmobiliare.getRegole();
         StringBuilder str = new StringBuilder();
-        str.append(ClasseDiServizioRegole.descrizioneRegole(regole));
+        str.append(ClasseDiServizioRegole.descriviRegole(regole));
         return str.toString();
     }
 

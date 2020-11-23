@@ -54,13 +54,25 @@ public class ClasseDiServizioCategoriaAttuatori {
             System.out.println("\nNon ci sono ancora informazioni rilevabili associate\n");
     }
 
+    /**
+     * Scegli modOperativa
+     *
+     * @param categoriaAttuatori per la scelta della mod Operativa
+     * @return modOperativa
+     */
     public static ModOperativa scegliModOperativa(CategoriaAttuatori categoriaAttuatori) {
-        System.out.println(descrizioneModOperativeNumerate(categoriaAttuatori));
+        System.out.println(visualizzaModOperativeNumerate(categoriaAttuatori));
         int i = InputDati.leggiIntero("Scegli la modOperativa: ", 1, categoriaAttuatori.getSizeModalitaOperative()) - 1;
         return categoriaAttuatori.getModalitaOperativa(i);
     }
 
-    public static String descrizioneModOperativeNumerate(CategoriaAttuatori categoriaAttuatori) {
+    /**
+     * Visualizza modOperative numerate
+     *
+     * @param categoriaAttuatori per la descrizione delle mod operative
+     * @return descrizione Mod Operative
+     */
+    public static String visualizzaModOperativeNumerate(CategoriaAttuatori categoriaAttuatori) {
         StringBuilder tmp = new StringBuilder();
         List<ModOperativa> modalitaOperative = categoriaAttuatori.getModalitaOperative();
 
@@ -68,7 +80,7 @@ public class ClasseDiServizioCategoriaAttuatori {
             int i = 1;
             tmp.append("\nModalita Operative:\n");
             for (ModOperativa modOperativa : modalitaOperative) {
-                tmp.append(i + ") " + modOperativa.getNome()+"\n");
+                tmp.append(i + ") " + modOperativa.getNome() + "\n");
                 i++;
             }
         } else
@@ -109,7 +121,7 @@ public class ClasseDiServizioCategoriaAttuatori {
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome + ": ");
         tmp.append(testoLibero);
-        tmp.append(descrizioneModOperativeNumerate(categoriaAttuatori));
+        tmp.append(visualizzaModOperativeNumerate(categoriaAttuatori));
 
         return tmp.toString();
     }

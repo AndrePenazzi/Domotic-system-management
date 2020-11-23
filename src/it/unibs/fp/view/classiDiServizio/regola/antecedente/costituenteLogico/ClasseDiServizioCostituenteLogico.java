@@ -88,6 +88,12 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(secondoOpLogico, opRelazionale);
     }
 
+    /**
+     * Crea costituente logico info rilevabile
+     *
+     * @param unitaImmobiliare per la creazione del costituente logico
+     * @return costituente logico
+     */
     public static CostituenteLogico creaCostituenteLogicoInfoRilevabile(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico = null;
@@ -111,6 +117,12 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(primoOpLogico, secondoOpLogico, opRelazionale);
     }
 
+    /**
+     * CreaCostituenteLogicoParametrico
+     *
+     * @param unitaImmobiliare per la creazione del costituente logico
+     * @return costituente logico
+     */
     public static CostituenteLogico creaCostituenteLogicoParametrico(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = ClasseDiServizioUnitaImmobiliare.scegliSensore(unitaImmobiliare);
         InfoRilevabile primoOpLogico;

@@ -51,9 +51,9 @@ public class ClasseDiServizioSensori {
      * Descrivi i nomi dei sensori
      *
      * @param sensori da visualizzare
-     * @return descrizione nomi sensori
+     * @return visualizza i nomi dei sensori
      */
-    public static String descriviNomiSensori(Sensori sensori) {
+    public static String visualizzaNomiSensori(Sensori sensori) {
         StringBuilder tmp = new StringBuilder();
 
         if (!sensori.isEmpty()) {

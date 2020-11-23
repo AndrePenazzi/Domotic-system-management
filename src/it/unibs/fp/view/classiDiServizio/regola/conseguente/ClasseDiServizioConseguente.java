@@ -7,9 +7,15 @@ import it.unibs.fp.view.classiDiServizio.regola.conseguente.azione.ClasseDiServi
 
 
 public class ClasseDiServizioConseguente {
+
+    /**
+     * Crea Conseguente
+     *
+     * @param unitaImmobiliare per la creazione del conseguente
+     * @return conseguente
+     */
     public static Conseguente creaConseguente(UnitaImmobiliare unitaImmobiliare) {
-        Azione azione;
-        azione = ClasseDiServizioAzione.menuCreaAzione(unitaImmobiliare);
+        Azione azione = ClasseDiServizioAzione.menuCreaAzione(unitaImmobiliare);
 
         return new Conseguente(azione);
     }

@@ -7,6 +7,9 @@ import java.util.List;
 public class Conseguenti implements Serializable {
     private List<Conseguente> conseguenti;
 
+    /**
+     * Costruttore conseguenti
+     */
     public Conseguenti() {
         conseguenti = new ArrayList<>();
     }
@@ -38,6 +41,11 @@ public class Conseguenti implements Serializable {
         return conseguenti.size();
     }
 
+    /**
+     * Inserisci i conseguenti
+     *
+     * @param conseguente da inserire
+     */
     public void inserisciConseguente(Conseguente conseguente) {
         conseguenti.add(conseguente);
     }

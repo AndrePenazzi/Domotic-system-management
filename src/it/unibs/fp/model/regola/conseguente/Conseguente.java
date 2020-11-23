@@ -7,6 +7,11 @@ import java.io.Serializable;
 public class Conseguente implements Serializable {
     private Azione azione;
 
+    /**
+     * Costruttore conseguente
+     *
+     * @param azione per creare il conseguente
+     */
     public Conseguente(Azione azione) {
         this.azione = azione;
     }

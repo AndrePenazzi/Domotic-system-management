@@ -12,6 +12,13 @@ import it.unibs.fp.view.mylib.MyMenu;
 
 
 public class ClasseDiServizioAzione {
+
+    /**
+     * Menu crea Azione
+     *
+     * @param unitaImmobiliare per la creazione delle azioni
+     * @return Azione
+     */
     public static Azione menuCreaAzione(UnitaImmobiliare unitaImmobiliare) {
         Azione azione = null;
         String[] azione_menu = {"Azione base", "Con orologio"};
@@ -34,6 +41,12 @@ public class ClasseDiServizioAzione {
         return azione;
     }
 
+    /**
+     * Crea azione orologio
+     *
+     * @param unitaImmobiliare per la creazione dell'azione orologio
+     * @return Azione
+     */
     private static Azione creaAzioneOrologio(UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore;
         ModOperativa modOperativa;
@@ -46,6 +59,12 @@ public class ClasseDiServizioAzione {
         return new Azione(attuatore, modOperativa, start);
     }
 
+    /**
+     * Crea azione base
+     *
+     * @param unitaImmobiliare per la creazione dell'azione base
+     * @return Azione
+     */
     public static Azione creaAzioneBase(UnitaImmobiliare unitaImmobiliare) {
         Attuatore attuatore;
         ModOperativa modOperativa;

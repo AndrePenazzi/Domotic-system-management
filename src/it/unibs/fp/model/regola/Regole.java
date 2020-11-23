@@ -8,6 +8,9 @@ import java.util.List;
 public class Regole implements Serializable {
     private List<Regola> regole;
 
+    /**
+     * Costruttore regole
+     */
     public Regole() {
         regole = new ArrayList<>();
     }
@@ -39,6 +42,11 @@ public class Regole implements Serializable {
         return regole.isEmpty();
     }
 
+    /**
+     * AttivaDisattivaRegola
+     *
+     * @param i posizione regola scelta
+     */
     public void attivaDsattivaRegola(int i) {
         getRegola(i).attivaDisattivaRegola();
     }
@@ -52,6 +60,11 @@ public class Regole implements Serializable {
         return regole.size();
     }
 
+    /**
+     * Inserisci una nuova regola
+     *
+     * @param regola da inserire
+     */
     public void inserisciRegola(Regola regola) {
         regole.add(regola);
     }

@@ -46,10 +46,20 @@ public class Regola implements Serializable {
         this.conseguenti = conseguenti;
     }
 
+    /**
+     * Inserisci conseguenti
+     *
+     * @param conseguenti da inserire
+     */
     public void inserisciConseguenti(Conseguenti conseguenti) {
         this.conseguenti.setConseguenti(conseguenti.getConseguenti());
     }
 
+    /**
+     * Inserisci antecedenti
+     *
+     * @param antecedenti da inserire
+     */
     public void inserisciAntecedenti(Antecedenti antecedenti) {
         this.antecedenti.setAntecendenti(antecedenti.getAntecendenti());
     }
@@ -72,6 +82,9 @@ public class Regola implements Serializable {
         this.attiva = attiva;
     }
 
+    /**
+     * AttivaDisattivaRegola
+     */
     public void attivaDisattivaRegola() {
         this.attiva = !this.attiva;
     }

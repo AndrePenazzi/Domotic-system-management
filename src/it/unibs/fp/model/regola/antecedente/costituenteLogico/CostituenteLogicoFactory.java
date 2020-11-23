@@ -8,10 +8,26 @@ import java.io.Serializable;
 
 public class CostituenteLogicoFactory implements Serializable {
 
+    /**
+     * Crea il costituente logico info rilevabile
+     *
+     * @param primoOperatoreLogico   info rilevabile
+     * @param secondoOperatoreLogico info rilevabile
+     * @param operatoreRelazionale   per il paragone
+     * @return il costituente logico
+     */
     public static CostituenteLogico creaCostituenteLogico(InfoRilevabile primoOperatoreLogico, InfoRilevabile secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         return new CostituenteLogicoInfoRilevabile(primoOperatoreLogico, secondoOperatoreLogico, operatoreRelazionale);
     }
 
+    /**
+     * Crea il costituente logico parametrico
+     *
+     * @param primoOperatoreLogico   info rilevabile
+     * @param secondoOperatoreLogico String
+     * @param operatoreRelazionale   per il paragone
+     * @return il costituente logico
+     */
     public static CostituenteLogico creaCostituenteLogico(InfoRilevabile primoOperatoreLogico, String secondoOperatoreLogico, OperatoriRelazionali operatoreRelazionale) {
         return new CostituenteLogicoParametrico(primoOperatoreLogico, secondoOperatoreLogico, operatoreRelazionale);
     }

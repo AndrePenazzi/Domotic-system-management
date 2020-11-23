@@ -12,7 +12,12 @@ import java.io.Serializable;
 
 public class ClasseDiServizioAntecedente implements Serializable {
 
-
+    /**
+     * Crea antecedente ennesimo
+     *
+     * @param unitaImmobiliare per la creazione dell'antecedente
+     * @return Antecedente
+     */
     public static Antecedente creaAntecedenteEnnesimo(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico;
         OperatoriBooleani opBooleano;
@@ -22,6 +27,12 @@ public class ClasseDiServizioAntecedente implements Serializable {
         return AntecedenteFactory.creaAntecedente(opBooleano, costituenteLogico);
     }
 
+    /**
+     * Crea Antecedente singolo
+     *
+     * @param unitaImmobiliare per la creazione di un antecedente singolo
+     * @return Antecedente
+     */
     public static Antecedente creaAntecedenteSingolo(UnitaImmobiliare unitaImmobiliare) {
         CostituenteLogico costituenteLogico;
         costituenteLogico = ClasseDiServizioCostituenteLogico.menuCreaCostituenteLogico(unitaImmobiliare);

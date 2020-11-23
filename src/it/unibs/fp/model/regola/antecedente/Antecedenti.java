@@ -8,6 +8,9 @@ import java.util.List;
 public class Antecedenti implements Serializable {
     private List<Antecedente> antecendenti;
 
+    /**
+     * Costruttore Antecedenti
+     */
     public Antecedenti() {
         antecendenti = new ArrayList<>();
     }

@@ -126,7 +126,7 @@ public class ClasseDiServizioFruitore {
 
                 case 5: {
 
-                    cambiaStatoRegola(unitaImmobiliare);
+                    cambiaStatoRegole(unitaImmobiliare);
                 }
                 break;
             }
@@ -167,6 +167,11 @@ public class ClasseDiServizioFruitore {
         } while (!finito);
     }
 
+    /**
+     * Crea e inserisci regole
+     *
+     * @param unitaImmobiliare nella quale inserire regole
+     */
     public static void creaEInserisciRegole(UnitaImmobiliare unitaImmobiliare) {
         ClasseDiServizioUnitaImmobiliare.creaEInserisciRegole(unitaImmobiliare);
     }
@@ -181,7 +186,12 @@ public class ClasseDiServizioFruitore {
     }
 
 
-    public static void cambiaStatoRegola(UnitaImmobiliare unitaImmobiliare) {
+    /**
+     * Cambia lo stato di una o più regole
+     *
+     * @param unitaImmobiliare per la scelta di regole da modificare
+     */
+    public static void cambiaStatoRegole(UnitaImmobiliare unitaImmobiliare) {
         do {
             int regola = ClasseDiServizioUnitaImmobiliare.scegliIndexRegola(unitaImmobiliare);
             unitaImmobiliare.cambiaRegolaAttivaDisattiva(regola);

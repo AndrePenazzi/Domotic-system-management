@@ -6,7 +6,13 @@ import it.unibs.fp.model.regola.antecedente.costituenteLogico.CostituenteLogico;
 import java.io.Serializable;
 
 public class EnnesimoAntecedente extends Antecedente implements Serializable {
-    public EnnesimoAntecedente(OperatoriBooleani operatoreBooleano, CostituenteLogico costituenteLogico ) {
+    /**
+     * Costruttore
+     *
+     * @param operatoreBooleano per il confronto
+     * @param costituenteLogico per la creazione dell'antecedente
+     */
+    public EnnesimoAntecedente(OperatoriBooleani operatoreBooleano, CostituenteLogico costituenteLogico) {
         setCostituenteLogico(costituenteLogico);
         setOpBooleano(operatoreBooleano);
     }
