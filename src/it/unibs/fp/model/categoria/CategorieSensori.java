@@ -31,8 +31,6 @@ public class CategorieSensori implements Serializable {
         return categorieSensori.size();
     }
 
-
-
     public void inserisciCategoriaSensori(CategoriaSensori categoriaSensori) {
         categorieSensori.add(categoriaSensori);
     }

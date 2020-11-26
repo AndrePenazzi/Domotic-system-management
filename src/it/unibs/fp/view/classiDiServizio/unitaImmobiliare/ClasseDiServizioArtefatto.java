@@ -78,8 +78,8 @@ public class ClasseDiServizioArtefatto {
         StringBuilder tmp = new StringBuilder();
         tmp.append(artefatto.getNome());
 
-        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto()));
-        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto()));
+        tmp.append(ClasseDiServizioSensori.toString(artefatto.getSensoriInArtefatto())+"\n");
+        tmp.append(ClasseDiServizioAttuatori.toString(artefatto.getAttuatoriInArtefatto())+"\n");
         return tmp.toString();
     }
 }

@@ -15,10 +15,20 @@ public class Antecedenti implements Serializable {
         antecendenti = new ArrayList<>();
     }
 
+    /**
+     * Getter
+     *
+     * @return antecedenti
+     */
     public List<Antecedente> getAntecendenti() {
         return antecendenti;
     }
 
+    /**
+     * Setter
+     *
+     * @param antecendenti da modificare
+     */
     public void setAntecendenti(List<Antecedente> antecendenti) {
         this.antecendenti = antecendenti;
     }
@@ -42,6 +52,12 @@ public class Antecedenti implements Serializable {
         return antecendenti.size();
     }
 
+    /**
+     * Inserisci un nuovo antecedente
+     *
+     * @param antecedente da inserire
+     * @throws InputMismatchException nel caso di errore di inserimento
+     */
     public void inserisciAntecedente(Antecedente antecedente) throws InputMismatchException {
         if ((antecendenti.size() == 0 && antecedente.getOpBooleano() == null) || (antecendenti.size() != 0 && antecedente.getOpBooleano() != null)) {
             antecendenti.add(antecedente);

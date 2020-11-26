@@ -145,8 +145,8 @@ public class ClasseDiServizioStanza {
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome + "\n");
 
-        tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()));
-        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()));
+        tmp.append(ClasseDiServizioSensori.toString(stanza.getSensori()) + "\n");
+        tmp.append(ClasseDiServizioAttuatori.toString(stanza.getAttuatoriInStanza()) + "\n");
         tmp.append(ClasseDiServizioArtefatti.toString(stanza.getArtefatti()) + "\n");
 
 

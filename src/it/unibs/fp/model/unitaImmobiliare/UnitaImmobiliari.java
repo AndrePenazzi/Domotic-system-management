@@ -29,6 +29,11 @@ public class UnitaImmobiliari implements Serializable {
         return unitaImmobiliari.size();
     }
 
+    /**
+     * Controlla se unita immobiliari è vuota
+     *
+     * @return true se è vuoto
+     */
     public boolean isEmpty() {
         return unitaImmobiliari.isEmpty();
     }

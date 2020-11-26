@@ -29,10 +29,21 @@ public class Stanze implements Serializable {
         this.stanze = stanze;
     }
 
+    /**
+     * Getter
+     *
+     * @return size stanze
+     */
     public int getSizeStanze() {
         return stanze.size();
     }
 
+    /**
+     * Getter
+     *
+     * @param i posizione
+     * @return stanza alla posizione i
+     */
     public Stanza getStanza(int i) {
         return stanze.get(i);
     }
@@ -63,6 +74,11 @@ public class Stanze implements Serializable {
     }
 
 
+    /**
+     * Inserisci una nuova stanza
+     *
+     * @param stanza da inserire
+     */
     public void inserisciStanza(Stanza stanza) {
         stanze.add(stanza);
     }

@@ -148,9 +148,6 @@ public class InputDati {
         return valoreLetto;
     }
 
-
-
-
     public static double leggiDouble(String messaggio) {
         boolean finito = false;
         double valoreLetto = 0;

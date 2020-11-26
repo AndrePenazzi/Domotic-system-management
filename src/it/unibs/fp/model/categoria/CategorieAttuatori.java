@@ -36,7 +36,6 @@ public class CategorieAttuatori implements Serializable {
         this.categorieAttuatori = categorieAttuatori;
     }
 
-
     public void inserisciAttuatore(CategoriaAttuatori categoriaAttuatori) {
         categorieAttuatori.add(categoriaAttuatori);
     }

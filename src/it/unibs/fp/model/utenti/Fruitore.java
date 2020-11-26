@@ -30,11 +30,4 @@ public class Fruitore implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    @Override
-    public String toString() {
-        return "Fruitore{" +
-                "nome='" + nome + '\'' +
-                '}';
-    }
 }

@@ -14,10 +14,20 @@ public class Conseguenti implements Serializable {
         conseguenti = new ArrayList<>();
     }
 
+    /**
+     * Getter
+     *
+     * @return conseguenti
+     */
     public List<Conseguente> getConseguenti() {
         return conseguenti;
     }
 
+    /**
+     * Setter
+     *
+     * @param conseguenti da modificare
+     */
     public void setConseguenti(List<Conseguente> conseguenti) {
         this.conseguenti = conseguenti;
     }
