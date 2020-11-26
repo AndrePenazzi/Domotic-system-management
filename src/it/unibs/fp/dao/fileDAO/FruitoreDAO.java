@@ -11,7 +11,7 @@ public class FruitoreDAO implements DAO<Fruitore> {
 
     @Override
     public void inserisci(Fruitore fruitore) {
-        File cFile = new File("salvataggiSuDisco/fruitore.dat");
+        File cFile = new File("salvataggiSuDisco/file/fruitore.dat");
         ServizioFile.salvaSingoloOggetto(cFile, fruitore);
     }
 
@@ -22,7 +22,7 @@ public class FruitoreDAO implements DAO<Fruitore> {
 
     @Override
     public Fruitore carica() {
-        File cFile = new File("salvataggiSuDisco/fruitore.dat");
+        File cFile = new File("salvataggiSuDisco/file/fruitore.dat");
         if (!cFile.exists()) {
             inserisci(ClasseDiServizioFruitore.creaFruitore());
         }

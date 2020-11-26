@@ -1,11 +1,13 @@
 package it.unibs.fp.dao;
 
 
+import java.io.IOException;
+
 public interface DAO<T> {
 
-    void inserisci(T t);
+    void inserisci(T t) throws IOException;
 
-    void aggiorna(T t);
+    void aggiorna(T t) throws IOException;
 
-    T carica();
+    T carica() throws IOException;
 }

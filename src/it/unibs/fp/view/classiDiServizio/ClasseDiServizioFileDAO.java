@@ -9,7 +9,7 @@ import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.model.utenti.Fruitore;
 import it.unibs.fp.model.utenti.Manutentore;
 
-public class ClasseDiServizioDAO {
+public class ClasseDiServizioFileDAO {
     private static ManutentoreDAO manutentoreDAO = new ManutentoreDAO();
     private static FruitoreDAO fruitoreDAO = new FruitoreDAO();
     private static UnitaImmobiliariDAO unitaImmobiliariDAO = new UnitaImmobiliariDAO();

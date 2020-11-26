@@ -10,7 +10,7 @@ import java.io.File;
 public class UnitaImmobiliariDAO implements DAO<UnitaImmobiliari> {
     @Override
     public void inserisci(UnitaImmobiliari unitaImmobiliari) {
-        File cFile = new File("salvataggiSuDisco/unitaImmobiliari.dat");
+        File cFile = new File("salvataggiSuDisco/file/unitaImmobiliari.dat");
         ServizioFile.salvaSingoloOggetto(cFile, unitaImmobiliari);
     }
 
@@ -21,7 +21,7 @@ public class UnitaImmobiliariDAO implements DAO<UnitaImmobiliari> {
 
     @Override
     public UnitaImmobiliari carica() {
-        File cFile = new File("salvataggiSuDisco/unitaImmobiliari.dat");
+        File cFile = new File("salvataggiSuDisco/file/unitaImmobiliari.dat");
         if (!cFile.exists()) {
             inserisci(ClasseDiServizioUnitaImmobiliari.creaUnitaImmobiliari());
         }

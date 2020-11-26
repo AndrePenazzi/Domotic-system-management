@@ -9,7 +9,7 @@ import java.io.File;
 public class ListaCategorieDAO implements DAO<ListaCategorie> {
     @Override
     public void inserisci(ListaCategorie listaCategorie) {
-        File cFile = new File("salvataggiSuDisco/listaCategorie.dat");
+        File cFile = new File("salvataggiSuDisco/file/listaCategorie.dat");
         ServizioFile.salvaSingoloOggetto(cFile, listaCategorie);
     }
 
@@ -20,7 +20,7 @@ public class ListaCategorieDAO implements DAO<ListaCategorie> {
 
     @Override
     public ListaCategorie carica() {
-        File cFile = new File("salvataggiSuDisco/listaCategorie.dat");
+        File cFile = new File("salvataggiSuDisco/file/listaCategorie.dat");
         if (!cFile.exists()) {
             inserisci(new ListaCategorie());
         }

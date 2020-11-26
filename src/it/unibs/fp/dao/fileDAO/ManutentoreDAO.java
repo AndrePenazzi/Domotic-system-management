@@ -12,7 +12,7 @@ public class ManutentoreDAO implements DAO<Manutentore> {
 
     @Override
     public void inserisci(Manutentore manutentore) {
-        File cFile = new File("salvataggiSuDisco/manutentore.dat");
+        File cFile = new File("salvataggiSuDisco/file/manutentore.dat");
         ServizioFile.salvaSingoloOggetto(cFile, manutentore);
     }
 
@@ -23,7 +23,7 @@ public class ManutentoreDAO implements DAO<Manutentore> {
 
     @Override
     public Manutentore carica() {
-        File cFile = new File("salvataggiSuDisco/manutentore.dat");
+        File cFile = new File("salvataggiSuDisco/file/manutentore.dat");
         if (!cFile.exists()) {
             inserisci(ClasseDiServizioManutentore.creaManutentore());
         }
