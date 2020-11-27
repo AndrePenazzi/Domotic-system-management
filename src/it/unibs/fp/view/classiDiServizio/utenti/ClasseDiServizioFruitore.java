@@ -17,6 +17,7 @@ public class ClasseDiServizioFruitore {
     }
 
     public static void stampaMenuFruitore(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
+        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(unitaImmobiliari);
         boolean finito = false;
         String[] azione = {"Operazioni di visualizzazione su un'unità immobiliare", "Operazioni su un'unità immobiliare", "Visualizza categorie"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
@@ -31,16 +32,17 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 1: {
-                    stampaMenuFruitoreVisualizzazione(unitaImmobiliari);
+                    stampaMenuFruitoreVisualizzazione(unitaImmobiliare);
                 }
                 break;
 
                 case 2: {
-                    stampaMenuOperazioniUnitaImmobiliare(unitaImmobiliari);
+                    stampaMenuOperazioniUnitaImmobiliare(unitaImmobiliare);
                 }
                 break;
 
                 case 3: {
+
                     stampaMenuVisualizzazioneCategorie(listaCategorie);
                 }
                 break;
@@ -49,8 +51,8 @@ public class ClasseDiServizioFruitore {
         while (!finito);
     }
 
-    public static void stampaMenuFruitoreVisualizzazione(UnitaImmobiliari unitaImmobiliari) {
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(unitaImmobiliari);
+    public static void stampaMenuFruitoreVisualizzazione(UnitaImmobiliare unitaImmobiliare) {
+
         boolean finito = false;
         String[] azione = {"Visualizza stanze", "Visualizza artefatti", "Visualizza valore rilevato da un sensore"};
         MyMenu menu = new MyMenu("Menu fruitore", azione);
@@ -76,7 +78,7 @@ public class ClasseDiServizioFruitore {
                 break;
 
                 case 3: {
-                    visualizzaValoriRilevati(unitaImmobiliare);
+                    System.out.println(descriviValoreRilevatoDaUnSensore(unitaImmobiliare));
                 }
                 break;
 
@@ -85,8 +87,7 @@ public class ClasseDiServizioFruitore {
         while (!finito);
     }
 
-    public static void stampaMenuOperazioniUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
-        UnitaImmobiliare unitaImmobiliare = scegliUnitaImmobiliare(unitaImmobiliari);
+    public static void stampaMenuOperazioniUnitaImmobiliare(UnitaImmobiliare unitaImmobiliare) {
         boolean finito = false;
         String[] azione = {"Modifica modalità operativa di un attuatore in una stanza", "Modifica modalità operativa di un attuatore in un artefatto", "Aggiungi nuova regola", "Visualizza regole", "Modifica stato regola"};
         MyMenu menu = new MyMenu("Menu fruitore operazioni:", azione);
@@ -248,5 +249,9 @@ public class ClasseDiServizioFruitore {
      */
     public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+    }
+
+    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare){
+        return ClasseDiServizioUnitaImmobiliare.descriviValoreRilevatoDaUnSensore(unitaImmobiliare);
     }
 }

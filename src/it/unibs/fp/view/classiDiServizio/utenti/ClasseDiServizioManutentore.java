@@ -157,7 +157,7 @@ public class ClasseDiServizioManutentore {
                     descrizioneArtefatti(unitaImmobiliare);
                 }
                 break;
-                //TODO TODO TODO
+
                 case 3:
                     System.out.println(descriviValoreRilevatoDaUnSensore(unitaImmobiliare));
                     break;

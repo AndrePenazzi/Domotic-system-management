@@ -34,13 +34,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/fruitore.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/listaCategorie.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/manutentore.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/unitaImmobiliari.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,13 +293,6 @@
       <workItem from="1606340571524" duration="751000" />
       <workItem from="1606342349488" duration="259000" />
       <workItem from="1606379989730" duration="3778000" />
-    </task>
-    <task id="LOCAL-00001" summary="toString added">
-      <created>1590681359283</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1590681359283</updated>
     </task>
     <task id="LOCAL-00002" summary="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi.">
       <created>1591280237523</created>
@@ -641,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606149677240</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Work Measurement of infoRilevabile">
+      <created>1606473975888</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1606473975888</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +673,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
     <MESSAGE value="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile" />
     <MESSAGE value="ClasseDiServizioInfoRilevabile&#10;&#10;-Add all constructors&#10;&#10;ClasseDiServizioOperatoriBooleani &amp;&amp; ClasseDiServizioOperatoriRelazionali&#10;&#10;-Add both classes" />
     <MESSAGE value="ClasseDiServizioAntecedente --completed&#10;&#10;-Add methods" />
@@ -702,7 +697,8 @@
     <MESSAGE value="Fix ClasseDiServizioRegole" />
     <MESSAGE value="Fix ClasseDiServizioCostituenteLogico" />
     <MESSAGE value="Extend Javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extend Javadoc" />
+    <MESSAGE value="Work Measurement of infoRilevabile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work Measurement of infoRilevabile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606387570119">
@@ -735,10 +731,10 @@
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1604237491692" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603794237822" />
-    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1606149675520">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="178" y="0" key="CommitChangelistDialog2" timestamp="1606473973209">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
+    <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1606473973209" />
     <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606149675520" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
@@ -749,25 +745,25 @@
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1606469675728" />
     <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606387553262" />
-    <state width="1493" height="475" key="GridCell.Tab.0.bottom" timestamp="1606473868108">
+    <state width="1493" height="676" key="GridCell.Tab.0.bottom" timestamp="1606474703205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="475" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
+    <state width="1493" height="676" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="475" key="GridCell.Tab.0.center" timestamp="1606473868108">
+    <state width="1493" height="676" key="GridCell.Tab.0.center" timestamp="1606474703205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="475" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
+    <state width="1493" height="676" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="475" key="GridCell.Tab.0.left" timestamp="1606473868108">
+    <state width="1493" height="676" key="GridCell.Tab.0.left" timestamp="1606474703204">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="475" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
+    <state width="1493" height="676" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606474703204" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="475" key="GridCell.Tab.0.right" timestamp="1606473868108">
+    <state width="1493" height="676" key="GridCell.Tab.0.right" timestamp="1606474703205">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="475" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
+    <state width="1493" height="676" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
     <state x="178" y="64" width="1358" height="703" key="MergeDialog" timestamp="1606469491115">
       <screen x="0" y="0" width="1536" height="834" />
@@ -787,10 +783,10 @@
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606473892944" />
     <state x="346" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606470579026" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606149681927">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1606473979222">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1606473979222" />
     <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606149681927" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
