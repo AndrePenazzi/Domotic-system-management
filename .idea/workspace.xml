@@ -34,20 +34,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_61.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_61.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/JSONDAO/FruitoreDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/JSONDAO/ListaCategorieDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/JSONDAO/ManutentoreDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/dao/JSONDAO/UnitaImmobiliariDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/ClasseDiServizioJSONDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/fruitore.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/listaCategorie.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/manutentore.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/file/unitaImmobiliari.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,13 +133,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -754,25 +749,25 @@
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1606469675728" />
     <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606387553262" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1606472206863">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="475" key="GridCell.Tab.0.bottom" timestamp="1606473868108">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="333" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
+    <state width="1493" height="475" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1606472206863">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="475" key="GridCell.Tab.0.center" timestamp="1606473868108">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="333" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
+    <state width="1493" height="475" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1606472206863">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="475" key="GridCell.Tab.0.left" timestamp="1606473868108">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="333" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
+    <state width="1493" height="475" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1606472206863">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="475" key="GridCell.Tab.0.right" timestamp="1606473868108">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="333" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
+    <state width="1493" height="475" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606473868108" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
     <state x="178" y="64" width="1358" height="703" key="MergeDialog" timestamp="1606469491115">
       <screen x="0" y="0" width="1536" height="834" />
@@ -787,10 +782,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603187556678" />
-    <state x="346" y="0" key="SettingsEditor" timestamp="1606470579026">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1606473892944">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606469684123" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606473892944" />
     <state x="346" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606470579026" />
     <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606149681927">
       <screen x="0" y="0" width="1920" height="1040" />

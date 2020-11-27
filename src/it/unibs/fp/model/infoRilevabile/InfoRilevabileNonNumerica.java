@@ -36,7 +36,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      * @return un valore estratto casualmente tra quelli disponibili
      */
     public String rilevaVariabile() {
-        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0, valori.size()));
+        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0, valori.size()-1));
     }
 
 
