@@ -15,9 +15,8 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
     public static String visualizzaValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
 
-        int i = 1;
         tmp.append("\nValore attuale:\n");
-        tmp.append(i + " " + infoRilevabile.rilevaVariabile()).append("\n");
+        tmp.append(infoRilevabile.getNome() + ": " + infoRilevabile.rilevaVariabile()).append("\n");
         return tmp.toString();
     }
 
@@ -30,8 +29,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
     public static String visualizzaSoloValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
 
-        int i = 1;
-        tmp.append(i + " " + infoRilevabile.rilevaVariabile()).append("\n");
+        tmp.append(" " + infoRilevabile.rilevaVariabile()).append("\n");
         return tmp.toString();
     }
 

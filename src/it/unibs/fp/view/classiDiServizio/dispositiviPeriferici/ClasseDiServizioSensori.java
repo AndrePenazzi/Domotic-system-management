@@ -39,7 +39,7 @@ public class ClasseDiServizioSensori {
             int i = 1;
             tmp.append("\nI sensori sono:\n");
             for (Sensore s : sensori.getSensori()) {
-                tmp.append(i + " " + ClasseDiServizioSensore.visualizzaValoreRilevato(s)).append("\n");
+                tmp.append(i + " " + ClasseDiServizioSensore.visualizzaValoreRilevati(s)).append("\n");
                 i++;
             }
         } else

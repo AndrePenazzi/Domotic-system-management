@@ -246,6 +246,11 @@ public class ClasseDiServizioUnitaImmobiliare {
 
     ////////////////////////////////////INIZIO VISUALIZZA/////////////////////////////////////////////////
 
+    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare) {
+        Sensore sensore = scegliSensore(unitaImmobiliare);
+        return ClasseDiServizioSensore.visualizzaValoreRilevati(sensore);
+    }
+
     public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {
         StringBuilder tmp = new StringBuilder();
         tmp.append(ClasseDiServizioStanze.visualizzaAttuatori(unitaImmobiliare.getStanze()));

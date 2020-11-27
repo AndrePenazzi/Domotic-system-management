@@ -159,6 +159,7 @@ public class ClasseDiServizioManutentore {
                 break;
                 //TODO TODO TODO
                 case 3:
+                    System.out.println(descriviValoreRilevatoDaUnSensore(unitaImmobiliare));
                     break;
 
             }
@@ -360,7 +361,6 @@ public class ClasseDiServizioManutentore {
     public static void descrizioneArtefatti(UnitaImmobiliare unitaImmobiliare) {
         ClasseDiServizioUnitaImmobiliare.descrizioneArtefatti(unitaImmobiliare);
     }
-    //TODO salvataggio su File
 
     /**
      * inserisciESalvaNuovaCategoriaDiSensori
@@ -467,5 +467,9 @@ public class ClasseDiServizioManutentore {
      */
     public static UnitaImmobiliare scegliUnitaImmobiliare(UnitaImmobiliari unitaImmobiliari) {
         return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
+    }
+
+    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare){
+        return ClasseDiServizioUnitaImmobiliare.descriviValoreRilevatoDaUnSensore(unitaImmobiliare);
     }
 }

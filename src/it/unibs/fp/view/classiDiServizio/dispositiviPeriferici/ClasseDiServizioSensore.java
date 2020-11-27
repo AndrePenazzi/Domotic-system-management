@@ -34,7 +34,7 @@ public class ClasseDiServizioSensore {
         return tmp.toString();
     }
 
-    public static String visualizzaValoreRilevato(Sensore sensore) {
+    public static String visualizzaValoreRilevati(Sensore sensore) {
         String nome = sensore.getNome();
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");

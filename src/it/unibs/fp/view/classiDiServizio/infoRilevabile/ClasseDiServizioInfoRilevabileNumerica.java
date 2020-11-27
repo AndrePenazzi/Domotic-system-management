@@ -13,8 +13,8 @@ public class ClasseDiServizioInfoRilevabileNumerica {
     public static String descriviValoreRilevato(InfoRilevabileNumerica infoRilevabile) {
         String nome = infoRilevabile.getNome();
         StringBuilder tmp = new StringBuilder();
-        tmp.append(nome);
-        tmp.append(infoRilevabile.rilevaVariabile());
+        tmp.append(nome+": ");
+        tmp.append(infoRilevabile.rilevaVariabile()+"\n");
         return tmp.toString();
     }
 
