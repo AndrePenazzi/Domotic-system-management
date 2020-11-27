@@ -2,7 +2,7 @@ package it.unibs.fp.model.infoRilevabile;
 
 import java.io.Serializable;
 
-public abstract class InfoRilevabile implements Serializable {
+public class InfoRilevabile implements Serializable {
     private String nome;
 
     /**
@@ -38,5 +38,7 @@ public abstract class InfoRilevabile implements Serializable {
      *
      * @return il tipo sottoforma di intero
      */
-    public abstract int getType();
+    public int getType() {
+        return 0;
+    }
 }

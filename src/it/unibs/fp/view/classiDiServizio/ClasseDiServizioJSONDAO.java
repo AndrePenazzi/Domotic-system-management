@@ -44,7 +44,7 @@ public class ClasseDiServizioJSONDAO {
         return listaCategorieDAO.carica();
     }
 
-    public static UnitaImmobiliari caricaUnitaImmobiliare() {
+    public static UnitaImmobiliari caricaUnitaImmobiliari() {
         return unitaImmobiliariDAO.carica();
     }
 }

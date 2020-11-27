@@ -33,13 +33,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="Add base data for testing">
+    <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2020_11_44_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2020_11_44_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/listaCategorie.json" beforeDir="false" afterPath="$PROJECT_DIR$/salvataggiSuDisco/JSON/listaCategorie.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/gson-2.8.6.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gson-2.8.6.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -132,13 +129,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -293,9 +292,14 @@
       <workItem from="1606329572664" duration="623000" />
       <workItem from="1606340571524" duration="751000" />
       <workItem from="1606342349488" duration="259000" />
-      <workItem from="1606379989730" duration="3954000" />
-      <workItem from="1606398901849" duration="1729000" />
-      <workItem from="1606466195981" duration="3043000" />
+      <workItem from="1606379989730" duration="3778000" />
+    </task>
+    <task id="LOCAL-00001" summary="toString added">
+      <created>1590681359283</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590681359283</updated>
     </task>
     <task id="LOCAL-00002" summary="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi.">
       <created>1591280237523</created>
@@ -633,14 +637,7 @@
       <option name="project" value="LOCAL" />
       <updated>1606149677240</updated>
     </task>
-    <task id="LOCAL-00050" summary="Add base data for testing">
-      <created>1606389622733</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1606389622733</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,6 +673,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="InfoRilevabile&#10;&#10;-Modify InfoRilevabile to abstract class&#10;-Modify Type to abstract method respecting OCP" />
     <MESSAGE value="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile" />
     <MESSAGE value="ClasseDiServizioInfoRilevabile&#10;&#10;-Add all constructors&#10;&#10;ClasseDiServizioOperatoriBooleani &amp;&amp; ClasseDiServizioOperatoriRelazionali&#10;&#10;-Add both classes" />
     <MESSAGE value="ClasseDiServizioAntecedente --completed&#10;&#10;-Add methods" />
@@ -700,8 +698,7 @@
     <MESSAGE value="Fix ClasseDiServizioRegole" />
     <MESSAGE value="Fix ClasseDiServizioCostituenteLogico" />
     <MESSAGE value="Extend Javadoc" />
-    <MESSAGE value="Add base data for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add base data for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extend Javadoc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606387570119">
@@ -734,44 +731,44 @@
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834@0.0.1536.834" timestamp="1604237491692" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603794237822" />
-    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1606466359894">
+    <state x="484" y="10" key="CommitChangelistDialog2" timestamp="1606149675520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1602708360688" />
-    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606466359894" />
+    <state x="484" y="10" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1606149675520" />
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1602183682510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1602183682510" />
-    <state x="686" y="197" key="FileChooserDialogImpl" timestamp="1606387553262">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1606469675728">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1602836217721" />
+    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1606469675728" />
     <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606387553262" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1606468985039">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1606389501751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="333" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606468985039" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1606468985039">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606389501751" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1606389501750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="333" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606468985039" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1606468985039">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606389501750" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1606389501750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="333" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606468985039" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1606468985039">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606389501750" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1606389501751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="333" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1604314189560" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606468985039" />
-    <state x="175" y="79" width="1358" height="703" key="MergeDialog" timestamp="1606387484443">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606389501751" />
+    <state x="178" y="64" width="1358" height="703" key="MergeDialog" timestamp="1606469491115">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="178" y="64" width="1358" height="703" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1604307982514" />
+    <state x="178" y="64" width="1358" height="703" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1606469491115" />
     <state x="175" y="79" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606387484443" />
     <state x="407" y="178" width="921" height="477" key="MultipleFileMergeDialog" timestamp="1602708437058">
       <screen x="0" y="0" width="1536" height="834" />
@@ -781,24 +778,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603187556678" />
-    <state x="346" y="0" key="SettingsEditor" timestamp="1606387561673">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1606469684123">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1600071631217" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1606469684123" />
     <state x="346" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606387561673" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606466383452">
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2" timestamp="1606149681927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1602708515178" />
-    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606466383452" />
+    <state x="451" y="187" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606149681927" />
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600331595904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="498" y="309" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.834@0.0.1536.834" timestamp="1600331595904" />
-    <state x="724" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606387448655">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606469484109">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1604307902916" />
+    <state x="579" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1606469484109" />
     <state x="724" y="413" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606387448655" />
     <state x="975" y="181" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600769813819">
       <screen x="0" y="0" width="1536" height="834" />
@@ -808,6 +805,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="281" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603471967236" />
+    <state x="360" y="37" key="new project wizard" timestamp="1606467958138">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="360" y="37" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1606467958138" />
     <state x="601" y="174" key="refactoring.ChangeSignatureDialog" timestamp="1600346061671">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

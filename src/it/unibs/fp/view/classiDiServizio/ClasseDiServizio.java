@@ -38,7 +38,7 @@ public class ClasseDiServizio {
                     System.out.println(BelleStringhe.incornicia(fruitore.getNome()));
                     ClasseDiServizioFruitore.stampaMenuFruitore(unitaImmobiliari, listaCategorie);
                     //salvataggio
-                    ClasseDiServizioJSONDAO.salvaUnitaImmboliari(unitaImmobiliari);
+                    ClasseDiServizioFileDAO.salvaUnitaImmboliari(unitaImmobiliari);
                 }
                 break;
             }

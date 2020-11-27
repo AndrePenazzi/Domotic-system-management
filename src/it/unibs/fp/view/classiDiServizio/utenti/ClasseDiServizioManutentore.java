@@ -6,7 +6,7 @@ import it.unibs.fp.model.categoria.ListaCategorie;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliare;
 import it.unibs.fp.model.unitaImmobiliare.UnitaImmobiliari;
 import it.unibs.fp.model.utenti.Manutentore;
-import it.unibs.fp.view.classiDiServizio.ClasseDiServizioJSONDAO;
+import it.unibs.fp.view.classiDiServizio.ClasseDiServizioFileDAO;
 import it.unibs.fp.view.classiDiServizio.categoria.ClasseDiServizioListaCategorie;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliare;
 import it.unibs.fp.view.classiDiServizio.unitaImmobiliare.ClasseDiServizioUnitaImmobiliari;
@@ -31,9 +31,9 @@ public class ClasseDiServizioManutentore {
                     finito = true;
                     System.out.println("Uscita verso menu principale");
                     //salvataggio
-                    ClasseDiServizioJSONDAO.salvaListaCategorie(listaCategorie);
+                    ClasseDiServizioFileDAO.salvaListaCategorie(listaCategorie);
                     //salvataggio
-                    ClasseDiServizioJSONDAO.salvaUnitaImmboliari(unitaImmobiliari);
+                    ClasseDiServizioFileDAO.salvaUnitaImmboliari(unitaImmobiliari);
                 }
                 break;
 
@@ -82,9 +82,9 @@ public class ClasseDiServizioManutentore {
                     finito = true;
                     System.out.println("Uscita verso menu principale");
                     //salvataggio
-                    ClasseDiServizioJSONDAO.salvaListaCategorie(listaCategorie);
+                    ClasseDiServizioFileDAO.salvaListaCategorie(listaCategorie);
                     //salvataggio
-                    ClasseDiServizioJSONDAO.salvaUnitaImmboliari(unitaImmobiliari);
+                    ClasseDiServizioFileDAO.salvaUnitaImmboliari(unitaImmobiliari);
                 }
                 break;
 
