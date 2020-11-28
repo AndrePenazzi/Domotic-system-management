@@ -97,7 +97,13 @@ public class ClasseDiServizioCategoriaSensori {
         return tmp.toString();
     }
 
-    public static String visualizzaValoreRilevato(CategoriaSensori categoriaSensori) {
+    /**
+     * Descrivi valori rilevati
+     *
+     * @param categoriaSensori per visualizzare i valori rilevati
+     * @return valori rilevati da visualizzare
+     */
+    public static String descriviValoriRilevato(CategoriaSensori categoriaSensori) {
         StringBuilder tmp = new StringBuilder();
         List<InfoRilevabile> informazioniRilevabili = categoriaSensori.getInformazioniRilevabili();
 
@@ -105,7 +111,7 @@ public class ClasseDiServizioCategoriaSensori {
             int i = 1;
             tmp.append("\nInformazioni rilevabili:\n");
             for (InfoRilevabile infoRilevabile : informazioniRilevabili) {
-                tmp.append(i + " " + ClasseDiServizioInfoRilevabile.visualizzaValoreRilevato(infoRilevabile));
+                tmp.append(i + " " + ClasseDiServizioInfoRilevabile.descriviValoreRilevato(infoRilevabile));
                 i++;
             }
         } else

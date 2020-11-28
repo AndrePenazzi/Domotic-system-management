@@ -34,13 +34,19 @@ public class ClasseDiServizioSensore {
         return tmp.toString();
     }
 
-    public static String visualizzaValoreRilevati(Sensore sensore) {
+    /**
+     * Descrivi i valori rilevati
+     *
+     * @param sensore per poter visualizzare i suoi valori rilevati
+     * @return descrizione dei valori rilevati
+     */
+    public static String descriviValoriRilevati(Sensore sensore) {
         String nome = sensore.getNome();
         StringBuilder tmp = new StringBuilder();
         tmp.append("\n");
         tmp.append(nome);
         tmp.append("\n");
-        tmp.append(ClasseDiServizioCategoriaSensori.visualizzaValoreRilevato(sensore.getCategoriaSensori()));
+        tmp.append(ClasseDiServizioCategoriaSensori.descriviValoriRilevato(sensore.getCategoriaSensori()));
         return tmp.toString();
     }
 

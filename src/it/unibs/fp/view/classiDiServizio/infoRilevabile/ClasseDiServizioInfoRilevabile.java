@@ -97,12 +97,12 @@ public class ClasseDiServizioInfoRilevabile {
      * @param infoRilevabile per visualizzare il valore rilevato ed il nome dell'info rilevabile
      * @return descrizione del valore rilevato ed il nome delle info rilevabile
      */
-    public static String visualizzaValoreRilevato(InfoRilevabile infoRilevabile) {
+    public static String descriviValoreRilevato(InfoRilevabile infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
         if (infoRilevabile.getType() == 1)
             tmp.append(ClasseDiServizioInfoRilevabileNumerica.descriviValoreRilevato((InfoRilevabileNumerica) infoRilevabile));
         else if (infoRilevabile.getType() == 2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.visualizzaValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
+            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.descriviValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
 
         return tmp.toString();
     }
@@ -113,12 +113,12 @@ public class ClasseDiServizioInfoRilevabile {
      * @param infoRilevabile per visualizzare solo il valore rilevato
      * @return descrizione solo valore rilevato
      */
-    public static String visualizzaSoloValoreRilevato(InfoRilevabile infoRilevabile) {
+    public static String descriviSoloValoreRilevato(InfoRilevabile infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
         if (infoRilevabile.getType() == 1)
             tmp.append(ClasseDiServizioInfoRilevabileNumerica.descriviSoloValoreRilevato((InfoRilevabileNumerica) infoRilevabile));
         else if (infoRilevabile.getType() == 2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.visualizzaSoloValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
+            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.descriviSoloValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
 
         return tmp.toString();
     }

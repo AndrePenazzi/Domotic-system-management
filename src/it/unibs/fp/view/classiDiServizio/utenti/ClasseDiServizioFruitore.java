@@ -251,7 +251,13 @@ public class ClasseDiServizioFruitore {
         return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
     }
 
-    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare){
+    /**
+     * Descrivi valore rilevato da un sensore
+     *
+     * @param unitaImmobiliare per scegliere un sensore
+     * @return descrizione del valore rilevato da un sensore
+     */
+    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare) {
         return ClasseDiServizioUnitaImmobiliare.descriviValoreRilevatoDaUnSensore(unitaImmobiliare);
     }
 }

@@ -12,7 +12,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
      * @param infoRilevabile dal quale prendere la variabile da rilevare
      * @return descrizione valore rilevato e nome infoRilevabile
      */
-    public static String visualizzaValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
+    public static String descriviValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
 
         tmp.append("\nValore attuale:\n");
@@ -26,7 +26,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
      * @param infoRilevabile dal quale prendere la variabile da rilevare
      * @return descrizione valore rilevato
      */
-    public static String visualizzaSoloValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
+    public static String descriviSoloValoreRilevato(InfoRilevabileNonNumerica infoRilevabile) {
         StringBuilder tmp = new StringBuilder();
 
         tmp.append(" " + infoRilevabile.rilevaVariabile()).append("\n");
@@ -39,7 +39,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
      * @param infoRilevabile non numerica
      * @return i valori non numerici
      */
-    public static String visualizzaValoriNonNumerato(InfoRilevabileNonNumerica infoRilevabile) {
+    public static String descriviValoriNonNumerato(InfoRilevabileNonNumerica infoRilevabile) {
         List<String> valori = infoRilevabile.getValori();
         StringBuilder tmp = new StringBuilder();
 
@@ -63,7 +63,7 @@ public class ClasseDiServizioInfoRilevabileNonNumerica {
         String nome = infoRilevabile.getNome();
         StringBuilder tmp = new StringBuilder();
         tmp.append(nome);
-        tmp.append(visualizzaValoriNonNumerato(infoRilevabile));
+        tmp.append(descriviValoriNonNumerato(infoRilevabile));
         return tmp.toString();
     }
 

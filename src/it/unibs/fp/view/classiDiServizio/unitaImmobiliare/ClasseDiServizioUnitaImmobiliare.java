@@ -246,9 +246,16 @@ public class ClasseDiServizioUnitaImmobiliare {
 
     ////////////////////////////////////INIZIO VISUALIZZA/////////////////////////////////////////////////
 
+    /**
+     * Descrivi il valore rilevato da un sensore
+     *
+     * @param unitaImmobiliare per visualizzare il valore rilevato da un sensore
+     * @return descrizione del valore rilevato da un sensore
+     *
+     */
     public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = scegliSensore(unitaImmobiliare);
-        return ClasseDiServizioSensore.visualizzaValoreRilevati(sensore);
+        return ClasseDiServizioSensore.descriviValoriRilevati(sensore);
     }
 
     public static String visualizzaAttuatori(UnitaImmobiliare unitaImmobiliare) {

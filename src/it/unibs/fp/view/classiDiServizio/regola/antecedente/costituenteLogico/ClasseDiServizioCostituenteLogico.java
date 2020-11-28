@@ -155,7 +155,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
             tmp.append(primoOperatoreLogico.getNome()).append(" ").append(operatoreRelazionale.getValue());
 
             if (secondoOperatoreLogico != null)
-                tmp.append(" " + ClasseDiServizioInfoRilevabile.visualizzaSoloValoreRilevato(secondoOperatoreLogico));
+                tmp.append(" " + ClasseDiServizioInfoRilevabile.descriviSoloValoreRilevato(secondoOperatoreLogico));
             if (secondoOperatoreCostante != null)
                 tmp.append(" " + secondoOperatoreCostante);
             if (secondoOperatoreScalare != null)

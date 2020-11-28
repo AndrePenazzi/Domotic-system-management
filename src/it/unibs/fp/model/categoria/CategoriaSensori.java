@@ -7,9 +7,9 @@ import java.util.List;
 
 public class CategoriaSensori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 50;
+    private final String testoLibero;
+    private final List<InfoRilevabile> informazioniRilevabili;
     private String nome;
-    private String testoLibero;
-    private List<InfoRilevabile> informazioniRilevabili;
 
     /**
      * Costruttore categoria sensori
@@ -92,6 +92,16 @@ public class CategoriaSensori implements Serializable {
      */
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    /**
+     * Controlla se il nome di catSen è uguale al nome di questa categoria sensori
+     *
+     * @param catSen da controllare
+     * @return true se è uguale false altrimenti
+     */
+    public boolean equals(CategoriaSensori catSen) {
+        return catSen.getNome().equals(this.nome);
     }
 
 }

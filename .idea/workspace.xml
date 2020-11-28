@@ -34,7 +34,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_12_26_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_12_26_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaAttuatori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioCategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioCategoriaSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/dispositiviPeriferici/ClasseDiServizioSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabileNonNumerica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/unitaImmobiliare/ClasseDiServizioUnitaImmobiliare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioFruitore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/utenti/ClasseDiServizioManutentore.java" afterDir="false" />
     </list>
@@ -129,15 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -293,6 +303,9 @@
       <workItem from="1606340571524" duration="751000" />
       <workItem from="1606342349488" duration="259000" />
       <workItem from="1606379989730" duration="3778000" />
+      <workItem from="1606494728326" duration="598000" />
+      <workItem from="1606496059054" duration="1649000" />
+      <workItem from="1606552262209" duration="1155000" />
     </task>
     <task id="LOCAL-00002" summary="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi.">
       <created>1591280237523</created>
@@ -745,26 +758,26 @@
     </state>
     <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1606469675728" />
     <state x="686" y="197" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606387553262" />
-    <state width="1493" height="676" key="GridCell.Tab.0.bottom" timestamp="1606474703205">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1606480394744">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="676" key="GridCell.Tab.0.center" timestamp="1606474703205">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606480394744" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1606480394744">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="676" key="GridCell.Tab.0.left" timestamp="1606474703204">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606480394744" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1606480394744">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1606474703204" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
-    <state width="1493" height="676" key="GridCell.Tab.0.right" timestamp="1606474703205">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606480394744" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1606480394744">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="676" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1606474703205" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606472206863" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606480394744" />
     <state x="178" y="64" width="1358" height="703" key="MergeDialog" timestamp="1606469491115">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

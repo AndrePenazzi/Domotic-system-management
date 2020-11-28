@@ -469,7 +469,13 @@ public class ClasseDiServizioManutentore {
         return ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(unitaImmobiliari);
     }
 
-    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare){
+    /**
+     * Descrivi il valore rilevato da un sensore
+     *
+     * @param unitaImmobiliare per visualizzare il valore rilevato da un sensore
+     * @return valore rilevato da un sensore
+     */
+    public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare) {
         return ClasseDiServizioUnitaImmobiliare.descriviValoreRilevatoDaUnSensore(unitaImmobiliare);
     }
 }

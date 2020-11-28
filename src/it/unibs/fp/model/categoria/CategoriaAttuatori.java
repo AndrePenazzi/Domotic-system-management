@@ -10,7 +10,7 @@ import java.util.List;
 public class CategoriaAttuatori implements Serializable {
     private static final int LUNGHEZZA_MASSIMA = 30;
     private String nome;
-    private String testoLibero;
+    private final String testoLibero;
     private List<ModOperativa> modalitaOperative = new ArrayList<>();
 
     /**
@@ -92,5 +92,15 @@ public class CategoriaAttuatori implements Serializable {
      */
     public int getSizeModalitaOperative() {
         return modalitaOperative.size();
+    }
+
+    /**
+     * Controlla se il nome di catSen è uguale al nome di questa categoria sensori
+     *
+     * @param catAtt da controllare
+     * @return true se è uguale false altrimenti
+     */
+    public boolean equals(CategoriaAttuatori catAtt) {
+        return catAtt.getNome().equals(this.nome);
     }
 }
