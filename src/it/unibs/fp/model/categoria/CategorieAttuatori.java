@@ -32,11 +32,19 @@ public class CategorieAttuatori implements Serializable {
         return categorieAttuatori.size();
     }
 
-    public void setAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
+    public void setCategoriaAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
         this.categorieAttuatori = categorieAttuatori;
     }
 
-    public void inserisciAttuatore(CategoriaAttuatori categoriaAttuatori) {
+    public void inserisciCategoriaAttuatore(CategoriaAttuatori categoriaAttuatori) {
         categorieAttuatori.add(categoriaAttuatori);
+    }
+
+    public boolean controlloOmonimia(CategoriaAttuatori catAtt) {
+        for (CategoriaAttuatori a : categorieAttuatori)
+            if (catAtt.controlloOmonimia(a)) {
+                return true;
+            }
+        return false;
     }
 }

@@ -2,10 +2,10 @@ package it.unibs.fp.model.infoRilevabile;
 
 import it.unibs.fp.view.mylib.NumeriCasuali;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class InfoRilevabileNonNumerica extends InfoRilevabile implements Serializable {
+public class InfoRilevabileNonNumerica implements InfoRilevabile<String> {
+    private String nome;
     private List<String> valori;
     private String valoreAttuale;
 
@@ -16,7 +16,7 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
      * @param valori sottoforma di stringa
      */
     public InfoRilevabileNonNumerica(String nome, List<String> valori) {
-        super(nome);
+        this.nome = nome;
         this.valori = valori;
         valoreAttuale = "default";
     }
@@ -30,13 +30,9 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
         valori.add(valore);
     }
 
-    /**
-     * Rilevamento della variabile casualmente
-     *
-     * @return un valore estratto casualmente tra quelli disponibili
-     */
+    @Override
     public String rilevaVariabile() {
-        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0, valori.size()-1));
+        return valoreAttuale = valori.get(NumeriCasuali.estraiIntero(0, valori.size() - 1));
     }
 
 
@@ -76,12 +72,13 @@ public class InfoRilevabileNonNumerica extends InfoRilevabile implements Seriali
         this.valoreAttuale = valoreAttuale;
     }
 
-    /**
-     * Getter
-     *
-     * @return type
-     */
-    public int getType() {
-        return 2;
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

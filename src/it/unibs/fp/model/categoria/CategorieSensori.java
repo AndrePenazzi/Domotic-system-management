@@ -34,4 +34,12 @@ public class CategorieSensori implements Serializable {
     public void inserisciCategoriaSensori(CategoriaSensori categoriaSensori) {
         categorieSensori.add(categoriaSensori);
     }
+
+    public boolean controlloOmonimia(CategoriaSensori catSen) {
+        for (CategoriaSensori s : categorieSensori)
+            if (catSen.controlloOmonimia(s)) {
+                return true;
+            }
+        return false;
+    }
 }

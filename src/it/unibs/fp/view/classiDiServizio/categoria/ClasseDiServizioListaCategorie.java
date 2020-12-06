@@ -31,7 +31,7 @@ public class ClasseDiServizioListaCategorie {
         if (!listaCategorie.categorieSensoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie sensori:\n");
-            for (CategoriaSensori categoriaSensori : listaCategorie.getCategorieSensori()) {
+            for (CategoriaSensori categoriaSensori : listaCategorie.getListaCategorieSensori()) {
                 tmp.append(i + ") " + ClasseDiServizioCategoriaSensori.toStringVisualizzazione(categoriaSensori));
                 i++;
             }
@@ -52,7 +52,7 @@ public class ClasseDiServizioListaCategorie {
         if (!listaCategorie.categorieSensoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie sensori:\n");
-            for (CategoriaSensori categoriaSensori : listaCategorie.getCategorieSensori()) {
+            for (CategoriaSensori categoriaSensori : listaCategorie.getListaCategorieSensori()) {
                 tmp.append(i + ") " + categoriaSensori.getNome()).append("\n");
                 i++;
             }
@@ -75,7 +75,7 @@ public class ClasseDiServizioListaCategorie {
         if (!listaCategorie.categorieAttuatoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie attuatori:\n");
-            for (CategoriaAttuatori categorieAttuatori : listaCategorie.getCategorieAttuatori()) {
+            for (CategoriaAttuatori categorieAttuatori : listaCategorie.getListaCategorieAttuatori()) {
                 tmp.append(i + ") " + ClasseDiServizioCategoriaAttuatori.toStringVisualizzazione(categorieAttuatori)).append("\n");
                 i++;
             }
@@ -96,7 +96,7 @@ public class ClasseDiServizioListaCategorie {
         if (!listaCategorie.categorieAttuatoriIsEmpty()) {
             int i = 1;
             tmp.append("\nCategorie attuatori:\n");
-            for (CategoriaAttuatori categorieAttuatori : listaCategorie.getCategorieAttuatori()) {
+            for (CategoriaAttuatori categorieAttuatori : listaCategorie.getListaCategorieAttuatori()) {
                 tmp.append(i + ") " + categorieAttuatori.getNome()).append("\n");
                 i++;
             }

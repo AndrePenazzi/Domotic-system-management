@@ -2,13 +2,13 @@ package it.unibs.fp.model.infoRilevabile;
 
 import it.unibs.fp.view.mylib.NumeriCasuali;
 
-import java.io.Serializable;
 import java.text.DecimalFormat;
 
-public class InfoRilevabileNumerica extends InfoRilevabile implements Serializable {
-    private static DecimalFormat df2 = new DecimalFormat("#.##");
-    private double min;
-    private double max;
+public class InfoRilevabileNumerica implements InfoRilevabile<Double> {
+    private static final DecimalFormat df2 = new DecimalFormat("#.##");
+    private final double min;
+    private final double max;
+    private String nome;
     private double valore;
 
     /**
@@ -20,7 +20,7 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
      * @throws IllegalArgumentException il valore minimo deve essere minore del valore massimo
      */
     public InfoRilevabileNumerica(String nome, double min, double max) throws IllegalArgumentException {
-        super(nome);
+        this.nome = nome;
         this.min = min;
         this.max = max;
         if (min > max)
@@ -28,23 +28,9 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
         valore = min;
     }
 
-    /**
-     * Rilevamento della variabile casualmente
-     *
-     * @return un valore estratto casualmente tra quelli disponibili
-     */
-    public double rilevaVariabile() {
+    @Override
+    public Double rilevaVariabile() {
         return valore = Double.parseDouble(df2.format(NumeriCasuali.estraiDouble(min, max)));
-    }
-
-
-    /**
-     * Getter
-     *
-     * @return nome
-     */
-    public String getNome() {
-        return super.getNome();
     }
 
     /**
@@ -83,12 +69,14 @@ public class InfoRilevabileNumerica extends InfoRilevabile implements Serializab
         this.valore = valore;
     }
 
-    /**
-     * Getter
-     *
-     * @return type
-     */
-    public int getType() {
-        return 1;
+    @Override
+    public String getNome() {
+        return nome;
     }
+
+    @Override
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
 }

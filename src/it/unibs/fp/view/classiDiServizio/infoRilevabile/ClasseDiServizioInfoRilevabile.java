@@ -1,8 +1,6 @@
 package it.unibs.fp.view.classiDiServizio.infoRilevabile;
 
-import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNonNumerica;
-import it.unibs.fp.model.infoRilevabile.InfoRilevabileNumerica;
+import it.unibs.fp.model.infoRilevabile.*;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 
@@ -98,6 +96,8 @@ public class ClasseDiServizioInfoRilevabile {
      * @return descrizione del valore rilevato ed il nome delle info rilevabile
      */
     public static String descriviValoreRilevato(InfoRilevabile infoRilevabile) {
+        Renderer renderer = new InfoNumericaRenderer(new InfoNonNumericaRenderer());
+
         StringBuilder tmp = new StringBuilder();
         if (infoRilevabile.getType() == 1)
             tmp.append(ClasseDiServizioInfoRilevabileNumerica.descriviValoreRilevato((InfoRilevabileNumerica) infoRilevabile));

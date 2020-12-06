@@ -100,7 +100,7 @@ public class CategoriaAttuatori implements Serializable {
      * @param catAtt da controllare
      * @return true se è uguale false altrimenti
      */
-    public boolean equals(CategoriaAttuatori catAtt) {
-        return catAtt.getNome().equals(this.nome);
+    public boolean controlloOmonimia(CategoriaAttuatori catAtt) {
+        return catAtt.getNome().equals(nome);
     }
 }

@@ -25,14 +25,7 @@ public class Manutentore implements Serializable {
      * @param categoriaAttuatori nuova categoria di attuatori
      */
     public void inserisciESalvaCategoriaAttuatori(ListaCategorie listaCategorie, CategoriaAttuatori categoriaAttuatori) {
-        boolean found = false;
-        for (CategoriaAttuatori a : listaCategorie.getCategorieAttuatori())
-            if (categoriaAttuatori.equals(a)) {
-                found = true;
-                break;
-            }
-        if (!found)
-            listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
+        listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
     }
 
     /**
@@ -42,14 +35,7 @@ public class Manutentore implements Serializable {
      * @param categoriaSensori nuova categoria di sensori
      */
     public void inserisciESalvaCategoriaSensori(ListaCategorie listaCategorie, CategoriaSensori categoriaSensori) {
-        boolean found = false;
-        for (CategoriaSensori s : listaCategorie.getCategorieSensori())
-            if (categoriaSensori.equals(s)) {
-                found = true;
-                break;
-            }
-        if (!found)
-            listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
+        listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
     }
 
     /**

@@ -100,8 +100,8 @@ public class CategoriaSensori implements Serializable {
      * @param catSen da controllare
      * @return true se è uguale false altrimenti
      */
-    public boolean equals(CategoriaSensori catSen) {
-        return catSen.getNome().equals(this.nome);
+    public boolean controlloOmonimia(CategoriaSensori catSen) {
+        return catSen.getNome().equals(nome);
     }
 
 }

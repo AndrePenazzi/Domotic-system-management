@@ -1,19 +1,18 @@
 package it.unibs.fp.model.categoria;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListaCategorie implements Serializable {
-    private List<CategoriaSensori> categorieSensori;
-    private List<CategoriaAttuatori> categorieAttuatori;
+    private CategorieSensori categorieSensori;
+    private CategorieAttuatori categorieAttuatori;
 
     /**
      * Costruttore lista categorie
      */
     public ListaCategorie() {
-        categorieSensori = new ArrayList<>();
-        categorieAttuatori = new ArrayList<>();
+        categorieSensori = new CategorieSensori();
+        categorieAttuatori = new CategorieAttuatori();
     }
 
     /**
@@ -22,7 +21,8 @@ public class ListaCategorie implements Serializable {
      * @param categoriaAttuatori nuova categoria
      */
     public void inserisciESalvaCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
-        categorieAttuatori.add(categoriaAttuatori);
+        if (controlloOmonimiaCatAtt(categoriaAttuatori))
+            categorieAttuatori.inserisciCategoriaAttuatore(categoriaAttuatori);
     }
 
     /**
@@ -31,7 +31,8 @@ public class ListaCategorie implements Serializable {
      * @param categoriaSensori nuova categoria
      */
     public void inserisciESalvaCategoriaSensori(CategoriaSensori categoriaSensori) {
-        categorieSensori.add(categoriaSensori);
+        if (controlloOmonimiaCatSen(categoriaSensori))
+            categorieSensori.inserisciCategoriaSensori(categoriaSensori);
     }
 
 
@@ -41,7 +42,7 @@ public class ListaCategorie implements Serializable {
      * @return size delle categorie di sensori
      */
     public int getSizeCategorieSensori() {
-        return categorieSensori.size();
+        return categorieSensori.getSize();
     }
 
     /**
@@ -50,7 +51,7 @@ public class ListaCategorie implements Serializable {
      * @return size delle categorie di attuatori
      */
     public int getSizeCategorieAttuatori() {
-        return categorieAttuatori.size();
+        return categorieAttuatori.getSize();
     }
 
     /**
@@ -58,7 +59,7 @@ public class ListaCategorie implements Serializable {
      *
      * @return categorieSensori
      */
-    public List<CategoriaSensori> getCategorieSensori() {
+    public CategorieSensori getCategorieSensori() {
         return categorieSensori;
     }
 
@@ -67,8 +68,17 @@ public class ListaCategorie implements Serializable {
      *
      * @param categorieSensori da modificare
      */
-    public void setCategorieSensori(List<CategoriaSensori> categorieSensori) {
+    public void setCategorieSensori(CategorieSensori categorieSensori) {
         this.categorieSensori = categorieSensori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return lista categorieSensori
+     */
+    public List<CategoriaSensori> getListaCategorieSensori() {
+        return categorieSensori.getCategorieSensori();
     }
 
     /**
@@ -78,7 +88,7 @@ public class ListaCategorie implements Serializable {
      * @return categoriaSensori alla posizione i
      */
     public CategoriaSensori getCategoriaSensori(int i) {
-        return categorieSensori.get(i);
+        return categorieSensori.getCategoriaSensori(i);
     }
 
     /**
@@ -98,7 +108,7 @@ public class ListaCategorie implements Serializable {
      * @return categoriaAttuatori alla posizione i
      */
     public CategoriaAttuatori getCategoriaAttuatori(int i) {
-        return categorieAttuatori.get(i);
+        return categorieAttuatori.getCategoriaAttuatori(i);
     }
 
     /**
@@ -116,7 +126,7 @@ public class ListaCategorie implements Serializable {
      *
      * @return categorieAttuatori
      */
-    public List<CategoriaAttuatori> getCategorieAttuatori() {
+    public CategorieAttuatori getCategorieAttuatori() {
         return categorieAttuatori;
     }
 
@@ -125,8 +135,17 @@ public class ListaCategorie implements Serializable {
      *
      * @param categorieAttuatori da modificare
      */
-    public void setCategorieAttuatori(List<CategoriaAttuatori> categorieAttuatori) {
+    public void setCategorieAttuatori(CategorieAttuatori categorieAttuatori) {
         this.categorieAttuatori = categorieAttuatori;
+    }
+
+    /**
+     * Getter
+     *
+     * @return lista categorieAttuatori
+     */
+    public List<CategoriaAttuatori> getListaCategorieAttuatori() {
+        return categorieAttuatori.getCategorieAttuatori();
     }
 
     /**
@@ -145,5 +164,13 @@ public class ListaCategorie implements Serializable {
      */
     public boolean categorieSensoriIsEmpty() {
         return categorieSensori.isEmpty();
+    }
+
+    public boolean controlloOmonimiaCatAtt(CategoriaAttuatori catAtt) {
+        return categorieAttuatori.controlloOmonimia(catAtt);
+    }
+
+    public boolean controlloOmonimiaCatSen(CategoriaSensori catSen) {
+        return categorieSensori.controlloOmonimia(catSen);
     }
 }
