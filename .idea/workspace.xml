@@ -34,47 +34,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2020_11_44_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_26_2020_11_44_AM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_10_46_AM__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_12_26_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_27_2020_12_26_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/CompositeRendererInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaHandlerInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/RendererInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/InfoNonNumericaRendererInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/InfoNumericaRendererInfoRilevabile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategoriaSensori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategorieAttuatori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategorieAttuatori.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategorieSensori.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/CategorieSensori.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/fruitore.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/listaCategorie.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/manutentore.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/unitaImmobiliari.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/HandlerInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaRenderer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNonNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabileNumerica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/utenti/Manutentore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ArtefattoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/AttuatoreTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/AzioneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaAttuatoriTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CategoriaSensoriTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/CostituenteLogicoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/FruitoreTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNonNumericaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/InfoRilevabileNumericaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ListaCategorieTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ManutentoreTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaNonParametrica.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaParametricaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/ModOperativaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/OperatoriRelazionaliTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/RegolaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/SensoreTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/StanzaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/test/UnitaImmobiliareTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/categoria/ClasseDiServizioListaCategorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Renderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,14 +69,17 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1cXLD2Gs3tx0dQ8wZp7OeD66yBD" />
   <component name="ProjectViewState">
@@ -335,14 +318,9 @@
       <workItem from="1607083927888" duration="11000" />
       <workItem from="1607155114169" duration="4069000" />
       <workItem from="1607246237861" duration="41000" />
-      <workItem from="1607249635569" duration="3383000" />
-    </task>
-    <task id="LOCAL-00002" summary="Aggiunti alcuni commenti&#10;Sistemati alcuni metodi.">
-      <created>1591280237523</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1591280237523</updated>
+      <workItem from="1607249635569" duration="3472000" />
+      <workItem from="1607337083832" duration="4032000" />
+      <workItem from="1607424019975" duration="1070000" />
     </task>
     <task id="LOCAL-00003" summary="Gestione eccezioni&#10;Aggiunta Modalità Operativa e Informazione Rilevabile.">
       <created>1591374536739</created>
@@ -680,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606473975888</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Complete Information Expert&#10;Start of Resolve OCP">
+      <created>1607253067079</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1607253067080</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -716,7 +701,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="InfoRilevabile&#10;&#10;-Modify ClasseDiServizioInfoRilevabile" />
     <MESSAGE value="ClasseDiServizioInfoRilevabile&#10;&#10;-Add all constructors&#10;&#10;ClasseDiServizioOperatoriBooleani &amp;&amp; ClasseDiServizioOperatoriRelazionali&#10;&#10;-Add both classes" />
     <MESSAGE value="ClasseDiServizioAntecedente --completed&#10;&#10;-Add methods" />
     <MESSAGE value="ClasseDiServizioAntecedenti --completed&#10;&#10;-Add methods" />
@@ -741,7 +725,8 @@
     <MESSAGE value="Fix ClasseDiServizioCostituenteLogico" />
     <MESSAGE value="Extend Javadoc" />
     <MESSAGE value="Work Measurement of infoRilevabile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work Measurement of infoRilevabile" />
+    <MESSAGE value="Complete Information Expert&#10;Start of Resolve OCP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Information Expert&#10;Start of Resolve OCP" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Domotic_system_management$InfoRilevabileTest.ic" NAME="InfoRilevabileTest Coverage Results" MODIFIED="1600334991828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

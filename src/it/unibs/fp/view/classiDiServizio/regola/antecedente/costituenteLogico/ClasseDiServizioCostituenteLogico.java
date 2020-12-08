@@ -1,6 +1,8 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente.costituenteLogico;
 
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
+import it.unibs.fp.model.infoRilevabile.HandlerInfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.InfoNumericaHandlerInfoRilevabile;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Orologio;
@@ -88,6 +90,8 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(secondoOpLogico, opRelazionale);
     }
 
+    //TODO RICORDATI DI MEEEE
+
     /**
      * Crea costituente logico info rilevabile
      *
@@ -99,13 +103,14 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         InfoRilevabile primoOpLogico = null;
         InfoRilevabile secondoOpLogico = null;
         OperatoriRelazionali opRelazionale = null;
+        HandlerInfoRilevabile handlerInfoRilevabileInfoNumerica = new InfoNumericaHandlerInfoRilevabile();
         boolean finito;
         do {
             try {
                 primoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
                 opRelazionale = ClasseDiServizioOperatoriRelazionali.sceltaOperatoreRelazionale();
                 secondoOpLogico = ClasseDiServizioCategoriaSensori.scegliInfoRilevabile(sensore.getCategoriaSensori());
-                if (primoOpLogico != null && secondoOpLogico != null && primoOpLogico.getType() != secondoOpLogico.getType())
+                if (primoOpLogico != null && secondoOpLogico != null && handlerInfoRilevabileInfoNumerica.canHandle(primoOpLogico) != handlerInfoRilevabileInfoNumerica.canHandle(secondoOpLogico))
                     throw new InputMismatchException();
                 finito = true;
             } catch (InputMismatchException e) {

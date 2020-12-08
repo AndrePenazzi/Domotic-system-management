@@ -21,7 +21,7 @@ public class ListaCategorie implements Serializable {
      * @param categoriaAttuatori nuova categoria
      */
     public void inserisciESalvaCategoriaAttuatori(CategoriaAttuatori categoriaAttuatori) {
-        if (controlloOmonimiaCatAtt(categoriaAttuatori))
+        if (!controlloOmonimiaCatAtt(categoriaAttuatori))
             categorieAttuatori.inserisciCategoriaAttuatore(categoriaAttuatori);
     }
 
@@ -31,7 +31,7 @@ public class ListaCategorie implements Serializable {
      * @param categoriaSensori nuova categoria
      */
     public void inserisciESalvaCategoriaSensori(CategoriaSensori categoriaSensori) {
-        if (controlloOmonimiaCatSen(categoriaSensori))
+        if (!controlloOmonimiaCatSen(categoriaSensori))
             categorieSensori.inserisciCategoriaSensori(categoriaSensori);
     }
 

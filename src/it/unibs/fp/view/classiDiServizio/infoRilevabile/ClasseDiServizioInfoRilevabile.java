@@ -96,15 +96,8 @@ public class ClasseDiServizioInfoRilevabile {
      * @return descrizione del valore rilevato ed il nome delle info rilevabile
      */
     public static String descriviValoreRilevato(InfoRilevabile infoRilevabile) {
-        Renderer renderer = new InfoNumericaRenderer(new InfoNonNumericaRenderer());
-
-        StringBuilder tmp = new StringBuilder();
-        if (infoRilevabile.getType() == 1)
-            tmp.append(ClasseDiServizioInfoRilevabileNumerica.descriviValoreRilevato((InfoRilevabileNumerica) infoRilevabile));
-        else if (infoRilevabile.getType() == 2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.descriviValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
-
-        return tmp.toString();
+        RendererInfoRilevabile rendererInfoRilevabile = new CompositeRendererInfoRilevabile();
+        return rendererInfoRilevabile.renderDescriviValoreRilevato(infoRilevabile);
     }
 
     /**
@@ -114,13 +107,8 @@ public class ClasseDiServizioInfoRilevabile {
      * @return descrizione solo valore rilevato
      */
     public static String descriviSoloValoreRilevato(InfoRilevabile infoRilevabile) {
-        StringBuilder tmp = new StringBuilder();
-        if (infoRilevabile.getType() == 1)
-            tmp.append(ClasseDiServizioInfoRilevabileNumerica.descriviSoloValoreRilevato((InfoRilevabileNumerica) infoRilevabile));
-        else if (infoRilevabile.getType() == 2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.descriviSoloValoreRilevato((InfoRilevabileNonNumerica) infoRilevabile));
-
-        return tmp.toString();
+        RendererInfoRilevabile rendererInfoRilevabile = new CompositeRendererInfoRilevabile();
+        return rendererInfoRilevabile.renderDescriviSoloValoreRilevato(infoRilevabile);
     }
 
     /**
@@ -130,13 +118,8 @@ public class ClasseDiServizioInfoRilevabile {
      * @return le infoRilevabili
      */
     public static String toString(InfoRilevabile infoRilevabile) {
-        StringBuilder tmp = new StringBuilder();
-        if (infoRilevabile.getType() == 1)
-            tmp.append(ClasseDiServizioInfoRilevabileNumerica.toString((InfoRilevabileNumerica) infoRilevabile));
-        else if (infoRilevabile.getType() == 2)
-            tmp.append(ClasseDiServizioInfoRilevabileNonNumerica.toString((InfoRilevabileNonNumerica) infoRilevabile));
-
-        return tmp.toString();
+        RendererInfoRilevabile rendererInfoRilevabile = new CompositeRendererInfoRilevabile();
+        return rendererInfoRilevabile.renderToString(infoRilevabile);
     }
 
 

@@ -40,7 +40,7 @@ public abstract class CostituenteLogico implements Serializable {
     public boolean calcolaValoreBooleano() {
         if (primoOperatoreLogico != null && secondoOperatoreLogico != null && operatoreRelazionale != null) {
             if (operatoreRelazionale == OperatoriRelazionali.UGUALE) {
-                if (primoOperatoreLogico.getType() == 1) {
+                if (primoOperatoreLogico instanceof InfoRilevabileNumerica) {
                     return ((InfoRilevabileNumerica) primoOperatoreLogico).rilevaVariabile() == ((InfoRilevabileNumerica) secondoOperatoreLogico).rilevaVariabile();
                 } else {
                     return ((InfoRilevabileNonNumerica) primoOperatoreLogico).rilevaVariabile().equals(((InfoRilevabileNonNumerica) secondoOperatoreLogico).rilevaVariabile());
