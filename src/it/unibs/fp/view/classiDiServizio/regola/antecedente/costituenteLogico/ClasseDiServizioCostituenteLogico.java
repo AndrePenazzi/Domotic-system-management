@@ -1,8 +1,8 @@
 package it.unibs.fp.view.classiDiServizio.regola.antecedente.costituenteLogico;
 
 import it.unibs.fp.model.dispositiviPeriferici.Sensore;
-import it.unibs.fp.model.infoRilevabile.HandlerInfoRilevabile;
-import it.unibs.fp.model.infoRilevabile.InfoNumericaHandlerInfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.handler.HandlerInfoRilevabile;
+import it.unibs.fp.model.infoRilevabile.handler.InfoNumericaHandler;
 import it.unibs.fp.model.infoRilevabile.InfoRilevabile;
 import it.unibs.fp.model.operatori.OperatoriRelazionali;
 import it.unibs.fp.model.regola.Orologio;
@@ -103,7 +103,7 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         InfoRilevabile primoOpLogico = null;
         InfoRilevabile secondoOpLogico = null;
         OperatoriRelazionali opRelazionale = null;
-        HandlerInfoRilevabile handlerInfoRilevabileInfoNumerica = new InfoNumericaHandlerInfoRilevabile();
+        HandlerInfoRilevabile handlerInfoRilevabileInfoNumerica = new InfoNumericaHandler();
         boolean finito;
         do {
             try {

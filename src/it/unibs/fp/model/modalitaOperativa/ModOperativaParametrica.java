@@ -1,12 +1,11 @@
 package it.unibs.fp.model.modalitaOperativa;
 
-import java.io.Serializable;
 import java.util.List;
 
-public class ModOperativaParametrica extends ModOperativa implements Serializable {
+public class ModOperativaParametrica implements ModOperativa {
     private List<String> paramentri;
     private String parametroAttuale;
-
+    private String nome;
     /**
      * Costruttore
      *
@@ -14,7 +13,7 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
      * @param paramentri scelti
      */
     public ModOperativaParametrica(String nome, List<String> paramentri) {
-        super(nome);
+        this.nome = nome;
         this.paramentri = paramentri;
     }
 
@@ -73,12 +72,24 @@ public class ModOperativaParametrica extends ModOperativa implements Serializabl
         this.parametroAttuale = parametroAttuale;
     }
 
+
     /**
      * Getter
      *
-     * @return type
+     * @return nome
      */
-    public int getType() {
-        return 2;
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Setter
+     *
+     * @param nome da modificare
+     */
+    @Override
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

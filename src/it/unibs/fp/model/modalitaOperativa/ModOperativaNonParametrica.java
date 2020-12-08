@@ -1,30 +1,29 @@
 package it.unibs.fp.model.modalitaOperativa;
 
-import java.io.Serializable;
 import java.text.DecimalFormat;
 
-public class ModOperativaNonParametrica extends ModOperativa implements Serializable {
+public class ModOperativaNonParametrica implements ModOperativa {
     private static DecimalFormat df2 = new DecimalFormat("#.##");
     private double valore;
-
+    private String nome;
     /**
      * Costruttore
      *
      * @param nome della modalità operativa
      */
     public ModOperativaNonParametrica(String nome) {
-        super(nome);
+        this.nome = nome;
         valore = 0;
     }
 
     /**
      * Costruttore
      *
-     * @param nome   della modalità operativa
+     * @param nome   della modalità operativa non parametrica
      * @param valore richiesto
      */
     public ModOperativaNonParametrica(String nome, double valore) {
-        super(nome);
+        this.nome = nome;
         this.valore = valore;
     }
 
@@ -55,12 +54,25 @@ public class ModOperativaNonParametrica extends ModOperativa implements Serializ
         return df2;
     }
 
+
     /**
      * Getter
      *
-     * @return type
+     * @return nome
      */
-    public int getType() {
-        return 1;
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Setter
+     *
+     * @param nome da modificare
+     */
+
+    @Override
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

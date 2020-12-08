@@ -34,26 +34,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/CompositeRendererInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaHandlerInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/RendererInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/InfoNonNumericaRendererInfoRilevabile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/InfoNumericaRendererInfoRilevabile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/HandlerModOperativa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/ModOperativaNonParametricaHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/ModOperativaParametricaHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/fruitore.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/listaCategorie.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/manutentore.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/salvataggiSuDisco/JSON/unitaImmobiliari.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/categoria/ListaCategorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/HandlerInfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/costituenteLogico/CostituenteLogico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/infoRilevabile/ClasseDiServizioInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/HandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/HandlerInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/InfoNonNumericaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaHandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/InfoNumericaHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaNonParametrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaNonParametrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaParametrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaParametrica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +61,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,7 +71,7 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/InfoNonNumericaHandler.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1cXLD2Gs3tx0dQ8wZp7OeD66yBD" />
   <component name="ProjectViewState">
@@ -112,21 +104,22 @@
       <recent name="it.unibs.fp.test" />
       <recent name="it.unibs.fp.infoRilevabile" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="it.unibs.fp.dao" />
-      <recent name="it.unibs.fp.view.classiDiServizio.modalitaOperativa" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="it.unibs.fp.infoRilevabile.InfoRilevabile" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="it.unibs.fp.model.modalitaOperativa" />
       <recent name="it.unibs.fp.dao.fileSecond" />
       <recent name="it.unibs.fp.dao" />
       <recent name="it.unibs.fp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="Z:\Documents\Unibs\Terzo anno\Ingegneria del software\Ingegneria del software parte A\Domotic-system-management\src\it\unibs\fp\dao\file" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="it.unibs.fp.infoRilevabile.InfoRilevabile" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.unibs.fp.dao" />
+      <recent name="it.unibs.fp.view.classiDiServizio.modalitaOperativa" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -150,13 +143,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -727,6 +722,40 @@
     <MESSAGE value="Work Measurement of infoRilevabile" />
     <MESSAGE value="Complete Information Expert&#10;Start of Resolve OCP" />
     <option name="LAST_COMMIT_MESSAGE" value="Complete Information Expert&#10;Start of Resolve OCP" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser" timestamp="1607439921085">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="123" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1607439921085" />
+    <state width="1493" height="64" key="GridCell.Tab.0.bottom" timestamp="1607440236406">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="64" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607440236406" />
+    <state width="1493" height="64" key="GridCell.Tab.0.center" timestamp="1607440236406">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="64" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607440236406" />
+    <state width="1493" height="64" key="GridCell.Tab.0.left" timestamp="1607440236406">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="64" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607440236406" />
+    <state width="1493" height="64" key="GridCell.Tab.0.right" timestamp="1607440236406">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="64" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607440236406" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1607439425281">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1607439425281" />
+    <state x="277" y="62" key="SettingsEditor" timestamp="1607439708868">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1607439708868" />
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607439419211">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1607439419211" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Domotic_system_management$InfoRilevabileTest.ic" NAME="InfoRilevabileTest Coverage Results" MODIFIED="1600334991828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -3,6 +3,8 @@ package it.unibs.fp.view.classiDiServizio.modalitaOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativa;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaNonParametrica;
 import it.unibs.fp.model.modalitaOperativa.ModOperativaParametrica;
+import it.unibs.fp.model.modalitaOperativa.handler.HandlerModOperativa;
+import it.unibs.fp.model.modalitaOperativa.handler.ModOperativaParametricaHandler;
 import it.unibs.fp.view.mylib.InputDati;
 import it.unibs.fp.view.mylib.MyMenu;
 
@@ -71,9 +73,10 @@ public class ClasseDiServizioModOperativa {
     }
 
     public static void modificaModOperativa(ModOperativa modOperativa) {
-        if (modOperativa.getType() == 1)
+        HandlerModOperativa handlerModOperativa = new ModOperativaParametricaHandler();
+        if (handlerModOperativa.canHandle(modOperativa))
             ClasseDiServizioModOperativaNonParametrica.modificaValoreModOperativaAttuale((ModOperativaNonParametrica) modOperativa);
-        else if (modOperativa.getType() == 2)
+        else
             ClasseDiServizioModOperativaParametrica.modificaValoreModOperativaAttuale((ModOperativaParametrica) modOperativa);
 
     }
@@ -85,10 +88,11 @@ public class ClasseDiServizioModOperativa {
      * @return Descrizione modOperativa
      */
     public static String toString(ModOperativa modOperativa) {
+        HandlerModOperativa handlerModOperativa = new ModOperativaParametricaHandler();
         StringBuilder tmp = new StringBuilder();
-        if (modOperativa.getType() == 1)
+        if (handlerModOperativa.canHandle(modOperativa))
             tmp.append(ClasseDiServizioModOperativaNonParametrica.toString((ModOperativaNonParametrica) modOperativa));
-        else if (modOperativa.getType() == 2)
+        else
             tmp.append(ClasseDiServizioModOperativaParametrica.toString((ModOperativaParametrica) modOperativa));
 
         return tmp.toString();
