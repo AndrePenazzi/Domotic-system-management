@@ -1,5 +1,7 @@
 package it.unibs.fp.model.regola.antecedente;
 
+import it.unibs.fp.model.operatori.OperatoriBooleani;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -65,5 +67,47 @@ public class Antecedenti implements Serializable {
             throw new InputMismatchException();
         }
     }
+
+    public boolean calcolaAntecedenti() {
+        List<Integer> posizioneOr = new ArrayList<>();
+        for (int i = 1; i < antecendenti.size(); i++) {
+            if (antecendenti.get(i).getOpBooleano() == OperatoriBooleani.OR)
+                posizioneOr.add(i);
+        }
+        List<Boolean> risultatiAnd = new ArrayList<>(calcolaAnd(posizioneOr));
+
+        boolean tmp = false;
+        for (int i = 0; i < risultatiAnd.size(); i++) {
+            tmp = tmp || risultatiAnd.get(i);
+        }
+        return tmp;
+    }
+
+
+    public List<Boolean> calcolaAnd(List<Integer> posizioneOr) {
+        List<Boolean> risultatiAnd = new ArrayList<>();
+        boolean tmp = true;
+        for (int i = 0; i < posizioneOr.get(0); i++) {
+            tmp = tmp && antecendenti.get(i).getCostituenteLogico().calcolaValoreBooleano();
+        }
+        risultatiAnd.add(tmp);
+
+        for (int i = 1; i < posizioneOr.size(); i++) {
+            tmp = true;
+            for (int j = posizioneOr.get(i - 1); j < posizioneOr.get(i); j++) {
+                tmp = tmp && antecendenti.get(j).getCostituenteLogico().calcolaValoreBooleano();
+            }
+            risultatiAnd.add(tmp);
+        }
+
+        tmp = true;
+        for (int i = posizioneOr.get(posizioneOr.size() - 1); i < antecendenti.size(); i++) {
+            tmp = tmp && antecendenti.get(i).getCostituenteLogico().calcolaValoreBooleano();
+        }
+        risultatiAnd.add(tmp);
+
+        return risultatiAnd;
+    }
+
 
 }

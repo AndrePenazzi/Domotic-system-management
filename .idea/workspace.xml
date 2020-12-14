@@ -34,19 +34,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c3fe59f-f177-4ede-981a-37c9f3f69f00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/HandlerModOperativa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/ModOperativaNonParametricaHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/handler/ModOperativaParametricaHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_14_2020_9_39_AM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_14_2020_9_39_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/HandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/HandlerInfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNonNumericaHandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/InfoNonNumericaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/InfoNumericaHandlerInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/handler/InfoNumericaHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/infoRilevabile/SelectableRendererInfoRilevabile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaNonParametrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaNonParametrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaParametrica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/modalitaOperativa/ModOperativaParametrica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/modalitaOperativa/ClasseDiServizioModOperativa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/view/classiDiServizio/regola/antecedente/costituenteLogico/ClasseDiServizioCostituenteLogico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/Antecedenti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/fp/model/regola/antecedente/Antecedenti.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +76,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
