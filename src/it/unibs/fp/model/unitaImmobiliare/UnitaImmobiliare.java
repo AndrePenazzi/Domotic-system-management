@@ -27,6 +27,15 @@ public class UnitaImmobiliare implements Serializable {
         this.regole = new Regole();
     }
 
+    public static boolean controlloPresenzaSensoreInArtefatti(Artefatti artefatti, Sensore nuovoSensore) {
+        for (Artefatto a : artefatti.getArtefatti())
+            for (Sensore s : a.getSensoriInArtefatto().getSensori())
+                if (nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori()) {
+                    return true;
+                }
+        return false;
+    }
+
     /**
      * Cambia lo stato delle regole da attiva a disattiva o viceversa in automatico
      *
@@ -44,7 +53,6 @@ public class UnitaImmobiliare implements Serializable {
     public void inserisciRegola(Regola regola) {
         regole.inserisciRegola(regola);
     }
-
 
     /**
      * Trova la regola se esistente restituisce -1 altrimenti
@@ -109,9 +117,10 @@ public class UnitaImmobiliare implements Serializable {
      * @param artefattoAss artefatto scelto
      */
     public void associaSensoreAdArtefatti(Sensore sensoreAss, Artefatti artefattoAss) {
-        for (Artefatto a : artefattoAss.getArtefatti()) {
-            a.inserisciSensore(sensoreAss);
-        }
+        if (!controlloPresenzaSensoreInArtefatti(artefatti, sensoreAss))
+            for (Artefatto a : artefattoAss.getArtefatti()) {
+                a.inserisciSensore(sensoreAss);
+            }
     }
 
     /**
@@ -230,7 +239,6 @@ public class UnitaImmobiliare implements Serializable {
         this.nome = nome;
     }
 
-
     /**
      * Getter
      *
@@ -265,6 +273,4 @@ public class UnitaImmobiliare implements Serializable {
         attuatori.getAttuatori().addAll(artefatti.getAttuatoriInArtefatti().getAttuatori());
         return attuatori;
     }
-
-
 }

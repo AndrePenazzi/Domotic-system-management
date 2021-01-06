@@ -17,7 +17,6 @@ public abstract class CostituenteLogico implements Serializable {
     private Orologio time;
     private Orologio secondoOperatoreOrologio = null;
 
-    //TODO da aggiungere alla factory
 
     /**
      * Costruttore con valore true
@@ -30,7 +29,6 @@ public abstract class CostituenteLogico implements Serializable {
         this.time = null;
     }
 
-    //todo non funzionerà mai sicuro
 
     /**
      * Calcolo del valore booleano attuale del costituente logico

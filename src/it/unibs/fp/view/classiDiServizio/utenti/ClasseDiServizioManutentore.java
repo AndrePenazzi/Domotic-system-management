@@ -22,7 +22,7 @@ public class ClasseDiServizioManutentore {
 
     public static void stampaMenuManutentore(UnitaImmobiliari unitaImmobiliari, ListaCategorie listaCategorie) {
         boolean finito = false;
-        String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori", "Operazioni di import", "Operazioni di salvataggio"};
+        String[] azione = {"Operazioni su un'unità immobiliare", "Inserisci unità immobiliare", "Inserisci categorie sensori/attuatori", "Visualizza categorie di sensori/attuatori"};
         MyMenu menu = new MyMenu("Menu manutentore", azione);
         do {
             int scelta = menu.scegli();
@@ -54,14 +54,6 @@ public class ClasseDiServizioManutentore {
 
                 case 4: {
                     stampaMenuVisualizzazioneCategorie(listaCategorie);
-                }
-                break;
-                case 5: {
-                    //stampaMenuImportLibrerie(contenitore);
-                }
-
-                case 6: {
-                    //   stampaMenuSalvataggiLibrerie(contenitore);
                 }
                 break;
             }
@@ -231,98 +223,6 @@ public class ClasseDiServizioManutentore {
         } while (!finito);
     }
 
-    /*
-    private static void stampaMenuSalvataggiLibrerie(Contenitore contenitore) {
-        boolean finito = false;
-        String[] azione = {"Salva categorie sensori", "Salva categorie attuatori", "Salva unità immobiliare", "Salva regole"};
-        MyMenu menu = new MyMenu("Menu salvataggio librerie", azione);
-        Manutentore manutentore = contenitore.getManutentore();
-        ListaCategorie listaCategorie = contenitore.getListaCategorie();
-        do {
-            int scelta = menu.scegli();
-            switch (scelta) {
-
-                case 0: {
-                    finito = true;
-                    System.out.println("Uscita verso menu principlae");
-
-                }
-                break;
-
-                case 1: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di sensori da salvare: ");
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), contenitore.getListaCategorie().getCategorieSensori());
-                }
-                break;
-
-                case 2: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di attuatori da salvare: ");
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), contenitore.getListaCategorie().getCategorieAttuatori());
-                }
-                break;
-
-                case 3: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria della unità immobiliare da salvare: ");
-                    UnitaImmobiliare unitaImmobiliare = ClasseDiServizioUnitaImmobiliari.scegliUnitaImmobiliare(manutentore.getUnitaImmobiliari());
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), unitaImmobiliare);
-                }
-                break;
-
-                case 4: {
-                    String nomeLibreria = InputDati.leggiStringaNonVuota("Inserire nome della libreria di regole da salvare: ");
-
-                    ServizioFile.salvaSingoloOggetto(new File(nomeLibreria + ".dat"), contenitore.getListaCategorie().getCategorieSensori());
-                }
-                break;
-            }
-        } while (!finito);
-    }*/
-
-
-    //TODO PENSACI TU
-
-    /*
-     * Menu importa librerie
-     *
-     * @param contenitore per gli oggetti necessari
-     */
-    /*
-    private static void stampaMenuImportLibrerie(Contenitore contenitore) {
-        boolean finito = false;
-        String[] azione = {"Importa categorie di sensori", "Importa categorie di attuatori", "Importa unità immobiliare", "Importa set di regole"};
-        MyMenu menu = new MyMenu("Menu salvataggio librerie", azione);
-        do {
-            int scelta = menu.scegli();
-            switch (scelta) {
-
-                case 0: {
-                    finito = true;
-                    System.out.println("Uscita verso menu principlae");
-
-                }
-                break;
-
-                case 1: {
-                }
-                break;
-
-                case 2: {
-                }
-                break;
-
-                case 3: {
-                }
-                break;
-
-                case 4: {
-                }
-                break;
-            }
-        }
-        while (!finito);
-    }
-
-*/
 
     /**
      * Visualizza la descrizione dei sensori delle categorie sensori

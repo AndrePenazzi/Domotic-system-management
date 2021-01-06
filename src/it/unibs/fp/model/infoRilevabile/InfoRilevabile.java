@@ -18,5 +18,10 @@ public interface InfoRilevabile <T> extends Serializable {
      */
      void setNome(String nome);
 
+    /**
+     * Rileva il valore della variabile
+     *
+     * @return valore rilevato
+     */
      T rilevaVariabile();
 }

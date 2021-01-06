@@ -48,6 +48,7 @@ public class CategoriaSensori implements Serializable {
         return testoLibero;
     }
 
+
     /**
      * Getter
      *

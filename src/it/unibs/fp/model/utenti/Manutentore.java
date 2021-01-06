@@ -18,25 +18,6 @@ public class Manutentore implements Serializable {
         this.nome = nome;
     }
 
-    /**
-     * Inseriscce e salva una categoria di attuatori se non esiste già
-     *
-     * @param listaCategorie     lista delle categorie esistenti
-     * @param categoriaAttuatori nuova categoria di attuatori
-     */
-    public void inserisciESalvaCategoriaAttuatori(ListaCategorie listaCategorie, CategoriaAttuatori categoriaAttuatori) {
-        listaCategorie.inserisciESalvaCategoriaAttuatori(categoriaAttuatori);
-    }
-
-    /**
-     * Inseriscce e salva una categoria di sensori se non esiste già
-     *
-     * @param listaCategorie   lista delle categorie esistenti
-     * @param categoriaSensori nuova categoria di sensori
-     */
-    public void inserisciESalvaCategoriaSensori(ListaCategorie listaCategorie, CategoriaSensori categoriaSensori) {
-        listaCategorie.inserisciESalvaCategoriaSensori(categoriaSensori);
-    }
 
     /**
      * Getter

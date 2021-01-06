@@ -37,8 +37,4 @@ public class CompositeRendererInfoRilevabile implements RendererInfoRilevabile {
     public String renderToString(InfoRilevabile info) {
         return getRendererFor(info).renderToString(info);
     }
-
-
-
-
 }

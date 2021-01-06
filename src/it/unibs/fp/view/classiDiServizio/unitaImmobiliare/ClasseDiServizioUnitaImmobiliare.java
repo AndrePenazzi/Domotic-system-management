@@ -251,7 +251,6 @@ public class ClasseDiServizioUnitaImmobiliare {
      *
      * @param unitaImmobiliare per visualizzare il valore rilevato da un sensore
      * @return descrizione del valore rilevato da un sensore
-     *
      */
     public static String descriviValoreRilevatoDaUnSensore(UnitaImmobiliare unitaImmobiliare) {
         Sensore sensore = scegliSensore(unitaImmobiliare);
@@ -391,6 +390,23 @@ public class ClasseDiServizioUnitaImmobiliare {
         }
     }
 
+    public static void associaSensoreArtefatto(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
+        unitaImmobiliare.associaSensoreAdArtefatti(ClasseDiServizioSensore.creaSensore(listaCategorie), scegliArtefatti(unitaImmobiliare));
+    }
+
+    public static void gestisciCategoriaSensoriMancante(ListaCategorie listaCategorie) {
+        if (listaCategorie.categorieSensoriIsEmpty())
+            System.out.println("Bisogna prima creare una categoria sensori");
+    }
+    public static void gestisciArtefattiMancanti(UnitaImmobiliare unitaImmobiliare) {
+        if(unitaImmobiliare.artefattiInUnitaImmobiliareIsEmpty())
+            System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
+    }
+
+
+
+
+
     /**
      * Associa Sensore ad artefatti
      *
@@ -398,22 +414,14 @@ public class ClasseDiServizioUnitaImmobiliare {
      * @param listaCategorie   per la creazione di sensori
      */
     public static void associaSensoreAdArtefatti(UnitaImmobiliare unitaImmobiliare, ListaCategorie listaCategorie) {
-        if (!unitaImmobiliare.artefattiInUnitaImmobiliareIsEmpty() && !listaCategorie.categorieSensoriIsEmpty()) {
-            do {
-                Sensore nuovoSensore = ClasseDiServizioSensore.creaSensore(listaCategorie);
-                Artefatti artefatti = ClasseDiServizioUnitaImmobiliare.scegliArtefatti(unitaImmobiliare);
-                for (Artefatto a : artefatti.getArtefatti())
-                    for (Sensore s : a.getSensoriInArtefatto().getSensori())
-                        if (nuovoSensore.getCategoriaSensori() == s.getCategoriaSensori())
-                            System.out.println("Esite già un sensore con la stessa categoria in uno degli artefatti");
+        if (!unitaImmobiliare.artefattiInUnitaImmobiliareIsEmpty() && !listaCategorie.categorieSensoriIsEmpty())
+            do
+                associaSensoreArtefatto(unitaImmobiliare, listaCategorie);
+            while (InputDati.yesOrNo("Vuoi associare un'altro sensore ad artefatti?"));
 
-                unitaImmobiliare.associaSensoreAdArtefatti(nuovoSensore, artefatti);
-            } while (InputDati.yesOrNo("Vuoi associare un'altro sensore ad artefatti?"));
-        } else {
-            if (listaCategorie.categorieSensoriIsEmpty())
-                System.out.println("Bisogna prima creare una categoria sensori");
-            if (unitaImmobiliare.artefattiInUnitaImmobiliareIsEmpty())
-                System.out.println("Bisogna prima avere un artefatto nell'unità immobiliare");
+         else {
+            gestisciCategoriaSensoriMancante(listaCategorie);
+            gestisciArtefattiMancanti(unitaImmobiliare);
         }
     }
 

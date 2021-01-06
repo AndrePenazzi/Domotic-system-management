@@ -90,7 +90,6 @@ public class ClasseDiServizioCostituenteLogico implements Serializable {
         return CostituenteLogicoFactory.creaCostituenteLogico(secondoOpLogico, opRelazionale);
     }
 
-    //TODO RICORDATI DI MEEEE
 
     /**
      * Crea costituente logico info rilevabile
